@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <title>{% block title %}Afrikapié - Livre Web{% endblock %}</title>
+
+    <!-- Styles
+    ================================================== -->
+    {{ css('bootstrap', 'font-awesome') }}
+    <link href="/css/main.css" rel="stylesheet">
+    {% block stylesheets %}{% endblock %}
+
+    {{ js('old-browsers.cdn') }}
+</head>
+<body>
+    {% include 'header.html.twig' %}
+
+    <!-- Main content
+    ================================================== -->
+    {% block main %}
+        <section id="main" class="container">
+            {% block main_inner %}{% endblock %}
+        </section>
+    {% endblock %}
+
+    {% include 'footer.html.twig' %}
+
+    <!-- Javascripts
+    ================================================== -->
+    {{ js('jquery', 'bootstrap') }}
+    {% block javascripts %}{% endblock %}
+</body>
+</html>
