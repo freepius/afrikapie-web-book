@@ -8,7 +8,7 @@ define('DEBUG', true);
 
 require ROOT.'/vendor/autoload.php';
 
-$app = new \Freepius\Application;
+$app = new \Freepius\Silex\Application;
 
 $app['locale'] = 'fr';
 
@@ -26,22 +26,18 @@ $app->register(new \Silex\Provider\TwigServiceProvider(), [
 ]);
 
 /* freepius/php-asset */
-$app->register(new \Freepius\Asset\ServiceProvider(), [
+$app->register(new \Freepius\Asset\ServiceProvider, [
     'asset.cdn.use' => ! $app['debug'],
     'asset.config'  => [
         'base.url' => $app['debug'] ? '//cdn.nomad/' : '//cdn.anarchos-semitas.net/',
     ],
 ]);
 
-/**
- * freepius/php-richtext
- * with an extension of the Richtext class
- */
-$app->register(new \Freepius\Pimple\Provider\RichtextProvider(), [
-    'richtext' => function ($c) {
-        return new \App\Util\AfrikapieRichtext($c['richtext.config']);
-    },
-]);
+/* freepius/php-richtext */
+$app->register(new \Freepius\Pimple\Provider\RichtextProvider);
+$app['afrikapieText'] = function ($app) {
+    return new \App\Util\AfrikapieText($app['richtext']);
+};
 
 
 /*************************************************
