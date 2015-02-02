@@ -16,6 +16,7 @@
     "require": {
         "silex/silex": "*",
         "twig/twig": "*",
+        "twbs/bootstrap": "3.3.2",
         "freepius/php-asset": "*",
         "freepius/php-richtext": "*",
         "freepius/silex-extended": "*"

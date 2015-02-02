@@ -1,0 +1,45 @@
+body > article
+{
+    > header
+    {
+        background: no-repeat center / cover;
+        cursor: default;
+        height: 350px;
+
+        > .inner {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            height: 350px;
+            padding: 0 10px;
+            text-align: center;
+
+            > * {
+                margin: 0 auto;
+                position: relative;
+            }
+
+            > h1 {
+                font-weight: bolder;
+                top: 70px;
+            }
+
+            > q {
+                display: block;
+                font-size: 20px;
+                top: 170px;
+                white-space: normal;
+                @media(min-width: 500px) { & { width: 450px; } }
+            }
+        }
+    }
+
+    > [property="articleBody"]:extend(.container all)
+    {
+        font-size: 20px;
+        line-height: 1.7;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        p { text-align: justify; }
+    }
+}
