@@ -1,7 +1,7 @@
 Afrikapié Web Book
 ==================
 
-Source code of the "Afrikapié" web book.
+Source code of the Afrikapié web book.
 
 Installation
 ------------

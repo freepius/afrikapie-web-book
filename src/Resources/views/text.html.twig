@@ -1,0 +1,55 @@
+{% set currentPage = 'text' %}
+
+{% extends 'layout.html.twig' %}
+
+{% block title %}Afrikapié - {{ article.title }}{% endblock %}
+
+
+{% block javascripts %}
+    <script src="/js/app-text.js"></script>
+{% endblock %}
+
+
+{% block stylesheets %}
+    <style>
+        body > header {
+            background-image: url('/images/header/{{ article.image }}.jpg') !important;
+        }
+    </style>
+{% endblock %}
+
+
+{% block main %}
+
+<header>
+    <div class="inner">
+        <h1>{{ article.title }}</h1>
+        <q>&#160;{{ article.intro  }}&#160;</q>
+    </div>
+
+    <nav>
+        {% if article.previous is defined %}
+            <a href="/{{ article.previous }}" class="previous">
+                <i class="fa fa-3x fa-chevron-circle-left"></i>
+                <span class="sr-only">Texte précédent</span>
+            </a>
+        {% endif %}
+
+        <a href="#menu">
+            <i class="fa fa-3x fa-bars"></i>
+        </a>
+
+        {% if article.next is defined %}
+            <a href="/{{ article.next }}" class="next">
+                <i class="fa fa-3x fa-chevron-circle-right"></i>
+                <span class="sr-only">Texte suivant</span>
+            </a>
+        {% endif %}
+    </nav>
+</header>
+
+<section property="articleBody">
+    {{ article.text | raw }}
+</section>
+
+{% endblock %}
