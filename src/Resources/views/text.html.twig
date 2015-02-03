@@ -28,8 +28,8 @@
     </div>
 
     <nav>
-        {% if article.previous is defined %}
-            <a href="/{{ article.previous }}" class="previous">
+        {% if article.prev %}
+            <a href="/{{ article.prev }}" class="previous">
                 <i class="fa fa-3x fa-chevron-circle-left"></i>
                 <span class="sr-only">Texte précédent</span>
             </a>
@@ -39,7 +39,7 @@
             <i class="fa fa-3x fa-bars"></i>
         </a>
 
-        {% if article.next is defined %}
+        {% if article.next %}
             <a href="/{{ article.next }}" class="next">
                 <i class="fa fa-3x fa-chevron-circle-right"></i>
                 <span class="sr-only">Texte suivant</span>
@@ -63,11 +63,11 @@
     <!-- Annotated -->
     <!--<a href="#" class="btn btn-default" role="button">
         Annoté
-    </a>!-->
+    </a>-->
 </div>
 
 <section property="articleBody">
-    {{ article.text | raw }}
+    {{ article.text | richtext }}
 </section>
 
 {% endblock %}

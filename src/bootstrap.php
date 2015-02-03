@@ -35,8 +35,10 @@ $app->register(new \Freepius\Asset\ServiceProvider, [
 
 /* freepius/php-richtext */
 $app->register(new \Freepius\Pimple\Provider\RichtextProvider);
-$app['afrikapieText'] = function ($app) {
-    return new \App\Util\AfrikapieText($app['richtext']);
+
+/* Transformer for "Afrikapié format" */
+$app['afrikapieText'] = function () {
+    return new \App\Util\AfrikapieText;
 };
 
 

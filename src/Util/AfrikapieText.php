@@ -2,8 +2,6 @@
 
 namespace App\Util;
 
-use Freepius\Richtext;
-
 class AfrikapieText
 {
     const TAGS_CONV = [
@@ -23,47 +21,45 @@ class AfrikapieText
     ];
 
     /**
-     * @param \Freepius\Richtext
+     * Transform 'mytag' into a regexp finding '<mytag>Value</mytag>'.
      */
-    protected $richtext;
-
-    public function __construct(Richtext $richtext)
+    protected static function tagify($e)
     {
-        $this->richtext = $richtext;
+        return "|<$e>(.*)</$e>|U";
     }
 
-    public function transform($year, $month, $day)
+    /**
+     * From a $text (passed by reference),
+     * find and return the value (or null) contained by a $tag.
+     * Then, remove this $tag from the $text.
+     */
+    protected static function getter($tag, & $text)
     {
-        $tagify = function ($e) { return "|<$e>(.*)</$e>|U"; };
+        $text = preg_replace_callback(
+            self::tagify($tag),
+            function ($m) use (& $value) { $value = @ $m[1]; return; },
+            $text, 1
+        );
 
+        return $value;
+    }
+
+    public function findAndTransform($year, $month, $day)
+    {
         $text = file_get_contents(__DIR__."/../Resources/views/texts/$year-$month/$year-$month-$day.md");
 
-        // Get the title
-        $text = preg_replace_callback(
-            $tagify('title'),
-            function ($m) use (& $title) { $title = $m[1]; return; },
-            $text, 1
-        );
+        // Retrieve and remove the "one shot" tags
+        $oneShotInfo = array_fill_keys(['image', 'intro', 'next', 'prev', 'title'], null);
 
-        // Get the introduction sentence
-        $text = preg_replace_callback(
-            $tagify('is'),
-            function ($m) use (& $intro) { $intro = $m[1]; return; },
-            $text, 1
-        );
+        foreach ($oneShotInfo as $tag => & $value) {
+            $value = self::getter($tag, $text);
+        }
 
-        // Transform the Afrikapié tags
-        $tags = array_map($tagify, array_keys(self::TAGS_CONV));
+        // Transform the "multiple occurrences" tags
+        $tags = array_map([$this, 'tagify'], array_keys(self::TAGS_CONV));
         $rpls = array_values(self::TAGS_CONV);
         $text = preg_replace($tags, $rpls, $text);
 
-        // Transform with Markdown and SmartyPants
-        $text = $this->richtext->transform($text);
-
-        return [
-            'title' => $title,
-            'intro' => $intro,
-            'text'  => $text,
-        ];
+        return $oneShotInfo + ['text' => $text];
     }
 }
