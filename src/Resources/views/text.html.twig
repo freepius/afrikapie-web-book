@@ -35,7 +35,7 @@
             </a>
         {% endif %}
 
-        <a href="#menu">
+        <a href="#menu" role="button">
             <i class="fa fa-3x fa-bars"></i>
         </a>
 
@@ -47,6 +47,24 @@
         {% endif %}
     </nav>
 </header>
+
+<!-- Types of display -->
+<div class="btn-group btn-group-lg btn-group-justified" role="group" aria-label="Type d'affichage du texte">
+    <!-- Augmented -->
+    <a href="#" class="active btn btn-default" role="button">
+        Vue augmentée
+    </a>
+
+    <!-- Simple -->
+    <a href="#" class="btn btn-default" role="button">
+        Vue simple
+    </a>
+
+    <!-- Annotated -->
+    <!--<a href="#" class="btn btn-default" role="button">
+        Annoté
+    </a>!-->
+</div>
 
 <section property="articleBody">
     {{ article.text | raw }}
