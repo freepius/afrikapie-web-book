@@ -22,15 +22,15 @@ class BaseController implements ControllerProviderInterface
     {
         $ctrl = $app['controllers_factory'];
 
-        $ctrl->get('/{year}-{month}-{day}', [$this, 'readText']);
+        $ctrl->get('/{name}', [$this, 'readText']);
 
         return $ctrl;
     }
 
-    public function readText($year, $month, $day)
+    public function readText($name)
     {
         return $this->app->render('text.html.twig', [
-            'article' => $this->app['afrikapieText']->findAndTransform($year, $month, $day)
+            'text' => $this->app['afrikapieText']->findAndTransform($name)
         ]);
     }
 }

@@ -2,6 +2,11 @@
 
 namespace App\Util;
 
+use Symfony\Component\HttpKernel\Exception\HttpException;
+
+/**
+ * Utility allowing to transform a text in "Afrikapié" format.
+ */
 class AfrikapieText
 {
     const TAGS_CONV = [
@@ -19,6 +24,41 @@ class AfrikapieText
         're'    => '$1',
         'to'    => '$1',
     ];
+
+    protected $textDirectory;
+
+    public function __construct($textDirectory)
+    {
+        $this->textDirectory = $textDirectory;
+    }
+
+    public function findAndTransform($name)
+    {
+        $fullName = "{$this->textDirectory}/$name.md";
+
+        // Check if the text exists
+        if (! file_exists($fullName) || ! is_readable($fullName))
+        {
+            throw new HttpException(404, "Le texte \"$name\" n'existe pas !");
+        }
+
+        // Retrieve the text
+        $text = file_get_contents($fullName);
+
+        // Retrieve and remove the "one shot" tags
+        $oneShotInfo = array_fill_keys(['image', 'intro', 'next', 'prev', 'title'], null);
+
+        foreach ($oneShotInfo as $tag => & $value) {
+            $value = self::getter($tag, $text);
+        }
+
+        // Transform the "multiple occurrences" tags
+        $tags = array_map([$this, 'tagify'], array_keys(self::TAGS_CONV));
+        $rpls = array_values(self::TAGS_CONV);
+        $text = preg_replace($tags, $rpls, $text);
+
+        return $oneShotInfo + ['content' => $text];
+    }
 
     /**
      * Transform 'mytag' into a regexp finding '<mytag>Value</mytag>'.
@@ -42,24 +82,5 @@ class AfrikapieText
         );
 
         return $value;
-    }
-
-    public function findAndTransform($year, $month, $day)
-    {
-        $text = file_get_contents(__DIR__."/../Resources/views/texts/$year-$month/$year-$month-$day.md");
-
-        // Retrieve and remove the "one shot" tags
-        $oneShotInfo = array_fill_keys(['image', 'intro', 'next', 'prev', 'title'], null);
-
-        foreach ($oneShotInfo as $tag => & $value) {
-            $value = self::getter($tag, $text);
-        }
-
-        // Transform the "multiple occurrences" tags
-        $tags = array_map([$this, 'tagify'], array_keys(self::TAGS_CONV));
-        $rpls = array_values(self::TAGS_CONV);
-        $text = preg_replace($tags, $rpls, $text);
-
-        return $oneShotInfo + ['text' => $text];
     }
 }

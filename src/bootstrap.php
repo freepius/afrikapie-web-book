@@ -10,8 +10,6 @@ require ROOT.'/vendor/autoload.php';
 
 $app = new \Freepius\Silex\Application;
 
-$app['locale'] = 'fr';
-
 $app['debug'] = DEBUG;
 
 
@@ -38,7 +36,7 @@ $app->register(new \Freepius\Pimple\Provider\RichtextProvider);
 
 /* Transformer for "Afrikapié format" */
 $app['afrikapieText'] = function () {
-    return new \App\Util\AfrikapieText;
+    return new \App\Util\AfrikapieText(APP.'/Resources/texts');
 };
 
 
