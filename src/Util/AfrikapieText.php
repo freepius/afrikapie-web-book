@@ -18,7 +18,7 @@ class AfrikapieText
         'flora' => '$1',
         'fp'    => '$1',
         'frt'   => '$1',
-        'la'    => '$1',
+        'la'    => '*$1*',
         'mc'    => '*$1*',
         'na'    => '$1',
         're'    => '$1',
@@ -47,11 +47,23 @@ class AfrikapieText
         // Retrieve the text
         $text = file_get_contents($fullName);
 
-        // Retrieve and remove the "one shot" tags
-        $oneShotInfo = array_fill_keys(['image', 'intro', 'next', 'prev', 'title'], null);
+        // The "one shot" information
+        $oneShotInfo =
+        [
+            // mandatory
+            'intro' => null,
+            'title' => null,
 
+            // with a default value
+            'image' => $name,
+            'next'  => date('Y-m-d', strtotime("$name +1 day")),
+            'prev'  => date('Y-m-d', strtotime("$name -1 day")),
+        ];
+
+        // Retrieve and remove the "one shot" tags
         foreach ($oneShotInfo as $tag => & $value) {
-            $value = self::getter($tag, $text);
+            $tmp = self::getter($tag, $text);
+            if (null !== $tmp) { $value = $tmp; }
         }
 
         // Transform the "multiple occurrences" tags
@@ -74,6 +86,13 @@ class AfrikapieText
      * From a $text (passed by reference),
      * find and return the value (or null) contained by a $tag.
      * Then, remove this $tag from the $text.
+     *
+     * Example:
+     *
+     * $text = '<title>A title</title>...An other text...';
+     * $value = self::getter('title', $text);
+     *
+     * Then, $value === 'A title' and $text = '...An other text...'
      */
     protected static function getter($tag, & $text)
     {
