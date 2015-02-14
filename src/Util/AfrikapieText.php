@@ -23,6 +23,8 @@ class AfrikapieText
         'na'    => '$1',
         're'    => '$1',
         'to'    => '$1',
+        'url'   => '[$1](http://$1)',
+        'wp'    => '<http://fr.wikipedia.org/wiki/$1>',
     ];
 
     protected $textDirectory;
