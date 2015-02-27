@@ -24,7 +24,7 @@
 <header>
     <div class="inner">
         <h1>{{ text.title }}</h1>
-        <q>&#160;{{ text.intro  }}&#160;</q>
+        {{ text.intro ? '<q>&#160;'~text.intro~'&#160;</q>' }}
     </div>
 
     <nav>
@@ -49,14 +49,16 @@
 </header>
 
 <!-- Types of display -->
-<div class="btn-group btn-group-lg btn-group-justified" role="group" aria-label="Type d'affichage du texte">
-    <!-- Augmented -->
-    <a href="#" class="active btn btn-default" role="button">
+<div class="btn-group btn-group-lg btn-group-justified"
+     role="group" aria-label="Type d'affichage du texte">
+
+    <!-- Enhanced -->
+    <a href="#enhanced" class="active btn btn-default" role="button" data-toggle="tab">
         Vue augmentée
     </a>
 
     <!-- Simple -->
-    <a href="#" class="btn btn-default" role="button">
+    <a href="#simple" class="btn btn-default" role="button" data-toggle="tab">
         Vue simple
     </a>
 
@@ -66,8 +68,14 @@
     </a>-->
 </div>
 
-<section property="articleBody">
-    {{ text.content | richtext }}
+<section class="tab-content" property="articleBody">
+    <div id="enhanced" role="tabpanel" class="tab-pane fade in active">
+        {{ text.enhanced | richtext }}
+    </div>
+
+    <div id="simple" role="tabpanel" class="tab-pane fade">
+        {{ text.simple | richtext }}
+    </div>
 </section>
 
 {% endblock %}
