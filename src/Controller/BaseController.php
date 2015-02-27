@@ -29,8 +29,16 @@ class BaseController implements ControllerProviderInterface
 
     public function readText($name)
     {
-        return $this->app->render('text.html.twig', [
-            'text' => $this->app['afrikapieText']->findAndTransform($name)
-        ]);
+        try {
+            $text = $this->app['afrikapieText']->findAndTransform($name);
+        }
+        catch (\Exception $e) {
+            $this->app->abort(404,
+                "Le texte \"$name\" n'existe pas !\n".
+                ($this->app['debug'] ? $e->getMessage() : '')
+            );
+        }
+
+        return $this->app->render('text.html.twig', ['text' => $text]);
     }
 }
