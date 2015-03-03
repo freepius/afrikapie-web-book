@@ -8,15 +8,8 @@ include __DIR__.'/TransRules.php';
 
 class AfrikapieText
 {
-    /**
-     * The directory where to search the files
-     * (texts, "simple text" metadata and "enhanced text" metadata)
-     */
     protected $dir;
-
-    // Working attributes
-    protected $simpleMetadata;
-    protected $enhancedMetadata;
+    protected $metadata;
     protected $originalText;
     protected $text;
 
@@ -27,29 +20,25 @@ class AfrikapieText
 
     public function findAndTransform($name)
     {
-        $textPath     = "{$this->dir}/md/$name.md";
-        $simplePath   = "{$this->dir}/simple/$name.yml";
-        $enhancedPath = "{$this->dir}/enhanced/$name.yml";
+        $textPath     = "{$this->dir}/$name/text.md";
+        $metadataPath = "{$this->dir}/$name/metadata.yml";
 
         $this->originalText = self::readfile($textPath);
-        $simpleMetadata     = self::readfile($simplePath);
-        $enhancedMetadata   = self::readfile($enhancedPath);
 
-        // Parse the 2 Yaml files
-        $parser                 = new Yaml\Parser;
-        $this->simpleMetadata   = $parser->parse($simpleMetadata);
-        $this->enhancedMetadata = $parser->parse($enhancedMetadata);
+        $this->metadata = (new Yaml\Parser)->parse(
+            self::readfile($metadataPath)
+        );
 
         // Default values for some metadata
         $defaultMetadata =
         [
             'intro' => null,
-            'image' => $name,
             'next'  => date('Y-m-d', strtotime("$name +1 day")),
             'prev'  => date('Y-m-d', strtotime("$name -1 day")),
         ];
 
-        return $this->simpleMetadata + $defaultMetadata + [
+        return $this->metadata + $defaultMetadata + [
+            'name'     => $name,
             'simple'   => $this->transformSimple(),
             'enhanced' => $this->transformEnhanced(),
         ];
@@ -73,16 +62,14 @@ class AfrikapieText
 
     protected function transformSimple()
     {
-        $this->metadata = $this->simpleMetadata;
-        $this->text     = $this->originalText;
+        $this->text = $this->originalText;
 
         return $this->text;
     }
 
     protected function transformEnhanced()
     {
-        $this->metadata = $this->enhancedMetadata;
-        $this->text     = $this->originalText;
+        $this->text = $this->originalText;
 
         $this->replaceTermCollection('lightboxes', 'lightboxTextIcon');
         $this->replaceTermCollection('wikipedias', 'wikipediaLinkIcon');
@@ -93,7 +80,7 @@ class AfrikapieText
     /**
      * In the current text ($this->text),
      * replace a $collection of terms ($this->metadata[$collection])
-     * using the $callback function (\App\Util\Trans\$callback).
+     * using the $callback function (see functions in TransRules.php file).
      */
     protected function replaceTermCollection($collection, $callback)
     {
@@ -107,7 +94,7 @@ class AfrikapieText
     /**
      * In the current text ($this->text),
      * replace a term (contained in $toSearch)
-     * using the $callback function (\App\Util\Trans\$callback).
+     * using the $callback function (see functions in TransRules.php file).
      */
     protected function replaceTerm($toSearch, $callback)
     {

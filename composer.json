@@ -15,6 +15,7 @@
 
     "require": {
         "silex/silex": "*",
+        "symfony/yaml": "*",
         "twig/twig": "*",
         "twbs/bootstrap": "3.3.2",
         "freepius/php-asset": "*",

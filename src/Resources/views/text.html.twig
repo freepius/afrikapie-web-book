@@ -13,7 +13,7 @@
 {% block stylesheets %}
     <style>
         body > header {
-            background-image: url('/images/text/header/{{ text.image }}.jpg') !important;
+            background-image: url('/text/{{ text.name }}/header.jpg') !important;
         }
     </style>
 {% endblock %}
@@ -24,7 +24,7 @@
 <header>
     <div class="inner">
         <h1>{{ text.title }}</h1>
-        {{ text.intro ? '<q>&#160;'~text.intro~'&#160;</q>' }}
+        {{ text.intro ? ('<q>&#160;'~text.intro~'&#160;</q>') | raw }}
     </div>
 
     <nav>
@@ -48,7 +48,7 @@
     </nav>
 </header>
 
-<!-- Types of display -->
+<!-- Buttons to choose the displaying type -->
 <div class="btn-group btn-group-lg btn-group-justified"
      role="group" aria-label="Type d'affichage du texte">
 

@@ -24,7 +24,7 @@ $app->register(new \Silex\Provider\TwigServiceProvider(), [
 ]);
 
 /* freepius/php-asset */
-$app->register(new \Freepius\Asset\ServiceProvider, [
+$app->register(new \Freepius\Pimple\Provider\AssetServiceProvider, [
     'asset.cdn.use' => ! $app['debug'],
     'asset.config'  => [
         'base.url' => $app['debug'] ? '//cdn.nomad/' : '//cdn.anarchos-semitas.net/',
@@ -32,7 +32,7 @@ $app->register(new \Freepius\Asset\ServiceProvider, [
 ]);
 
 /* freepius/php-richtext */
-$app->register(new \Freepius\Pimple\Provider\RichtextProvider);
+$app->register(new \Freepius\Pimple\Provider\RichtextServiceProvider);
 
 /* Transformer for "Afrikapié format" */
 $app['afrikapieText'] = function () {
