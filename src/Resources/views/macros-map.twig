@@ -1,0 +1,23 @@
+{% macro css() %}
+    {{ css(
+        'leaflet',
+        'leaflet.awesome-markers',
+        'leaflet.label'
+    ) }}
+{% endmacro %}
+
+
+{% macro js() %}
+    <script>
+        bingMapsAPIKey = "{#{- app['register.config']['bing_maps_api_key'] -}#}";
+    </script>
+
+    {{ js(
+        'leaflet',
+        'leaflet.awesome-markers',
+        'leaflet.label',
+        'leaflet.plugins.bing'
+    ) }}
+
+    <script src="/js/freepius-easy-map.js"></script>
+{% endmacro %}

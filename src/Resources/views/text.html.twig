@@ -2,18 +2,30 @@
 
 {% extends 'layout.html.twig' %}
 
+{% import 'macros-map.twig' as map %}
+
 {% block title %}Afrikapié - {{ text.title }}{% endblock %}
 
 
 {% block javascripts %}
+    {{ js('lightbox') }}
+    {{ map.js() }}
+    <script src="/js/app-afrikapie-path.js"></script>
+    <script src="/js/app-text-points.js"></script>
+    <script>
+        var currentPoint = textPoints['{{ text.name }}'];
+    </script>
     <script src="/js/app-text.js"></script>
+    {#<script src="/texts/{{ text.name }}/main.js"></script>#}
 {% endblock %}
 
 
 {% block stylesheets %}
+    {{ css('lightbox') }}
+    {{ map.css() }}
     <style>
         body > header {
-            background-image: url('/text/{{ text.name }}/header.jpg') !important;
+            background-image: url('/texts/{{ text.name }}/header.jpg') !important;
         }
     </style>
 {% endblock %}
@@ -69,10 +81,15 @@
 </div>
 
 <section class="tab-content" property="articleBody">
+
+    <!-- The enhanced text -->
     <div id="enhanced" role="tabpanel" class="tab-pane fade in active">
         {{ text.enhanced | richtext }}
+
+        <div id="map" class="col-md-6"></div>
     </div>
 
+    <!-- The simple text -->
     <div id="simple" role="tabpanel" class="tab-pane fade">
         {{ text.simple | richtext }}
     </div>
