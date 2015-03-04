@@ -81,7 +81,14 @@
 
         o.layers = [baseLayers[o.baseLayers.first]];
 
-        // Add ZoomSlider control through options
+        // Add controls through options
+
+        if (o.controls.fullscreen)
+            o.fullscreenControl = true;
+
+        if (o.controls.pan)
+            o.panControl = true;
+
         if (o.controls.zoomslider) {
             o.zoomsliderControl = true;
             o.zoomControl = false;
@@ -94,13 +101,10 @@
         if (map.attributionControl)
             map.attributionControl.setPrefix('');
 
-        // Add controls
+        // Add controls through functions
 
         if (o.controls.layers)
             L.control.layers(baseLayers).addTo(map);
-
-        if (o.controls.pan)
-            L.control.pan().addTo(map);
 
         if (o.controls.scale)
             L.control.scale({maxWidth: 150}).addTo(map);
