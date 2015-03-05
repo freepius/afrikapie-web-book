@@ -80,8 +80,20 @@
      * Useful to see the full background picture.
      */
     var header = document.querySelector('body > header'),
-        inner  = $(header.querySelector('.inner'));
-    header.onmouseenter = function () { inner.fadeOut(); };
-    header.onmouseleave = function () { inner.fadeIn(); };
+        inner  = header.querySelector('.inner');
+    header.onmouseenter = function () { inner.style.opacity = 0; };
+    header.onmouseleave = function () { inner.style.opacity = 1; };
+
+    /**
+     * Handle the choice of display
+     */
+    var displayLinks = $('#choose-display > a'),
+        displayTabs  = $('#displays > div');
+
+    displayLinks.click(function (e) {
+        if ($(this).hasClass('active')) return;
+        displayLinks.toggleClass('active');
+        displayTabs.toggle(0);
+    });
 
 }());

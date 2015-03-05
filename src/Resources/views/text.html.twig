@@ -60,37 +60,23 @@
     </nav>
 </header>
 
-<!-- Buttons to choose the displaying type -->
-<div class="btn-group btn-group-lg btn-group-justified"
-     role="group" aria-label="Type d'affichage du texte">
-
-    <!-- Enhanced -->
-    <a href="#enhanced" class="active btn btn-default" role="button" data-toggle="tab">
-        Vue augmentée
-    </a>
-
-    <!-- Simple -->
-    <a href="#simple" class="btn btn-default" role="button" data-toggle="tab">
-        Vue simple
-    </a>
-
-    <!-- Annotated -->
-    <!--<a href="#" class="btn btn-default" role="button">
-        Annoté
-    </a>-->
+<!-- Links to choose the display -->
+<div id="choose-display" role="group" aria-label="Choisir l'affichage du texte">
+    <a class="btn active" role="button">Vue augmentée</a>
+    <a class="btn"        role="button">Vue simple</a>
+    <!--<a class="btn" role="button">Annoté</a>-->
 </div>
 
-<section class="tab-content" property="articleBody">
+<section id="displays" property="articleBody">
 
     <!-- The enhanced text -->
-    <div id="enhanced" role="tabpanel" class="tab-pane fade in active">
+    <div role="tabpanel">
         {{ text.enhanced | richtext }}
-
         <div id="map" class="col-md-6"></div>
     </div>
 
     <!-- The simple text -->
-    <div id="simple" role="tabpanel" class="tab-pane fade">
+    <div role="tabpanel" style="display: none;">
         {{ text.simple | richtext }}
     </div>
 </section>
