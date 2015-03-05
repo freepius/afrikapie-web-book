@@ -7,15 +7,16 @@
     // =============================
 
     L.EasyMap = function (id, options) {
-        var baseLayers, i, layerId, map, tmp = {},
+        var baseLayerFirst, baseLayers, i, layerId, map, tmp = {},
 
             /////////////////////
             // Default options //
             /////////////////////
 
             o = {
-                center : [0.0, 0.0],
-                zoom   : 5,
+                baseLayer : undefined, // alias of baseLayers.first
+                center    : [0.0, 0.0],
+                zoom      : 5,
 
                 baseLayers: {
                     enabled : [],    // what base layers to enable? (default: all)
@@ -52,7 +53,8 @@
         // Get the enabled base layers //
         /////////////////////////////////
 
-        baseLayers = this.getBaseLayers(o.baseLayers.options);
+        baseLayerFirst = o.baseLayer || o.baseLayers.first;
+        baseLayers     = this.getBaseLayers(o.baseLayers.options);
 
         // add extra base layers
         for (i in o.baseLayers.extra)
@@ -62,7 +64,7 @@
         if (o.baseLayers.enabled) {
 
             // select the default one
-            tmp[o.baseLayers.first] = baseLayers[o.baseLayers.first];
+            tmp[baseLayerFirst] = baseLayers[baseLayerFirst];
 
             // select the ones to enable
             for (i in o.baseLayers.enabled) {
@@ -80,7 +82,7 @@
         // Init. and config. the Leaflet map //
         ///////////////////////////////////////
 
-        o.layers = [baseLayers[o.baseLayers.first]];
+        o.layers = [baseLayers[baseLayerFirst]];
 
         // Add controls through options
 
