@@ -12,6 +12,9 @@ $app = new \Freepius\Silex\Application;
 
 $app['debug'] = DEBUG;
 
+// from marie-c9(at)hotmail.fr account
+$app['bing_maps_api_key'] = 'Aj6KakrmmAztTyUmXMu7wJnHplOuIYmGbXdd5brEpsAFk3nZL57oPmFgV47nMNHp';
+
 
 /*************************************************
  * Register services

@@ -10,7 +10,7 @@
 
 {% macro js() %}
     <script>
-        bingMapsAPIKey = "{#{- app['register.config']['bing_maps_api_key'] -}#}";
+        bingMapsAPIKey = "{{- app.bing_maps_api_key -}}";
     </script>
 
     {{ js(

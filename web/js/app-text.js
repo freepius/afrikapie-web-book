@@ -13,12 +13,12 @@
         // Map definition
         map = L.easyMap('map', {
             baseLayers : {
-                enabled : ['Bing'],
+                enabled : ['BingAerial'],
                 first   : 'Landscape',
                 options : {bingMapsAPIKey : bingMapsAPIKey}
             },
             center   : currentPoint,
-            controls : {fullscreen: true, layers: false},
+            controls : {fullscreen: true},
             zoom     : 10
         }),
 

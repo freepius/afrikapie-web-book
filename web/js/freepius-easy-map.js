@@ -68,7 +68,7 @@
 
                 layerId = o.baseLayers.enabled[i];
 
-                if (baseLayers.hasOwnProperty(layerId))
+                if (baseLayers[layerId])
                     tmp[layerId] = baseLayers[layerId];
             }
 
@@ -132,7 +132,7 @@
             layers.WaterColor = L.stamenTileLayer('watercolor');
 
         if (L.bingLayer && options.bingMapsAPIKey)
-            layers.BingAerial = L.bingAerial(options.bingMapsAPIKey);
+            layers.BingAerial = L.bingLayer(options.bingMapsAPIKey);
 
         return layers;
     };
