@@ -22,19 +22,19 @@ class BaseController implements ControllerProviderInterface
     {
         $ctrl = $app['controllers_factory'];
 
-        $ctrl->get('/{name}', [$this, 'readText']);
+        $ctrl->get('/{slug}', [$this, 'readText']);
 
         return $ctrl;
     }
 
-    public function readText($name)
+    public function readText($slug)
     {
         try {
-            $text = $this->app['afrikapieText']->findAndTransform($name);
+            $text = $this->app['afrikapieText']->findAndTransform($slug);
         }
         catch (\Exception $e) {
             $this->app->abort(404,
-                "Le texte \"$name\" n'existe pas !\n".
+                "Le texte \"$slug\" n'existe pas !\n".
                 ($this->app['debug'] ? $e->getMessage() : '')
             );
         }

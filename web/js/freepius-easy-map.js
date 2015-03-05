@@ -19,7 +19,7 @@
                 zoom      : 5,
 
                 baseLayers: {
-                    enabled : [],    // what base layers to enable? (default: all)
+                    enabled : [],    // what base layers to enable? (empty => all)
                     extra   : {},    // extra base layers
                     first   : 'OSM', // default base layer
                     options : {}     // various options to init. the base layers (eg: a Bing API key)
@@ -61,7 +61,7 @@
             baseLayers[i] = o.baseLayers.extra[i];
 
         // select only some base layers
-        if (o.baseLayers.enabled) {
+        if (o.baseLayers.enabled.length > 0) {
 
             // select the default one
             tmp[baseLayerFirst] = baseLayers[baseLayerFirst];

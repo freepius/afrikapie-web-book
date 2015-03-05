@@ -18,10 +18,10 @@ class AfrikapieText
         $this->dir = $dir;
     }
 
-    public function findAndTransform($name)
+    public function findAndTransform($slug)
     {
-        $textPath     = "{$this->dir}/$name/text.md";
-        $metadataPath = "{$this->dir}/$name/metadata.yml";
+        $textPath     = "{$this->dir}/$slug/text.md";
+        $metadataPath = "{$this->dir}/$slug/metadata.yml";
 
         $this->originalText = self::readfile($textPath);
 
@@ -33,12 +33,12 @@ class AfrikapieText
         $defaultMetadata =
         [
             'intro' => null,
-            'next'  => date('Y-m-d', strtotime("$name +1 day")),
-            'prev'  => date('Y-m-d', strtotime("$name -1 day")),
+            'next'  => date('Y-m-d', strtotime("$slug +1 day")),
+            'prev'  => date('Y-m-d', strtotime("$slug -1 day")),
         ];
 
         return $this->metadata + $defaultMetadata + [
-            'name'     => $name,
+            'slug'     => $slug,
             'simple'   => $this->transformSimple(),
             'enhanced' => $this->transformEnhanced(),
         ];
