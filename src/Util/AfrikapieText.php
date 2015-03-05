@@ -23,7 +23,7 @@ class AfrikapieText
         $textPath     = "{$this->dir}/$slug/text.md";
         $metadataPath = "{$this->dir}/$slug/metadata.yml";
 
-        $this->originalText = self::readfile($textPath);
+        $this->originalText = self::readfile($textPath)."\n\n";
 
         $this->metadata = (new Yaml\Parser)->parse(
             self::readfile($metadataPath)
@@ -64,6 +64,8 @@ class AfrikapieText
     {
         $this->text = $this->originalText;
 
+        $this->replaceCollection('wikipedias', 'wikipediaFootnote');
+
         return $this->text;
     }
 
@@ -78,9 +80,23 @@ class AfrikapieText
     }
 
     /**
+     * Replace the current text ($this->text)
+     * by the application of a $callback function (see TransRules.php)
+     * on each element of a $collection.
+     */
+    protected function replaceCollection($collection, $callback)
+    {
+        $collection = (array) @ $this->metadata[$collection];
+
+        foreach ($collection as $e) {
+            $this->text = $callback($this->text, $e);
+        }
+    }
+
+    /**
      * In the current text ($this->text),
      * replace a $collection of terms ($this->metadata[$collection])
-     * using the $callback function (see functions in TransRules.php file).
+     * using the $callback function (see TransRules.php).
      */
     protected function replaceTermCollection($collection, $callback)
     {
@@ -94,7 +110,7 @@ class AfrikapieText
     /**
      * In the current text ($this->text),
      * replace a term (contained in $toSearch)
-     * using the $callback function (see functions in TransRules.php file).
+     * using the $callback function (see TransRules.php).
      */
     protected function replaceTerm($toSearch, $callback)
     {
