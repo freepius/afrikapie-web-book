@@ -1,5 +1,5 @@
 /*global $, L, document, window */
-/*global afrikapiePath, bingMapsAPIKey, currentPoint, textPoints */
+/*global afrikapiePath, currentPoint, textPoints */
 
 (function () {
     'use strict';
@@ -14,8 +14,7 @@
         map = L.easyMap('map', {
             baseLayers : {
                 enabled : ['BingAerial'],
-                first   : 'Landscape',
-                options : {bingMapsAPIKey : bingMapsAPIKey}
+                first   : 'Landscape'
             },
             center   : currentPoint,
             controls : {fullscreen: true},

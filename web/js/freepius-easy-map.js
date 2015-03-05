@@ -6,7 +6,7 @@
     // "EASY MAP" CLASS DEFINITION
     // =============================
 
-    var EasytMap = function (id, options) {
+    L.EasyMap = function (id, options) {
         var baseLayers, i, layerId, map, tmp = {},
 
             /////////////////////
@@ -25,11 +25,12 @@
                 },
 
                 controls: {
-                    fullscreen : false,
-                    layers     : true,
-                    pan        : false,
-                    scale      : false,
-                    zoomslider : false
+                    attribution : true,
+                    fullscreen  : false,
+                    layers      : true,
+                    pan         : false,
+                    scale       : false,
+                    zoomslider  : false
                 }
             };
 
@@ -83,11 +84,9 @@
 
         // Add controls through options
 
-        if (o.controls.fullscreen)
-            o.fullscreenControl = true;
-
-        if (o.controls.pan)
-            o.panControl = true;
+        o.attributionControl = o.controls.attribution;
+        o.fullscreenControl  = o.controls.fullscreen;
+        o.panControl         = o.controls.pan;
 
         if (o.controls.zoomslider) {
             o.zoomsliderControl = true;
@@ -112,33 +111,37 @@
         return map;
     };
 
-    EasytMap.prototype.getBaseLayers = function (options) {
+    L.EasyMap.BING_MAPS_API_KEY = undefined;
 
-        var layers = {
-            OSM: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, CC-BY-SA'
-            }),
-            Landscape: L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', {
-                attribution: 'Tiles &copy; <a href="http://www.thunderforest.com/landscape/">Gravitystorm</a>' +
-                             ' / map data <a href="http://osm.org/copyright">OpenStreetMap</a>'
-            }),
-            Outdoors: L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', {
-                attribution: 'Tiles &copy; <a href="http://www.thunderforest.com/outdoors/">Gravitystorm</a>' +
-                             ' / map data <a href="http://osm.org/copyright">OpenStreetMap</a>'
-            })
-        };
+    L.EasyMap.prototype.getBaseLayers = function (options) {
+
+        var bingMapsAPIKey = options.bingMapsAPIKey || L.EasyMap.BING_MAPS_API_KEY,
+
+            layers = {
+                OSM: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, CC-BY-SA'
+                }),
+                Landscape: L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', {
+                    attribution: 'Tiles &copy; <a href="http://www.thunderforest.com/landscape/">Gravitystorm</a>' +
+                                 ' / map data <a href="http://osm.org/copyright">OpenStreetMap</a>'
+                }),
+                Outdoors: L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', {
+                    attribution: 'Tiles &copy; <a href="http://www.thunderforest.com/outdoors/">Gravitystorm</a>' +
+                                 ' / map data <a href="http://osm.org/copyright">OpenStreetMap</a>'
+                })
+            };
+
+        if (L.bingLayer && bingMapsAPIKey)
+            layers.BingAerial = L.bingLayer(bingMapsAPIKey);
 
         if (L.stamenTileLayer)
             layers.WaterColor = L.stamenTileLayer('watercolor');
-
-        if (L.bingLayer && options.bingMapsAPIKey)
-            layers.BingAerial = L.bingLayer(options.bingMapsAPIKey);
 
         return layers;
     };
 
     L.easyMap = function (id, options) {
-        return new EasytMap(id, options);
+        return new L.EasyMap(id, options);
     };
 
 }(L));
