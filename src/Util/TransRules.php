@@ -13,7 +13,7 @@
 function lightboxTextIcon($e)
 {
     return sprintf(
-        '<a href="%s" data-lightbox="global" data-title="%s">%s '.
+        '<a href="%s" data-lightbox="global" data-title="%s">%s '.
             ' <i class="fa fa-camera-retro"></i>'.
         '</a>',
         $e['url'], @ $e['caption'], $e['term']
@@ -34,7 +34,7 @@ function popoversLinkIcon($e)
     $title   = htmlspecialchars(@ $e['title'], ENT_QUOTES);
 
     return sprintf(
-        '<a tabindex="0" data-toggle="popover" title="%s" data-content="%s">%s '.
+        '<a tabindex="0" data-toggle="popover" title="%s" data-content="%s">%s '.
             '<i class="fa fa-info-circle"></i>'.
         '</a>',
         $title, $content, $e['term']
@@ -71,7 +71,7 @@ function wikipediaLinkIcon($e)
     $term = is_string($e) ? $e : $e['term'];
 
     return sprintf(
-        '<a href="%s" target="_blank">%s '.
+        '<a href="%s" target="_blank">%s '.
             '<span class="fa-stack" style="font-size: 0.6em;">'.
                 '<i class="fa fa-square-o fa-stack-2x"></i>'.
                 '<i class="fa fa-stack-1x">W</i>'.
