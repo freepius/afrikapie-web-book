@@ -1,0 +1,34 @@
+title : 2 octobre 2013
+intro : Face à une mer d'angoisse, que faire ? Sauter d'dans à pieds joints !
+prev  : null
+
+lightboxes:
+    - term    : Fantastic
+      url     : http://anarchos-semitas.net/media/web/524ef9cae7964.jpeg
+      caption : Notre ferry « Le Fantastic » dans le port de Sète.
+
+popovers:
+    - term    : au Maroc
+      title   : >
+          Maroc – Info n°1
+          <img src="/images/ma.png" class="pull-right">
+      content : |
+          Le Maroc (en arabe : المغرب, en berbère : ⵍⵎⴰⵖⵔⵉⴱ)
+          est une <b>monarchie consitutionnelle</b>
+          dont le roi est <b>Mohammed VI</b> <small>(depuis 1999)</small>.
+
+          Population <small>(en 2014)</small> :
+          <ul>
+              <li>près de <b>33 millions</b> d'habitants,</li>
+              <li>à <b>99% musulmane</b>.</li>
+          </ul>
+          La capitale est <b>Rabat</b>,
+          la plus grande ville <b>Casablanca</b> <small>(3 millions d'habitants).
+
+
+          <a href="http://fr.wikipedia.org/wiki/Maroc" target="_blank">
+              </b>En savoir plus</b>
+          </a>
+          <small>(Wikipedia)</small>
+
+wikipedias: Aïd al-Adha
