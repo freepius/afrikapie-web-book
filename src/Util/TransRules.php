@@ -21,6 +21,27 @@ function lightboxTextIcon($e)
 }
 
 /**
+ * Data: term, content (mandatory) and title (optional)
+ */
+function popoversLinkIcon($e)
+{
+    $content = str_replace(
+        ["\n\n\n"  , "\n\n", "\n"],
+        ['<br><br>', '<br>', ' '],
+        $e['content']
+    );
+    $content = htmlspecialchars($content     , ENT_QUOTES);
+    $title   = htmlspecialchars(@ $e['title'], ENT_QUOTES);
+
+    return sprintf(
+        '<a tabindex="0" data-toggle="popover" title="%s" data-content="%s">%s '.
+            '<i class="fa fa-info-circle"></i>'.
+        '</a>',
+        $title, $content, $e['term']
+    );
+}
+
+/**
  * Data:   If  $e is string
  *       Then  page = term = $e
  *       Else  $e has 'page' and 'term' keys

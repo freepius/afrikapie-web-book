@@ -74,6 +74,7 @@ class AfrikapieText
         $this->text = $this->originalText;
 
         $this->replaceTermCollection('lightboxes', 'lightboxTextIcon');
+        $this->replaceTermCollection('popovers'  , 'popoversLinkIcon');
         $this->replaceTermCollection('wikipedias', 'wikipediaLinkIcon');
 
         return $this->text;

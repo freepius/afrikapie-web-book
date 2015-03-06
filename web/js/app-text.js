@@ -96,4 +96,13 @@
         displayTabs.toggle(0);
     });
 
+    /**
+     * Activate the eventual Bootstrap popovers.
+     */
+    $('a[data-toggle="popover"]').popover({
+        html      : true,
+        placement : 'auto',
+        trigger   : 'focus'
+    });
+
 }());
