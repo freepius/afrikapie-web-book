@@ -72,7 +72,12 @@
     <!-- The enhanced text -->
     <div role="tabpanel">
         {{ text.enhanced | richtext }}
-        <div id="map" class="col-md-6"></div>
+
+        <div id="marie-img" class="col-xs-12 col-md-6">
+            <img src="/texts/{{ text.slug }}/marie.jpg">
+        </div>
+
+        <div id="map" class="col-xs-12 col-md-6"></div>
     </div>
 
     <!-- The simple text -->
