@@ -4,10 +4,10 @@ prev  : null
 
 lightboxes:
     - term    : Fantastic
-      url     : http://anarchos-semitas.net/media/web/524ef9cae7964.jpeg
+      url     : anarchos/524ef9cae7964.jpeg
       caption : Notre ferry « Le Fantastic » dans le port de Sète.
 
-popovers:
+blocknotes:
     - term    : au Maroc
       title   : >
           Maroc – Info n°1

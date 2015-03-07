@@ -105,4 +105,9 @@
         trigger   : 'focus'
     });
 
+    /**
+     * Activate the eventual Bootstrap tooltips.
+     */
+    $('[data-title]').tooltip();
+
 }());

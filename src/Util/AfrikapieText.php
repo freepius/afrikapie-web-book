@@ -64,6 +64,8 @@ class AfrikapieText
     {
         $this->text = $this->originalText;
 
+        $this->replaceCollection('blocknotes', 'eventualFootnote');
+        $this->replaceCollection('comments'  , 'footnote');
         $this->replaceCollection('wikipedias', 'wikipediaFootnote');
 
         return $this->text;
@@ -74,7 +76,8 @@ class AfrikapieText
         $this->text = $this->originalText;
 
         $this->replaceTermCollection('lightboxes', 'lightboxTextIcon');
-        $this->replaceTermCollection('popovers'  , 'popoversLinkIcon');
+        $this->replaceTermCollection('blocknotes', 'popoverLinkIcon');
+        $this->replaceTermCollection('comments'  , 'tooltipIcon');
         $this->replaceTermCollection('wikipedias', 'wikipediaLinkIcon');
 
         return $this->text;

@@ -1,43 +1,88 @@
 <?php
 /**
  * Summary:
+ *  -> eventualFootnote
+ *  -> footnote
  *  -> lightboxTextIcon
+ *  -> popoverLinkIcon
+ *  -> tooltipIcon
  *  -> wikipediaFootnote
  *  -> wikipediaLinkIcon
+ *
+ *  -> specialFormat
  *  -> wikipediaUrl
  */
+
+/**
+ * Data: content, term (mandatory) and altFootnote (optional)
+ * Make a footnote only if $e['altFootnote'] exists and is true.
+ */
+function eventualFootnote($text, $e)
+{
+    if (! @ $e['altFootnote']) return $text;
+    return footnote($text, $e);
+}
+
+/**
+ * Data: content and term (mandatory)
+ */
+function footnote($text, $e)
+{
+    $content = specialFormat($e['content']);
+    $term    = $e['term'];
+
+    return str_replace($term, $term.'[^'.$term.']', $text).
+           '[^'.$term.']: '.$content."\n";
+}
 
 /**
  * Data: term, url (mandatory) and caption (optional)
  */
 function lightboxTextIcon($e)
 {
+    $url = $e['url'];
+
+    if ('anarchos/' === substr($url, 0, 9)) {
+        $url = 'http://anarchos-semitas.net/media/web/'.substr($url, 9);
+    }
+
     return sprintf(
         '<a href="%s" data-lightbox="global" data-title="%s">%s '.
             ' <i class="fa fa-camera-retro"></i>'.
         '</a>',
-        $e['url'], @ $e['caption'], $e['term']
+        $url, @ $e['caption'], $e['term']
     );
 }
 
 /**
- * Data: term, content (mandatory) and title (optional)
+ * Data: content, term (mandatory) and title (optional)
  */
-function popoversLinkIcon($e)
+function popoverLinkIcon($e)
 {
     $content = str_replace(
         ["\n\n\n"  , "\n\n", "\n"],
         ['<br><br>', '<br>', ' '],
         $e['content']
     );
-    $content = htmlspecialchars($content     , ENT_QUOTES);
-    $title   = htmlspecialchars(@ $e['title'], ENT_QUOTES);
+    $content = htmlspecialchars(specialFormat($content), ENT_QUOTES);
+    $title   = htmlspecialchars(@ $e['title']          , ENT_QUOTES);
 
     return sprintf(
         '<a tabindex="0" data-toggle="popover" title="%s" data-content="%s">%s '.
             '<i class="fa fa-info-circle"></i>'.
         '</a>',
         $title, $content, $e['term']
+    );
+}
+
+/**
+ * Data: content and term (mandatory)
+ */
+function tooltipIcon($e)
+{
+    return sprintf(
+        '%s<sup class="fa fa-comment-o small" data-title="%s"></sup>',
+        $e['term'], $e['content']
     );
 }
 
@@ -51,13 +96,11 @@ function wikipediaFootnote($text, $e)
     $page = is_string($e) ? $e : $e['page'];
     $term = is_string($e) ? $e : $e['term'];
 
-    return
-        str_replace($term, $term.'[^'.$term.']', $text)
-        .
-        sprintf(
-            "[^%s]: Voir l'article Wikipedia <a href=\"%s\" target=\"_blank\">%s</a>.\n",
-            $term, wikipediaUrl($page), $term
-        );
+    return footnote($text, [
+        'term'    => $term,
+        'content' => sprintf("Voir l'article Wikipedia <url>%s|%s</url>.",
+                             wikipediaUrl($page), $term),
+    ]);
 }
 
 /**
@@ -79,6 +122,23 @@ function wikipediaLinkIcon($e)
         '</a>',
         wikipediaUrl($page), $term
     );
+}
+
+/**
+ * Transform:
+ *
+ *  -> <url>http://my-website.com|My site</url>
+ *      into <a href="http://my-website.com" target="_blank">My site</a>
+ *
+ *  -> <url>my-website.com</url>
+ *      into <a href="http://my-website.com" target="_blank">my-website.com</a>
+ */
+function specialFormat($c)
+{
+    $c = preg_replace('|<url>(.*)\|(.*)</url>|U', '<a href="$1"        target="_blank">$2</a>', $c);
+    $c = preg_replace('|<url>(.*)</url>|U'      , '<a href="http://$1" target="_blank">$1</a>', $c);
+
+    return $c;
 }
 
 function wikipediaUrl($page)
