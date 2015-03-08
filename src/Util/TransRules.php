@@ -81,7 +81,7 @@ function popoverLinkIcon($e)
 function tooltipIcon($e)
 {
     return sprintf(
-        '%s<sup class="fa fa-comment-o small" data-title="%s"></sup>',
+        '%s<sup class="fa fa-comment-o small" data-toggle="tooltip" title="%s"></sup>',
         $e['term'], $e['content']
     );
 }

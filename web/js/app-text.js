@@ -108,6 +108,6 @@
     /**
      * Activate the eventual Bootstrap tooltips.
      */
-    $('[data-title]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
 
 }());
