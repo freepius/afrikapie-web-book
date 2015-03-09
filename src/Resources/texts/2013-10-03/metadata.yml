@@ -3,6 +3,10 @@ intro: >
     Je sors d'ma zone culturelle douillette, pour la première fois d'une vie.
     J'ai la tête en courant d'air. J'suis peureuse comme une enfant.
 
+comments:
+    - term    : vide et crasseux
+      content : Une collocation de mecs, quoi !
+
 longnotes:
     - term     : Beni Ensar
       footnote : true
@@ -16,6 +20,11 @@ longnotes:
           Voyez, par exemple, les portails web
           <url>couchsurfing.com</url> ou <url>bewelcome.org</url>.
 
-comments:
-    - term    : vide et crasseux
-      content : Une collocation de mecs, quoi !
+sounds:
+    - term : Donnez-moi deux thés.
+      file : Donnez-moi
+    - term : Combien ça coûte
+      file : Combien
+    - term : S'il vous plaît.
+      file : Aafak
+    - Marhbabikoum
