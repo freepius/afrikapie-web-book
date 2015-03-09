@@ -1,17 +1,32 @@
 <?php
+
+namespace App\Util;
+
 /**
- * Summary:
- *  -> eventualFootnote
- *  -> footnote
- *  -> lightboxTextIcon
- *  -> popoverLinkIcon
- *  -> tooltipIcon
- *  -> wikipediaFootnote
- *  -> wikipediaLinkIcon
+ * Public:
+ *   eventualFootnote
+ *   footnote
+ *   lightboxTextIcon
+ *   popoverLinkIcon
+ *   soundIcon
+ *   tooltipIcon
+ *   wikipediaFootnote
+ *   wikipediaLinkIcon
  *
- *  -> specialFormat
- *  -> wikipediaUrl
+ * Protected:
+ *   specialFormat
+ *   wikipediaUrl
  */
+class TransRules
+{
+
+// Store the slug of the current text
+public function __construct($slug) { $this->slug = $slug; }
+
+
+////////////
+// PUBLIC //
+////////////
 
 /**
  * Data: content, term (mandatory) and footnote (optional)
@@ -20,7 +35,7 @@
 function eventualFootnote($text, $e)
 {
     if (! @ $e['footnote']) return $text;
-    return footnote($text, $e);
+    return $this->footnote($text, $e);
 }
 
 /**
@@ -28,7 +43,7 @@ function eventualFootnote($text, $e)
  */
 function footnote($text, $e)
 {
-    $content = specialFormat($e['content']);
+    $content = $this->specialFormat($e['content']);
     $term    = $e['term'];
 
     return str_replace($term, $term.'[^'.$term.']', $text).
@@ -64,14 +79,30 @@ function popoverLinkIcon($e)
         ['<br><br>', '<br>', ' '],
         $e['content']
     );
-    $content = htmlspecialchars(specialFormat($content), ENT_QUOTES);
-    $title   = htmlspecialchars(@ $e['title']          , ENT_QUOTES);
+    $content = htmlspecialchars($this->specialFormat($content), ENT_QUOTES);
+    $title   = htmlspecialchars(@ $e['title']                 , ENT_QUOTES);
 
     return sprintf(
         '<a tabindex="0" data-toggle="popover" title="%s" data-content="%s">%s '.
             '<i class="fa fa-info-circle"></i>'.
         '</a>',
         $title, $content, $e['term']
+    );
+}
+
+/**
+ * Data:   If  $e is string
+ *       Then  file = term = $e
+ *       Else  $e has 'file' and 'term' keys
+ */
+function soundIcon($e)
+{
+    $file = is_string($e) ? $e : $e['file'];
+    $term = is_string($e) ? $e : $e['term'];
+
+    return sprintf(
+        '%s<sup class="fa fa-music small" data-sound="/texts/%s/%s"></sup>',
+        $term, $this->slug, $file
     );
 }
 
@@ -96,10 +127,11 @@ function wikipediaFootnote($text, $e)
     $page = is_string($e) ? $e : $e['page'];
     $term = is_string($e) ? $e : $e['term'];
 
-    return footnote($text, [
+    return $this->footnote($text,
+    [
         'term'    => $term,
         'content' => sprintf("Voir l'article Wikipedia <url>%s|%s</url>.",
-                             wikipediaUrl($page), $term),
+                             $this->wikipediaUrl($page), $term),
     ]);
 }
 
@@ -120,9 +152,14 @@ function wikipediaLinkIcon($e)
                 '<i class="fa fa-stack-1x">W</i>'.
             '</span>'.
         '</a>',
-        wikipediaUrl($page), $term
+        $this->wikipediaUrl($page), $term
     );
 }
+
+
+///////////////
+// PROTECTED //
+///////////////
 
 /**
  * Transform:
@@ -133,7 +170,7 @@ function wikipediaLinkIcon($e)
  *  -> <url>my-website.com</url>
  *      into <a href="http://my-website.com" target="_blank">my-website.com</a>
  */
-function specialFormat($c)
+protected function specialFormat($c)
 {
     $c = preg_replace('|<url>(.*)\|(.*)</url>|U', '<a href="$1"        target="_blank">$2</a>', $c);
     $c = preg_replace('|<url>(.*)</url>|U'      , '<a href="http://$1" target="_blank">$1</a>', $c);
@@ -141,7 +178,9 @@ function specialFormat($c)
     return $c;
 }
 
-function wikipediaUrl($page)
+protected function wikipediaUrl($page)
 {
     return "https://fr.wikipedia.org/wiki/$page";
 }
+
+}/*END OF CLASS*/

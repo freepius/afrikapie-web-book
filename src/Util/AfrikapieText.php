@@ -4,14 +4,13 @@ namespace App\Util;
 
 use Symfony\Component\Yaml;
 
-include __DIR__.'/TransRules.php';
-
 class AfrikapieText
 {
     protected $dir;
     protected $metadata;
     protected $originalText;
     protected $text;
+    protected $trans;
 
     public function __construct($dir)
     {
@@ -28,6 +27,8 @@ class AfrikapieText
         $this->metadata = (new Yaml\Parser)->parse(
             self::readfile($metadataPath)
         );
+
+        $this->trans = new TransRules($slug);
 
         // Default values for some metadata
         $defaultMetadata =
@@ -78,6 +79,7 @@ class AfrikapieText
         $this->replaceTermCollection('comments'  , 'tooltipIcon');
         $this->replaceTermCollection('lightboxes', 'lightboxTextIcon');
         $this->replaceTermCollection('longnotes' , 'popoverLinkIcon');
+        $this->replaceTermCollection('sounds'    , 'soundIcon');
         $this->replaceTermCollection('wikipedias', 'wikipediaLinkIcon');
 
         return $this->text;
@@ -93,7 +95,7 @@ class AfrikapieText
         $collection = (array) @ $this->metadata[$collection];
 
         foreach ($collection as $e) {
-            $this->text = $callback($this->text, $e);
+            $this->text = $this->trans->$callback($this->text, $e);
         }
     }
 
@@ -120,6 +122,8 @@ class AfrikapieText
     {
         $term = is_string($toSearch) ? $toSearch : $toSearch['term'];
 
-        $this->text = str_replace($term, $callback($toSearch), $this->text);
+        $this->text = str_replace(
+            $term, $this->trans->$callback($toSearch), $this->text
+        );
     }
 }

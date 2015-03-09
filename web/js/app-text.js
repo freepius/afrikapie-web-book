@@ -1,4 +1,4 @@
-/*global $, L, document, window */
+/*global $, L, buzz, document, window */
 /*global afrikapiePath, currentPoint, textPoints */
 
 (function () {
@@ -71,12 +71,12 @@
             map.addLayer(markers);
     });
 
-    ////////////////////////
-    // OTHER THAN MAPPING //
-    ////////////////////////
+    //////////////////
+    // INTERACTIONS //
+    //////////////////
 
     /**
-     * On mouseenter, hide the header content.
+     * On mouseenter, hide the HEADER content.
      * Useful to see the full background picture.
      */
     var header = document.querySelector('body > header'),
@@ -85,7 +85,7 @@
     header.onmouseleave = function () { inner.style.opacity = 1; };
 
     /**
-     * Handle the choice of display
+     * Handle the choice of DISPLAY
      */
     var displayLinks = $('#choose-display > a'),
         displayTabs  = $('#displays > div');
@@ -97,7 +97,7 @@
     });
 
     /**
-     * Activate the eventual Bootstrap popovers.
+     * Activate the Bootstrap POPOVERS.
      */
     $('a[data-toggle="popover"]').popover({
         html      : true,
@@ -106,8 +106,27 @@
     });
 
     /**
-     * Activate the eventual Bootstrap tooltips.
+     * Activate the Bootstrap TOOLTIPS.
      */
     $('[data-toggle="tooltip"]').tooltip();
+
+    /**
+     * Activate the SHORT SOUNDS (using Buzz library).
+     */
+    [].forEach.call(
+        document.querySelectorAll('[data-sound]'),
+        function (el) {
+            // If ogg and mp3 are not supported: remove the element!
+            if (!buzz.isOGGSupported() && !buzz.isMP3Supported())
+                return el.remove();
+
+            el.sound = new buzz.sound(
+                el.getAttribute('data-sound'),
+                {formats: ['ogg', 'mp3']}
+            );
+
+            el.onmouseenter = el.sound.play;
+        }
+    );
 
 }());
