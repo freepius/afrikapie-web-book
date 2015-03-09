@@ -14,12 +14,12 @@
  */
 
 /**
- * Data: content, term (mandatory) and altFootnote (optional)
- * Make a footnote only if $e['altFootnote'] exists and is true.
+ * Data: content, term (mandatory) and footnote (optional)
+ * Make a footnote only if $e['footnote'] exists and is true.
  */
 function eventualFootnote($text, $e)
 {
-    if (! @ $e['altFootnote']) return $text;
+    if (! @ $e['footnote']) return $text;
     return footnote($text, $e);
 }
 
