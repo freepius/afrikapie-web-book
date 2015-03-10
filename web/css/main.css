@@ -304,7 +304,7 @@ img {
   vertical-align: middle;
 }
 .img-responsive,
-body[typeof="Article"] > #displays #marie-img > img {
+body[typeof="Article"] > [property="articleBody"] #marie-img > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -700,8 +700,8 @@ address {
   line-height: 1.428571429;
 }
 .container,
-body[typeof="Article"] > #displays,
-body[typeof="Article"] > #displays {
+body[typeof="Article"] > [property="articleBody"],
+body[typeof="Article"] > [property="articleBody"] {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -709,19 +709,19 @@ body[typeof="Article"] > #displays {
 }
 @media (min-width: 768px) {
   .container,
-  body[typeof="Article"] > #displays {
+  body[typeof="Article"] > [property="articleBody"] {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
   .container,
-  body[typeof="Article"] > #displays {
+  body[typeof="Article"] > [property="articleBody"] {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
   .container,
-  body[typeof="Article"] > #displays {
+  body[typeof="Article"] > [property="articleBody"] {
     width: 1170px;
   }
 }
@@ -2513,15 +2513,22 @@ body[typeof="Article"] > header > nav > a:focus {
 body[typeof="Article"] > audio {
   width: 100%;
 }
-body[typeof="Article"] > #displays {
+body[typeof="Article"] > [property="articleBody"] {
   font-size: 20px;
   line-height: 1.7;
   margin-top: 20px;
   margin-bottom: 20px;
+  /* No wrap the "text + icon" elements */
+
 }
-body[typeof="Article"] > #displays p {
+body[typeof="Article"] > [property="articleBody"] p {
   text-align: justify;
 }
-body[typeof="Article"] > #displays #marie-img > img {
+body[typeof="Article"] > [property="articleBody"] #marie-img > img {
   border: 2px solid black;
+}
+body[typeof="Article"] > [property="articleBody"] [data-lightbox],
+body[typeof="Article"] > [property="articleBody"] [data-toggle="popover"],
+body[typeof="Article"] > [property="articleBody"] .wikipedia {
+  white-space: nowrap;
 }

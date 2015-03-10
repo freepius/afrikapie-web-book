@@ -61,7 +61,7 @@ body[typeof="Article"]
 
     > audio { width: 100%; }
 
-    > #displays:extend(.container all)
+    > [property="articleBody"]:extend(.container all)
     {
         font-size: 20px;
         line-height: 1.7;
@@ -71,5 +71,9 @@ body[typeof="Article"]
         p { text-align: justify; }
 
         #marie-img > img:extend(.img-responsive) { border: 2px solid black; }
+
+        /* No wrap the "text + icon" elements */
+        [data-lightbox], [data-toggle="popover"], .wikipedia
+        { white-space: nowrap; }
     }
 }

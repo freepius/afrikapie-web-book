@@ -16,7 +16,6 @@
         currentPoint = textPoints['{{ text.slug }}'];
     </script>
     <script src="/js/app-text.js"></script>
-    {#<script src="/texts/{{ text.slug }}/main.js"></script>#}
 {% endblock %}
 
 
@@ -64,7 +63,6 @@
 <div id="choose-display" role="group" aria-label="Choisir l'affichage du texte">
     <a class="btn active" role="button">Version augmentée</a>
     <a class="btn"        role="button">Version simple</a>
-    <!--<a class="btn" role="button">Annoté</a>-->
 </div>
 
 <!-- Audio version -->
@@ -81,7 +79,7 @@
     </object>
 </audio>
 
-<section id="displays" property="articleBody">
+<section property="articleBody">
 
     <!-- The enhanced text -->
     <div role="tabpanel">
