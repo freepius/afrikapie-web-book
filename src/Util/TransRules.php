@@ -191,12 +191,30 @@ function wikipediaLinkIcon($e)
  *
  *  -> <url>my-website.com</url>
  *      into <a href="http://my-website.com" target="_blank">my-website.com</a>
+ *
+ *  -> <wp>Page|My page</wp>
+ *      into <a href="https://fr.wikipedia.org/wiki/Page" target="_blank">My page</a>
+ *
+ *  -> <wp>Page</wp>
+ *      into <a href="https://fr.wikipedia.org/wiki/Page" target="_blank">Page</a>
  */
-protected function format($c)
+function format($c)
 {
+    // nl2br
     $c = str_replace(["\n\n\n", "\n\n", "\n"], ['<br><br>', '<br>', ' '], $c);
+
+    // URL
     $c = preg_replace('|<url>(.*)\|(.*)</url>|U', '<a href="$1"        target="_blank">$2</a>', $c);
     $c = preg_replace('|<url>(.*)</url>|U'      , '<a href="http://$1" target="_blank">$1</a>', $c);
+
+    // Wikipedia
+    $wpUrl = function ($m) {
+        return sprintf('<a href="%s" target="_blank">%s</a>',
+            $this->wikipediaUrl($m[1]), @ $m[2] ?: $m[1]
+        );
+    };
+    $c = preg_replace_callback('|<wp>(.*)\|(.*)</wp>|U', $wpUrl, $c);
+    $c = preg_replace_callback('|<url>(.*)</url>|U'    , $wpUrl, $c);
 
     return $c;
 }
