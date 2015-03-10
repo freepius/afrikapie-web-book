@@ -16,6 +16,7 @@ namespace App\Util;
  *
  * LOCAL TRANSFORMATIONS:
  *   format
+ *   imageUrl
  *   soundUrl
  *   wikipediaUrl
  */
@@ -58,17 +59,11 @@ function footnote($e)
  */
 function lightboxTextIcon($e)
 {
-    $url = $e['url'];
-
-    if ('anarchos/' === substr($url, 0, 9)) {
-        $url = 'http://anarchos-semitas.net/media/web/'.substr($url, 9);
-    }
-
     return sprintf(
         '<a href="%s" data-lightbox="global" data-title="%s">%s '.
             '<i class="fa fa-camera-retro"></i>'.
         '</a>',
-        $url, @ $e['caption'], $e['term']
+        $this->imageUrl($e['url']), @ $e['caption'], $e['term']
     );
 }
 
@@ -217,6 +212,18 @@ function format($c)
     $c = preg_replace_callback('|<url>(.*)</url>|U'    , $wpUrl, $c);
 
     return $c;
+}
+
+function imageUrl($url)
+{
+    $prefix = strtok($url, '/');
+    $file   = strtok('');
+
+    switch ($prefix) {
+        case 'anarchos': return "http://anarchos-semitas.net/media/web/$file.jpeg";
+        case 'local'   : return "/texts/$this->slug/$file";
+        default        : return $url;
+    }
 }
 
 function soundUrl($file)
