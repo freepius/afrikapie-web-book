@@ -9,12 +9,13 @@ namespace App\Util;
  *   lightboxTextIcon
  *   popoverLinkIcon
  *   soundIcon
+ *   soundPopoverLinkIcon
  *   tooltipIcon
  *   wikipediaFootnote
  *   wikipediaLinkIcon
  *
  * Protected:
- *   specialFormat
+ *   format
  *   wikipediaUrl
  */
 class TransRules
@@ -43,7 +44,7 @@ function eventualFootnote($text, $e)
  */
 function footnote($text, $e)
 {
-    $content = $this->specialFormat($e['content']);
+    $content = $this->format($e['content']);
     $term    = $e['term'];
 
     return str_replace($term, $term.'[^'.$term.']', $text).
@@ -62,8 +63,8 @@ function lightboxTextIcon($e)
     }
 
     return sprintf(
-        '<a href="%s" data-lightbox="global" data-title="%s">%s '.
-            ' <i class="fa fa-camera-retro"></i>'.
+        '<a href="%s" data-lightbox="global" data-title="%s">%s '.
+            '<i class="fa fa-camera-retro"></i>'.
         '</a>',
         $url, @ $e['caption'], $e['term']
     );
@@ -74,16 +75,11 @@ function lightboxTextIcon($e)
  */
 function popoverLinkIcon($e)
 {
-    $content = str_replace(
-        ["\n\n\n"  , "\n\n", "\n"],
-        ['<br><br>', '<br>', ' '],
-        $e['content']
-    );
-    $content = htmlspecialchars($this->specialFormat($content), ENT_QUOTES);
-    $title   = htmlspecialchars(@ $e['title']                 , ENT_QUOTES);
+    $content = htmlspecialchars($this->format($e['content']), ENT_QUOTES);
+    $title   = htmlspecialchars(@ $e['title']               , ENT_QUOTES);
 
     return sprintf(
-        '<a tabindex="0" data-toggle="popover" title="%s" data-content="%s">%s '.
+        '<a tabindex="0" data-toggle="popover" title="%s" data-content="%s">%s '.
             '<i class="fa fa-info-circle"></i>'.
         '</a>',
         $title, $content, $e['term']
@@ -101,8 +97,25 @@ function soundIcon($e)
     $term = is_string($e) ? $e : $e['term'];
 
     return sprintf(
-        '%s<sup class="fa fa-music small" data-sound="/texts/%s/%s"></sup>',
-        $term, $this->slug, $file
+        '%s<sup class="fa fa-music small" data-sound="%s"></sup>',
+        $term, $this->soundUrl($file)
+    );
+}
+
+/**
+ * Data: file, term (mandatory) and description (optional)
+ */
+function soundPopoverLinkIcon($e)
+{
+    $description = htmlspecialchars(
+        $this->format(@ $e['description']), ENT_QUOTES
+    );
+
+    return sprintf(
+        '<a tabindex="0" data-toggle="popover" data-content="%s" data-sound="%s" data-type="long">%s '.
+            '<i class="fa fa-bell-o"></i>'.
+        '</a>',
+        $description, $this->soundUrl($e['file']),  $e['term']
     );
 }
 
@@ -146,7 +159,7 @@ function wikipediaLinkIcon($e)
     $term = is_string($e) ? $e : $e['term'];
 
     return sprintf(
-        '<a href="%s" target="_blank">%s '.
+        '<a href="%s" class="wikipedia" target="_blank">%s '.
             '<span class="fa-stack" style="font-size: 0.6em;">'.
                 '<i class="fa fa-square-o fa-stack-2x"></i>'.
                 '<i class="fa fa-stack-1x">W</i>'.
@@ -164,18 +177,28 @@ function wikipediaLinkIcon($e)
 /**
  * Transform:
  *
+ *  -> 3 "\n" by 2 <br>
+ *  -> 2 "\n" by 1 <br>
+ *  -> 1 "\n" by one space
+ *
  *  -> <url>http://my-website.com|My site</url>
  *      into <a href="http://my-website.com" target="_blank">My site</a>
  *
  *  -> <url>my-website.com</url>
  *      into <a href="http://my-website.com" target="_blank">my-website.com</a>
  */
-protected function specialFormat($c)
+protected function format($c)
 {
+    $c = str_replace(["\n\n\n", "\n\n", "\n"], ['<br><br>', '<br>', ' '], $c);
     $c = preg_replace('|<url>(.*)\|(.*)</url>|U', '<a href="$1"        target="_blank">$2</a>', $c);
     $c = preg_replace('|<url>(.*)</url>|U'      , '<a href="http://$1" target="_blank">$1</a>', $c);
 
     return $c;
+}
+
+protected function soundUrl($file)
+{
+    return "/texts/$this->slug/$file";
 }
 
 protected function wikipediaUrl($page)

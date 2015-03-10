@@ -71,9 +71,58 @@
             map.addLayer(markers);
     });
 
-    //////////////////
-    // INTERACTIONS //
-    //////////////////
+    ////////////////////
+    //     SOUNDS     //
+    ////////////////////
+
+    function shortSound(el) {
+        el.onmouseenter = el.sound.play;
+    }
+
+    function longSound(el) {
+        // The <i> of the long sound
+        var $icon = $(el.children[0]);
+
+        el.sound.bind('ended', function () {
+            $icon.removeClass('fa-bell-slash-o').addClass('fa-bell-o');
+        });
+
+        el.onclick = function () {
+            // Turn the sound ON
+            if (el.sound.isPaused()) {
+                $icon.removeClass('fa-bell-o').addClass('fa-bell-slash-o');
+                el.sound.play();
+            // Turn the sound OFF
+            } else {
+                $icon.removeClass('fa-bell-slash-o').addClass('fa-bell-o');
+                el.sound.pause();
+            }
+        };
+    }
+
+    /**
+     * Activate the short and long SOUNDS (using Buzz library).
+     */
+    [].forEach.call(
+        document.querySelectorAll('[data-sound]'),
+        function (el) {
+            // If ogg and mp3 are not supported: remove the element!
+            if (!buzz.isOGGSupported() && !buzz.isMP3Supported())
+                return el.remove();
+
+            el.sound = new buzz.sound(
+                el.getAttribute('data-sound'),
+                {formats: ['ogg', 'mp3']}
+            );
+
+            if ('long' === el.getAttribute('data-type')) longSound(el);
+            else shortSound(el);
+        }
+    );
+
+    ////////////////////////
+    // OTHER INTERACTIONS //
+    ////////////////////////
 
     /**
      * On mouseenter, hide the HEADER content.
@@ -88,7 +137,7 @@
      * Handle the choice of DISPLAY
      */
     var displayLinks = $('#choose-display > a'),
-        displayTabs  = $('#displays > div');
+        displayTabs  = $('[property="articleBody"] > div');
 
     displayLinks.click(function (e) {
         if ($(this).hasClass('active')) return;
@@ -109,24 +158,5 @@
      * Activate the Bootstrap TOOLTIPS.
      */
     $('[data-toggle="tooltip"]').tooltip();
-
-    /**
-     * Activate the SHORT SOUNDS (using Buzz library).
-     */
-    [].forEach.call(
-        document.querySelectorAll('[data-sound]'),
-        function (el) {
-            // If ogg and mp3 are not supported: remove the element!
-            if (!buzz.isOGGSupported() && !buzz.isMP3Supported())
-                return el.remove();
-
-            el.sound = new buzz.sound(
-                el.getAttribute('data-sound'),
-                {formats: ['ogg', 'mp3']}
-            );
-
-            el.onmouseenter = el.sound.play;
-        }
-    );
 
 }());
