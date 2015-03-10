@@ -8,7 +8,7 @@ lightboxes:
       caption : Notre ferry « Le Fantastic » dans le port de Sète.
 
 longnotes:
-    - term    : au Maroc
+    - term    : Maroc/1
       title   : >
           Maroc – Info n°1
           <img src="/images/ma.png" class="pull-right">
@@ -26,9 +26,7 @@ longnotes:
           la plus grande ville <b>Casablanca</b> <small>(3 millions d'habitants).
 
 
-          <a href="http://fr.wikipedia.org/wiki/Maroc" target="_blank">
-              </b>En savoir plus</b>
-          </a>
+          <wp>Maroc|<b>En savoir plus</b></wp>
           <small>(Wikipedia)</small>
 
 wikipedias: Aïd al-Adha
