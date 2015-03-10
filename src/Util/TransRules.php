@@ -3,7 +3,7 @@
 namespace App\Util;
 
 /**
- * Public:
+ * TRANSFORMATION RULES:
  *   eventualFootnote
  *   footnote
  *   lightboxTextIcon
@@ -14,41 +14,43 @@ namespace App\Util;
  *   wikipediaFootnote
  *   wikipediaLinkIcon
  *
- * Protected:
+ * LOCAL TRANSFORMATIONS:
  *   format
+ *   soundUrl
  *   wikipediaUrl
  */
-class TransRules
+trait TransRulesTrait
 {
 
-// Store the slug of the current text
-public function __construct($slug) { $this->slug = $slug; }
-
-
-////////////
-// PUBLIC //
-////////////
+//////////////////////////
+// TRANSFORMATION RULES //
+//////////////////////////
 
 /**
  * Data: content, term (mandatory) and footnote (optional)
  * Make a footnote only if $e['footnote'] exists and is true.
  */
-function eventualFootnote($text, $e)
+function eventualFootnote($e)
 {
-    if (! @ $e['footnote']) return $text;
-    return $this->footnote($text, $e);
+    if (@ $e['footnote']) { $this->footnote($e); }
 }
 
 /**
  * Data: content and term (mandatory)
  */
-function footnote($text, $e)
+function footnote($e)
 {
-    $content = $this->format($e['content']);
-    $term    = $e['term'];
+    // the reference
+    $this->replaceTerm($e, function ($e) {
+        return sprintf('%1$s[^%1$s]', $e['term']);
+    });
 
-    return str_replace($term, $term.'[^'.$term.']', $text).
-           '[^'.$term.']: '.$content."\n";
+    // the content
+    $content = $e['content'];
+    $content = is_callable($content) ? $content($e) : $content;
+
+    // the footnote
+    $this->text .= sprintf("[^%s]: %s\n", $e['term'], $this->format($content));
 }
 
 /**
@@ -135,17 +137,20 @@ function tooltipIcon($e)
  *       Then  page = term = $e
  *       Else  $e has 'page' and 'term' keys
  */
-function wikipediaFootnote($text, $e)
+function wikipediaFootnote($e)
 {
-    $page = is_string($e) ? $e : $e['page'];
-    $term = is_string($e) ? $e : $e['term'];
+    if (is_string($e)) {
+        $e = ['page' => $e];
+        $e['term'] =& $e['page'];
+    }
 
-    return $this->footnote($text,
-    [
-        'term'    => $term,
-        'content' => sprintf("Voir l'article Wikipedia <url>%s|%s</url>.",
-                             $this->wikipediaUrl($page), $term),
-    ]);
+    $e['content'] = function ($e) {
+        return sprintf("Voir l'article Wikipedia <wp>%s|%s</wp>.",
+            $e['page'], $e['term']
+        );
+    };
+
+    $this->footnote($e);
 }
 
 /**
@@ -170,9 +175,9 @@ function wikipediaLinkIcon($e)
 }
 
 
-///////////////
-// PROTECTED //
-///////////////
+///////////////////////////
+// LOCAL TRANSFORMATIONS //
+///////////////////////////
 
 /**
  * Transform:
@@ -196,14 +201,14 @@ protected function format($c)
     return $c;
 }
 
-protected function soundUrl($file)
+function soundUrl($file)
 {
     return "/texts/$this->slug/$file";
 }
 
-protected function wikipediaUrl($page)
+function wikipediaUrl($page)
 {
     return "https://fr.wikipedia.org/wiki/$page";
 }
 
-}/*END OF CLASS*/
+}/*END OF TRAIT*/

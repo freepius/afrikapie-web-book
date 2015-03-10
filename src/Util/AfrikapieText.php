@@ -6,11 +6,13 @@ use Symfony\Component\Yaml;
 
 class AfrikapieText
 {
+    use TransRulesTrait;
+
     protected $dir;
     protected $metadata;
     protected $originalText;
+    protected $slug;
     protected $text;
-    protected $trans;
 
     public function __construct($dir)
     {
@@ -19,6 +21,8 @@ class AfrikapieText
 
     public function findAndTransform($slug)
     {
+        $this->slug = $slug;
+
         $textPath     = "{$this->dir}/$slug/text.md";
         $metadataPath = "{$this->dir}/$slug/metadata.yml";
 
@@ -27,8 +31,6 @@ class AfrikapieText
         $this->metadata = (new Yaml\Parser)->parse(
             self::readfile($metadataPath)
         );
-
-        $this->trans = new TransRules($slug);
 
         // Default values for some metadata
         $defaultMetadata =
@@ -88,43 +90,64 @@ class AfrikapieText
 
     /**
      * Replace the current text ($this->text)
-     * by the application of a $callback function (see TransRules.php)
+     * by the application of a $callback function (see TransRulesTrait.php)
      * on each element of a $collection.
      */
     protected function replaceCollection($collection, $callback)
     {
         $collection = (array) @ $this->metadata[$collection];
 
-        foreach ($collection as $e) {
-            $this->text = $this->trans->$callback($this->text, $e);
-        }
+        array_map([$this, $callback], $collection);
     }
 
     /**
      * In the current text ($this->text),
      * replace a $collection of terms ($this->metadata[$collection])
-     * using the $callback function (see TransRules.php).
+     * using the $callback function (see TransRulesTrait.php).
      */
     protected function replaceTermCollection($collection, $callback)
     {
         $collection = (array) @ $this->metadata[$collection];
 
-        foreach ($collection as $toSearch) {
-            $this->replaceTerm($toSearch, $callback);
+        foreach ($collection as $e) {
+            $this->replaceTerm($e, [$this, $callback]);
         }
     }
 
     /**
      * In the current text ($this->text),
-     * replace a term (contained in $toSearch)
-     * using the $callback function (see TransRules.php).
+     * replace a term (being $e or contained in $e)
+     * using the $callback function (see TransRulesTrait.php).
+     *
+     * Note:
+     *  1) If the term form is 'My term/2',
+     *     only the 2nd occurrence of 'My term' will be replace!
+     *
+     *  2) $e is passed by reference. It can be modified!
      */
-    protected function replaceTerm($toSearch, $callback)
+    protected function replaceTerm(& $e, $callback)
     {
-        $term = is_string($toSearch) ? $toSearch : $toSearch['term'];
+        if (is_string($e)) $term =& $e;
+        else               $term =& $e['term'];
 
-        $this->text = str_replace(
-            $term, $this->trans->$callback($toSearch), $this->text
-        );
+        /**
+         * Case 1: all occurrence of $term will be replace
+         */
+        if (false === strpos($term, '/')) {
+            $this->text = str_replace($term, $callback($e), $this->text);
+            return;
+        }
+
+        /**
+         * Case 2: only the $nth occurrence of $term will be replace
+         */
+        list($term, $nth) = explode('/', $term, 2);
+
+        $terms       = array_fill(1, $nth, "/$term/");
+        $rplcs       = array_fill(1, $nth, '__TMP_REPLACEMENT__');
+        $rplcs[$nth] = $callback($e);
+
+        $this->text = preg_replace($terms, $rplcs, $this->text, 1);
+        $this->text = str_replace('__TMP_REPLACEMENT__', $term, $this->text);
     }
 }
