@@ -100,22 +100,30 @@
         };
     }
 
+    function removeLongSound(el) {
+        var newEl = document.createElement('span');
+        newEl.innerHTML = el.text;
+        el.parentNode.replaceChild(newEl, el);
+    }
+
     /**
      * Activate the short and long SOUNDS (using Buzz library).
      */
     [].forEach.call(
         document.querySelectorAll('[data-sound]'),
         function (el) {
+            var type = el.getAttribute('data-type');
+
             // If ogg and mp3 are not supported: remove the element!
             if (!buzz.isOGGSupported() && !buzz.isMP3Supported())
-                return el.remove();
+                return ('long' === type) ? removeLongSound(el) : el.remove();
 
             el.sound = new buzz.sound(
                 el.getAttribute('data-sound'),
                 {formats: ['ogg', 'mp3']}
             );
 
-            if ('long' === el.getAttribute('data-type')) longSound(el);
+            if ('long' === type) longSound(el);
             else shortSound(el);
         }
     );
