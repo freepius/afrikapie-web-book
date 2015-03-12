@@ -71,6 +71,9 @@ function linkIcon($e)
         $e['url'], $e['term']
     );
 }
+
+/**
+ * Data: term, file (mandatory) and caption (optional)
  */
 function lightboxTextIcon($e)
 {
@@ -80,7 +83,7 @@ function lightboxTextIcon($e)
         '<a href="%s" data-lightbox="global" data-title="%s">%s '.
             '<i class="fa fa-camera-retro"></i>'.
         '</a>',
-        $this->imageUrl($e['url']), $caption, $e['term']
+        $this->imageUrl($e['file']), $caption, $e['term']
     );
 }
 
@@ -191,15 +194,15 @@ function wikipediaLinkIcon($e)
 // LOCAL TRANSFORMATIONS //
 ///////////////////////////
 
-function imageUrl($url)
+function imageUrl($file)
 {
-    $prefix = strtok($url, '/');
-    $file   = strtok('');
+    $namespace = strtok($file, '/');
+    $filename  = strtok('');
 
-    switch ($prefix) {
-        case 'anarchos': return "http://anarchos-semitas.net/media/web/$file.jpeg";
-        case 'local'   : return "/texts/$this->slug/$file";
-        default        : return $url;
+    switch ($namespace) {
+        case 'anarchos': return "http://anarchos-semitas.net/media/web/$filename.jpeg";
+        case 'local'   : return "/texts/$this->slug/$filename";
+        default        : return $file;
     }
 }
 
