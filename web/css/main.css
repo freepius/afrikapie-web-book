@@ -2529,6 +2529,14 @@ body[typeof="Article"] > [property="articleBody"] #marie-img > img {
 }
 body[typeof="Article"] > [property="articleBody"] [data-lightbox],
 body[typeof="Article"] > [property="articleBody"] [data-toggle="popover"],
-body[typeof="Article"] > [property="articleBody"] .wikipedia {
+body[typeof="Article"] > [property="articleBody"] .unbreak {
   white-space: nowrap;
+}
+body[typeof="Article"] > [property="articleBody"] .gallery > div > a {
+  border: 2px solid black;
+  display: block;
+  padding: 2px;
+}
+body[typeof="Article"] > [property="articleBody"] .row > * {
+  margin-bottom: 10px;
 }

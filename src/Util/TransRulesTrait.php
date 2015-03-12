@@ -6,6 +6,7 @@ namespace App\Util;
  * TRANSFORMATION RULES:
  *   eventualFootnote
  *   footnote
+ *   gallery
  *   linkIcon
  *   lightboxTextIcon
  *   popoverLinkIcon
@@ -57,7 +58,27 @@ function footnote($e)
 }
 
 /**
- * Data: term, url (mandatory) and caption (optional)
+ * Data: files (mandatory)
+ */
+function gallery($e)
+{
+    $out     = '';
+    $files   = $e['files'];
+    $colSize = (int) floor(12 / count($files));
+
+    foreach ($files as $file) {
+        $out .= sprintf(
+            '<div class="col-sm-%s">'.
+                '<a href="%2$s" data-lightbox="global">'.
+                    '<img src="%2$s" class="img-responsive">'.
+                '</a>'.
+            '</div>',
+            $colSize, $this->imageUrl($file)
+        );
+    }
+
+    return '<div class="gallery row">'.$out.'</div>';
+}
 
 /**
  * Data: term and url (mandatory)
@@ -65,7 +86,7 @@ function footnote($e)
 function linkIcon($e)
 {
     return sprintf(
-        '<a href="%s" target="_blank">%s '.
+        '<a href="%s" class="unbreak" target="_blank">%s '.
             '<i class="fa fa-external-link small"></i>'.
         '</a>',
         $e['url'], $e['term']
@@ -179,7 +200,7 @@ function wikipediaLinkIcon($e)
     $term = is_string($e) ? $e : $e['term'];
 
     return sprintf(
-        '<a href="%s" class="wikipedia" target="_blank">%s '.
+        '<a href="%s" class="unbreak" target="_blank">%s '.
             '<span class="fa-stack" style="font-size: 0.6em;">'.
                 '<i class="fa fa-square-o fa-stack-2x"></i>'.
                 '<i class="fa fa-stack-1x">W</i>'.

@@ -73,7 +73,15 @@ body[typeof="Article"]
         #marie-img > img:extend(.img-responsive) { border: 2px solid black; }
 
         /* No wrap the "text + icon" elements */
-        [data-lightbox], [data-toggle="popover"], .wikipedia
+        [data-lightbox], [data-toggle="popover"], .unbreak
         { white-space: nowrap; }
+
+        .gallery > div > a {
+            border: 2px solid black;
+            display: block;
+            padding: 2px;
+        }
+
+        .row > * { margin-bottom: 10px; }
     }
 }
