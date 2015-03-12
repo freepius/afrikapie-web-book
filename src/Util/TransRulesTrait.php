@@ -277,9 +277,9 @@ function wikipediaUrl($page)
  *  -> <wp>Page</wp>
  *     into <a href="https://fr.wikipedia.org/wiki/Page" target="_blank">Page</a>
  *
- *  Wikimedia Commons Copyright:
- *  ----------------------------
- *  -> <copy-wc>The author|CC BY-SA 3.0|The-file.jpg</copy-wc>
+ *  Copyright (Flickr and Wikimedia Commons):
+ *  -----------------------------------------
+ *  -> <copy=wc>The author|CC BY-SA 3.0|The-file.jpg</copy>
  *     into <small>
  *              &copy; The author
  *              – <a href="//creativecommons.org/licenses/by-sa/3.0/deed.fr" target="_blank">CC BY-SA 3.0</a>
@@ -304,15 +304,28 @@ function format($c)
     $c = preg_replace_callback('|<wp>(.*)\|(.*)</wp>|U', $wpUrl, $c);
     $c = preg_replace_callback('|<wp>(.*)</wp>|U'      , $wpUrl, $c);
 
-    // Wikimedia Commons Copyright
-    $c = preg_replace_callback('|<copy-wc>(.*)\|(.*)\|(.*)</copy-wc>|U', function ($m) {
+    // Copyright (Flickr and Wikimedia Commons)
+    $c = preg_replace_callback('|<copy=(.*)>(.*)\|(.*)\|(.*)</copy>|U', function ($m) {
+
+        list($_, $type, $author, $license, $file) = $m;
+
+        switch ($type) {
+            case 'fk': $text = 'via Flickr';
+                       $url = "//www.flickr.com/photos/$file/in/photostream/";
+                       break;
+            case 'wc': $text = 'via Wikimedia Commons';
+                       $url = "//commons.wikimedia.org/wiki/$file";
+                       break;
+            default:   return;
+        }
+
         return sprintf(
             '<small>'.
                 '&copy; %s'.
                 ' – <a href="%s" target="_blank">%s</a>'.
-                ' – <a href="//commons.wikimedia.org/wiki/%s" target="_blank">via Wikimedia Commons</a>'.
+                ' – <a href="%s" target="_blank">%s</a>'.
             '</small>',
-            $m[1], $this->licenseUrl($m[2]), $m[2], $m[3]
+            $author, $this->licenseUrl($license), $license, $url, $text
         );
     }, $c);
 
