@@ -35,7 +35,7 @@ Nous montons quelques étages, dans la colocation qu’occupe un collègue.
 Le collègue n’est pas là (il travaille ce soir, également) ; ses colocataires non plus.
 « Il n’y a pas de problème. Vous êtes les bienvenus ! *Marhbabikoum* ! » nous lance Abdellatif, avant de repartir comme une tempête.
 
-Vingt-trois heures. Nous nous retrouvons seuls, dans un appartement vide et crasseux de la banlieusarde Beni Ensar.
+Vingt-trois heures. Nous nous retrouvons seuls, dans un appartement vide et crasseux de la banlieusarde Beni Ensar.
 Vingt-sept heures d’une douce et lente navigation, puis tout est allé si vite ; quel choc !
 La situation est impromptue, franchement intimidante aussi.
 Mais ne tombons pas dans des peurs infondées, celles-là même que nous combattons en France.
