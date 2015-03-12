@@ -2426,7 +2426,7 @@ body[typeof="Article"] > #choose-display > .btn-group .dropdown-menu {
   bottom: -10px;
 }
 #map {
-  height: 300px;
+  height: 311px;
   border: 2px solid black;
 }
 @media (max-width: 991px) {

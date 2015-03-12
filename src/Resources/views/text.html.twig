@@ -85,12 +85,15 @@
     <div role="tabpanel">
         {{ text.enhanced | richtext }}
 
-        <div id="marie-img" class="col-xs-12 col-md-6">
-            <img src="/texts/{{ text.slug }}/marie.jpg">
-        </div>
+        <!-- Marie drawing + Map -->
+        <div class="row">
+            <div id="marie-img" class="col-xs-12 col-md-6">
+                <img src="/texts/{{ text.slug }}/marie.jpg">
+            </div>
 
-        <div class="col-xs-12 col-md-6">
-            <div id="map"></div>
+            <div class="col-xs-12 col-md-6">
+                <div id="map"></div>
+            </div>
         </div>
     </div>
 
