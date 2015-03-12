@@ -229,11 +229,17 @@ function imageUrl($file)
 
 function licenseUrl($license)
 {
-    switch ($license) {
-        case 'CC BY-SA 3.0': return '//creativecommons.org/licenses/by-sa/3.0/deed.fr';
-        case 'CC BY-SA 2.0': return '//creativecommons.org/licenses/by-sa/2.0/deed.fr';
-        default            : return '';
+    // The Creative Commons licenses
+    if ('CC' === substr($license, 0, 2))
+    {
+        list($_, $license, $version) = explode(' ', $license);
+
+        return sprintf('//creativecommons.org/licenses/%s/%s/deed.fr',
+            strtolower($license), $version
+        );
     }
+
+    return '';
 }
 
 function soundUrl($file)
