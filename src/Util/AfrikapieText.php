@@ -79,6 +79,7 @@ class AfrikapieText
         $this->text = $this->originalText;
 
         $this->replaceTermCollection('comments'  , 'tooltipIcon');
+        $this->replaceTermCollection('links'     , 'linkIcon');
         $this->replaceTermCollection('lightboxes', 'lightboxTextIcon');
         $this->replaceTermCollection('longnotes' , 'popoverLinkIcon');
         $this->replaceTermCollection('longsounds', 'soundPopoverLinkIcon');

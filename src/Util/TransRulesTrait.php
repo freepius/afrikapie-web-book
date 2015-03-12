@@ -6,6 +6,7 @@ namespace App\Util;
  * TRANSFORMATION RULES:
  *   eventualFootnote
  *   footnote
+ *   linkIcon
  *   lightboxTextIcon
  *   popoverLinkIcon
  *   soundIcon
@@ -57,6 +58,19 @@ function footnote($e)
 
 /**
  * Data: term, url (mandatory) and caption (optional)
+
+/**
+ * Data: term and url (mandatory)
+ */
+function linkIcon($e)
+{
+    return sprintf(
+        '<a href="%s" target="_blank">%s '.
+            '<i class="fa fa-external-link small"></i>'.
+        '</a>',
+        $e['url'], $e['term']
+    );
+}
  */
 function lightboxTextIcon($e)
 {
