@@ -63,6 +63,15 @@ class AfrikapieText
         return file_get_contents($path);
     }
 
+    /**
+     * In the current text, remove the markers
+     * (ie, the tags <marker=An ID>).
+     */
+    protected function removeMarkers()
+    {
+        $this->text = preg_replace('|<marker=.*>|U', '', $this->text);
+    }
+
     protected function transformSimple()
     {
         $this->text = $this->originalText;
@@ -71,6 +80,7 @@ class AfrikapieText
         $this->replaceCollection('longnotes' , 'eventualFootnote');
         $this->replaceCollection('wikipedias', 'wikipediaFootnote');
 
+        $this->removeMarkers();
         return $this->text;
     }
 
@@ -86,7 +96,23 @@ class AfrikapieText
         $this->replaceTermCollection('sounds'    , 'soundIcon');
         $this->replaceTermCollection('wikipedias', 'wikipediaLinkIcon');
 
+        $this->removeMarkers();
         return $this->text;
+    }
+
+    /**
+     * In the current text ($this->text),
+     * put some content (using the $callback function ; see TransRulesTrait.php)
+     * on each marker of the $collection.
+     */
+    protected function putAtMarkerCollection($collection, $callback)
+    {
+        $collection = (array) @ $this->metadata[$collection];
+
+        foreach ($collection as $e) {
+            $marker = "<marker={$e['marker']}>";
+            $this->text = str_replace($marker, $this->$callback($e)."\n".$marker, $this->text);
+        }
     }
 
     /**
