@@ -59,11 +59,13 @@ function footnote($e)
  */
 function lightboxTextIcon($e)
 {
+    $caption = htmlspecialchars($this->format(@ $e['caption']), ENT_QUOTES);
+
     return sprintf(
         '<a href="%s" data-lightbox="global" data-title="%s">%s '.
             '<i class="fa fa-camera-retro"></i>'.
         '</a>',
-        $this->imageUrl($e['url']), @ $e['caption'], $e['term']
+        $this->imageUrl($e['url']), $caption, $e['term']
     );
 }
 
