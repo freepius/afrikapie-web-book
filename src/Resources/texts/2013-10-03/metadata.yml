@@ -11,13 +11,8 @@ lightboxes:
     - term : Beni Ensar/2
       url  : local/BeniEnsar.jpg
       caption : >
-          Vue sur Beni Ensar et son port.
-
-          <small>
-              &copy; Aït Nsar
-              – <url>//creativecommons.org/licenses/by-sa/3.0/deed.fr|CC BY-SA 3.0</url>
-              – <url>//commons.wikimedia.org/wiki/File%3AAit_Nsar%2C_Nador%2C_Morocco.JPG|via Wikimedia Commons</url>
-          </small>
+          Vue sur Beni Ensar et son port.<br>
+          <copy-wc>Aït Nsar|CC BY-SA 3.0|File%3AAit_Nsar%2C_Nador%2C_Morocco.JPG</copy-wc>
 
 longnotes:
     - term     : Beni Ensar/1

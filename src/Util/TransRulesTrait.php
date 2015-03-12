@@ -15,10 +15,11 @@ namespace App\Util;
  *   wikipediaLinkIcon
  *
  * LOCAL TRANSFORMATIONS:
- *   format
  *   imageUrl
+ *   licenseUrl
  *   soundUrl
  *   wikipediaUrl
+ *   format
  */
 trait TransRulesTrait
 {
@@ -176,24 +177,70 @@ function wikipediaLinkIcon($e)
 // LOCAL TRANSFORMATIONS //
 ///////////////////////////
 
+function imageUrl($url)
+{
+    $prefix = strtok($url, '/');
+    $file   = strtok('');
+
+    switch ($prefix) {
+        case 'anarchos': return "http://anarchos-semitas.net/media/web/$file.jpeg";
+        case 'local'   : return "/texts/$this->slug/$file";
+        default        : return $url;
+    }
+}
+
+function licenseUrl($license)
+{
+    switch ($license) {
+        case 'CC BY-SA 3.0': return '//creativecommons.org/licenses/by-sa/3.0/deed.fr';
+        case 'CC BY-SA 2.0': return '//creativecommons.org/licenses/by-sa/2.0/deed.fr';
+        default            : return '';
+    }
+}
+
+function soundUrl($file)
+{
+    return "/texts/$this->slug/$file";
+}
+
+function wikipediaUrl($page)
+{
+    return "https://fr.wikipedia.org/wiki/$page";
+}
+
 /**
  * Transform:
  *
- *  -> 3 "\n" by 2 <br>
- *  -> 2 "\n" by 1 <br>
- *  -> 1 "\n" by one space
+ *  nl2br:
+ *  ------
+ *  -> 3 "\n" into 2 <br>
+ *  -> 2 "\n" into 1 <br>
+ *  -> 1 "\n" into 1 space
  *
+ *  URL:
+ *  ----
  *  -> <url>http://my-website.com|My site</url>
- *      into <a href="http://my-website.com" target="_blank">My site</a>
+ *     into <a href="http://my-website.com" target="_blank">My site</a>
  *
  *  -> <url>my-website.com</url>
- *      into <a href="http://my-website.com" target="_blank">my-website.com</a>
+ *     into <a href="http://my-website.com" target="_blank">my-website.com</a>
  *
+ *  Wikipedia:
+ *  ----------
  *  -> <wp>Page|My page</wp>
- *      into <a href="https://fr.wikipedia.org/wiki/Page" target="_blank">My page</a>
+ *     into <a href="https://fr.wikipedia.org/wiki/Page" target="_blank">My page</a>
  *
  *  -> <wp>Page</wp>
- *      into <a href="https://fr.wikipedia.org/wiki/Page" target="_blank">Page</a>
+ *     into <a href="https://fr.wikipedia.org/wiki/Page" target="_blank">Page</a>
+ *
+ *  Wikimedia Commons Copyright:
+ *  ----------------------------
+ *  -> <copy-wc>The author|CC BY-SA 3.0|The-file.jpg</copy-wc>
+ *     into <small>
+ *              &copy; The author
+ *              – <a href="//creativecommons.org/licenses/by-sa/3.0/deed.fr" target="_blank">CC BY-SA 3.0</a>
+ *              – <a href="//commons.wikimedia.org/wiki/The-file.jpg" target="_blank">via Wikimedia Commons</a>
+ *          </small>
  */
 function format($c)
 {
@@ -211,31 +258,21 @@ function format($c)
         );
     };
     $c = preg_replace_callback('|<wp>(.*)\|(.*)</wp>|U', $wpUrl, $c);
-    $c = preg_replace_callback('|<url>(.*)</url>|U'    , $wpUrl, $c);
+    $c = preg_replace_callback('|<wp>(.*)</wp>|U'      , $wpUrl, $c);
+
+    // Wikimedia Commons Copyright
+    $c = preg_replace_callback('|<copy-wc>(.*)\|(.*)\|(.*)</copy-wc>|U', function ($m) {
+        return sprintf(
+            '<small>'.
+                '&copy; %s'.
+                ' – <a href="%s" target="_blank">%s</a>'.
+                ' – <a href="//commons.wikimedia.org/wiki/%s" target="_blank">via Wikimedia Commons</a>'.
+            '</small>',
+            $m[1], $this->licenseUrl($m[2]), $m[2], $m[3]
+        );
+    }, $c);
 
     return $c;
-}
-
-function imageUrl($url)
-{
-    $prefix = strtok($url, '/');
-    $file   = strtok('');
-
-    switch ($prefix) {
-        case 'anarchos': return "http://anarchos-semitas.net/media/web/$file.jpeg";
-        case 'local'   : return "/texts/$this->slug/$file";
-        default        : return $url;
-    }
-}
-
-function soundUrl($file)
-{
-    return "/texts/$this->slug/$file";
-}
-
-function wikipediaUrl($page)
-{
-    return "https://fr.wikipedia.org/wiki/$page";
 }
 
 }/*END OF TRAIT*/
