@@ -21,14 +21,22 @@
     }
 
     /**
-     * Preload the body background image:
-     * http://perishablepress.com/3-ways-preload-images-css-javascript-ajax/
+     * Preload the body background image.
      */
     window.onload = function () {
-        document.getElementById("preload-1").style.background = "url(header-1.png) no-repeat -9999px -9999px";
-        document.getElementById("preload-2").style.background = "url(header-2.png) no-repeat -9999px -9999px";
-        document.getElementById("preload-3").style.background = "url(header-3.png) no-repeat -9999px -9999px";
-        document.getElementById("preload-4").style.background = "url(header-4.png) no-repeat -9999px -9999px";
+        var i, bg,
+            preload = document.createElement('div');
+
+        preload.id = 'preload';
+        document.body.appendChild(preload);
+
+        for (i = 0; i < 5; i += 1) {
+            bg = document.createElement('div');
+            bg.style.background = 'url(header-' + i + '.jpg) no-repeat -9999px -9999px';
+            preload.appendChild(bg);
+        }
+
+        setTimeout(function () { preload.remove(); }, 5000)
     };
 
     /**
