@@ -15,7 +15,7 @@
         for (i = 0; i < slides.length - 1; i += 1) {
             rect = slides[i].getBoundingClientRect();
 
-            if (rect.y + rect.height < 100) { upper = i + 1; }
+            if (rect.top + rect.height < 100) { upper = i + 1; }
         }
         return upper;
     }
