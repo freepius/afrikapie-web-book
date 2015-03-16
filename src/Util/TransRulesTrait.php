@@ -298,11 +298,10 @@ function format($c)
     // Wikipedia
     $wpUrl = function ($m) {
         return sprintf('<a href="%s" target="_blank">%s</a>',
-            $this->wikipediaUrl($m[1]), @ $m[2] ?: $m[1]
+            $this->wikipediaUrl($m[1]), @ $m[3] ?: $m[1]
         );
     };
-    $c = preg_replace_callback('|<wp>(.*)\|(.*)</wp>|U', $wpUrl, $c);
-    $c = preg_replace_callback('|<wp>(.*)</wp>|U'      , $wpUrl, $c);
+    $c = preg_replace_callback('|<wp>(.*)(\|(.*))?</wp>|U', $wpUrl, $c);
 
     // Copyright (Flickr and Wikimedia Commons)
     $c = preg_replace_callback('|<copy=(.*)>(.*)\|(.*)\|(.*)</copy>|U', function ($m) {
