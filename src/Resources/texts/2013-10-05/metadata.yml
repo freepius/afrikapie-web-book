@@ -1,0 +1,136 @@
+title: 05 octobre 2013
+next : 2013-10-05-soir
+intro: >
+    Le débutant, il a l'air gauche, un peu couillon.
+    Mais s'il est beau d'la tête, qu'il a le cœur ouvert, il deviendra un bon.
+    Alors vogue la galère... le cœur ouvert.
+
+
+comments:
+    - term    : Zeghanghane
+      content : Prononcez « Z’rane z’rane ».
+
+galleries:
+    - marker : 1
+      files  : [local/Nuancier.jpg]
+    - marker : 1
+      files  : [local/Rif-1.jpg, local/Rif-2.jpg]
+
+lightboxes:
+    - term    : scoute catho
+      file    : local/GirlScout.jpg
+      caption : Une « girl-scoute » au Maroc !
+
+longnotes:
+    ################
+    ## Le Rif n°1 ##
+    ################
+    - term  : Rif/1
+      title : >
+          Région du Rif – Info n°1
+      content : |
+          Le Rif – en amazigh « Arrif / ⴰⵔⵔⵉⴼ » (« rivage, bord ») –
+          est la région septentrionale du Maroc.
+
+
+          À l'ouest et au centre, des montagnes imposantes
+          (point culminant, l'<i>Adrar Tidirhine</i>, 2456 m).
+          À l'est, de grandes plaines et de petites montagnes.
+
+
+          Population :
+          <ul>
+              <li><b>7 millions</b> d'habitants</li>
+              <li>dont <b>3 millions de <wp>Jbalas</wp></b>, ethnie arabophone d'origine berbère (Rif occidental)</li>
+              <li>et <b>3 millions de <wp>Rifains</wp></b>, ethnie berbère (Rif oriental)</li>
+          </ul>
+          <wp>Rif|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>
+
+    ################
+    ## Le Rif n°2 ##
+    ################
+    - term  : grenier à cannabis
+      title : >
+          Région du Rif – Info n°2
+      content : |
+          Bien que sa production soit en baisse, la <b>région du Rif</b> reste
+          le <b>premier producteur</b> mondial de cannabis,
+          devant l'Afghanistan et le Mexique.
+
+
+          Cultivé sur près de <b>50 000 hectares</b> en 2010
+          <small>(contre 10 000 en 1970 et 150 000 en 2000)</small>,
+          le cannabis <b>ferait vivre plus d’un million de Marocains</b>.
+
+
+          À lire sur le sujet :
+          <ul>
+              <li>
+                  <url>//www.slateafrique.com/96437/maroc-cannabis-trafic-europe-haschisch|
+                       « Comment le Maroc est devenu le royaume du cannabis »
+                  </url>
+                  <br>
+                  <small>(<b>SlateAfrique</b>, octobre 2012)</small>
+              </li>
+              <li>
+                  <url>//www.liberation.fr/monde/2014/04/29/le-rif-reste-accro-au-kif_1007354|
+                       « Le Rif reste accro au kif »
+                  </url>
+                  <br>
+                  <small>(<b>Libération</b>, avril 2014)</small>
+              </li>
+          </ul>
+
+    #################
+    ## Des déchets ##
+    #################
+    - term  : des déchets/1
+      title : Zero Zbel Xperience
+      content : >
+          Ici, le traitement des déchets semble un <b>vrai gros problème</b>.
+          À maintes reprises, notre traversée marocaine le confirmera.
+
+
+          Pour le régler, y'a du boulot !
+          Quelques courageux, cependant, s'y attellent.
+          À l'image de ce jeune Casaoui qui a réalisé la
+          <url>//zerozbel.wordpress.com|<b>« Zero Zbel Xperience »</b></url>
+          (« Expérience zéro déchet »).
+
+
+          Bon courage à lui dans ses efforts militants !
+
+    ###############
+    ## Grenadier ##
+    ###############
+    - term : grenadiers
+      content : >
+          Le <b>Grenadier commun</b> (<i>Punica granatum</i>) est un arbre fruitier
+          des régions méditerranéennes, pouvant atteindre 6 m de haut et vivre jusqu'à 200 ans.
+          Il est cultivé, depuis la plus haute Antiquité, pour ses <b>fruits comestibles</b> (les grenades)
+          et pour les qualités ornementales de ses grandes fleurs.
+
+
+          <wp>Grenadier commun|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>
+
+
+          <img>local/Grenadier.jpg</img>
+
+    #########################
+    ## Figuier de Barbarie ##
+    #########################
+    - term : figuiers de Barbarie
+      content : >
+          <img>local/FiguierBarbarie.jpg</img>
+
+          Le <b>figuier de Barbarie</b> (<i>Opuntia ficus-indica</i>) est une espèce de plante
+          de la famille des <i>Cactaceae</i> (cactus), originaire du Mexique,
+          qui s'est naturalisée dans d'autres continents,
+          notamment le pourtour méditerranéen et en Afrique du Sud.
+          Il produit un <b>fruit comestible</b> appelé figue de Barbarie.
+
+
+          <wp>Figuier de Barbarie|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>

@@ -261,6 +261,11 @@ function wikipediaUrl($page)
  *  -> 2 "\n" into 1 <br>
  *  -> 1 "\n" into 1 space
  *
+ *  Image:
+ *  ------
+ *  -> <img>local/my-img.jpg</img>
+ *     into <img src="/texts/2013-10-03/my-img.jpg" class="img-responsive">
+ *
  *  URL:
  *  ----
  *  -> <url>http://my-website.com|My site</url>
@@ -290,6 +295,11 @@ function format($c)
 {
     // nl2br
     $c = str_replace(["\n\n\n", "\n\n", "\n"], ['<br><br>', '<br>', ' '], $c);
+
+    // Image
+    $c = preg_replace_callback('|<img>(.*)</img>|U', function ($m) {
+        return '<img src="'.$this->imageUrl($m[1]).'" class="img-responsive">';
+    }, $c);
 
     // URL
     $c = preg_replace('|<url>(.*)\|(.*)</url>|U', '<a href="$1"        target="_blank">$2</a>', $c);
