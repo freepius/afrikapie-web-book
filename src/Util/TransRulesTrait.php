@@ -94,17 +94,32 @@ function linkIcon($e)
 }
 
 /**
- * Data: term, file (mandatory) and caption (optional)
+ * Data:   If  $e is string
+ *       Then  term = $e
+ *       Else  $e has term (mandatory), caption and file (optional)
+ *
+ * If file is not defined, then file = local/camelize(term).jpg
+ * Eg: if term = "my words", then file = "local/MyWords.jpg"
  */
 function lightboxTextIcon($e)
 {
+    if (is_string($e)) { $e = ['term' => $e]; }
+
     $caption = htmlspecialchars($this->format(@ $e['caption']), ENT_QUOTES);
+
+    /**
+     * Case of $e['file'] not defined:
+     *   if   term = "the term to search"
+     *   then file = "local/TheTermToSearch.jpg"
+     */
+    $file = @ $e['file'] ?:
+        ('local/'.str_replace([' ', ' '], '', ucwords($e['term'])).'.jpg');
 
     return sprintf(
         '<a href="%s" data-lightbox="global" data-title="%s">%s '.
             '<i class="fa fa-camera-retro"></i>'.
         '</a>',
-        $this->imageUrl($e['file']), $caption, $e['term']
+        $this->imageUrl($file), $caption, $e['term']
     );
 }
 

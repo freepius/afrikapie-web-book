@@ -6,16 +6,13 @@ galleries:
       files  : [anarchos/52625acc874ab]
 
 lightboxes:
-    - term : carrioles
-      file : local/HorseAndCarriage.jpg
+    - term    : carrioles
       caption : <copy=wc>Alex Proimos|CC BY-SA 2.0|File%3AHorse_and_Carriage_(4260744806).jpg</copy>
 
-    - term    : vendeurs de bric et de broc
-      file    : local/BricBroc.jpg
+    - term    : de bric et de broc
       caption : <copy=fk>Karolina Lubryczynska|CC BY-NC-ND 2.0|karolajnat/749339266</copy>
 
     - term : lagune de Marchica
-      file : local/MarChica.jpg
       caption : >
           Lagune de Nador – Mar Chica<br>
           <copy=wc>Kokopelado|CC BY-SA 3.0|File%3ANador_Lagoon_-_Mar_Chica.jpg</copy>

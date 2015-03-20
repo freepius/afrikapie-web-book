@@ -17,11 +17,9 @@ galleries:
       files  : [local/Rif-1.jpg, local/Rif-2.jpg]
 
 lightboxes:
-    - term : vieille femme
-      file : local/VieilleFemme.jpg
+    - vieille femme
 
     - term    : scoute catho
-      file    : local/GirlScout.jpg
       caption : Une « girl-scoute » au Maroc !
 
 longnotes:
