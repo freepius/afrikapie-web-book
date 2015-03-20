@@ -23,7 +23,6 @@ links:
 
 longsounds:
     - term : complainte du muezzin
-      file : Muezzins-Fès
       description : >
           Les Muezzins de Fès entament le premier appel à la prière, à 4 h 30.<br>
           &copy; <url>https://www.youtube.com/watch?v=QQkaCh5TYhI|Nicolas Bogaerts</url>
@@ -31,7 +30,7 @@ longsounds:
 sounds:
     - salam
     - term : chāï bil n'anā
-      file : ChaiBilNana
+      file : chai-bil-nana
 
 wikipedias:
     - term : cinq prières quotidiennes

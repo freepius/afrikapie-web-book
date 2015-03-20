@@ -10,6 +10,8 @@ require ROOT.'/vendor/autoload.php';
 
 $app = new \Freepius\Silex\Application;
 
+setlocale(LC_ALL, 'fr_FR.UTF-8');
+
 $app['debug'] = DEBUG;
 
 // from marie-c9(at)hotmail.fr account

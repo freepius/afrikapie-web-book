@@ -27,10 +27,7 @@ longnotes:
           <url>couchsurfing.com</url> ou <url>bewelcome.org</url>.
 
 sounds:
-    - term : Donnez-moi deux thés.
-      file : Donnez-moi
-    - term : Combien ça coûte
-      file : Combien
-    - term : S'il vous plaît.
-      file : Aafak
+    - Donnez-moi deux thés.
+    - Combien ça coûte
+    - S'il vous plaît.
     - Marhbabikoum

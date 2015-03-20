@@ -12,7 +12,7 @@ comments:
 
 galleries:
     - marker : 1
-      files  : [local/Nuancier.jpg]
+      files  : [local/nuancier.jpg]
     - marker : 1
       files  : [local/Rif-1.jpg, local/Rif-2.jpg]
 
@@ -117,14 +117,14 @@ longnotes:
           <small>(Wikipedia)</small>
 
 
-          <img>local/Grenadier.jpg</img>
+          <img>local/grenadier.jpg</img>
 
     #########################
     ## Figuier de Barbarie ##
     #########################
     - term : figuiers de Barbarie
       content : >
-          <img>local/FiguierBarbarie.jpg</img>
+          <img>local/figuier-barbarie.jpg</img>
 
           Le <b>figuier de Barbarie</b> (<i>Opuntia ficus-indica</i>) est une espèce de plante
           de la famille des <i>Cactaceae</i> (cactus), originaire du Mexique,

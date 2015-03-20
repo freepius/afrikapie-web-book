@@ -22,6 +22,7 @@ namespace App\Util;
  *   soundUrl
  *   wikipediaUrl
  *   format
+ *   slugify
  */
 trait TransRulesTrait
 {
@@ -98,8 +99,8 @@ function linkIcon($e)
  *       Then  term = $e
  *       Else  $e has term (mandatory), caption and file (optional)
  *
- * If file is not defined, then file = local/camelize(term).jpg
- * Eg: if term = "my words", then file = "local/MyWords.jpg"
+ * If file is not defined, then file = local/slugify(term).jpg
+ * Eg: if term = "my words", then file = "local/my-words.jpg"
  */
 function lightboxTextIcon($e)
 {
@@ -110,10 +111,9 @@ function lightboxTextIcon($e)
     /**
      * Case of $e['file'] not defined:
      *   if   term = "the term to search"
-     *   then file = "local/TheTermToSearch.jpg"
+     *   then file = "local/the-term-to-search.jpg"
      */
-    $file = @ $e['file'] ?:
-        ('local/'.str_replace([' ', ' '], '', ucwords($e['term'])).'.jpg');
+    $file = @ $e['file'] ?: ('local/'.$this->slugify($e['term']).'.jpg');
 
     return sprintf(
         '<a href="%s" data-lightbox="global" data-title="%s">%s '.
@@ -141,13 +141,13 @@ function popoverLinkIcon($e)
 
 /**
  * Data:   If  $e is string
- *       Then  file = term = $e
+ *       Then  term = $e and file = slugify($e)
  *       Else  $e has 'file' and 'term' keys
  */
 function soundIcon($e)
 {
-    $file = is_string($e) ? $e : $e['file'];
-    $term = is_string($e) ? $e : $e['term'];
+    $term = is_string($e) ? $e                 : $e['term'];
+    $file = is_string($e) ? $this->slugify($e) : $e['file'];
 
     return sprintf(
         '%s<sup class="fa fa-music small" data-sound="%s"></sup>',
@@ -156,19 +156,29 @@ function soundIcon($e)
 }
 
 /**
- * Data: file, term (mandatory) and description (optional)
+ * Data:   If  $e is string
+ *       Then  term = $e
+ *       Else  $e has term (mandatory), description and file (optional)
+ *
+ * If file is not defined, then file = slugify(term)
  */
 function soundPopoverLinkIcon($e)
 {
+    $term = is_string($e) ? $e : $e['term'];
+
     $description = htmlspecialchars(
         $this->format(@ $e['description']), ENT_QUOTES
+    );
+
+    $file = $this->soundUrl(
+        @ $e['file'] ?: $this->slugify($term)
     );
 
     return sprintf(
         '<a tabindex="0" data-toggle="popover" data-content="%s" data-sound="%s" data-type="long">%s '.
             '<i class="fa fa-bell-o"></i>'.
         '</a>',
-        $description, $this->soundUrl($e['file']),  $e['term']
+        $description, $file,  $term
     );
 }
 
@@ -354,6 +364,30 @@ function format($c)
     }, $c);
 
     return $c;
+}
+
+/**
+ * Modify a string to remove all non ASCII characters and spaces,
+ * and to put ASCII characters in lowercase.
+ */
+function slugify($text)
+{
+    // replace non letter or digits by -
+    $text = preg_replace('~[^\\pL\d]+~u', '-', $text);
+
+    // trim
+    $text = trim($text, '-');
+
+    // transliterate
+    if (function_exists('iconv'))
+    {
+        $text = iconv('utf-8', 'ascii//TRANSLIT', $text);
+    }
+
+    // remove unwanted characters
+    $text = preg_replace('~[^-\w]+~', '', $text);
+
+    return strtolower($text);
 }
 
 }/*END OF TRAIT*/
