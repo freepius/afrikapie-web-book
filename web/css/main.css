@@ -2425,35 +2425,9 @@ body[typeof="Article"] > #choose-display > .btn-group .dropdown-menu {
   border-left-color: #ffffff;
   bottom: -10px;
 }
-#map {
-  height: 311px;
-  border: 2px solid black;
-}
-@media (max-width: 991px) {
-  #map {
-    margin-top: 1em;
-  }
-}
-.leaflet-label {
-  z-index: 1000;
-}
-.current-text-icon {
-  background-color: #CCC;
-  border: 3px solid black;
-  border-radius: 15px;
-  line-height: 24px;
-  text-align: center;
-}
-.other-text-icon {
-  background-color: #CCC;
-  border: 3px solid #888;
-  border-radius: 10px;
-}
-.other-text-icon:hover {
-  border-color: black;
-}
 body[typeof="Article"] > header {
-  background: no-repeat center / cover;
+  background: no-repeat center;
+  background-size: cover;
   height: 350px;
   position: relative;
   text-align: center;
@@ -2477,7 +2451,12 @@ body[typeof="Article"] > header > .inner > * {
 }
 body[typeof="Article"] > header > .inner > h1 {
   font-weight: bolder;
-  padding-top: 100px;
+  padding-top: 50px;
+}
+@media (min-width: 480px) {
+  body[typeof="Article"] > header > .inner > h1 {
+    padding-top: 100px;
+  }
 }
 body[typeof="Article"] > header > .inner > q {
   display: block;
@@ -2485,7 +2464,7 @@ body[typeof="Article"] > header > .inner > q {
   padding-top: 10px;
   white-space: normal;
 }
-@media (min-width: 500px) {
+@media (min-width: 480px) {
   body[typeof="Article"] > header > .inner > q {
     width: 450px;
   }
@@ -2524,8 +2503,15 @@ body[typeof="Article"] > [property="articleBody"] {
 body[typeof="Article"] > [property="articleBody"] p {
   text-align: justify;
 }
+body[typeof="Article"] > [property="articleBody"] .row > * {
+  margin-bottom: 10px;
+}
 body[typeof="Article"] > [property="articleBody"] #marie-img > img {
   border: 2px solid black;
+}
+body[typeof="Article"] > [property="articleBody"] #map {
+  border: 2px solid black;
+  height: 311px;
 }
 body[typeof="Article"] > [property="articleBody"] [data-lightbox],
 body[typeof="Article"] > [property="articleBody"] [data-toggle="popover"],
@@ -2537,6 +2523,30 @@ body[typeof="Article"] > [property="articleBody"] .gallery > div > a {
   display: block;
   padding: 2px;
 }
-body[typeof="Article"] > [property="articleBody"] .row > * {
-  margin-bottom: 10px;
+.leaflet-label {
+  z-index: 1000;
+}
+.current-text-icon {
+  background-color: #CCC;
+  border: 3px solid black;
+  border-radius: 15px;
+  line-height: 24px;
+  text-align: center;
+}
+.other-text-icon {
+  background-color: #CCC;
+  border: 3px solid #888;
+  border-radius: 10px;
+}
+.other-text-icon:hover {
+  border-color: black;
+}
+.lightbox .lb-outerContainer {
+  border-radius: 0;
+}
+.lightbox .lb-dataContainer {
+  background-color: white;
+}
+.lightbox .lb-details {
+  color: #555;
 }

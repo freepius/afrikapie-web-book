@@ -1,8 +1,17 @@
 body[typeof="Article"]
 {
+    ////////////////////////////////////////////////////////
+    // HEADER having:
+    //   -> a background image
+    //   -> a black transparent background      .inner
+    //   -> the text title                      .inner > h1
+    //   -> the introduction sentence           .inner > q
+    //   -> the navigation buttons              nav
+    ////////////////////////////////////////////////////////
     > header
     {
-        background: no-repeat center / cover;
+        background: no-repeat center;
+        background-size: cover;
         height: 350px;
         position: relative;
         text-align: center;
@@ -20,7 +29,8 @@ body[typeof="Article"]
 
             > h1 {
                 font-weight: bolder;
-                padding-top: 100px;
+                padding-top: 50px;
+                @media(min-width: @screen-xs-min) { padding-top: 100px; }
             }
 
             > q {
@@ -28,7 +38,7 @@ body[typeof="Article"]
                 font-size: 20px;
                 padding-top: 10px;
                 white-space: normal;
-                @media(min-width: 500px) { width: 450px; }
+                @media(min-width: @screen-xs-min) { width: 450px; }
             }
         }
 
@@ -50,6 +60,11 @@ body[typeof="Article"]
         }
     }
 
+    ////////////////////////////////////////////////////////
+    // Button group to CHOOSE THE DISPAY MODE, between:
+    //   -> Enhanced mode
+    //   -> Simple mode
+    ////////////////////////////////////////////////////////
     > #choose-display:extend(
         .btn-group all,
         .btn-group-lg all,
@@ -59,8 +74,16 @@ body[typeof="Article"]
         > a:extend(.btn-default all) {}
     }
 
+    ////////////////////////////////////////////////////////
+    // THE AUDIO MODE
+    ////////////////////////////////////////////////////////
     > audio { width: 100%; }
 
+    ////////////////////////////////////////////////////////
+    // CORE OF THE TEXT:
+    //   -> general style and typography
+    //   -> style of the widgets
+    ////////////////////////////////////////////////////////
     > [property="articleBody"]:extend(.container all)
     {
         font-size: 20px;
@@ -70,7 +93,16 @@ body[typeof="Article"]
 
         p { text-align: justify; }
 
+        .row > * { margin-bottom: 10px; }
+
+        ///// WIDGETS /////
+
         #marie-img > img:extend(.img-responsive) { border: 2px solid black; }
+
+        #map {
+            border: 2px solid black;
+            height: 311px;
+        }
 
         /* No wrap the "text + icon" elements */
         [data-lightbox], [data-toggle="popover"], .unbreak
@@ -81,7 +113,5 @@ body[typeof="Article"]
             display: block;
             padding: 2px;
         }
-
-        .row > * { margin-bottom: 10px; }
     }
 }
