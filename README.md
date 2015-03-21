@@ -27,6 +27,12 @@ License
 
 The **Afrikapié Web Book** is licensed under the **CC0** license.
 
+TODO
+----
+
+* AfrikapieText: rename replaceCollection() by applyCollection()
+* BUG of "replace the replacements"
+
 
 [Composer]: http://getcomposer.org
 [PHPUnit]: https://phpunit.de

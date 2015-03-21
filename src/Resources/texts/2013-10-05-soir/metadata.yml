@@ -28,6 +28,21 @@ wikipedias:
       page : Henné
 
 longnotes:
+    ########################
+    ## Portrait Aboutaleb ##  /!\ Big priority because of "du Rif"
+    ########################
+    - term    : du Rif/2
+      title   : Région du Rif – Info n°4
+      content : >
+          <em>Le saviez-vous ?</em>
+
+          Depuis 2009, le <b>maire de Rotterdam</b> (plus grande ville des Pays-Bas)
+          est <b>Ahmed Aboutaleb</b>, un Marocain originaire du Rif (et naturalisé néerlandais).
+
+
+          Lire <url>//www.jeuneafrique.com/ArticlePersonnalite/JA2827p050.xml0/Type:Portrait/islam-europe-pays-bas-ahmed-aboutalebahmed-aboutaleb-un-marocain-en-plat-pays.html|<b>son portrait</b></url>
+          sur <b>Jeune Afrique</b> (mars 2015).
+
     ###################
     ## Tamazight n°1 ##
     ###################
@@ -103,10 +118,6 @@ longnotes:
           Durant le <b>règne de Hassan II</b> (de 1961 à 1999), l'<b>isolement politique et économique</b> du Rif
           pousse plusieurs centaines de milliers de Rifains à l'<b>exode</b>,
           vers les grandes villes du Maroc et vers l'Europe.
-
-
-          À noter : depuis 2009, le <b>maire de Rotterdam</b> (plus grande ville des Pays-Bas)
-          est <b>Ahmed Aboutaleb</b>, un Marocain originaire du Rif (et naturalisé néerlandais).
 
     ##############
     ## Bivouacs ##
