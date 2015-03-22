@@ -4,6 +4,7 @@ namespace App\Util;
 
 /**
  * TRANSFORMATION RULES:
+ *   collapsibleTextLinkIcon
  *   eventualFootnote
  *   footnote
  *   gallery
@@ -30,6 +31,57 @@ trait TransRulesTrait
 //////////////////////////
 // TRANSFORMATION RULES //
 //////////////////////////
+
+/**
+ * Data: file, marker, term (mandatory) and caption (optional)
+ */
+function collapsibleTextLinkIcon($e)
+{
+    $id     = uniqid();
+    $linkId = "link_$id";
+    $textId = "text_$id";
+    $text   = static::readfile($this->dir.'/'.$this->slug.'/'.$e['file']);
+
+    /**
+     * 1) Link to open/close the collapsible text + to go on it.
+     * 2) An eventual caption (as a tooltip).
+     */
+    $this->replaceTerm($e, function ($e) use ($linkId, $textId) {
+        return sprintf(
+            '<a href="#%1$s" id="%2$s" aria-expanded="false" aria-controls="%1$s" '.
+                'data-toggle="collapse" data-target="#%1$s" data-title="%4$s"'.
+            '>'.
+                '%3$s <i class="fa fa-leaf"></i>'.
+            '</a>',
+            $textId, $linkId, $e['term'], @ $e['caption']
+        );
+    });
+
+    /**
+     * 1) The text in a .collapse <div>.
+     * 2) Two links to close the ".collapse <div>" + to go on the "parent link"
+     */
+    $this->putAtMarker($e, function ($e) use ($linkId, $textId, $text) {
+        return
+<<<EOT
+<aside id="$textId" class="collapse">
+    <div class="well clearfix">
+
+        <a class="close" href="#$linkId" data-toggle="collapse" data-target="#$textId" aria-controls="$textId">
+            <i class="fa fa-close"></i>
+        </a>
+
+        <div markdown="1">\n\n$text\n\n</div>
+
+        <a class="close" href="#$linkId" data-toggle="collapse" data-target="#$textId" aria-controls="$textId">
+            Fermer <i class="fa fa-close"></i>
+        </a>
+
+    </div>
+</aside>
+EOT;
+    });
+}
 
 /**
  * Data: content, term (mandatory) and footnote (optional)
@@ -158,7 +210,7 @@ function soundIcon($e)
 /**
  * Data:   If  $e is string
  *       Then  term = $e
- *       Else  $e has term (mandatory), description and file (optional)
+ *       Else  $e has term (mandatory), caption and file (optional)
  *
  * If file is not defined, then file = slugify(term)
  */
@@ -166,8 +218,8 @@ function soundPopoverLinkIcon($e)
 {
     $term = is_string($e) ? $e : $e['term'];
 
-    $description = htmlspecialchars(
-        $this->format(@ $e['description']), ENT_QUOTES
+    $caption = htmlspecialchars(
+        $this->format(@ $e['caption']), ENT_QUOTES
     );
 
     $file = $this->soundUrl(
@@ -178,7 +230,7 @@ function soundPopoverLinkIcon($e)
         '<a tabindex="0" data-toggle="popover" data-content="%s" data-sound="%s" data-type="long">%s '.
             '<i class="fa fa-bell-o"></i>'.
         '</a>',
-        $description, $file,  $term
+        $caption, $file,  $term
     );
 }
 
@@ -188,7 +240,7 @@ function soundPopoverLinkIcon($e)
 function tooltipIcon($e)
 {
     return sprintf(
-        '%s<sup class="fa fa-comment-o small" data-toggle="tooltip" title="%s"></sup>',
+        '%s<sup class="fa fa-comment-o small" data-title="%s"></sup>',
         $e['term'], $e['content']
     );
 }

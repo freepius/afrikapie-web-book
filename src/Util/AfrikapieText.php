@@ -26,10 +26,10 @@ class AfrikapieText
         $textPath     = "{$this->dir}/$slug/text.md";
         $metadataPath = "{$this->dir}/$slug/metadata.yml";
 
-        $this->originalText = self::readfile($textPath)."\n\n";
+        $this->originalText = static::readfile($textPath)."\n\n";
 
         $this->metadata = (new Yaml\Parser)->parse(
-            self::readfile($metadataPath)
+            static::readfile($metadataPath)
         );
 
         // Default values for some metadata
@@ -95,6 +95,7 @@ class AfrikapieText
         $this->replaceTermCollection('longnotes' , 'popoverLinkIcon');
         $this->replaceTermCollection('longsounds', 'soundPopoverLinkIcon');
         $this->replaceTermCollection('sounds'    , 'soundIcon');
+        $this->replaceCollection    ('subtexts'  , 'collapsibleTextLinkIcon');
         $this->replaceTermCollection('wikipedias', 'wikipediaLinkIcon');
 
         $this->removeMarkers();
@@ -103,16 +104,15 @@ class AfrikapieText
 
     /**
      * In the current text ($this->text),
-     * put some content (using the $callback function ; see TransRulesTrait.php)
-     * on each marker of the $collection.
+     * put some content on each marker of the $collection,
+     * using the $callback function (see TransRulesTrait.php).
      */
     protected function putAtMarkerCollection($collection, $callback)
     {
         $collection = (array) @ $this->metadata[$collection];
 
         foreach ($collection as $e) {
-            $marker = "<marker={$e['marker']}>";
-            $this->text = str_replace($marker, $this->$callback($e)."\n".$marker, $this->text);
+            $this->putAtMarker($e, [$this, $callback]);
         }
     }
 
@@ -140,6 +140,17 @@ class AfrikapieText
         foreach ($collection as $e) {
             $this->replaceTerm($e, [$this, $callback]);
         }
+    }
+
+    /**
+     * In the current text ($this->text),
+     * put some content on a marker (contained in $e),
+     * using the $callback function (see TransRulesTrait.php).
+     */
+    protected function putAtMarker($e, $callback)
+    {
+        $marker = "<marker={$e['marker']}>";
+        $this->text = str_replace($marker, $callback($e)."\n".$marker, $this->text);
     }
 
     /**

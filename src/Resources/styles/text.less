@@ -97,6 +97,11 @@ body[typeof="Article"]
 
         ///// WIDGETS /////
 
+        .collapse h2 {
+            font-size: 28px;
+            margin-top: 0;
+        }
+
         #marie-img > img:extend(.img-responsive) { border: 2px solid black; }
 
         #map {
@@ -104,8 +109,8 @@ body[typeof="Article"]
             height: 311px;
         }
 
-        /* No wrap the "text + icon" elements */
-        [data-lightbox], [data-toggle="popover"], .unbreak
+        /* Not wrap the "text + icon" elements */
+        [data-lightbox], [data-toggle="collapse"], [data-toggle="popover"], .unbreak
         { white-space: nowrap; }
 
         .gallery > div > a {

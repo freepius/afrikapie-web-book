@@ -165,6 +165,6 @@
     /**
      * Activate the Bootstrap TOOLTIPS.
      */
-    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-title]:not([data-lightbox])').tooltip();
 
 }());
