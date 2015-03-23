@@ -1,6 +1,6 @@
 ﻿Au loin, une mobylette ondule sur le macadam, pétaradant tout ce qu’elle a de vieillesse, sans fumée ni poussière, car la mécanique est saine et la route est bonne.
 Qui est en selle, la tête dans le guidon, courbé contre le vent, cet homme de taille moyenne, de corpulence autant, beau pantalon noir, chemisette blanche à carreaux ?
-C’est Mohamed ! Mohamed de Kandoussi, notre tout premier hôte marocain, notre *baba* berbère devant Allah et pour la vie.
+C’est Mohamed ! Mohamed de Kandoussi, notre tout premier hôte marocain, notre « *baba* berbère » devant Allah et pour la vie.
 
 Il zigzague sur la R610, tandis que sa meule ondule, ondule encore, puis arrive à notre niveau et se stoppe net.
 Pied à terre, il sourit tout grand, tout beau, comme un croissant de lune.

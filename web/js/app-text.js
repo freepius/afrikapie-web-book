@@ -61,7 +61,7 @@
 
     // Under the zoom level 8, hide the markers
     map.on('zoomend', function () {
-        if (map.getZoom() < 8) {
+        if (map.getZoom() < 7) {
             if (map.hasLayer(markers))
                 map.removeLayer(markers);
             return;
@@ -165,6 +165,8 @@
     /**
      * Activate the Bootstrap TOOLTIPS.
      */
-    $('[data-title]:not([data-lightbox])').tooltip();
+    $('[data-title]:not([data-lightbox])').tooltip({
+        container: 'body'
+    });
 
 }());

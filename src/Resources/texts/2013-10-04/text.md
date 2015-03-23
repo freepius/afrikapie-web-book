@@ -68,7 +68,7 @@ Sitôt fini l’exquis « jus royal » (amande, ananas, avocat, banane), ils n
 OK. Nous partons.
 
 Passé le traditionnel « barrage policier de sortie de ville », nous quittons l’effervescence de cette grande agglomération (505 000 habitants en 2004).
-La vieille *Renault 21* entame une longue et chaotique montée en forêt, dans la plus profonde pénombre.
+La vieille Renault 21 entame une longue et chaotique montée en forêt, dans la plus profonde pénombre.
 La route est étroite, défoncée, pleine de nids de poule.
 Tout en bavardant, Mathieu me lance de brefs regards inquiets.
 Encore une fois, est-ce bien prudent de partir si loin, de nuit, avec deux inconnus, dans une forêt excentrée et avec, pour seule défense, une bonne dose de confiance et un Opinel en poche ?
