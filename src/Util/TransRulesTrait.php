@@ -17,12 +17,15 @@ namespace App\Util;
  *   wikipediaFootnote
  *   wikipediaLinkIcon
  *
- * LOCAL TRANSFORMATIONS:
+ * URL MAKERS:
  *   imageUrl
  *   licenseUrl
  *   soundUrl
  *   wikipediaUrl
+ *
+ * VARIOUS FORMATTING:
  *   format
+ *   makeUnbreakable
  *   slugify
  */
 trait TransRulesTrait
@@ -200,12 +203,11 @@ function soundIcon($e)
 {
     $term = is_string($e) ? $e                 : $e['term'];
     $file = is_string($e) ? $this->slugify($e) : $e['file'];
+    $url  = $this->soundUrl($file);
 
-    return sprintf(
-        '<span class="unbreak">'.
-            '%s<sup class="fa fa-music small" data-sound="%s"></sup>'.
-        '</span>',
-        $term, $this->soundUrl($file)
+    return $this->makeUnbreakable(
+        $term,
+        '<sup class="fa fa-music small" data-sound="'.$url.'"></sup>'
     );
 }
 
@@ -241,11 +243,9 @@ function soundPopoverLinkIcon($e)
  */
 function tooltipIcon($e)
 {
-    return sprintf(
-        '<span class="unbreak">'.
-            '%s<sup class="fa fa-comment-o small" data-title="%s"></sup>'.
-        '</span>',
-        $e['term'], $e['content']
+    return $this->makeUnbreakable(
+        $e['term'],
+        '<sup class="fa fa-comment-o small" data-title="'.$e['content'].'"></sup>'
     );
 }
 
@@ -291,10 +291,9 @@ function wikipediaLinkIcon($e)
     );
 }
 
-
-///////////////////////////
-// LOCAL TRANSFORMATIONS //
-///////////////////////////
+////////////////
+// URL MAKERS //
+////////////////
 
 function imageUrl($file)
 {
@@ -333,6 +332,10 @@ function wikipediaUrl($page)
 {
     return "https://fr.wikipedia.org/wiki/$page";
 }
+
+////////////////////////
+// VARIOUS FORMATTING //
+////////////////////////
 
 /**
  * Transform:
@@ -421,6 +424,26 @@ function format($c)
     }, $c);
 
     return $c;
+}
+
+/**
+ * Make unbreakable: concat(last word of $phrase, $suffix)
+ * Eg:
+ *   -> $phrase = 'A little test' and $suffix = '<sup>3+3 = 9</sup>'
+ *   -> Return: 'A little <span class="unbreak">test<sup>3+3 = 9</sup></span>'
+ */
+function makeUnbreakable($phrase, $suffix)
+{
+    $phrase = trim($phrase);
+
+    // Position of the last word
+    $pos = strrpos($phrase, ' ');
+
+    list($begin, $end) = $pos ?
+        str_split($phrase, $pos+1) : // case of "several words"
+        ['', $phrase];               // case of "one word"
+
+    return $begin.'<span class="unbreak">'.$end.$suffix.'</span>';
 }
 
 /**
