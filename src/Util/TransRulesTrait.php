@@ -202,7 +202,9 @@ function soundIcon($e)
     $file = is_string($e) ? $this->slugify($e) : $e['file'];
 
     return sprintf(
-        '%s<sup class="fa fa-music small" data-sound="%s"></sup>',
+        '<span class="unbreak">'.
+            '%s<sup class="fa fa-music small" data-sound="%s"></sup>'.
+        '</span>',
         $term, $this->soundUrl($file)
     );
 }
@@ -240,7 +242,9 @@ function soundPopoverLinkIcon($e)
 function tooltipIcon($e)
 {
     return sprintf(
-        '%s<sup class="fa fa-comment-o small" data-title="%s"></sup>',
+        '<span class="unbreak">'.
+            '%s<sup class="fa fa-comment-o small" data-title="%s"></sup>'.
+        '</span>',
         $e['term'], $e['content']
     );
 }
@@ -311,7 +315,8 @@ function licenseUrl($license)
     {
         list($_, $license, $version) = explode(' ', $license);
 
-        return sprintf('//creativecommons.org/licenses/%s/%s/deed.fr',
+        return sprintf(
+            '//creativecommons.org/licenses/%s/%s/deed.fr',
             strtolower($license), $version
         );
     }
