@@ -51,7 +51,7 @@ function collapsibleTextLinkIcon($e)
             '<a href="#%1$s" id="%2$s" aria-expanded="false" aria-controls="%1$s" '.
                 'data-toggle="collapse" data-target="#%1$s" data-title="%4$s"'.
             '>'.
-                '%3$s <i class="fa fa-leaf"></i>'.
+                '%3$s <i class="fa fa-file-text-o small"></i>'.
             '</a>',
             $textId, $linkId, $e['term'], @ $e['caption']
         );
@@ -216,21 +216,21 @@ function soundIcon($e)
  */
 function soundPopoverLinkIcon($e)
 {
-    $term = is_string($e) ? $e : $e['term'];
+    if (is_string($e)) { $e = ['term' => $e]; }
 
     $caption = htmlspecialchars(
         $this->format(@ $e['caption']), ENT_QUOTES
     );
 
     $file = $this->soundUrl(
-        @ $e['file'] ?: $this->slugify($term)
+        @ $e['file'] ?: $this->slugify($e['term'])
     );
 
     return sprintf(
         '<a tabindex="0" data-toggle="popover" data-content="%s" data-sound="%s" data-type="long">%s '.
             '<i class="fa fa-bell-o"></i>'.
         '</a>',
-        $caption, $file,  $term
+        $caption, $file,  $e['term']
     );
 }
 

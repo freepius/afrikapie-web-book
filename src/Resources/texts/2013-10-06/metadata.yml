@@ -1,0 +1,38 @@
+title : 06 octobre 2013
+prev  : '2013-10-05-soir'
+intro : ~
+
+comments:
+    - term    : shokran
+      content : « Shokran » ou « Choukran » : en français, « Merci ».
+
+lightboxes:
+    - term    : sardines grillées
+      caption : <copy=fk>Kamil Fibak|CC BY-NC-ND 2.0|bratamen/15851308881</copy>
+
+    - réseau de ravines
+
+    - term    : souk marocain
+      caption : <copy=fk>mhobl|CC BY-ND 2.0|87106931@N00/14063750575</copy>
+
+links:
+    - term : la France à pied
+      url  : http://anarchos-semitas.net/our-travels/3000-km-diagonal
+
+longnotes:
+    - term  : s’abrutir de télévision
+      title : Les femmes, gagas, s'en gavent...
+      content : >
+          Que ce soient les <b>séries turques ou indiennes</b>, très <b>populaires</b> ici,
+          elles me semblent encore plus <b>niaises et irréalistes</b> que notre
+          « Plus belle la vie » nationale, ou « Les feux de l'amour » de nos grands-mères.
+
+longsounds: [Ambiance]
+
+sounds: [kawa halib, Shokran bezaf]
+
+subtexts:
+    - term    : dirham marocain
+      file    : text-petits-prix.md
+      caption : Quelques petits prix marocains
+      marker  : 1
