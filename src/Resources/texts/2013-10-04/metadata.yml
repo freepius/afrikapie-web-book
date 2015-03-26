@@ -6,6 +6,10 @@ galleries:
       files  : [anarchos/52625acc874ab]
 
 lightboxes:
+    - term    : dirhams
+      caption : Quelques dirhams marocains
+      file    : anarchos/524ef5560d35f
+
     - term    : carrioles
       caption : <copy=wc>Alex Proimos|CC BY-SA 2.0|File%3AHorse_and_Carriage_(4260744806).jpg</copy>
 
