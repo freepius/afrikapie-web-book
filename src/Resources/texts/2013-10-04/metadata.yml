@@ -11,7 +11,7 @@ lightboxes:
       file    : anarchos/524ef5560d35f
 
     - term    : carrioles
-      caption : <copy=wc>Alex Proimos|CC BY-SA 2.0|File%3AHorse_and_Carriage_(4260744806).jpg</copy>
+      caption : <copy=wc>Alex Proimos|CC BY-SA 2.0|Horse_and_Carriage_(4260744806).jpg</copy>
 
     - term    : de bric et de broc
       caption : <copy=fk>Karolina Lubryczynska|CC BY-NC-ND 2.0|karolajnat/749339266</copy>
@@ -19,7 +19,7 @@ lightboxes:
     - term : lagune de Marchica
       caption : >
           Lagune de Nador – Mar Chica<br>
-          <copy=wc>Kokopelado|CC BY-SA 3.0|File%3ANador_Lagoon_-_Mar_Chica.jpg</copy>
+          <copy=wc>Kokopelado|CC BY-SA 3.0|Nador_Lagoon_-_Mar_Chica.jpg</copy>
 
 links:
     - term : aigrettes garzettes

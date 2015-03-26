@@ -408,7 +408,7 @@ function format($c)
                        $url = "//www.flickr.com/photos/$file/in/photostream/";
                        break;
             case 'wc': $text = 'via Wikimedia Commons';
-                       $url = "//commons.wikimedia.org/wiki/$file";
+                       $url = "//commons.wikimedia.org/wiki/File:$file";
                        break;
             default:   return;
         }
