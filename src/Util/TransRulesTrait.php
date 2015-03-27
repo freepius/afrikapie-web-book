@@ -115,21 +115,37 @@ function footnote($e)
 
 /**
  * Data: files (mandatory)
+ *
+ * For each element $e of "files":
+ *     If  $e is string
+ *   Then  file = $e
+ *   Else  $e has file (mandatory), caption and size (optional)
  */
 function gallery($e)
 {
     $out     = '';
     $files   = $e['files'];
-    $colSize = (int) floor(12 / count($files));
+    $colSize = (int) floor(12 / count($files));  // default col. size
 
-    foreach ($files as $file) {
+    foreach ($files as $e)
+    {
+        if (is_string($e)) { $e = ['file' => $e]; }
+
         $out .= sprintf(
-            '<div class="col-sm-%s">'.
-                '<a href="%2$s" data-lightbox="global">'.
+            '<div class="col-sm-%1$s">'.
+                '<a href="%2$s" data-lightbox="global" data-title="%3$s">'.
                     '<img src="%2$s" class="img-responsive">'.
                 '</a>'.
             '</div>',
-            $colSize, $this->imageUrl($file)
+
+            // col. size
+            @ $e['size'] ?: $colSize,
+
+            // file
+            $this->imageUrl($e['file']),
+
+            // caption
+            htmlspecialchars($this->format(@ $e['caption']), ENT_QUOTES)
         );
     }
 
