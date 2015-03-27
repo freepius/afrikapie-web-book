@@ -25,8 +25,8 @@ namespace App\Util;
  *
  * VARIOUS FORMATTING:
  *   format
- *   makeUnbreakable
  *   slugify
+ *   unbreak
  */
 trait TransRulesTrait
 {
@@ -161,20 +161,19 @@ function lightboxTextIcon($e)
 {
     if (is_string($e)) { $e = ['term' => $e]; }
 
-    $caption = htmlspecialchars($this->format(@ $e['caption']), ENT_QUOTES);
-
-    /**
-     * Case of $e['file'] not defined:
-     *   if   term = "the term to search"
-     *   then file = "local/the-term-to-search.jpg"
-     */
-    $file = @ $e['file'] ?: ('local/'.$this->slugify($e['term']).'.jpg');
-
     return sprintf(
-        '<a href="%s" data-lightbox="global" data-title="%s">%s '.
-            '<i class="fa fa-camera-retro"></i>'.
-        '</a>',
-        $this->imageUrl($file), $caption, $e['term']
+        '<a href="%s" data-lightbox="global" data-title="%s">%s</a>',
+
+        // file
+        $this->imageUrl(
+            @ $e['file'] ?: ('local/'.$this->slugify($e['term']).'.jpg')
+        ),
+
+        // caption
+        htmlspecialchars($this->format(@ $e['caption']), ENT_QUOTES),
+
+        // text + icon
+        $this->unbreak($e['term'], ' <i class="fa fa-camera-retro"></i>')
     );
 }
 
@@ -205,10 +204,8 @@ function soundIcon($e)
     $file = is_string($e) ? $this->slugify($e) : $e['file'];
     $url  = $this->soundUrl($file);
 
-    return $this->makeUnbreakable(
-        $term,
-        '<sup class="fa fa-music small" data-sound="'.$url.'"></sup>'
-    );
+    return $this->unbreak($term,
+        '<sup class="fa fa-music small" data-sound="'.$url.'"></sup>');
 }
 
 /**
@@ -243,10 +240,8 @@ function soundPopoverLinkIcon($e)
  */
 function tooltipIcon($e)
 {
-    return $this->makeUnbreakable(
-        $e['term'],
-        '<sup class="fa fa-comment-o small" data-title="'.$e['content'].'"></sup>'
-    );
+    return $this->unbreak($e['term'],
+        '<sup class="fa fa-comment-o small" data-title="'.$e['content'].'"></sup>');
 }
 
 /**
@@ -447,26 +442,6 @@ function format($c)
 }
 
 /**
- * Make unbreakable: concat(last word of $phrase, $suffix)
- * Eg:
- *   -> $phrase = 'A little test' and $suffix = '<sup>3+3 = 9</sup>'
- *   -> Return: 'A little <span class="unbreak">test<sup>3+3 = 9</sup></span>'
- */
-function makeUnbreakable($phrase, $suffix)
-{
-    $phrase = trim($phrase);
-
-    // Position of the last word
-    $pos = strrpos($phrase, ' ');
-
-    list($begin, $end) = $pos ?
-        str_split($phrase, $pos+1) : // case of "several words"
-        ['', $phrase];               // case of "one word"
-
-    return $begin.'<span class="unbreak">'.$end.$suffix.'</span>';
-}
-
-/**
  * Modify a string to remove all non ASCII characters and spaces,
  * and to put ASCII characters in lowercase.
  */
@@ -488,6 +463,26 @@ function slugify($text)
     $text = preg_replace('~[^-\w]+~', '', $text);
 
     return strtolower($text);
+}
+
+/**
+ * Make unbreakable: concat(last word of $phrase, $suffix)
+ * Eg:
+ *   -> $phrase = 'A little test' and $suffix = '<sup>3+3 = 9</sup>'
+ *   -> Return: 'A little <span class="unbreak">test<sup>3+3 = 9</sup></span>'
+ */
+function unbreak($phrase, $suffix)
+{
+    $phrase = trim($phrase);
+
+    // Position of the last word
+    $pos = strrpos($phrase, ' ');
+
+    list($begin, $end) = $pos ?
+        str_split($phrase, $pos+1) : // case of "several words"
+        ['', $phrase];               // case of "one word"
+
+    return $begin.'<span class="unbreak">'.$end.$suffix.'</span>';
 }
 
 }/*END OF TRAIT*/
