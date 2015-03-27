@@ -52,11 +52,11 @@ function collapsibleTextLinkIcon($e)
     $this->replaceTerm($e, function ($e) use ($linkId, $textId) {
         return sprintf(
             '<a href="#%1$s" id="%2$s" aria-expanded="false" aria-controls="%1$s" '.
-                'data-toggle="collapse" data-target="#%1$s" data-title="%4$s"'.
-            '>'.
-                '%3$s <i class="fa fa-file-text-o small"></i>'.
-            '</a>',
-            $textId, $linkId, $e['term'], @ $e['caption']
+                'data-toggle="collapse" data-target="#%1$s" data-title="%3$s">%4$s</a>',
+            $textId,
+            $linkId,
+            @ $e['caption'],
+            $this->unbreak($e['term'], ' <i class="fa fa-file-text-o small"></i>')
         );
     });
 
@@ -141,12 +141,10 @@ function gallery($e)
  */
 function linkIcon($e)
 {
-    return sprintf(
-        '<a href="%s" class="unbreak" target="_blank">%s '.
-            '<i class="fa fa-external-link small"></i>'.
-        '</a>',
-        $e['url'], $e['term']
-    );
+    return
+    '<a href="'.$e['url'].'" target="_blank">'.
+        $this->unbreak($e['term'], ' <i class="fa fa-external-link small"></i>').
+    '</a>';
 }
 
 /**
@@ -275,15 +273,15 @@ function wikipediaLinkIcon($e)
     $page = is_string($e) ? $e : $e['page'];
     $term = is_string($e) ? $e : $e['term'];
 
-    return sprintf(
-        '<a href="%s" class="unbreak" target="_blank">%s '.
-            '<span class="fa-stack" style="font-size: 0.6em;">'.
+    $icon = ' <span class="fa-stack" style="font-size: 0.6em;">'.
                 '<i class="fa fa-square-o fa-stack-2x"></i>'.
                 '<i class="fa fa-stack-1x">W</i>'.
-            '</span>'.
-        '</a>',
-        $this->wikipediaUrl($page), $term
-    );
+            '</span>';
+
+    return
+    '<a href="'.$this->wikipediaUrl($page).'" target="_blank">'.
+        $this->unbreak($term, $icon).
+    '</a>';
 }
 
 ////////////////
