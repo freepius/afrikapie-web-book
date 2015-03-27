@@ -476,9 +476,13 @@ function unbreak($phrase, $suffix)
     // Position of the last word
     $pos = strrpos($phrase, ' ');
 
-    list($begin, $end) = $pos ?
-        str_split($phrase, $pos+1) : // case of "several words"
-        ['', $phrase];               // case of "one word"
+    // Case of "several words"
+    if ($pos) {
+        $begin = substr($phrase, 0, $pos+1);
+        $end   = substr($phrase, $pos+1);
+    }
+    // Case of "one word"
+    else { $begin = ''; $end = $phrase; }
 
     return $begin.'<span class="unbreak">'.$end.$suffix.'</span>';
 }
