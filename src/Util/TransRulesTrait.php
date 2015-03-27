@@ -297,6 +297,7 @@ function wikipediaLinkIcon($e)
 
 function imageUrl($file)
 {
+    $file      = trim($file);
     $namespace = strtok($file, '/');
     $filename  = strtok('');
 
@@ -349,7 +350,15 @@ function wikipediaUrl($page)
  *  Image:
  *  ------
  *  -> <img>local/my-img.jpg</img>
- *     into <img src="/texts/2013-10-03/my-img.jpg" class="img-responsive">
+ *     into <img src="/texts/slug/my-img.jpg" class="img-responsive">
+ *
+ *  Lightbox image:
+ *  (note: the caption can embed <copy> and <wp>)
+ *  ---------------
+ *  -> <lb>local/my-img.jpg|My caption</lb>
+ *     into <a href="/texts/slug/my-img.jpg" data-title='My caption' data-lightbox="84dacd1...">
+ *              <img src="/texts/slug/my-img.jpg" class="img-responsive">
+ *          </a>
  *
  *  URL:
  *  ----
@@ -384,6 +393,17 @@ function format($c)
     // Image
     $c = preg_replace_callback('|<img>(.*)</img>|U', function ($m) {
         return '<img src="'.$this->imageUrl($m[1]).'" class="img-responsive">';
+    }, $c);
+
+    // Lightbox image
+    // (note: the caption (data-title) can embed <copy> and <wp>)
+    $c = preg_replace_callback('|<lb>(.*)(\|(.*))?</lb>|U', function ($m) {
+        return sprintf(
+            '<a href="%1$s" data-lightbox="%2$s" data-title=\'%3$s\'>'.
+                '<img src="%1$s" class="img-responsive">'.
+            '</a>',
+            $this->imageUrl($m[1]), uniqid(), @ $m[3]
+        );
     }, $c);
 
     // URL
