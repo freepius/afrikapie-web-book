@@ -1,0 +1,126 @@
+title: 08 octobre 2013
+intro: >
+    Dans l’café du village, y’a toujours une porte qui mène à l’hospitalité.
+    Au Rif oriental, tu peux pas la louper.
+
+galleries:
+    ###############################
+    ## Galerie de la jeune maman ##
+    ###############################
+    - marker : 1
+      files  :
+          - file    : local/jeune-maman-par-marie.jpg
+            size    : 3
+            caption : La jeune maman peinte à l'aquarelle, par Marie.
+
+          - file : anarchos/52627c2357c70
+            size : 6
+
+          - file    : local/jeune-maman-par-mathieu.jpg
+            size    : 3
+            caption : La jeune maman dessinée au stylo bic, par Mathieu.
+
+    ######################
+    ## Galerie de Marie ##
+    ######################
+    - marker : 2
+      files  :
+          - file : local/marie-danse.jpg
+            size : 7
+
+          - file : local/marie-en-robe.jpg
+            size : 5
+
+links:
+    - term : Le baptême/2
+      url  : //fetes.festiclic.com/page-10615-bapteme-musulman-adhan.html
+
+lightboxes:
+    - term : jeune maman et son bébé
+
+    - term    : Fatima
+      caption : Fatima avec sa mère et deux de ses enfants.
+      file    : anarchos/52627bf12e95d
+
+    - term : tenues/2
+      caption : >
+          Exemples de caftans portés durant la fête.<br>
+          <copy=fk>Mustapha Ennaimi|CC BY 2.0|ennaimi/4296363204</copy>
+
+longnotes:
+    #######################
+    ## Musique marocaine ##  /!\ Big priority because of "Maroc"
+    #######################
+    - term    : Maroc/1
+      title   : >
+          Maroc – Info n°2
+          <img src="/images/ma.png" class="pull-right">
+      content : >
+          La <b>musique marocaine</b> est formée, dans l'immense majorité,
+          par la <b>musique amazighe</b> (berbère) comme le <i>reggada</i>, le <i>chaabi</i> ou l'<i>ahidous</i>.
+
+
+          Puis viennent la musique andalouse et la musique <i>gnawa</i> (issue des esclaves noirs amenés au Maghreb).
+          La musique arabe, quant à elle, est très peu présente au Maroc.
+
+
+          En revanche, il existe une <b>nouvelle génération</b> de musiciens,
+          <b>mélangeant l’esprit marocain aux styles internationaux</b>
+          (blues, rock, metal, reggae, rap marocain, etc.)
+
+
+          <wp>Musique_marocaine|<b>En savoir plus</b></wp>
+          <small>(long article sur Wikipedia)</small>
+
+    ##########################
+    ## Aarfa - Rif oriental ##
+    ##########################
+    - term    : Rif oriental
+      title   : Région du Rif – Info n°5
+      content : >
+          La <b>Aarfa</b> est une <b>danse guerrière</b> marocaine originaire du Rif,
+          très ancienne et populaire, exercée par des musiciens appelés <i>arrif</i>, <i>cheikh</i> ou <i>chioukh</i>.
+          Elle est pratiquée dans toute la région du <b>Rif oriental</b> (nord-est du Maroc).
+
+
+          Les Rifains <b>fêtaient leurs victoires</b> en bougeant les épaules et en frappant du pied sur le sol,
+          au rythme de la musique, en tenant soit leur fusil soit un bâton.
+          Cette action signifiait l'<b>appartenance à la terre</b> et démontrait la <b>fierté des guerriers</b>.
+
+
+          <wp>Aarfa|<b>Lire sur Wikipedia</b></wp>.
+
+          <url>//www.youtube.com/watch?v=IqBr61hnc88|<b>Voir sur YouTube</b></url>.
+
+    ##############
+    ## Le hijab ##
+    ##############
+    - term : hijab
+      content : >
+          De l'arabe حِجَاب,حجاب <i>hijâb</i> (« écran, rideau, voile placé devant un être
+          ou un objet pour le soustraire à la vue »), de حجب <i>ħájaba</i> (« voiler, cacher, couvrir »).
+
+
+          Tenue que les <b>femmes musulmanes</b> portent, qui <b>cache</b> selon les diverses traditions nationales
+          <b>tout ou partie de leur tête</b>, notamment les cheveux, et parfois estompe les formes de leur corps.
+
+
+          <lb>local/hijabs.jpg|
+              Adolescentes marocaines en hijab.<br>
+              <copy=wc>Land Rover MENA|CC BY-SA 2.0|British_Polo_Day_Morocco_(14011257293).jpg</copy>
+          </lb>
+
+          <wp>Hijab|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>
+
+longsounds:
+    - term : les chants
+      caption : Chants traditionnels rifains <i>(6 min)</i>.
+
+sounds: [youyous]
+
+subtexts:
+    - term    : Qu’a-t-il bien pu faire
+      file    : text-soir-mathieu.md
+      caption : Cliquez-ici pour le savoir.
+      marker  : 3
