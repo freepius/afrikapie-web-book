@@ -22,9 +22,16 @@ class BaseController implements ControllerProviderInterface
     {
         $ctrl = $app['controllers_factory'];
 
+        $ctrl->get('/', [$this, 'home']);
+
         $ctrl->get('/{slug}', [$this, 'readText']);
 
         return $ctrl;
+    }
+
+    public function home(Request $request)
+    {
+        return $this->app->render('home.html.twig', [] + $this->contact($request));
     }
 
     public function readText($slug)

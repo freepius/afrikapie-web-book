@@ -1,6 +1,6 @@
 {
     "name": "freepius/afrikapie-web-book",
-    "description": "",
+    "description": "The Afrikapié web book",
     "homepage": "https://github.com/freepius/afrikapie-web-book",
     "license": "CC0",
 
@@ -16,7 +16,7 @@
     "require": {
         "silex/silex": "*",
         "symfony/yaml": "*",
-        "twig/twig": "*",
+        "twig/twig": "~1.18",
         "twbs/bootstrap": "3.3.2",
         "freepius/php-asset": "*",
         "freepius/php-richtext": "*",

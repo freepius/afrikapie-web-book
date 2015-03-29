@@ -1,0 +1,32 @@
+{% set currentPage = 'home' %}
+
+{% extends 'layout.html.twig' %}
+
+
+{% block javascripts %}
+    <script src="/js/app-home.js"></script>
+{% endblock %}
+
+
+{% block stylesheets %}
+{% endblock %}
+
+
+{% block main %}
+
+<div class="slide">
+    <h1>Afrikapié
+        <br><small>le livre web</small>
+    </h1>
+    <p>Un voyage,
+        <strong>9 mois</strong> de découvertes,
+        <strong>4000 km</strong> à pied.
+    </p>
+    <p>Libre Lecture<br>Prix Libre</p>
+</div>
+
+<div class="slide">
+    {% include 'contact.html.twig' %}
+</div>
+
+{% endblock %}

@@ -1,122 +1,118 @@
-body[typeof="Article"]
+////////////////////////////////////////////////////////
+// HEADER having:
+//   -> a background image
+//   -> a black transparent background      .inner
+//   -> the text title                      .inner > h1
+//   -> the introduction sentence           .inner > q
+//   -> the navigation buttons              nav
+////////////////////////////////////////////////////////
+> header
 {
-    ////////////////////////////////////////////////////////
-    // HEADER having:
-    //   -> a background image
-    //   -> a black transparent background      .inner
-    //   -> the text title                      .inner > h1
-    //   -> the introduction sentence           .inner > q
-    //   -> the navigation buttons              nav
-    ////////////////////////////////////////////////////////
-    > header
-    {
-        background: no-repeat center;
-        background-size: cover;
+    background: no-repeat center;
+    background-size: cover;
+    height: 350px;
+    position: relative;
+    text-align: center;
+
+    * { color: white; }
+    a { text-decoration: none; }
+
+    > .inner {
+        background-color: rgba(0, 0, 0, 0.5);
         height: 350px;
-        position: relative;
-        text-align: center;
+        padding: 0 10px;
+        .transition(opacity .3s linear);
 
-        * { color: white; }
-        a { text-decoration: none; }
+        > * { margin: 0 auto; }
 
-        > .inner {
-            background-color: rgba(0, 0, 0, 0.5);
-            height: 350px;
-            padding: 0 10px;
-            .transition(opacity .3s linear);
-
-            > * { margin: 0 auto; }
-
-            > h1 {
-                font-weight: bolder;
-                padding-top: 50px;
-                @media(min-width: @screen-xs-min) { padding-top: 100px; }
-            }
-
-            > q {
-                display: block;
-                font-size: 20px;
-                padding-top: 10px;
-                white-space: normal;
-                @media(min-width: @screen-xs-min) { width: 450px; }
-            }
+        > h1 {
+            font-weight: bolder;
+            padding-top: 50px;
+            @media(min-width: @screen-xs-min) { padding-top: 100px; }
         }
 
-        > nav
-        {
-            bottom: 20px;
-            position: absolute;
-            width: 100%;
-
-            > * {
-                margin-right: 20px;
-                &:last-child { margin-right: 0; }
-            }
-
-            > a {
-                .opacity(0.5);
-                &:hover, &:focus { .opacity(1.0); }
-            }
-        }
-    }
-
-    ////////////////////////////////////////////////////////
-    // Button group to CHOOSE THE DISPAY MODE, between:
-    //   -> Enhanced mode
-    //   -> Simple mode
-    ////////////////////////////////////////////////////////
-    > #choose-display:extend(
-        .btn-group all,
-        .btn-group-lg all,
-        .btn-group-justified all
-    ) {
-        // <a> must have .btn class (limitation of extend)
-        > a:extend(.btn-default all) {}
-    }
-
-    ////////////////////////////////////////////////////////
-    // THE AUDIO MODE
-    ////////////////////////////////////////////////////////
-    > audio { width: 100%; }
-
-    ////////////////////////////////////////////////////////
-    // CORE OF THE TEXT:
-    //   -> general style and typography
-    //   -> style of the widgets
-    ////////////////////////////////////////////////////////
-    > [property="articleBody"]:extend(.container all)
-    {
-        font-size: 20px;
-        line-height: 1.7;
-        margin-top: 20px;
-        margin-bottom: 20px;
-
-        p { text-align: justify; }
-
-        .row > * { margin-bottom: 10px; }
-
-        ///// WIDGETS /////
-
-        .collapse {
-            h2 { font-size: 28px; margin-top: 0; }
-            h3 { font-style: italic; }
-            table:extend(.table all, .table-striped all, .table-responsive all) {}
-        }
-
-        #marie-img > img:extend(.img-responsive) { border: 2px solid black; }
-
-        #map {
-            border: 2px solid black;
-            height: 311px;
-        }
-
-        [data-toggle="popover"], .unbreak
-        { white-space: nowrap; }
-
-        .gallery > div > a {
-            border: 2px solid black;
+        > q {
             display: block;
-            padding: 2px;
+            padding-top: 10px;
+            white-space: normal;
+            @media(min-width: @screen-xs-min) { width: 450px; }
         }
+    }
+
+    > nav
+    {
+        bottom: 20px;
+        font-size: 16px;
+        position: absolute;
+        width: 100%;
+
+        > * {
+            margin-right: 20px;
+            &:last-child { margin-right: 0; }
+        }
+
+        > a {
+            .opacity(0.5);
+            &:hover, &:focus { .opacity(1.0); }
+        }
+    }
+}
+
+////////////////////////////////////////////////////////
+// Button group to CHOOSE THE DISPAY MODE, between:
+//   -> Enhanced mode
+//   -> Simple mode
+////////////////////////////////////////////////////////
+> #choose-display:extend(
+    .btn-group all,
+    .btn-group-lg all,
+    .btn-group-justified all
+) {
+    // <a> must have .btn class (limitation of extend)
+    > a:extend(.btn-default all) {}
+}
+
+////////////////////////////////////////////////////////
+// THE AUDIO MODE
+////////////////////////////////////////////////////////
+> audio { width: 100%; }
+
+////////////////////////////////////////////////////////
+// CORE OF THE TEXT:
+//   -> general style and typography
+//   -> style of the widgets
+////////////////////////////////////////////////////////
+> [property="articleBody"]:extend(.container all)
+{
+    line-height: 1.7;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    p { text-align: justify; }
+
+    .row > * { margin-bottom: 10px; }
+
+    ///// WIDGETS /////
+
+    .collapse {
+        h2 { margin-top: 0; }
+        h3 { font-style: italic; }
+        table:extend(.table all, .table-striped all, .table-responsive all) {}
+    }
+
+    #marie-img > img:extend(.img-responsive) { border: 2px solid black; }
+
+    #map {
+        border: 2px solid black;
+        height: 311px;
+    }
+
+    [data-toggle="popover"], .unbreak
+    { white-space: nowrap; }
+
+    .gallery > div > a {
+        border: 2px solid black;
+        display: block;
+        padding: 2px;
     }
 }
