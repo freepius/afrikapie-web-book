@@ -2,6 +2,8 @@
 
 {% extends 'layout.html.twig' %}
 
+{% from 'form.twig' import list_errors %}
+
 {% import 'macros-map.twig' as map %}
 
 {% block title %}Afrikapié - {{ text.title }}{% endblock %}
@@ -26,6 +28,19 @@
             background-image: url('/texts/{{ text.slug }}/header.jpg') !important;
         }
     </style>
+{% endblock %}
+
+
+{% block header %}
+    {{ list_errors(errors, 'contact') }}
+{% endblock %}
+
+
+{% block footer %}
+    <footer id="contact">
+        <hr>
+        {% include 'contact.html.twig' %}
+    </footer>
 {% endblock %}
 
 

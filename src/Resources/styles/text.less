@@ -26,7 +26,7 @@
         > * { margin: 0 auto; }
 
         > h1 {
-            font-weight: bolder;
+            font-family: 'GorriSansRegular';
             padding-top: 50px;
             @media(min-width: @screen-xs-min) { padding-top: 100px; }
         }
@@ -58,6 +58,16 @@
     }
 }
 
+
+////////////////////////////////////////////////////////
+// FOOTER containing the contact form
+////////////////////////////////////////////////////////
+> footer:extend(.container all)
+{
+    padding-bottom: 10px;
+}
+
+
 ////////////////////////////////////////////////////////
 // Button group to CHOOSE THE DISPAY MODE, between:
 //   -> Enhanced mode
@@ -65,17 +75,18 @@
 ////////////////////////////////////////////////////////
 > #choose-display:extend(
     .btn-group all,
-    .btn-group-lg all,
     .btn-group-justified all
 ) {
     // <a> must have .btn class (limitation of extend)
     > a:extend(.btn-default all) {}
 }
 
+
 ////////////////////////////////////////////////////////
 // THE AUDIO MODE
 ////////////////////////////////////////////////////////
 > audio { width: 100%; }
+
 
 ////////////////////////////////////////////////////////
 // CORE OF THE TEXT:
@@ -87,8 +98,6 @@
     line-height: 1.7;
     margin-top: 20px;
     margin-bottom: 20px;
-
-    p { text-align: justify; }
 
     .row > * { margin-bottom: 10px; }
 
@@ -107,8 +116,7 @@
         height: 311px;
     }
 
-    [data-toggle="popover"], .unbreak
-    { white-space: nowrap; }
+    [data-toggle="popover"]:extend(.unbreak) {}
 
     .gallery > div > a {
         border: 2px solid black;

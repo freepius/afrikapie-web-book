@@ -21,8 +21,12 @@
 <body id="{{ currentPage }}" vocab="http://schema.org/"
       typeof="{{ currentPage == 'text' ? 'Article' : 'WebPage' }}">
 
+    {% include 'header.html.twig' %}
+
     {% block header %}{% endblock %}
+
     {% block main %}{% endblock %}
+
     {% block footer %}{% endblock %}
 
     <!-- Javascripts

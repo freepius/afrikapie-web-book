@@ -1,0 +1,52 @@
+{% from 'form.twig' import render_fields %}
+
+<h1>Nous contacter</h1>
+
+{% if currentPage == 'text' %}
+    <p>Si, pour ce texte, vous avez une question, une critique, un avis, un encouragement,
+       ou une <b>faute d'orthographe</b> à nous faire parvenir :
+       le formulaire ci-dessous est pour vous !
+       Sauf mention contraire de votre part, nous nous donnons le droit de publier,
+       sur cette même page, les avis sympathiques et les critiques intéressantes.
+    </p>
+{% else %}
+    <p>Que vous ayez une question, une critique, un avis, un encouragement,
+       un p'tit bonjour ou une faute d'orthographe à nous faire parvenir :
+       le formulaire ci-dessous est pour vous !
+    </p>
+{% endif %}
+
+<p>Vous pouvez, également, nous contacter directement sur :
+   <b><a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#99;&#111;&#110;&#x74;&#97;&#99;&#x74;&#x40;&#x61;&#110;&#x61;&#x72;&#99;&#104;&#x6f;&#x73;&#45;&#115;&#x65;&#109;&#105;&#116;&#97;&#x73;&#46;&#110;&#101;&#x74;">&#x63;&#111;&#110;&#116;&#x61;&#x63;&#116;&#64;&#x61;&#x6e;&#x61;&#x72;&#x63;&#x68;&#x6f;&#115;&#x2d;&#x73;&#101;&#x6d;&#105;&#116;&#x61;&#x73;&#x2e;&#x6e;&#101;&#x74;</a></b>.
+</p>
+
+<p>Enfin, pour suivre nos « aventures » passées, présentes et à venir, retrouvez-nous sur
+   <b><a href="http://anarchos-semitas.net" class="unbreak">anarchos-semitas.net</a></b>,
+   notre site web de voyage, de bric et de broc.
+</p>
+
+<form action="{{ pathInfo }}" method="post" class="form-horizontal">
+    {{ render_fields(contact, errors, 'contact', {required: true},
+        [
+            {name: 'name'},
+            {
+                name: 'email',
+                help: true,
+                help_inline: true,
+                required: false
+            },
+            {
+                name: 'subject',
+                size: 12
+            },
+            {
+                type: 'textarea',
+                name: 'message',
+            }
+        ]
+    ) }}
+
+    <button type="submit" class="btn btn-success col-xs-12">
+        <i class="fa fa-check fa-white"></i> Envoyer
+    </button>
+</form>

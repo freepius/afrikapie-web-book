@@ -3,8 +3,6 @@
 namespace App\Controller;
 
 use Silex\Api\ControllerProviderInterface;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Summary :
@@ -22,16 +20,18 @@ class BaseController implements ControllerProviderInterface
     {
         $ctrl = $app['controllers_factory'];
 
-        $ctrl->get('/', [$this, 'home']);
+        $ctrl->match('/', [$this, 'home'])->method('GET|POST');
 
-        $ctrl->get('/{slug}', [$this, 'readText']);
+        $ctrl->match('/{slug}', [$this, 'readText'])->method('GET|POST');
 
         return $ctrl;
     }
 
-    public function home(Request $request)
+    public function home()
     {
-        return $this->app->render('home.html.twig', [] + $this->contact($request));
+        return (true === $contact = $this->contact()) ?
+            $this->app->redirect("/")                 :
+            $this->app->render('home.html.twig', $contact);
     }
 
     public function readText($slug)
@@ -46,6 +46,50 @@ class BaseController implements ControllerProviderInterface
             );
         }
 
-        return $this->app->render('text.html.twig', ['text' => $text]);
+        return (true === $contact = $this->contact()) ?
+            $this->app->redirect("/$slug")            :
+            $this->app->render('text.html.twig', ['text' => $text] + $contact);
+    }
+
+    /**
+     * Return true if the mail is sent.
+     */
+    protected function contact()
+    {
+        $request = $this->app['request_stack']->getMasterRequest();
+        $ourMail = $this->app['swiftmailer.options']['username'];
+        $factory = $this->app['model.factory.contact'];
+        $contact = $factory->instantiate();
+        $errors  = [];
+
+        if ($request->isMethod('POST'))
+        {
+            $httpData = $request->request->all(); // http POST data
+
+            $errors = $factory->bind($contact, $httpData);
+
+            // No error => log + send a mail + redirect
+            if (! $errors)
+            {
+                // TODO: to activate
+                /*$this->app->mail(\Swift_Message::newInstance()
+                    ->setSubject($contact['subject'])
+                    ->setFrom([$contact['email'] => $contact['name']])
+                    ->setTo($ourMail)
+                    ->setBody($contact['message'])
+                );*/
+
+                $this->app->addFlash('success',
+                    'Votre message a bien été envoyé. <b>Merci.</b>');
+
+                return true;
+            }
+        }
+
+        return [
+            'contact'  => $contact,
+            'errors'   => $errors,
+            'pathInfo' => $request->getPathInfo(),
+        ];
     }
 }

@@ -1,0 +1,25 @@
+<!-- Notifications
+================================================== -->
+{% block notifications %}
+    {% for level in ['success', 'danger', 'info', 'warning']
+        if app.session.flashbag.has(level)
+    %}
+
+        <div class="alert alert-{{ level }}">
+            <a class="close" data-dismiss="alert" href="#">×</a>
+
+            {% set messages = app.session.flashbag.get(level) %}
+
+            {% if messages|length > 1 %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message|raw }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                {{ messages[0]|raw }}
+            {% endif %}
+        </div>
+
+    {% endfor %}
+{% endblock %}

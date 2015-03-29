@@ -15,10 +15,16 @@
 
     "require": {
         "silex/silex": "*",
-        "symfony/yaml": "*",
         "twig/twig": "~1.18",
         "twbs/bootstrap": "3.3.2",
+        "monolog/monolog": "*",
+        "swiftmailer/swiftmailer": "5.*",
+        "symfony/config": "*",
+        "symfony/translation": "*",
+        "symfony/validator": "2.4",
+        "symfony/yaml": "*",
         "freepius/php-asset": "*",
+        "freepius/php-model": "*",
         "freepius/php-richtext": "*",
         "freepius/silex-extended": "*"
     },
