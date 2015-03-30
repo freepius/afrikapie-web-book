@@ -31,23 +31,9 @@
 {% endblock %}
 
 
-{% block header %}
-    {{ list_errors(errors, 'contact') }}
-{% endblock %}
-
-
-{% block footer %}
-    <footer id="contact">
-        <hr>
-        {% include 'text-nav.html.twig' with {footer: true} %}
-        {% include 'text-soutien.html.twig' %}
-        <hr>
-        {% include 'contact.html.twig' %}
-    </footer>
-{% endblock %}
-
-
 {% block main %}
+
+{{ list_errors(errors, 'contact') }}
 
 <header>
     <div class="inner">
@@ -55,7 +41,7 @@
         {{ text.intro ? ('<q>&#160;'~text.intro~'&#160;</q>') | raw }}
     </div>
 
-    {% include 'text-nav.html.twig' %}
+    {% include 'text-nav.html.twig' with {header: true} %}
 </header>
 
 <!-- Links to choose the display mode -->
@@ -101,5 +87,15 @@
         {{ text.simple | richtext }}
     </div>
 </section>
+
+<footer>
+    <hr>
+    {% include 'text-nav.html.twig' with {footer: true} %}
+    {% include 'text-soutien.html.twig' %}
+    <hr>
+    {% include 'contact.html.twig' %}
+</footer>
+
+{% include 'text-help.html.twig' only %}
 
 {% endblock %}
