@@ -1,0 +1,17 @@
+<nav>
+    {% if text.prev %}
+        <a href="/{{ text.prev }}" aria-label="Texte précédent">
+            <i class="fa fa-3x fa-chevron-circle-left" data-title="Texte précédent"></i>
+        </a>
+    {% endif %}
+
+    <a href="/" role="button" aria-label="Accueil">
+        <i class="fa fa-3x fa-home" data-title="Accueil"></i>
+    </a>
+
+    {% if text.next %}
+        <a href="/{{ text.next }}" aria-label="Texte suivant">
+            <i class="fa fa-3x fa-chevron-circle-right" data-title="Texte suivant"></i>
+        </a>
+    {% endif %}
+</nav>

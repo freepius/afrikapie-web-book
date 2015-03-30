@@ -39,6 +39,9 @@
 {% block footer %}
     <footer id="contact">
         <hr>
+        {% include 'text-nav.html.twig' %}
+        {% include 'text-soutien.html.twig' %}
+        <hr>
         {% include 'contact.html.twig' %}
     </footer>
 {% endblock %}
@@ -52,25 +55,7 @@
         {{ text.intro ? ('<q>&#160;'~text.intro~'&#160;</q>') | raw }}
     </div>
 
-    <nav>
-        {% if text.prev %}
-            <a href="/{{ text.prev }}" class="previous">
-                <i class="fa fa-3x fa-chevron-circle-left"></i>
-                <span class="sr-only">Texte précédent</span>
-            </a>
-        {% endif %}
-
-        <a href="#menu" role="button">
-            <i class="fa fa-3x fa-bars"></i>
-        </a>
-
-        {% if text.next %}
-            <a href="/{{ text.next }}" class="next">
-                <i class="fa fa-3x fa-chevron-circle-right"></i>
-                <span class="sr-only">Texte suivant</span>
-            </a>
-        {% endif %}
-    </nav>
+    {% include 'text-nav.html.twig' %}
 </header>
 
 <!-- Links to choose the display mode -->
