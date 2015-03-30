@@ -33,6 +33,8 @@
 
 {% block main %}
 
+{% include 'text-help.html.twig' only %}
+
 {{ list_errors(errors, 'contact') }}
 
 <header>
@@ -95,7 +97,5 @@
     <hr>
     {% include 'contact.html.twig' %}
 </footer>
-
-{% include 'text-help.html.twig' only %}
 
 {% endblock %}

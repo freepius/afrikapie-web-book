@@ -1,4 +1,16 @@
 <nav>
+    {% if header|default(false) %}
+        <a class="right" href="#help-for-text" data-toggle="modal" role="button" aria-label="Afficher l'aide">
+            <i class="fa fa-3x fa-question-circle" data-title="Afficher l'aide"></i>
+        </a>
+    {% endif %}
+
+    {% if footer|default(false) %}
+        <a class="right" href="#text" role="button" aria-label="Aller en haut">
+            <i class="fa fa-3x fa-arrow-circle-up"></i>
+        </a>
+    {% endif %}
+
     {% if text.prev %}
         <a href="/{{ text.prev }}" aria-label="Texte précédent">
             <i class="fa fa-3x fa-chevron-circle-left" data-title="Texte précédent"></i>
@@ -12,12 +24,6 @@
     {% if text.next %}
         <a href="/{{ text.next }}" aria-label="Texte suivant">
             <i class="fa fa-3x fa-chevron-circle-right" data-title="Texte suivant"></i>
-        </a>
-    {% endif %}
-
-    {% if footer|default(false) %}
-        <a href="#text" role="button" aria-label="Aller en haut" class="pull-right">
-            <i class="fa fa-3x fa-arrow-circle-up"></i>
         </a>
     {% endif %}
 </nav>
