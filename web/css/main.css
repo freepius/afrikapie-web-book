@@ -3535,6 +3535,9 @@ p {
 #text > [property="articleBody"] [data-toggle="popover"] {
   white-space: nowrap;
 }
+#contact > form {
+  margin-top: 30px;
+}
 @media (max-width: 991px) {
   #contact > form * {
     text-align: center;

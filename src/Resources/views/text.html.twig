@@ -39,7 +39,7 @@
 {% block footer %}
     <footer id="contact">
         <hr>
-        {% include 'text-nav.html.twig' %}
+        {% include 'text-nav.html.twig' with {footer: true} %}
         {% include 'text-soutien.html.twig' %}
         <hr>
         {% include 'contact.html.twig' %}

@@ -46,14 +46,14 @@
         var body  = document.body,
             old_i = getUpperSlideNum();
 
-        body.onscroll = function () {
+        window.addEventListener('scroll', function () {
             var i = getUpperSlideNum();
 
             if (i !== old_i) {
                 old_i = i;
                 body.style.backgroundImage = 'url(images/home-header/' + i + '.jpg)';
             }
-        };
+        });
     });
 
 }());

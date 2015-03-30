@@ -14,4 +14,10 @@
             <i class="fa fa-3x fa-chevron-circle-right" data-title="Texte suivant"></i>
         </a>
     {% endif %}
+
+    {% if footer|default(false) %}
+        <a href="#text" role="button" aria-label="Aller en haut" class="pull-right">
+            <i class="fa fa-3x fa-arrow-circle-up"></i>
+        </a>
+    {% endif %}
 </nav>

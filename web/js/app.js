@@ -3,10 +3,8 @@
 (function () {
     "use strict";
 
-    $(document).ready(function () {
+    /*document.addEventListener('DOMContentLoaded', function () {
 
-        /*$('[title]').tooltip();*/
-
-    });
+    });*/
 
 }());
