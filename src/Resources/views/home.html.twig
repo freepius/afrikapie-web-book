@@ -18,17 +18,137 @@
 
 {{ list_errors(errors, 'contact') }}
 
+<!-- Jumbotron -->
 <div id="main" class="slide">
     <h1>Afrikapié
         <br><small>le livre web</small>
     </h1>
-    <p>Un voyage,
-        <strong>9 mois</strong> de découvertes,
-        <strong>4000 km</strong> à pied.
+
+    <p>Une voyageuse, un voyageur</p>
+
+    <p><strong>9 mois</strong> de découvertes,
+       <strong>4000 km</strong> à pied
     </p>
+
+    <p class="small">à travers Maroc, Mauritanie, Sénégal et Mali</p>
+
     <p>Libre Lecture<br>Prix Libre</p>
 </div>
 
+<!-- The travel -->
+<div class="slide">
+    <h1>Le voyage</h1>
+
+    <div class="row">
+        <div class="col-md-8">
+{% filter richtext %}
+Avant d’être un livre, des dessins, des photos...
+**Afrikapié** est d’abord un **très beau voyage**,
+notre tout premier hors des frontières européennes, françaises presque.
+
+À travers Maroc, Mauritanie, Sénégal et Mali,
+durant **9 mois** et **4000 kilomètres à pied**,
+l’Afrique nous a offert des moments forts, des instants magnifiques,
+nous permettant de nous accomplir comme *voyageurs de grand chemin*.
+
+D’octobre 2013 à juillet 2014, nous y avons déambulé,
+sac sur le dos, au rythme rude et lent de la marche,
+papillonnant au gré des rencontres, des paysages, des cultures, des langues
+et avec, pour seule motivation, la découverte décomplexée de « l’autre ».
+{% endfilter %}
+        </div>
+
+        <div class="col-md-4 text-center">
+            <a href="/images/afrikapie-path.jpg" data-lightbox="our-path" title="Le chemin parcouru en Afrique">
+                <img src="/images/afrikapie-path.jpg" style="max-width: 100%;">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- The web book -->
+<div class="slide">
+    <h1>Le livre web</h1>
+
+{% filter richtext %}
+Le voyage à peine terminé, nous voulions déjà le partager, par l’écriture surtout.
+
+« Avec quel angle d’attaque ? Pour quels supports ? Qui écrira ? »
+Ces questions, dans la déprime du retour, nous avons eu quelque mal à y répondre.
+C’est désormais chose faite avec ce **livre web** !
+
+**Écrit à quatre mains**, sous la forme d’un **journal de bord**,
+c’est avec **un regard féminin**, celui de Marie,
+que vous découvrirez notre quotidien de jeunes marcheurs, naïfs et passionés,
+que vous plongerez dans notre **Afrikapié** !
+
+Pourquoi sur le web ?
+D'abord, parce qu’il permet une **diffusion plus large et plus égalitaire**
+des idées, de l'information, de la culture, etc.
+Aussi, parce que les possibilités y sont démultipliées !
+
+Ainsi, à l’image des web-documentaires, desquels nous nous sommes inspirés,
+nous avons conçu ce livre web pour être **interactif**,
+en associant textes, encarts encyclopédiques, photos, dessins, sons et vidéos.
+De la sorte, le récit s’en trouve **largement enrichi**,
+vous offrant une **immersion plus profonde, plus complète**.
+
+Pour les **malvoyants** (ou les feignants :-), chaque texte a même sa **version audio**, lue par Marie.
+D’ailleurs, nous avons veillé à ce que ce livre web soit **accessible aux personnes en situation de handicap**
+<small>(n’hésitez pas à <a href="#contact">nous contacter</a>
+si des défauts persistes, ou si des améliorations sont à faire)</small>.
+{% endfilter %}
+</div>
+
+<!-- Release -->
+<div class="slide">
+    <h1>Parution</h1>
+
+{% filter richtext %}
+**Dès le 12 avril et durant deux mois** environ,
+laissez-vous transporter au **Maroc** et en **Mauritanie**,
+à travers montagnes sèches ou enneigées, grandes plaines cultivées,
+villes bouillonnantes, paisibles campagnes, longues plages solitaires,
+déserts immenses et poétiques, etc.
+
+Ainsi, **chaque jour** d’avril, mai et juin, découvrez les nouvelles pages
+du **journal de bord d'Afrikapié**.
+
+L’Afrique noire – Sénégal et Mali – ne se dévoilera qu’à l’automne. Alors, patiente...
+
+**Et la version papier ?**
+Elle sera disponible, bien sûr !
+Quelque part entre la fin d’été et la fin d’année.
+Probablement en **auto-édition** et en **deux tomes**.
+Pas d’inquiétude cependant : nous vous tiendrons au courant.
+{% endfilter %}
+</div>
+
+<!-- Free reading -->
+<div class="slide">
+    <h1>Lecture libre</h1>
+
+{% filter richtext %}
+{% endfilter %}
+</div>
+
+<!-- Open price -->
+<div class="slide">
+    <h1>Prix libre</h1>
+
+{% filter richtext %}
+{% endfilter %}
+</div>
+
+<!-- The authors -->
+<div class="slide">
+    <h1>Les auteurs</h1>
+
+{% filter richtext %}
+{% endfilter %}
+</div>
+
+<!-- Contact us -->
 <div class="slide">
     {% include 'contact.html.twig' %}
 </div>
