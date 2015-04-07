@@ -33,7 +33,7 @@
         // There are 8 photos to load!
         for (i = 0; i < 8; i += 1) {
             bg = document.createElement('div');
-            bg.style.background = 'url(/images/home-header/' + i + '.jpg) no-repeat -9999px -9999px';
+            bg.style.background = 'url(/images/home-bg/' + i + '.jpg) no-repeat -9999px -9999px';
             preload.appendChild(bg);
         }
 
