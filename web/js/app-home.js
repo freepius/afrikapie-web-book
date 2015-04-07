@@ -52,7 +52,7 @@
 
             if (i !== old_i) {
                 old_i = i;
-                body.style.backgroundImage = 'url(images/home-header/' + i + '.jpg)';
+                body.style.backgroundImage = 'url(images/home-bg/' + i + '.jpg)';
             }
         });
     });
