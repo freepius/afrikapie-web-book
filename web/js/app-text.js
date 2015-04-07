@@ -162,11 +162,4 @@
         trigger   : 'focus'
     });
 
-    /**
-     * Activate the Bootstrap TOOLTIPS.
-     */
-    $('[data-title]:not([data-lightbox])').tooltip({
-        container: 'body'
-    });
-
 }());

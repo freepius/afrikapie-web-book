@@ -8,6 +8,9 @@ use Silex\Api\ControllerProviderInterface;
  * Summary :
  *  -> __construct
  *  -> connect
+ *  -> home
+ *  -> readText
+ *  -> contact      [protected]
  */
 class BaseController implements ControllerProviderInterface
 {
