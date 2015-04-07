@@ -27,10 +27,11 @@
         var i, bg,
             preload = document.createElement('div');
 
-        preload.id = 'preload';
+        preload.id = 'preload-body';
         document.body.appendChild(preload);
 
-        for (i = 0; i < 5; i += 1) {
+        // There are 8 photos to load!
+        for (i = 0; i < 8; i += 1) {
             bg = document.createElement('div');
             bg.style.background = 'url(/images/home-header/' + i + '.jpg) no-repeat -9999px -9999px';
             preload.appendChild(bg);
