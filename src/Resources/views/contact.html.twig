@@ -1,6 +1,6 @@
 {% from 'form.twig' import render_fields %}
 
-<h1>Nous contacter</h1>
+<h1 id="contact">Nous contacter</h1>
 
 {% if currentPage == 'text' %}
     <p>Si, pour ce texte, vous avez une question, une critique, un avis, un encouragement,
@@ -25,7 +25,7 @@
    notre site web de voyage, de bric et de broc.
 </p>
 
-<form id="contact" action="{{ pathInfo }}" method="post" class="form-horizontal">
+<form action="{{ pathInfo }}" method="post" class="form-horizontal">
     {{ render_fields(contact, errors, 'contact', {required: true},
         [
             {name: 'name'},

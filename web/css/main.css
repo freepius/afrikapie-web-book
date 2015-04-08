@@ -337,7 +337,8 @@ hr {
   border: 0;
   border-top: 1px solid #777777;
 }
-.sr-only {
+.sr-only,
+#home > nav > ul.affix-top {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -605,12 +606,14 @@ ol ol {
   list-style: none;
 }
 .list-inline,
+#home > nav > ul,
 #summary-summary > nav.main > ul {
   padding-left: 0;
   list-style: none;
   margin-left: -5px;
 }
 .list-inline > li,
+#home > nav > ul > li,
 #summary-summary > nav.main > ul > li {
   display: inline-block;
   padding-left: 5px;
@@ -2139,7 +2142,8 @@ select[multiple].form-group-lg .form-control {
 .has-feedback label ~ .form-control-feedback {
   top: 33px;
 }
-.has-feedback label.sr-only ~ .form-control-feedback {
+.has-feedback label.sr-only ~ .form-control-feedback,
+.has-feedback label#home > nav > ul.affix-top ~ .form-control-feedback {
   top: 0;
 }
 .help-block {
@@ -4113,6 +4117,18 @@ body#home {
   #home #main.slide h1 {
     font-size: 50px;
   }
+}
+#home > nav > ul {
+  background-color: white;
+  border-bottom: 2px solid black;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+#home > nav > ul.affix {
+  top: 0;
 }
 #text > header {
   background: no-repeat center;

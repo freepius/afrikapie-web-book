@@ -33,3 +33,17 @@ body&
         h1 { font-size: 50px; }
     }
 }
+
+// Affix navbar: important shortcuts
+> nav > ul:extend(.list-inline all)
+{
+    background-color: white;
+    border-bottom: 2px solid black;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+}
+> nav > ul.affix { top: 0; }
+> nav > ul.affix-top:extend(.sr-only all) {}

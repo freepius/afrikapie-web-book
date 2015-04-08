@@ -1,4 +1,4 @@
-/*global document, window, setTimeout */
+/*global $, document, window, setTimeout */
 
 (function () {
     "use strict";
@@ -55,6 +55,15 @@
                 body.style.backgroundImage = 'url(images/home-bg/' + i + '.jpg)';
             }
         });
+    });
+
+    /**
+     * Activate the affix navbar (containing the important shortcuts).
+     */
+    $('#home > nav > ul').affix({
+        offset: {
+            top: function () { return $('#main').outerHeight(true); }
+        }
     });
 
 }());
