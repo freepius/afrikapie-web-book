@@ -33,7 +33,7 @@
 
 {% block main %}
 
-{% include 'text-help.html.twig' only %}
+{% include 'text/help.html.twig' only %}
 
 {{ list_errors(errors, 'contact') }}
 
@@ -43,7 +43,7 @@
         {{ text.intro ? ('<q>&#160;'~text.intro~'&#160;</q>') | raw }}
     </div>
 
-    {% include 'text-nav.html.twig' with {header: true} %}
+    {% include 'text/nav.html.twig' with {header: true} %}
 </header>
 
 <!-- Buttons to choose the display mode -->
@@ -65,7 +65,7 @@
 </div>
 
 {% if text.module.audio %}
-    {% include 'text/module/audio.html.twig' %}
+    {% include 'text/audio.html.twig' %}
 {% endif %}
 
 <section property="articleBody">
@@ -94,8 +94,8 @@
 
 <footer>
     <hr>
-    {% include 'text-nav.html.twig' with {footer: true} %}
-    {% include 'text-support.html.twig' %}
+    {% include 'text/nav.html.twig' with {footer: true} %}
+    {% include 'text/support.html.twig' %}
     <hr>
     {% include 'contact.html.twig' %}
 </footer>

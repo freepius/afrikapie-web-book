@@ -4213,11 +4213,6 @@ body#home {
   opacity: 1;
   filter: alpha(opacity=100);
 }
-#text nav .right {
-  margin: 0;
-  position: absolute;
-  right: 20px;
-}
 #text > audio {
   width: 100%;
 }

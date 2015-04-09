@@ -46,8 +46,6 @@
 ////////////////////////////////////////////////////////
 // FOOTER having:
 //   -> the navigation buttons              nav
-//   -> the "Support us" part
-//   -> the contact form                    form
 ////////////////////////////////////////////////////////
 > footer:extend(.container all)
 {
@@ -60,13 +58,7 @@
 }
 
 ////////////////////////////////////////////////////////
-// NAVIGATION BUTTONS:
-//   -> Previous text       (both in <header> and <footer>)
-//   -> Home                (idem)
-//   -> Next text           (idem)
-//
-//   -> Open the help modal (only in <header>)
-//   -> Back to the top     (only in <footer>)
+// NAVIGATION BUTTONS
 ////////////////////////////////////////////////////////
 nav
 {
@@ -83,12 +75,6 @@ nav
     > a {
         .opacity(0.5);
         &:hover, &:focus { .opacity(1.0); }
-    }
-
-    .right {
-        margin: 0;
-        position: absolute;
-        right: 20px;
     }
 }
 

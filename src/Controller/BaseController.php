@@ -51,7 +51,9 @@ class BaseController implements ControllerProviderInterface
 
         return (true === $contact = $this->contact()) ?
             $this->app->redirect("/$slug")            :
-            $this->app->render('text.html.twig', ['text' => $text] + $contact);
+            $this->app->render("text/tpl-{$text['template']}.html.twig",
+                ['text' => $text] + $contact
+            );
     }
 
     /**
