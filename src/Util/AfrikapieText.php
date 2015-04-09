@@ -82,9 +82,9 @@ class AfrikapieText
     {
         $this->text = $this->originalText;
 
-        $this->replaceCollection('comments'  , 'footnote');
-        $this->replaceCollection('longnotes' , 'eventualFootnote');
-        $this->replaceCollection('wikipedias', 'wikipediaFootnote');
+        $this->applyCollection('comments'  , 'footnote');
+        $this->applyCollection('longnotes' , 'eventualFootnote');
+        $this->applyCollection('wikipedias', 'wikipediaFootnote');
 
         $this->removeMarkers();
         return $this->text;
@@ -101,7 +101,7 @@ class AfrikapieText
         $this->replaceTermCollection('longnotes' , 'popoverLinkIcon');
         $this->replaceTermCollection('longsounds', 'soundPopoverLinkIcon');
         $this->replaceTermCollection('sounds'    , 'soundIcon');
-        $this->replaceCollection    ('subtexts'  , 'collapsibleTextLinkIcon');
+        $this->applyCollection      ('subtexts'  , 'collapsibleTextLinkIcon');
         $this->replaceTermCollection('wikipedias', 'wikipediaLinkIcon');
 
         $this->removeMarkers();
@@ -123,11 +123,10 @@ class AfrikapieText
     }
 
     /**
-     * Replace the current text ($this->text)
-     * by the application of a $callback function (see TransRulesTrait.php)
+     * Apply a $callback function (see TransRulesTrait.php)
      * on each element of a $collection.
      */
-    protected function replaceCollection($collection, $callback)
+    protected function applyCollection($collection, $callback)
     {
         $collection = (array) @ $this->metadata[$collection];
 

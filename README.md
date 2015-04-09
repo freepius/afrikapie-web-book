@@ -30,8 +30,7 @@ The **Afrikapié Web Book** is licensed under the **CC0** license.
 TODO
 ----
 
-* AfrikapieText: rename replaceCollection() by applyCollection()
-* BUG of "replace the replacements"
+* BUG of "replace the replacements": try to adapt the script using the powerful strtr() function!
 
 
 [Composer]: http://getcomposer.org
