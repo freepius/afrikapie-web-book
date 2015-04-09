@@ -16,7 +16,7 @@
     "require": {
         "silex/silex": "*",
         "twig/twig": "~1.18",
-        "twbs/bootstrap": "3.3.2",
+        "twbs/bootstrap": "3.3.4",
         "monolog/monolog": "*",
         "swiftmailer/swiftmailer": "5.*",
         "symfony/config": "*",
