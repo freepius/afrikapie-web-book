@@ -4,6 +4,23 @@ namespace App\Util;
 
 use Symfony\Component\Yaml;
 
+/**
+ * PUBLIC:
+ *   __construct
+ *   findAndTransform
+ *
+ * PROTECTED:
+ *   readfile           [static]
+ *   defaultMetadata
+ *   removeMarkers
+ *   transformSimple
+ *   transformEnhanced
+ *   putAtMarkerCollection
+ *   applyCollection
+ *   replaceTermCollection
+ *   putAtMarker
+ *   replaceTerm
+ */
 class AfrikapieText
 {
     use TransRulesTrait;
@@ -23,6 +40,7 @@ class AfrikapieText
     {
         $this->slug = $slug;
 
+        // Retrieve the "raw text" + the metadata
         $textPath     = "{$this->dir}/$slug/text.md";
         $metadataPath = "{$this->dir}/$slug/metadata.yml";
 
@@ -32,25 +50,22 @@ class AfrikapieText
             static::readfile($metadataPath)
         );
 
-        // Default values:
-        $defaultMetadata =
-        [
-            // for some metadata
-            'intro' => null,
-            'next'  => date('Y-m-d', strtotime("$slug +1 day")),
-            'prev'  => date('Y-m-d', strtotime("$slug -1 day")),
+        // Complete the metadata
+        $this->metadata += ['slug' => $slug] + $this->defaultMetadata();
 
-            // for the modules activation
-            'module' => [
-                'audio' => true,
-            ],
-        ];
+        // Apply the wanted transformations
+        $out   = [];
+        $trans = array_intersect(
+            ['enhanced', 'simple'],
+            (array) $this->metadata['trans']
+        );
 
-        return $this->metadata + $defaultMetadata + [
-            'slug'     => $slug,
-            'simple'   => $this->transformSimple(),
-            'enhanced' => $this->transformEnhanced(),
-        ];
+        foreach ($trans as $t) {
+            $out[$t] = $this->{'transform'.ucfirst($t)}();
+        }
+
+        // Return the transformed texts + the metadata
+        return $out + $this->metadata;
     }
 
     /**
@@ -67,6 +82,28 @@ class AfrikapieText
             throw new \RuntimeException("Unable to open the file \"$path\"");
         }
         return file_get_contents($path);
+    }
+
+    /**
+     * Return the default values:
+     *  -> for some metadata
+     *  -> for the modules activation
+     */
+    protected function defaultMetadata()
+    {
+        return [
+            // for some metadata
+            'intro'    => null,
+            'next'     => date('Y-m-d', strtotime("$this->slug +1 day")),
+            'prev'     => date('Y-m-d', strtotime("$this->slug -1 day")),
+            'template' => 'main',
+            'trans'    => ['enhanced', 'simple'],
+
+            // for the modules activation
+            'module' => [
+                'audio' => true,
+            ],
+        ];
     }
 
     /**
