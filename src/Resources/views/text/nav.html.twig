@@ -1,0 +1,27 @@
+<nav>
+    {% if text.prev %}
+        <a href="/{{ text.prev }}" aria-label="Aller au texte précédent">
+            <i class="fa fa-3x fa-chevron-circle-left" data-title="Texte précédent"></i>
+        </a>
+    {% endif %}
+
+    <a href="/" aria-label="Aller à l’accueil">
+        <i class="fa fa-3x fa-home" data-title="Accueil"></i>
+    </a>
+
+    <a href="/sommaire" aria-label="Aller au sommaire">
+        <i class="fa fa-3x fa-bars" data-title="Sommaire"></i>
+    </a>
+
+    {% if footer|default(false) %}
+        <a href="#text" aria-label="Aller en haut de page">
+            <i class="fa fa-3x fa-arrow-circle-up" data-title="Haut de page"></i>
+        </a>
+    {% endif %}
+
+    {% if text.next %}
+        <a href="/{{ text.next }}" aria-label="Aller au texte suivant">
+            <i class="fa fa-3x fa-chevron-circle-right" data-title="Texte suivant"></i>
+        </a>
+    {% endif %}
+</nav>
