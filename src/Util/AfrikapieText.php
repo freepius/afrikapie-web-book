@@ -32,12 +32,18 @@ class AfrikapieText
             static::readfile($metadataPath)
         );
 
-        // Default values for some metadata
+        // Default values:
         $defaultMetadata =
         [
+            // for some metadata
             'intro' => null,
             'next'  => date('Y-m-d', strtotime("$slug +1 day")),
             'prev'  => date('Y-m-d', strtotime("$slug -1 day")),
+
+            // for the modules activation
+            'module' => [
+                'audio' => true,
+            ],
         ];
 
         return $this->metadata + $defaultMetadata + [
