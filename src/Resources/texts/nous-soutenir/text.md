@@ -1,3 +1,9 @@
+<nav class="text-center">
+    <a class="btn btn-default" href="#moyens-de-paiement">Moyens de paiements</a></li>
+    <a class="btn btn-default" href="#contreparties">Contreparties</a></li>
+    <a class="btn btn-default" href="#contact">Nous contacter</a></li>
+</nav>
+
 Avant-propos
 ------------
 
@@ -23,7 +29,7 @@ Donc, favorisez l’humain, le consommable ou les deux ;-).
 **Nota bene :** pour tout envoi/paiement, **pensez à [nous contacter](#contact)**, en nous laissant **votre adresse** email ou postale, afin que nous puissions **vous remercier** et, le cas échéant, **vous envoyer vos [contreparties](#contreparties)**.
 
 
-Des euros sonnants et trébuchants
+Des euros sonnants et trébuchants {#moyens-de-paiement}
 ---------------------------------
 
 Malgré notre pratique intensive de la « récup’ » et du « fait maison », et notre consommation, presque exclusive, de « bouillie de pommes de terre sans sel », nous avons -- *encore !* -- la nécessité de recolter quelque argent.
@@ -34,8 +40,8 @@ Alors voici, par **ordre de préférence**, les moyens pour nous rémunérer :
 
 1. Par **virement bancaire** sur le compte IBAN **FR76 1469 0000 0151 0000 0435 604** (BIC : CMCIFRFRP1MON).
 Facile et **sans frais** si vous êtes dans la zone SEPA.
-<br><br>
 
+********************
 
 2. En nature, chèque ou espèce, **directement à la maison** (en personne ou par voie postale).
 La démarche est peu coûteuse et notre porte toujours ouverte !
@@ -46,8 +52,8 @@ Notre adresse :
     7 La Ville de Bas<br>
     56910 Saint-Nicolas du Tertre
 </p>
-<br>
 
+********************
 
 3. Par **Flattr**, un système de donation par micro-paiements.
 Vous pouvez soutenir seuls **les textes qui vous plaisent** ou notre démarche tout entière, **en vous abonnant à notre compte Flattr** (en cliquant deux fois sur le bouton).
@@ -61,8 +67,8 @@ Petit bémol, 10% du don va à Flattr.
 
 Ainsi, à la fin de chacun de nos textes, n’hésitez pas à cliquer sur le petit bouton vert ;-)
 Et pour en savoir plus, lisez « Et si vous testiez le web payant ? » de Ploum, le fameux blogueur belge, *une fois !*
-<br><br>
 
+********************
 
 4. Par **Paypal**, en utilisant le **bouton ci-dessous** ou sur le compte **contact@anarchos-semitas.net**.
 Note : une commission est prélevée pour chaque transaction (de 1,4% à 3,4%, + 0,25€).
@@ -75,13 +81,13 @@ Note : une commission est prélevée pour chaque transaction (de 1,4% à 3,4%, 
 <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
 <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
 </form>
-<br>
 
+********************
 
 5. Si vous tenez **absolument** à nous rémunérer autrement (via Tipee ou ChangeTip, en Bitcoin ou en Ouguiya...), faites-nous en part, nous aviserons !
 
 
-Les contreparties
+Les contreparties {#contreparties}
 -----------------
 
 Dans notre vieux monde marchand, qu’il nous est difficile de débourser quelques pièces sans une contrepartie sonnante, trébuchante et suffisante.
@@ -89,17 +95,17 @@ Dans notre vieux monde matériel, aussi, l’on aime à s’entourer d’objets 
 Alors, pour celles et ceux qui le souhaitent, **nous proposons les contreparties suivantes** :
 
 
-1. 5€ : un p’tit mail chaleureux + votre nom dans les remerciements de la page d’accueil.
+Combien ? | Quoi ?
+----|----
+5€  | un email chaleureux + votre nom dans les remerciements <small>(page d’accueil)</small>
+15€ | 1 aquarelle <small>(format *Carte postale*)</small> dédicacée par Marie <small>+ contreparties des 5€</small>
+25€ | 3 aquarelles <small>(format *Carte postale*)</small> dédicacées par Marie <small>+ contreparties des 5€</small>
+35€ | 1 photo du [catalogue](/catalogue-photos) <small>(format 40x30)</small>, imprimée sur papier d’art et dédicacée par Mathieu <small>+ contreparties des 15€</small>
+45€ | le livre papier « Afrikapié -- tome 1 » dédicacé par Mathieu + 1 marque-page *aquarelle* dédicacé par Marie <small class="text-danger">(contreparties à retardement)</small>
+100€| contreparties des 45€ et des 35€ + votre nom dans les remerciements du livre + notre reconnaissance éternelle à vie <small class="text-danger">(contreparties à retardement)</small>
 
-1. 15€ : une aquarelle au format « carte postale », dédicacée par Marie + contreparties des 5€.
-
-1. 25€ : un carnet de 3 aquarelles, au format « carte postale », dédicacée par Marie + contreparties des 5€.
-
-1. 35€ : une photo parmis le catalogue, imprimée sur papier canson *fine art*, au format 40x30 et dédicacée par Mathieu + contreparties des 15€.
-
-1. 45€ : 1 livre papier « Afrikapié tome 1 » dédicacé par Mathieu + 1 marque-page « aquarelle » dédicacé par Marie.
-
-1. 100€ (on peut rêver) : les contreparties des 45€ + celles des 35€ + votre nom dans les remerciements du livre + notre reconnaissance éternelle post-Alzaymer.
-
-**N’hésitez pas à imaginer d’autres contreparties !**  
+**N’hésitez pas à en imaginer d’autres !**
 *(exemples : un petit carnet de 5 aquarelles, un cadre de 3 photos, un poème personnalisé, un texte à thème, une dédicace particulière, etc.)*
+
+**N’oubliez pas**, encore une fois, de nous envoyer **votre adresse** email ou postale.
+Sinon, ni remerciement ni contrepartie !
