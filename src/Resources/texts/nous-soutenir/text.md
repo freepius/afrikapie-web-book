@@ -30,8 +30,12 @@ Donc, favorisez l’humain, le consommable ou les deux ;-).
 **Nota bene :** pour tout envoi ou paiement, **pensez à [nous contacter](#contact)** en nous laissant **votre adresse** email ou postale, afin que nous puissions **vous remercier** et, le cas échéant, **vous envoyer vos [contreparties](#contreparties)**.
 
 
-Des euros sonnants et trébuchants {#moyens-de-paiement .text-center}
----------------------------------
+<h2 id="moyens-de-paiement" class="text-center">
+    Des euros sonnants et trébuchants
+    <a href="#text" aria-label="Aller en haut de page">
+        <i class="fa fa-arrow-up small" title="Haut de page"></i>
+    </a>
+</h2>
 <marker=2>
 
 Malgré notre pratique intensive de la « récup’ » et du « fait maison », et notre consommation, presque exclusive, de « bouillie de pommes de terre sans sel », nous avons -- *encore !* -- la nécessité de récolter quelque argent.
@@ -89,8 +93,12 @@ Note : une commission est prélevée pour chaque transaction (de 1,4% à 3,4% +
 5. Si vous tenez **absolument** à nous rémunérer autrement (via Tipee ou ChangeTip, en Bitcoin ou en Ouguiya...), faites-nous en part, nous aviserons !
 
 
-Les contreparties {#contreparties .text-center}
------------------
+<h2 id="contreparties" class="text-center">
+    Les contreparties
+    <a href="#text" aria-label="Aller en haut de page">
+        <i class="fa fa-arrow-up small" title="Haut de page"></i>
+    </a>
+</h2>
 <marker=3>
 
 Dans notre vieux monde marchand, qu’il nous est difficile de débourser quelques pièces sans une contrepartie sonnante, trébuchante et suffisante.
