@@ -1,0 +1,52 @@
+{% set currentPage = 'text' %}
+
+{% extends 'layout.html.twig' %}
+
+{% from 'form.twig' import list_errors %}
+
+{% block title %}Afrikapié - {{ text.title }}{% endblock %}
+
+
+{% block javascripts %}
+    {{ js('buzz') }}
+    <script src="/js/app-text.js"></script>
+{% endblock %}
+
+
+{% block stylesheets %}
+    <style>
+        body > header {
+            background-image: url('/texts/{{ text.slug }}/header.jpg') !important;
+        }
+    </style>
+{% endblock %}
+
+
+{% block main %}
+
+{{ list_errors(errors, 'contact') }}
+
+<header>
+    <div class="inner">
+        <h1>{{ text.title }}</h1>
+        {{ text.intro ? ('<q>&#160;'~text.intro~'&#160;</q>') | raw }}
+    </div>
+
+    {% include 'text/nav.html.twig' %}
+</header>
+
+{% if text.module.audio %}
+    {% include 'text/audio.html.twig' %}
+{% endif %}
+
+<section property="articleBody">
+    {{ text.enhanced | richtext }}
+</section>
+
+<footer>
+    <hr>
+    {% include 'text/nav.html.twig' with {footer: true} %}
+    {% include 'contact.html.twig' with {currentPage: null} %}
+</footer>
+
+{% endblock %}
