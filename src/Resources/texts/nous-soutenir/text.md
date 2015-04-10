@@ -15,7 +15,7 @@ Ou, plus simplement, vous nous trouvez un vague intérêt ?
 **Alors soutenez-nous !**
 Parce que les p’tits artisans-créateurs, plus que d’autres, z’en ont bien besoin.
 
-Sachez, avant de trifouiller votre petite monnaie, que **nous acceptons volontier les paiements en nature** :
+Sachez, avant de trifouiller votre petite monnaie, que **nous acceptons volontiers les paiements en nature** :
 
 * tout ce qui se boit, se mange, se contemple, s’écoute ou se lit
 * tout ce qui permet de jardiner, cuisiner, dessiner, voyager ou dormir
@@ -40,7 +40,7 @@ Donc, favorisez l’humain, le consommable ou les deux ;-).
 
 Malgré notre pratique intensive de la « récup’ » et du « fait maison », et notre consommation, presque exclusive, de « bouillie de pommes de terre sans sel », nous avons -- *encore !* -- la nécessité de récolter quelque argent.
 
-Surtout, qu’il serait plaisant et valorisant de gagner notre croûte, même un peu, avec cette activité passionante de voyageur-créateur.
+Surtout, qu’il serait plaisant et valorisant de gagner notre croûte, même un peu, avec cette activité passionnante de voyageur-créateur.
 
 Alors voici, par **ordre de préférence**, les moyens pour nous rémunérer :
 
@@ -61,7 +61,7 @@ Notre adresse :
 
 ********************
 
-3. Par **Flattr**, un système de donation par micro-paiements.
+3. Par **Flattr**, un système de donation par micropaiements.
 Vous pouvez soutenir seuls **les textes qui vous plaisent** ou notre démarche tout entière, **en vous abonnant à notre compte Flattr** (en cliquant deux fois sur le bouton).
 <script id='fbkkljt'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=anarchos-semitas&button=compact&url=http%3A%2F%2Fafrikapied.fr';f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbkkljt');</script>
 
