@@ -58,6 +58,7 @@ $app->register(new \Freepius\Pimple\Provider\AssetServiceProvider, [
 
 /* freepius/php-richtext */
 $app->register(new \Freepius\Pimple\Provider\RichtextServiceProvider);
+$app['richtext.config'] += ['remove.script.tags' => false];
 
 /* Transformer for "Afrikapié format" */
 $app['afrikapieText'] = function () {

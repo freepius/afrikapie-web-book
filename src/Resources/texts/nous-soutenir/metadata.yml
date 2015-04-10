@@ -1,0 +1,38 @@
+title    : Nous soutenir
+intro    : Parce que c’est bien !
+module   : {audio: false}
+prev     : ~
+next     : ~
+template : simple
+trans    : enhanced
+
+lightboxes:
+    - term   : récup’
+      caption: J’aime ma cocotte !
+
+    - term   : fait maison
+      caption: Superbe objet très utile, fait maison.
+
+    - term   : bouillie de pommes de terre sans sel
+      caption: Miam !
+
+    - term    : voyageur-créateur
+      caption : Session d’écriture dans l’Anti-Atlas marocain.
+
+links:
+    - term : Flattr/1
+      url  : https://flattr.com/profile/anarchos-semitas
+
+    - term : Et si vous testiez le web payant ?
+      url  : https://ploum.net/si-vous-testiez-le-web-payant/
+
+    - term : Ploum
+      url  : https://ploum.net/a-propos-de-lionel-dricot/
+
+    - term : Tipee
+      url  : https://www.tipeee.com/
+
+    - term : ChangeTip
+      url  : https://www.changetip.com/
+
+wikipedias: [SEPA, Paypal/1, Bitcoin, Ouguiya]
