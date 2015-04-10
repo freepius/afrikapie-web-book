@@ -4,8 +4,9 @@
     <a class="btn btn-default" href="#contact">Nous contacter</a></li>
 </nav>
 
-Avant-propos
+Avant-propos {.text-center}
 ------------
+<marker=1>
 
 Vous aimez nos textes ?
 Vous appréciez notre démarche ?
@@ -26,13 +27,14 @@ Donc, favorisez l’humain, le consommable ou les deux ;-).
 
 **Nota bene :** pour tout envoi, trouvez notre adresse postale ci-après.
 
-**Nota bene :** pour tout envoi/paiement, **pensez à [nous contacter](#contact)**, en nous laissant **votre adresse** email ou postale, afin que nous puissions **vous remercier** et, le cas échéant, **vous envoyer vos [contreparties](#contreparties)**.
+**Nota bene :** pour tout envoi ou paiement, **pensez à [nous contacter](#contact)** en nous laissant **votre adresse** email ou postale, afin que nous puissions **vous remercier** et, le cas échéant, **vous envoyer vos [contreparties](#contreparties)**.
 
 
-Des euros sonnants et trébuchants {#moyens-de-paiement}
+Des euros sonnants et trébuchants {#moyens-de-paiement .text-center}
 ---------------------------------
+<marker=2>
 
-Malgré notre pratique intensive de la « récup’ » et du « fait maison », et notre consommation, presque exclusive, de « bouillie de pommes de terre sans sel », nous avons -- *encore !* -- la nécessité de recolter quelque argent.
+Malgré notre pratique intensive de la « récup’ » et du « fait maison », et notre consommation, presque exclusive, de « bouillie de pommes de terre sans sel », nous avons -- *encore !* -- la nécessité de récolter quelque argent.
 
 Surtout, qu’il serait plaisant et valorisant de gagner notre croûte, même un peu, avec cette activité passionante de voyageur-créateur.
 
@@ -71,7 +73,7 @@ Et pour en savoir plus, lisez « Et si vous testiez le web payant ? » de Plo
 ********************
 
 4. Par **Paypal**, en utilisant le **bouton ci-dessous** ou sur le compte **contact@anarchos-semitas.net**.
-Note : une commission est prélevée pour chaque transaction (de 1,4% à 3,4%, + 0,25€).
+Note : une commission est prélevée pour chaque transaction (de 1,4% à 3,4% + 0,25€).
 
 <!-- Form to pay with paypal -->
 <form class="text-center" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
@@ -87,8 +89,9 @@ Note : une commission est prélevée pour chaque transaction (de 1,4% à 3,4%, 
 5. Si vous tenez **absolument** à nous rémunérer autrement (via Tipee ou ChangeTip, en Bitcoin ou en Ouguiya...), faites-nous en part, nous aviserons !
 
 
-Les contreparties {#contreparties}
+Les contreparties {#contreparties .text-center}
 -----------------
+<marker=3>
 
 Dans notre vieux monde marchand, qu’il nous est difficile de débourser quelques pièces sans une contrepartie sonnante, trébuchante et suffisante.
 Dans notre vieux monde matériel, aussi, l’on aime à s’entourer d’objets qui nous rappellent.

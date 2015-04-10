@@ -119,7 +119,7 @@ function footnote($e)
  * For each element $e of "files":
  *     If  $e is string
  *   Then  file = $e
- *   Else  $e has file (mandatory), caption and size (optional)
+ *   Else  $e has file (mandatory), caption, offset and size (optional)
  */
 function gallery($e)
 {
@@ -132,14 +132,17 @@ function gallery($e)
         if (is_string($e)) { $e = ['file' => $e]; }
 
         $out .= sprintf(
-            '<div class="col-sm-%1$s">'.
-                '<a href="%2$s" data-lightbox="global" data-title="%3$s">'.
-                    '<img src="%2$s" class="img-responsive">'.
+            '<div class="col-sm-%1$s %2$s">'.
+                '<a href="%3$s" data-lightbox="global" data-title="%4$s">'.
+                    '<img src="%3$s" class="img-responsive">'.
                 '</a>'.
             '</div>',
 
             // col. size
             @ $e['size'] ?: $colSize,
+
+            // eventual offset
+            @ $e['offset'] ? ('col-sm-offset-'.$e['offset']) : '',
 
             // file
             $this->imageUrl($e['file']),

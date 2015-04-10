@@ -6,6 +6,16 @@ next     : ~
 template : simple
 trans    : enhanced
 
+galleries:
+    - marker: 1
+      files : [{offset: 3, size: 6, file: local/nature-morte.jpg}]
+
+    - marker: 2
+      files : [{offset: 3, size: 6, file: local/argent.jpg}]
+
+    - marker: 3
+      files : [{offset: 3, size: 6, file: local/cercle-vertueux.jpg}]
+
 lightboxes:
     - term   : récup’
       caption: J’aime ma cocotte !
