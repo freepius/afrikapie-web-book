@@ -68,20 +68,18 @@ function collapsibleTextLinkIcon($e)
     $this->putAtMarker($e, function ($e) use ($linkId, $textId, $text) {
         return
 <<<EOT
-<aside id="$textId" class="collapse">
-    <div class="well clearfix">
+<aside id="$textId" class="collapse well">
 
-        <a class="close" href="#$linkId" data-toggle="collapse" data-target="#$textId" aria-controls="$textId">
-            <i class="fa fa-close"></i>
-        </a>
+    <a class="close" href="#$linkId" data-toggle="collapse" data-target="#$textId" aria-controls="$textId">
+        <i class="fa fa-close"></i>
+    </a>
 
-        <div markdown="1">\n\n$text\n\n</div>
+    <div markdown="1">\n\n$text\n\n</div>
 
-        <a class="close" href="#$linkId" data-toggle="collapse" data-target="#$textId" aria-controls="$textId">
-            Fermer <i class="fa fa-close"></i>
-        </a>
+    <a class="close" href="#$linkId" data-toggle="collapse" data-target="#$textId" aria-controls="$textId">
+        Fermer <i class="fa fa-close"></i>
+    </a>
 
-    </div>
 </aside>
 EOT;
     });
