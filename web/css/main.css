@@ -4066,7 +4066,7 @@ body#home {
 }
 #home #main.slide {
   font-size: 26px;
-  padding: 40px;
+  padding-top: 40px;
 }
 #home #main.slide * {
   text-align: center;
@@ -4105,7 +4105,7 @@ body#home {
 #sommaire #today-texts > ul {
   font-size: 80%;
 }
-#sommaire > nav {
+#sommaire > * {
   margin-top: 20px;
 }
 #sommaire > nav .notext {
