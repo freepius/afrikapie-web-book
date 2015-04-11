@@ -10,7 +10,8 @@ use Silex\Api\ControllerProviderInterface;
  *  -> connect
  *  -> home
  *  -> readText
- *  -> contact      [protected]
+ *  -> contact         [protected]
+ *  -> isPublishedText [protected]
  */
 class BaseController implements ControllerProviderInterface
 {
@@ -53,22 +54,10 @@ class BaseController implements ControllerProviderInterface
     public function readText($slug)
     {
         try {
-            $found = false;
-            $today = date('Y-m-d');
-            $published = $this->app['publishedTexts'];
+            if (! $this->isPublishedText($slug)) {
+                throw new \Exception('Texte non publié.');
+            }
 
-            // Search the $slug text, for each publication date <= today
-            while (($e = each($published))
-                && $e[0] <= $today
-                && ! $found = in_array($slug, $e[1])
-            );
-
-            // if $slug not found in "published texts" => throw an exception!
-            if (! $found) { throw new \Exception('Texte non publié !'); }
-
-            /**
-             * Load and transform the $slug text
-             */
             $text = $this->app['afrikapieText']->findAndTransform($slug);
         }
         catch (\Exception $e) {
@@ -77,6 +66,9 @@ class BaseController implements ControllerProviderInterface
                 ($this->app['debug'] ? $e->getMessage() : '')
             );
         }
+
+        // If the next text is unpublished => remove it.
+        if ($next =& $text['next'] && ! $this->isPublishedText($next)) { $next = null; }
 
         return (true === $contact = $this->contact()) ?
             $this->app->redirect("/$slug")            :
@@ -125,5 +117,20 @@ class BaseController implements ControllerProviderInterface
             'errors'   => $errors,
             'pathInfo' => $request->getPathInfo(),
         ];
+    }
+
+    /**
+     * Determine if a $text is published or not.
+     */
+    protected function isPublishedText($text)
+    {
+        $found = false;
+        $pub   = $this->app['publishedTexts'];
+        $today = date('Y-m-d');
+
+        // Search the $text, for each publication date <= today
+        while (($e = each($pub)) && $e[0] <= $today && ! $found = in_array($text, $e[1]));
+
+        return $found;
     }
 }
