@@ -1,0 +1,17 @@
+font-size: @font-size-base;
+text-align: center;
+
+.close { font-size: inherit; }
+
+> nav
+{
+    margin-top: 20px;
+
+    ul:extend(.list-inline all) {}
+
+    .notext {
+        font-size: 80%;
+        color: @text-muted;
+        cursor: @cursor-disabled;
+    }
+}

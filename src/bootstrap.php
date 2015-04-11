@@ -25,6 +25,8 @@ $app['debug'] = DEBUG;
 
 $app['bing_maps_api_key'] = BING_MAPS_API_KEY;
 
+require_once APP.'/texts.php';
+
 
 /*************************************************
  * Register services
@@ -80,18 +82,18 @@ $app['twig'] = $app->extend('twig', function($twig, $app)
         'Error(s)'              => 'Il y a <b>0</b> erreur(s) au <b><a href="#contact">formulaire de contact</a></b>.',
 
         // Months
-        'month.01' => 'janvier',
-        'month.02' => 'février',
-        'month.03' => 'mars',
-        'month.04' => 'avril',
-        'month.05' => 'mai',
-        'month.06' => 'juin',
-        'month.07' => 'juillet',
-        'month.08' => 'août',
-        'month.09' => 'septembre',
-        'month.10' => 'octobre',
-        'month.11' => 'novembre',
-        'month.12' => 'décembre',
+        '01' => 'janvier',
+        '02' => 'février',
+        '03' => 'mars',
+        '04' => 'avril',
+        '05' => 'mai',
+        '06' => 'juin',
+        '07' => 'juillet',
+        '08' => 'août',
+        '09' => 'septembre',
+        '10' => 'octobre',
+        '11' => 'novembre',
+        '12' => 'décembre',
     ];
 
     // My simple trans filter

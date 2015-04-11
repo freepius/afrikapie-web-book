@@ -1,25 +1,81 @@
 <section id="summary">
 
-    <a href="/2013-10-02" class="lead">
-        <i class="fa fa-book"></i> Commencer la lecture
-    </a>
+<a href="/2013-10-02" class="lead">
+    <i class="fa fa-book"></i> Commencer la lecture
+</a>
 
-    <!-- Notification for the last posted texts -->
-    <nav id="today-texts">
-        Aujourd’hui {{ today.day }} {{ ('month.' ~ today.month) | trans }},
-        <b>
-            {%     if today.num == 1 %} un nouveau texte !
-            {% elseif today.num  > 1 %} {{ today.num }} nouveaux textes !
-            {% else %}                  aucun nouveau texte.
-            {% endif %}
-        </b>
-
-        {% if today.texts %}
-            <ul class="list-inline">
-                {% for slug in today.texts %}
-                    <li><a href="{{ slug }}">{{ app.textTitles[slug] }}</a></li>
-                {% endfor %}
-            </ul>
+<!-- List of "today published texts" -->
+<nav>
+    Aujourd’hui {{ today.day }} {{ today.month|trans }},
+    <b>
+        {%     if today.num == 1 %} un nouveau texte :
+        {% elseif today.num  > 1 %} {{ today.num }} nouveaux textes :
+        {% else %}                  aucun nouveau texte.
         {% endif %}
-    </nav>
+    </b>
+
+    {% if today.texts %}
+        <ul>
+            {% for slug in today.texts %}
+                <li><a href="{{ slug }}">{{ app.textTitles[slug] }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</nav>
+
+<!-- Summary by country and month, in collapsible <div> -->
+<nav id="sommaire">
+    <h2>Sommaire</h2>
+
+    {# For each country, display its months #}
+    {% for country in app.countries %}
+        <ul>
+            <li>{{ country }} :</li>
+
+            {% for month in app[country] | keys %}
+                <li>
+                    {# Add, if necessary, a link to open the collapsible <div> #}
+                    {% if app[country][month] %}
+                        {% set id = country ~ month %}
+
+                        <a href="#{{ id }}" data-toggle="collapse"
+                           data-title="{{ app[country][month] | length }} textes publiés"
+                           aria-expanded="false" aria-controls="{{ id }}"
+                        >
+                            {{ month|trans }}
+                        </a>
+                    {% else %}
+                        <span class="notext">{{ month|trans }}</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+
+    <!-- Here, one collapsible <div> by country-month having published texts -->
+    {% for country in app.countries %}
+        {% for month, texts in app[country] if texts %}
+
+            {% set id = country ~ month %}
+
+            <div id="{{ id }}" class="collapse well">
+                {{ country }} – {{ month|trans }}
+                <ul class="pagination pagination-sm">
+                    {% for slug, titles in texts %}
+                        <li>
+                            <a href="/{{ slug }}" data-title="{{ titles[0] }}">
+                                {{ titles[1] }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                <a class="close" href="#{{ id }}" data-toggle="collapse">
+                    Fermer <i class="fa fa-close"></i>
+                </a>
+            </div>
+        {% endfor %}
+    {% endfor %}
+</nav>
+
 </section>
