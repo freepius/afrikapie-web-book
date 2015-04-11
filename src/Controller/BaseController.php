@@ -8,6 +8,7 @@ use Silex\Api\ControllerProviderInterface;
  * Summary :
  *  -> __construct
  *  -> connect
+ *  -> manageErrors
  *  -> home
  *  -> readText
  *  -> contact         [protected]
@@ -22,6 +23,8 @@ class BaseController implements ControllerProviderInterface
 
     public function connect(\Silex\Application $app)
     {
+        $app->error([$this, 'manageErrors']);
+
         $ctrl = $app['controllers_factory'];
 
         $ctrl->match('/', [$this, 'home'])->method('GET|POST');
@@ -29,6 +32,12 @@ class BaseController implements ControllerProviderInterface
         $ctrl->match('/{slug}', [$this, 'readText'])->method('GET|POST');
 
         return $ctrl;
+    }
+
+    public function manageErrors()
+    {
+        if ($this->app['debug']) { return; }
+        return $this->app->render('error.html.twig');
     }
 
     public function home()
