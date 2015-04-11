@@ -25,6 +25,8 @@ $app['debug'] = DEBUG;
 
 $app['bing_maps_api_key'] = BING_MAPS_API_KEY;
 
+$app['mail_cache_dir'] = CACHE.'/mail';
+
 require_once APP.'/texts.php';
 
 
@@ -114,10 +116,10 @@ $app['twig'] = $app->extend('twig', function($twig, $app)
 
 $app['swiftmailer.options'] =
 [
-    'host'       => 'smtp.alwaysdata.com',
+    'host'       => 'smtp-anarchos-semitas.alwaysdata.com',
     'port'       => 587,
     'username'   => 'contact@anarchos-semitas.net',
-    'password'   => SMTP_PASSWORD,
+    'password'   => '',
     'encryption' => null,
     'auth_mode'  => null,
 ];

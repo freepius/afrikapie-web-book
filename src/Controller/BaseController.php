@@ -92,6 +92,7 @@ class BaseController implements ControllerProviderInterface
     protected function contact()
     {
         $request = $this->app['request_stack']->getMasterRequest();
+        $logDir  = $this->app['mail_cache_dir'];
         $ourMail = $this->app['swiftmailer.options']['username'];
         $factory = $this->app['model.factory.contact'];
         $contact = $factory->instantiate();
@@ -103,17 +104,30 @@ class BaseController implements ControllerProviderInterface
 
             $errors = $factory->bind($contact, $httpData);
 
-            // No error => log + send a mail + redirect
             if (! $errors)
             {
-                // TODO: to activate
-                /*$this->app->mail(\Swift_Message::newInstance()
+                // Log
+                $fp = fopen(
+                    $logDir.'/'.date('Y-m-d-H-i-s_').uniqid().'.txt',
+                    'w'
+                );
+                fwrite($fp,
+                    "Name   : {$contact['name']}\n".
+                    "Email  : {$contact['email']}\n".
+                    "Subject: {$contact['subject']}\n".
+                    "Message: {$contact['message']}"
+                );
+                fclose($fp);
+
+                // Send
+                $this->app->mail(\Swift_Message::newInstance()
                     ->setSubject($contact['subject'])
                     ->setFrom([$contact['email'] => $contact['name']])
                     ->setTo($ourMail)
                     ->setBody($contact['message'])
-                );*/
+                );
 
+                // Notify
                 $this->app->addFlash('success',
                     'Votre message a bien été envoyé. <b>Merci.</b>');
 
