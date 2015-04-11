@@ -1,0 +1,49 @@
+title    : Catalogue photos
+intro    : Notre sélection parmi les plus jolies d’Afrikapié
+module   : {audio: false}
+prev     : ~
+next     : ~
+template : simple
+trans    : enhanced
+
+photowalls:
+    - marker   : 1
+      colnum   : 4
+      files    : 36
+      captions :
+          1  : Légende
+          2  : Légende
+          3  : Légende
+          4  : Légende
+          5  : Légende
+          6  : Légende
+          7  : Légende
+          8  : Légende
+          9  : Légende
+          10 : Légende
+          11 : Légende
+          12 : Légende
+          13 : Légende
+          14 : Légende
+          15 : Légende
+          16 : Légende
+          17 : Légende
+          18 : Légende
+          19 : Légende
+          20 : Légende
+          21 : Légende
+          22 : Légende
+          23 : Légende
+          24 : Légende
+          25 : Légende
+          26 : Légende
+          27 : Légende
+          28 : Légende
+          29 : Légende
+          30 : Légende
+          31 : Légende
+          32 : Légende
+          33 : Légende
+          34 : Légende
+          35 : Légende
+          36 : Légende
