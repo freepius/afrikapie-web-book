@@ -37,7 +37,7 @@ class BaseController implements ControllerProviderInterface
 
         list($_, $month, $day) = explode('-', $today);
 
-        $texts = (array) @ $this->app['publishedTexts'][$today];
+        $texts = (array) @ $this->app['text.published.all'][$today];
 
         return (true === $contact = $this->contact()) ?
             $this->app->redirect("/")                 :
@@ -67,7 +67,7 @@ class BaseController implements ControllerProviderInterface
             );
         }
 
-        // If the next text is unpublished => remove it.
+        // If the next text is unpublished => remove it
         if ($next =& $text['next'] && ! $this->isPublishedText($next)) { $next = null; }
 
         return (true === $contact = $this->contact()) ?
@@ -124,13 +124,6 @@ class BaseController implements ControllerProviderInterface
      */
     protected function isPublishedText($text)
     {
-        $found = false;
-        $pub   = $this->app['publishedTexts'];
-        $today = date('Y-m-d');
-
-        // Search the $text, for each publication date <= today
-        while (($e = each($pub)) && $e[0] <= $today && ! $found = in_array($text, $e[1]));
-
-        return $found;
+        return array_key_exists($text, $this->app['text.published.really']);
     }
 }

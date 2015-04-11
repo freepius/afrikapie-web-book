@@ -17,7 +17,7 @@
     {% if today.texts %}
         <ul>
             {% for slug in today.texts %}
-                <li><a href="{{ slug }}">{{ app.textTitles[slug] }}</a></li>
+                <li><a href="{{ slug }}">{{ app['text.titles'][slug] }}</a></li>
             {% endfor %}
         </ul>
     {% endif %}
