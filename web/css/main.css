@@ -4237,10 +4237,16 @@ body#home {
   border: 2px solid black;
   height: 311px;
 }
-#text > [property="articleBody"] .gallery > div > a {
+#text > [property="articleBody"] .gallery > div {
+  text-align: center;
+}
+#text > [property="articleBody"] .gallery > div img {
   border: 2px solid black;
-  display: block;
+  max-width: 100%;
   padding: 2px;
+}
+#text > [property="articleBody"] .photowall > .gallery {
+  margin-bottom: 20px;
 }
 #summary-summary {
   font-size: 20px;

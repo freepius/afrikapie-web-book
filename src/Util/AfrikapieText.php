@@ -137,6 +137,7 @@ class AfrikapieText
         $this->replaceTermCollection('lightboxes', 'lightboxTextIcon');
         $this->replaceTermCollection('longnotes' , 'popoverLinkIcon');
         $this->replaceTermCollection('longsounds', 'soundPopoverLinkIcon');
+        $this->putAtMarkerCollection('photowalls', 'photoWall');
         $this->replaceTermCollection('sounds'    , 'soundIcon');
         $this->applyCollection      ('subtexts'  , 'collapsibleTextLinkIcon');
         $this->replaceTermCollection('wikipedias', 'wikipediaLinkIcon');

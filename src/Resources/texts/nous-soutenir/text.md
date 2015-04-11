@@ -25,13 +25,15 @@ Sachez, avant de trifouiller votre petite monnaie, que **nous acceptons volontie
 Notez, toutefois, que nous n’aimons pas accumuler les objets.
 Donc, favorisez l’humain, le consommable ou les deux ;-).
 
-**Nota bene :** pour tout envoi, trouvez notre adresse postale ci-après.
+**Nota bene :**
 
-**Nota bene :** pour tout envoi ou paiement, **pensez à [nous contacter](#contact)** en nous laissant **votre adresse** email ou postale, afin que nous puissions **vous remercier** et, le cas échéant, **vous envoyer vos [contreparties](#contreparties)**.
+* pour tout envoi, trouvez notre adresse postale ci-après.
+
+* pour tout envoi ou paiement, **pensez à [nous contacter](#contact)** en nous laissant **votre adresse** email ou postale, afin que nous puissions **vous remercier** et, le cas échéant, **vous envoyer vos [contreparties](#contreparties)**.
 
 
 <h2 id="moyens-de-paiement" class="text-center">
-    Des euros sonnants et trébuchants
+    Des euros en pagaille
     <a href="#text" aria-label="Aller en haut de page">
         <i class="fa fa-arrow-up small" title="Haut de page"></i>
     </a>
@@ -40,7 +42,7 @@ Donc, favorisez l’humain, le consommable ou les deux ;-).
 
 Malgré notre pratique intensive de la « récup’ » et du « fait maison », et notre consommation, presque exclusive, de « bouillie de pommes de terre sans sel », nous avons -- *encore !* -- la nécessité de récolter quelque argent.
 
-Surtout, qu’il serait plaisant et valorisant de gagner notre croûte, même un peu, avec cette activité passionnante de voyageur-créateur.
+Surtout, il serait plaisant et valorisant de gagner notre croûte, même un peu, avec cette activité passionnante de voyageur-créateur.
 
 Alors voici, par **ordre de préférence**, les moyens pour nous rémunérer :
 
@@ -111,9 +113,9 @@ Combien ? | Quoi ?
 5€  | un email chaleureux + votre nom dans les remerciements <small>(page d’accueil)</small>
 15€ | 1 aquarelle <small>(format *Carte postale*)</small> dédicacée par Marie <small>+ contreparties des 5€</small>
 25€ | 3 aquarelles <small>(format *Carte postale*)</small> dédicacées par Marie <small>+ contreparties des 5€</small>
-35€ | 1 photo du [catalogue](/catalogue-photos) <small>(format 40x30)</small>, imprimée sur papier d’art et dédicacée par Mathieu <small>+ contreparties des 15€</small>
+35€ | 1 photo du [catalogue](/catalogue-photos) <small>(format 40x30 ou 40x20)</small>, imprimée sur papier d’art et dédicacée par Mathieu <small>+ contreparties des 15€</small>
 45€ | le livre papier « Afrikapié -- tome 1 » dédicacé par Mathieu + 1 marque-page *aquarelle* dédicacé par Marie <small class="text-danger">(contreparties à retardement)</small>
-100€| contreparties des 45€ et des 35€ + votre nom dans les remerciements du livre + notre reconnaissance éternelle à vie <small class="text-danger">(contreparties à retardement)</small>
+100€| contreparties des 45€ + celles des 35€ + votre nom dans les remerciements du livre + notre reconnaissance éternelle à vie <small class="text-danger">(contreparties à retardement)</small>
 
 **N’hésitez pas à en imaginer d’autres !**
 *(exemples : un petit carnet de 5 aquarelles, un cadre de 3 photos, un poème personnalisé, un texte à thème, une dédicace particulière, etc.)*

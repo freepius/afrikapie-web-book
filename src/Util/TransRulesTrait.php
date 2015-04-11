@@ -10,6 +10,7 @@ namespace App\Util;
  *   gallery
  *   linkIcon
  *   lightboxTextIcon
+ *   photoWall
  *   popoverLinkIcon
  *   soundIcon
  *   soundPopoverLinkIcon
@@ -132,9 +133,10 @@ function gallery($e)
         if (is_string($e)) { $e = ['file' => $e]; }
 
         $out .= sprintf(
+            "\n\t".
             '<div class="col-sm-%1$s %2$s">'.
                 '<a href="%3$s" data-lightbox="global" data-title="%4$s">'.
-                    '<img src="%3$s" class="img-responsive">'.
+                    '<img src="%3$s">'.
                 '</a>'.
             '</div>',
 
@@ -152,7 +154,7 @@ function gallery($e)
         );
     }
 
-    return '<div class="gallery row">'.$out.'</div>';
+    return '<div class="gallery row">'.$out."\n</div>";
 }
 
 /**
@@ -192,6 +194,76 @@ function lightboxTextIcon($e)
         // text + icon
         $this->unbreak($e['term'], ' <i class="fa fa-camera-retro"></i>')
     );
+}
+
+/**
+ * A responsive photo-wall, where photos are openable with lightbox2.
+ *
+ * Data: files (mandatory), captions and colnum (optional)
+ *
+ * 1) If files is a two-dimensional array:
+ *      -> 1-st dimension represents the lines
+ *      -> 2-nd dimension represents the image names for a line
+ *      -> colnum is unnecessary
+ *
+ * 2) If files is a one-dimensional array:
+ *      -> 1-st dimension represents the image names
+ *      -> colnum is used (default: 4)
+ *
+ * 3) If files is an integer:
+ *      -> the images are named from 1 to files
+ *      -> colnum is used (default: 4)
+ */
+function photoWall($e)
+{
+    $out = '';
+
+    $files = $e['files'];
+
+    $captions = @ $e['captions'];
+
+    // Transform "files" from integer to one-dimensional array
+    if (is_integer($files)) {
+        $files = range(1, $files);
+    }
+
+    // Transform "files" from one-dimensional to two-dimensional array
+    if (!is_array($files[0])) {
+        $files = array_chunk($files, @ $e['colnum'] ?: 4);
+    }
+
+    // For each line of images
+    foreach ($files as $line) {
+        $tmp = '';
+
+        $colSize = (int) floor(12 / count($line));
+
+        // For each image
+        foreach ($line as $img) {
+            $tmp .= sprintf(
+                "\n\t\t".
+                '<div class="col-sm-%1$s">'.
+                    '<a href="%2$s" data-lightbox="global" data-title="%4$s">'.
+                        '<img src="%3$s">'.
+                    '</a>'.
+                '</div>',
+
+                // col. size
+                $colSize,
+
+                // original image
+                "/texts/{$this->slug}/origin/$img.jpg",
+
+                // thumb image
+                "/texts/{$this->slug}/thumb/$img.jpg",
+
+                // caption
+                @ $e['captions'][$img]
+            );
+        }
+        $out .= "\n\t<div class=\"gallery row\">$tmp\n\t</div>";
+    }
+    return '<div class="photowall">'.$out."\n</div>";
 }
 
 /**

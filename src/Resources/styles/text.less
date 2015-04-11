@@ -129,9 +129,17 @@ nav
 
     [data-toggle="popover"]:extend(.unbreak) {}
 
-    .gallery > div > a {
-        border: 2px solid black;
-        display: block;
-        padding: 2px;
+    .gallery > div {
+        text-align: center;
+
+        img {
+            border: 2px solid black;
+            max-width: 100%;
+            padding: 2px;
+        }
+    }
+
+    .photowall > .gallery {
+        margin-bottom: 20px;
     }
 }
