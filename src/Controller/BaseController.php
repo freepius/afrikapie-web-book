@@ -40,6 +40,16 @@ class BaseController implements ControllerProviderInterface
     public function readText($slug)
     {
         try {
+            $found = false;
+            $today = date('Y-m-d');
+            $texts = $this->app['publishedTexts'];
+
+            // Search the $slug text, for each publication date <= today
+            while (($e = each($texts)) && $e[0] <= $today && ! $found = in_array($slug, $e[1]));
+
+            // if $slug not found in "published texts" => throw an exception!
+            if (! $found) { throw new \Exception('Texte non publié !'); }
+
             $text = $this->app['afrikapieText']->findAndTransform($slug);
         }
         catch (\Exception $e) {
