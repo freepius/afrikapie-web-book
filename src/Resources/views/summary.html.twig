@@ -1,11 +1,11 @@
-<section id="summary">
+<section id="sommaire">
 
 <a href="/2013-10-02" class="lead">
     <i class="fa fa-book"></i> Commencer la lecture
 </a>
 
 <!-- List of "today published texts" -->
-<nav>
+<nav id="today-texts">
     Aujourd’hui {{ today.day }} {{ today.month|trans }},
     <b>
         {%     if today.num == 1 %} un nouveau texte :
@@ -24,7 +24,7 @@
 </nav>
 
 <!-- Summary by country and month, in collapsible <div> -->
-<nav id="sommaire">
+<nav>
     <h2>Sommaire</h2>
 
     {# For each country, display its months #}

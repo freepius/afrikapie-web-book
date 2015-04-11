@@ -608,14 +608,14 @@ ol ol {
 }
 .list-inline,
 #home > nav > ul,
-#summary > nav ul {
+#sommaire > nav ul {
   padding-left: 0;
   list-style: none;
   margin-left: -5px;
 }
 .list-inline > li,
 #home > nav > ul > li,
-#summary > nav ul > li {
+#sommaire > nav ul > li {
   display: inline-block;
   padding-left: 5px;
   padding-right: 5px;
@@ -4095,17 +4095,20 @@ body#home {
 #home > nav > ul.affix {
   top: 0;
 }
-#summary {
+#sommaire {
   font-size: 20px;
   text-align: center;
 }
-#summary .close {
+#sommaire .close {
   font-size: inherit;
 }
-#summary > nav {
+#sommaire #today-texts > ul {
+  font-size: 80%;
+}
+#sommaire > nav {
   margin-top: 20px;
 }
-#summary > nav .notext {
+#sommaire > nav .notext {
   font-size: 80%;
   color: #777777;
   cursor: not-allowed;
