@@ -97,6 +97,12 @@
 <footer>
     <hr>
     {% include 'text/nav.html.twig' with {footer: true} %}
+
+    <!-- Dynamic Flattr button -->
+    <div class="text-center" style="margin-bottom: 10px;">
+        <script id='fbojqpd'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=anarchos-semitas&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbojqpd');</script>
+    </div>
+
     {% include 'text/support.html.twig' %}
     <hr>
     {% include 'contact.html.twig' %}
