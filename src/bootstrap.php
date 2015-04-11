@@ -3,7 +3,6 @@
 define('APP'  , __DIR__);
 define('ROOT' , dirname(APP));
 define('CACHE', ROOT.'/cache');
-define('WEB'  , ROOT.'/web');
 
 require ROOT.'/vendor/autoload.php';
 
@@ -24,7 +23,6 @@ $app['locale'] = 'fr';
 /* debug */
 $app['debug'] = DEBUG;
 
-// from marie-c9(at)hotmail.fr account
 $app['bing_maps_api_key'] = BING_MAPS_API_KEY;
 
 
@@ -32,7 +30,7 @@ $app['bing_maps_api_key'] = BING_MAPS_API_KEY;
  * Register services
  ************************************************/
 
-/* session */
+/* session (only used for flash messages) */
 $app->register(new \Silex\Provider\SessionServiceProvider());
 
 /* twig */
@@ -80,9 +78,23 @@ $app['twig'] = $app->extend('twig', function($twig, $app)
         'contact.field.message' => 'Votre message',
         'contact.help.email'    => '(facultatif)',
         'Error(s)'              => 'Il y a <b>0</b> erreur(s) au <b><a href="#contact">formulaire de contact</a></b>.',
+
+        // Months
+        'month.01' => 'janvier',
+        'month.02' => 'février',
+        'month.03' => 'mars',
+        'month.04' => 'avril',
+        'month.05' => 'mai',
+        'month.06' => 'juin',
+        'month.07' => 'juillet',
+        'month.08' => 'août',
+        'month.09' => 'septembre',
+        'month.10' => 'octobre',
+        'month.11' => 'novembre',
+        'month.12' => 'décembre',
     ];
 
-    // My short trans filter
+    // My simple trans filter
     $twig->addFilter(new \Twig_SimpleFilter('trans',
         function ($msg, array $rpls = []) use ($trans)
         {

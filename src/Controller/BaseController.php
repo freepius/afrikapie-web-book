@@ -32,9 +32,22 @@ class BaseController implements ControllerProviderInterface
 
     public function home()
     {
+        $today = date('Y-m-d');
+
+        list($_, $month, $day) = explode('-', $today);
+
+        $texts = (array) @ $this->app['publishedTexts'][$today];
+
         return (true === $contact = $this->contact()) ?
             $this->app->redirect("/")                 :
-            $this->app->render('home.html.twig', $contact);
+            $this->app->render('home.html.twig', $contact + [
+                'today' => [
+                    'day'   => $day,
+                    'month' => $month,
+                    'num'   => count($texts),
+                    'texts' => $texts,
+                ],
+            ]);
     }
 
     public function readText($slug)
@@ -42,14 +55,20 @@ class BaseController implements ControllerProviderInterface
         try {
             $found = false;
             $today = date('Y-m-d');
-            $texts = $this->app['publishedTexts'];
+            $published = $this->app['publishedTexts'];
 
             // Search the $slug text, for each publication date <= today
-            while (($e = each($texts)) && $e[0] <= $today && ! $found = in_array($slug, $e[1]));
+            while (($e = each($published))
+                && $e[0] <= $today
+                && ! $found = in_array($slug, $e[1])
+            );
 
             // if $slug not found in "published texts" => throw an exception!
             if (! $found) { throw new \Exception('Texte non publié !'); }
 
+            /**
+             * Load and transform the $slug text
+             */
             $text = $this->app['afrikapieText']->findAndTransform($slug);
         }
         catch (\Exception $e) {

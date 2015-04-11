@@ -1,40 +1,25 @@
-<!-- The summary of the summary, you know -->
-<section id="summary-summary">
+<section id="summary">
 
-    <!-- Main links of the summary -->
-    <nav class="main">
-        <ul>
-            {% if currentPage == 'home' %}
-                <li><a href="/sommaire">
-                    <i class="fa fa-bars"></i> Sommaire
-                </a></li>
-            {% endif %}
-
-            <li><a href="/2013-10-03">
-                <i class="fa fa-book"></i> Commencer la lecture
-            </a></li>
-
-            <li><a href="#" data-title="Texte « 2013-10-04 »">
-                <i class="fa fa-share"></i> Reprendre la lecture
-            </a></li>
-        </ul>
-    </nav>
+    <a href="/2013-10-02" class="lead">
+        <i class="fa fa-book"></i> Commencer la lecture
+    </a>
 
     <!-- Notification for the last posted texts -->
-    <nav class="last-texts">
-        Aujourd’hui, 8 avril :
+    <nav id="today-texts">
+        Aujourd’hui {{ today.day }} {{ ('month.' ~ today.month) | trans }},
+        <b>
+            {%     if today.num == 1 %} un nouveau texte !
+            {% elseif today.num  > 1 %} {{ today.num }} nouveaux textes !
+            {% else %}                  aucun nouveau texte.
+            {% endif %}
+        </b>
 
-        <div class="dropdown">
-            <span id="last-texts" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <b>3 nouveaux textes</b> !
-                <span class="caret"></span>
-            </span>
-
-            <ul class="dropdown-menu" role="menu" aria-labelledby="last-texts">
-                <li><a href="#">3 octobre 2013</a></li>
-                <li><a href="#">4 octobre 2013</a></li>
-                <li><a href="#">5 octobre 2013</a></li>
+        {% if today.texts %}
+            <ul class="list-inline">
+                {% for slug in today.texts %}
+                    <li><a href="{{ slug }}">{{ app.textTitles[slug] }}</a></li>
+                {% endfor %}
             </ul>
-        </div>
+        {% endif %}
     </nav>
 </section>
