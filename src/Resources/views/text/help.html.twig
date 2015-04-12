@@ -2,7 +2,7 @@
 <div class="modal fade" id="help-for-text" tabindex="-1"
      role="dialog" aria-hidden="true" aria-labelledby="help-for-text-title"
 >
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
 
             <div class="modal-header">
@@ -15,7 +15,68 @@
             </div>
 
             <div class="modal-body">
-Blabla
+{% filter richtext %}
+Juste en dessous de l’entête, vous pouvez choisir 3 versions du même texte.
+
+* **Une version simple**, brute, sans fioriture d’aucune sorte.
+
+* **Une version audio** <small>(si votre navigateur est compatible)</small>, lue par Marie, permettant aux non- et malvoyants (ou aux fainéants), de profiter du voyage.
+
+* Enfin, la principale, **une version augmentée**, qui permet une immersion maximale dans l’aventure.
+
+Au fil de vos lectures, vous trouverez divers boutons et icônes, dont voici l’explication :
+
+
+Cliquez sur
+<i class="fa fa-camera-retro"></i>
+et une **photo d’illustration** s’affiche.
+
+
+Cliquez sur
+<span class="fa-stack" style="font-size: 0.6em;">
+    <i class="fa fa-square-o fa-stack-2x"></i>
+    <i class="fa fa-stack-1x">W</i>
+</span>
+et une nouvelle page s’ouvre sur un **article Wikipédia**.
+
+
+Cliquez sur
+<i class="fa fa-external-link"></i>
+et une nouvelle page s’ouvre sur un **site web complémentaire**.
+
+
+Cliquez sur
+<i class="fa fa-info-circle"></i>
+pour ouvrir une **boîte « d’informations encyclopédiques »**, contenant textes, photos ou liens externes.
+
+
+Cliquez sur
+<i class="fa fa-file-text-o"></i>
+pour ouvrir, à la suite, un **texte complémentaire**.
+
+
+Quelques <i class="fa fa-comment-o"></i> parsèment les textes.
+Avec votre souris, passez dessus pour afficher un **commentaire**.
+
+
+En survolant
+<i class="fa fa-music"></i>
+avec votre souris, écoutez un **son court**, un bruit, une phrase, etc.
+
+
+En cliquant sur
+<i class="fa fa-bell-o"></i>,
+un **son long**, une musique, un poème... se fait entendre.
+Cliquez de nouveau pour mettre en pause.
+
+
+**Astuce :** pour toutes les images du texte, cliquez dessus pour les agrandir !
+
+En fin de **version augmentée**, trouvez :
+
+* **une aquarelle** de Marie
+* **une carte** permettant de visualiser notre chemin, ainsi que d’aller vers les textes voisins.
+{% endfilter %}
             </div>
 
             <div class="modal-footer">
