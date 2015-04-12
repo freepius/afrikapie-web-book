@@ -63,7 +63,7 @@ class BaseController implements ControllerProviderInterface
     public function readText($slug)
     {
         try {
-            if (! $this->isPublishedText($slug)) {
+            if (!$this->app['debug'] && ! $this->isPublishedText($slug)) {
                 throw new \Exception('Texte non publié.');
             }
 
