@@ -20,7 +20,7 @@
         "swiftmailer/swiftmailer": "5.*",
         "symfony/config": "*",
         "symfony/translation": "*",
-        "symfony/validator": "2.4",
+        "symfony/validator": "2.6",
         "symfony/yaml": "*",
         "freepius/php-asset": "*",
         "freepius/php-model": "*",

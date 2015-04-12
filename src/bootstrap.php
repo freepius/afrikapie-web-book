@@ -116,10 +116,10 @@ $app['twig'] = $app->extend('twig', function($twig, $app)
 
 $app['swiftmailer.options'] =
 [
-    'host'       => 'smtp-anarchos-semitas.alwaysdata.com',
+    'host'       => 'smtp-anarchos-semitas.alwaysdata.net',
     'port'       => 587,
     'username'   => 'contact@anarchos-semitas.net',
-    'password'   => '',
+    'password'   => SMTP_PASSWORD,
     'encryption' => null,
     'auth_mode'  => null,
 ];
