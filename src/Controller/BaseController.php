@@ -122,7 +122,7 @@ class BaseController implements ControllerProviderInterface
                 // Send
                 $this->app->mail(\Swift_Message::newInstance()
                     ->setSubject($contact['subject'])
-                    ->setFrom([$contact['email'] => $contact['name']])
+                    ->setFrom([($contact['email'] ?: $ourMail) => $contact['name']])
                     ->setTo($ourMail)
                     ->setBody($contact['message'])
                 );
