@@ -1,7 +1,20 @@
-/*global $, document, window, setTimeout */
+/*global $, document, navigator, setTimeout, window */
 
 (function () {
     "use strict";
+
+    /**
+     * Browser detection
+     */
+    var userAgent = navigator.userAgent.toLowerCase(),
+        browser = {
+            version : (userAgent.match(/.+(?:rv|it|ra|ie|me)[\/: ]([\d.]+)/) || [])[1],
+            chrome  : /chrome/.test(userAgent),
+            safari  : /webkit/.test(userAgent) && !/chrome/.test(userAgent),
+            opera   : /opera/.test(userAgent),
+            msie    : /msie/.test(userAgent) && !/opera/.test(userAgent),
+            mozilla : /mozilla/.test(userAgent) && !/(compatible|webkit)/.test(userAgent)
+        };
 
     /**
      * Return the number of the upper ".slide" element.
@@ -65,5 +78,11 @@
             top: function () { return $('#main').outerHeight(true); }
         }
     });
+
+    /**
+     * If user agent is Mozilla or Chrome, delete the "Notice for old navigators".
+     */
+    if (browser.mozilla || browser.chrome)
+        $('#old-navigator-notice').remove();
 
 }());

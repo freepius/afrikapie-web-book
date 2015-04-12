@@ -7,7 +7,8 @@
 <!-- List of "today published texts" -->
 <nav id="today-texts">
     Aujourd’hui {{ today.day }} {{ today.month|trans }},
-    <b>
+
+    <b class="unbreak">
         {%     if today.num == 1 %} un nouveau texte :
         {% elseif today.num  > 1 %} {{ today.num }} nouveaux textes :
         {% else %}                  aucun nouveau texte.
@@ -78,8 +79,17 @@
     {% endfor %}
 </nav>
 
-<p><i class="fa fa-thumbs-o-up"></i>
-   Mémorisez votre progression grâce aux <em>favoris</em> ou <em>marque-pages</em> de votre navigateur !
+<!-- Notice about bookmarks -->
+<p class="notice" style="margin-top: 30px;">
+    <i class="fa fa-thumbs-o-up"></i>
+    Mémorisez votre progression grâce aux <em>favoris</em> ou <em>marque-pages</em> de votre navigateur !
+</p>
+
+<!-- Notice for old navigators -->
+<p id="old-navigator-notice" class="notice">
+    <i class="fa fa-exclamation-triangle"></i>
+    Ce livre web s’affiche bien mieux avec un navigateur moderne
+    <em>(ex : Firefox ou Chromium)</em>
 </p>
 
 </section>

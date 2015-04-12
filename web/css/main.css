@@ -3978,6 +3978,10 @@ p {
 blockquote {
   border: 0;
 }
+.notice {
+  font-size: 90%;
+  margin: 7px;
+}
 .unbreak,
 #text > [property="articleBody"] [data-toggle="popover"] {
   white-space: nowrap;
@@ -4103,9 +4107,9 @@ body#home {
   font-size: inherit;
 }
 #sommaire #today-texts > ul {
-  font-size: 80%;
+  font-size: 90%;
 }
-#sommaire > * {
+#sommaire > nav {
   margin-top: 20px;
 }
 #sommaire > nav .notext {
