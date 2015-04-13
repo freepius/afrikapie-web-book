@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Silex\Api\ControllerProviderInterface;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Summary :
@@ -71,9 +72,10 @@ class BaseController implements ControllerProviderInterface
      */
     public function feed()
     {
-        $i      = 1;
-        $tmp    = $this->app['text.published.really'];
-        $titles = $this->app['text.titles'];
+        $i        = 1;
+        $tmp      = $this->app['text.published.really'];
+        $titles   = $this->app['text.titles'];
+        $response = new Response(null, 200, ['content-type' => 'application/rss+xml']);
 
         /**
          * 1) Retrieve only the 10 last published texts.
@@ -92,7 +94,7 @@ class BaseController implements ControllerProviderInterface
             ];
         }
 
-        return $this->app->render('feed.xml.twig', ['texts' => $texts]);
+        return $this->app->render('feed.xml.twig', ['texts' => $texts], $response);
     }
 
     public function readText($slug)
