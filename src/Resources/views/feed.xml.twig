@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+>
+<channel>
+    <title>Afrikapié, le livre web</title>
+    <atom:link href="http://afrikapied.fr/feed/" rel="self" type="application/rss+xml" />
+    <link>http://afrikapied.fr</link>
+    <description>Le livre web d’un très beau voyage en Afrique : 9 mois, 4000 km à pied, des centaines de rencontres !</description>
+    <lastBuildDate>{{ "now" | date('D, d M Y H:i:s O') }}</lastBuildDate>
+    <language>fr</language>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+
+    {% for slug, text in texts %}
+    <item>
+        <title>{{ text.title }}</title>
+        <link>http://afrikapied.fr/{{ slug }}</link>
+        <pubDate>{{ text.pubDate | date('D, d M Y H:i:s O') }}</pubDate>
+        <dc:creator><![CDATA[Marie Courtel et Mathieu Poisbeau]]></dc:creator>
+
+        <description><![CDATA[
+            {{- text.content[:500] | raw -}} ...
+            <a href="http://afrikapied.fr/{{ slug }}">Continuer la lecture sur Afrikapied.fr !</a>
+        ]]></description>
+
+        <content:encoded><![CDATA[
+            <p><a href="http://afrikapied.fr/{{ slug }}">Lire la version augmentée sur Afrikapied.fr !</a>
+            {{- text.content | raw -}}
+        ]]</content:encoded>
+    </item>
+    {% endfor %}
+</channel>
+</rss>

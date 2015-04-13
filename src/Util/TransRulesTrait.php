@@ -44,7 +44,7 @@ function collapsibleTextLinkIcon($e)
     $id     = uniqid();
     $linkId = "link_$id";
     $textId = "text_$id";
-    $text   = static::readfile($this->dir.'/'.$this->slug.'/'.$e['file']);
+    $text   = $this->readfile($this->slug, $e['file']);
 
     /**
      * 1) Link to open/close the collapsible text + to go on it.
@@ -395,7 +395,7 @@ function licenseUrl($license)
     // The Creative Commons licenses
     if ('CC' === substr($license, 0, 2))
     {
-        list($_, $license, $version) = explode(' ', $license);
+        list(, $license, $version) = explode(' ', $license);
 
         return sprintf(
             '//creativecommons.org/licenses/%s/%s/deed.fr',
@@ -503,7 +503,7 @@ function format($c)
     // Copyright (Flickr and Wikimedia Commons)
     $c = preg_replace_callback('|<copy=(.*)>(.*)\|(.*)\|(.*)</copy>|U', function ($m) {
 
-        list($_, $type, $author, $license, $file) = $m;
+        list(, $type, $author, $license, $file) = $m;
 
         switch ($type) {
             case 'fk': $text = 'via Flickr';

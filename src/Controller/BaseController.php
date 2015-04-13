@@ -10,6 +10,7 @@ use Silex\Api\ControllerProviderInterface;
  *  -> connect
  *  -> manageErrors
  *  -> home
+ *  -> feed
  *  -> readText
  *  -> contact         [protected]
  *  -> isPublishedText [protected]
@@ -29,6 +30,8 @@ class BaseController implements ControllerProviderInterface
 
         $ctrl->match('/', [$this, 'home'])->method('GET|POST');
 
+        $ctrl->get('/feed', [$this, 'feed']);
+
         $ctrl->match('/{slug}', [$this, 'readText'])->method('GET|POST');
 
         return $ctrl;
@@ -44,7 +47,7 @@ class BaseController implements ControllerProviderInterface
     {
         $today = date('Y-m-d');
 
-        list($_, $month, $day) = explode('-', $today);
+        list(, $month, $day) = explode('-', $today);
 
         $texts = (array) @ $this->app['text.published.all'][$today];
 
@@ -58,6 +61,38 @@ class BaseController implements ControllerProviderInterface
                     'texts' => $texts,
                 ],
             ]);
+    }
+
+    /**
+     * Only the 10 last published texts.
+     *
+     * Each text contains : slug, title, publication date and "raw text"
+     * (without any transformation).
+     */
+    public function feed()
+    {
+        $i      = 1;
+        $tmp    = $this->app['text.published.really'];
+        $titles = $this->app['text.titles'];
+
+        /**
+         * 1) Retrieve only the 10 last published texts.
+         * 2) Do not include the static texts (key = 1).
+         */
+        while ((list($slug, $pubDate) = each($tmp))
+               &&
+               $i++ < 11 && $pubDate !== 1
+        ) {
+            $texts[$slug] = [
+                'title'   => $titles[$slug],
+                'pubDate' => $pubDate,
+                'content' => $this->app['richtext']->transform(
+                    $this->app['afrikapieText']->readfile($slug, 'text.md')
+                ),
+            ];
+        }
+
+        return $this->app->render('feed.xml.twig', ['texts' => $texts]);
     }
 
     public function readText($slug)

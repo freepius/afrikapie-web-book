@@ -5,12 +5,13 @@
  *
  * It contains:
  *
- *   1. an array of all published texts (past, present and future),
+ *   1. an array of text titles
+ *
+ *   2. an array of all published texts (past, present and future),
+ *      indexed by publication dates
+ *
+ *   3. an array of really published texts (past and present only)
  *      with their publication date
- *
- *   2. an array of really published texts (past and present only)
- *
- *   3. an array of text titles
  *
  *   4. an array of all activated countries
  *
@@ -19,41 +20,10 @@
 
 
 /*******************************************************************************
- * All published texts (past, present and future).
- *
- * Key = Publication date ; value = published texts
- * Key is 1 <=> static texts (always published)
- */
-$app['text.published.all'] = $allPub =
-[
-    1            => ['catalogue-photos', 'nous-soutenir'],
-    '2015-04-12' => ['2013-10-02', '2013-10-03'],
-    '2015-04-13' => ['2013-10-04'],
-    '2015-04-14' => ['2013-10-05', '2013-10-05-soir'],
-    '2015-04-15' => ['2013-10-06', '2013-10-07'],
-    '2015-04-16' => ['2013-10-08'],
-];
-
-
-/*******************************************************************************
- * Really published texts (past and present only).
- *
- * Key = a text slug ; value = 1
- */
-$reallyPub = [];
-$today     = date('Y-m-d');
-
-while (($e = each($allPub)) && $e[0] <= $today)
-{
-    $reallyPub += array_fill_keys($e[1], 1);
-}
-
-$app['text.published.really'] = $reallyPub;
-
-
-/*******************************************************************************
  * Text titles.
  * Key = a text slug ; value = its title
+ *
+ * WARNING: MUST BE from oldest to newest !
  */
 $app['text.titles'] =
 [
@@ -66,6 +36,43 @@ $app['text.titles'] =
     '2013-10-07' => '7 octobre 2013',
     '2013-10-08' => '8 octobre 2013',
 ];
+
+
+/*******************************************************************************
+ * All published texts (past, present and future).
+ *
+ * Key = Publication date ; value = published texts
+ * Key is 1 <=> static texts (always published)
+ *
+ * WARNING: MUST BE from newest to oldest !
+ */
+$app['text.published.all'] = $allPub =
+[
+    '2015-04-16' => ['2013-10-08'],
+    '2015-04-15' => ['2013-10-07', '2013-10-06'],
+    '2015-04-14' => ['2013-10-05-soir', '2013-10-05'],
+    '2015-04-13' => ['2013-10-04'],
+    '2015-04-12' => ['2013-10-03', '2013-10-02'],
+    1            => ['catalogue-photos', 'nous-soutenir'],
+];
+
+
+/*******************************************************************************
+ * Really published texts (past and present only) with their publication date.
+ *
+ * Key = a text slug ; value = publication date
+ */
+$reallyPub = [];
+$today     = date('Y-m-d');
+
+while (list($pubDate, $texts) = each($allPub))
+{
+    if ($pubDate > $today) { continue; }
+
+    $reallyPub += array_fill_keys($texts, $pubDate);
+}
+
+$app['text.published.really'] = $reallyPub;
 
 
 /*******************************************************************************
@@ -112,8 +119,8 @@ foreach ($app['text.titles'] as $slug => $title)
     if ($slug > $endDate)
     {
         // Try to go on next
-        if ($e = each($allEndDate)) {
-            list($country, $endDate) = $e;
+        if (list($country, $endDate) = each($allEndDate))
+        {
             $countryTexts =& $countriesTexts[$country];
         }
 
@@ -122,7 +129,7 @@ foreach ($app['text.titles'] as $slug => $title)
     }
 
     // Compute the text "short title"
-    list($_, $month, $day) = explode('-', $slug);
+    list(, $month, $day) = explode('-', $slug);
 
     $short = strtok($title, ' ');
 

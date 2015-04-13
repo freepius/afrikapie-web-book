@@ -8,9 +8,9 @@ use Symfony\Component\Yaml;
  * PUBLIC:
  *   __construct
  *   findAndTransform
+ *   readfile
  *
  * PROTECTED:
- *   readfile           [static]
  *   defaultMetadata
  *   removeMarkers
  *   transformSimple
@@ -41,13 +41,10 @@ class AfrikapieText
         $this->slug = $slug;
 
         // Retrieve the "raw text" + the metadata
-        $textPath     = "{$this->dir}/$slug/text.md";
-        $metadataPath = "{$this->dir}/$slug/metadata.yml";
-
-        $this->originalText = static::readfile($textPath)."\n\n";
+        $this->originalText = $this->readfile($slug, 'text.md')."\n\n";
 
         $this->metadata = (new Yaml\Parser)->parse(
-            static::readfile($metadataPath)
+            $this->readfile($slug, 'metadata.yml')
         );
 
         // Complete the metadata
@@ -72,12 +69,14 @@ class AfrikapieText
      * Check if a file is readable (if not, throw a \RuntimeException).
      * Then, open it and return its content.
      *
-     * @param  string $path
+     * @param  string $file  A file in "$this->dir/$slug" directory
      *
      * @return string
      */
-    protected static function readfile($path)
+    public function readfile($slug, $file)
     {
+        $path = "{$this->dir}/$slug/$file";
+
         if (!is_readable($path) || !is_file($path)) {
             throw new \RuntimeException("Unable to open the file \"$path\"");
         }
