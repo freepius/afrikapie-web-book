@@ -59,7 +59,7 @@ class BaseController implements ControllerProviderInterface
                     'day'   => $day,
                     'month' => $month,
                     'num'   => count($texts),
-                    'texts' => $texts,
+                    'texts' => array_reverse($texts),
                 ],
             ]);
     }
