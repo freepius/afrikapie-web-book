@@ -3990,11 +3990,11 @@ blockquote {
 #text > [property="articleBody"] [data-toggle="popover"] {
   white-space: nowrap;
 }
-form#contact {
+form.contact {
   margin-top: 30px;
 }
 @media (max-width: 991px) {
-  form#contact * {
+  form.contact * {
     text-align: center;
   }
 }
