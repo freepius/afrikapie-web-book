@@ -94,4 +94,10 @@
         trigger   : 'focus'
     });
 
+    /**
+     * Equalize the heights of "marie drawing" and map
+     */
+    document.getElementById('map').style.height =
+        document.getElementById('marie-img').clientHeight + 'px';
+
 }());
