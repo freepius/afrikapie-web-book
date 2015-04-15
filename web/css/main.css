@@ -3968,6 +3968,10 @@ button.close {
   font-weight: normal;
   font-style: normal;
 }
+body {
+  max-width: 1400px;
+  margin: auto;
+}
 h1 {
   margin: 15px 0;
   text-align: center;
