@@ -10,16 +10,16 @@ afrikapiePath = [
     [34.939892, -3.534358], // Midar
     [34.901707, -3.610503],
     [34.859737, -3.699629],
-    [34.815453, -3.710397], // Sidi Ali Bourakba
-    [34.806408, -3.751256],
-    [34.717911, -3.829641], // 1er bivouac (pas loin de Aknoul)
-    [34.676037, -3.877397],
-    [34.710522, -3.919950], // Aïn Hamra
-    [34.734535, -3.944084], // Dodo chez "Ahmed Ajdir"
-    [34.732788, -4.019059], // Bivouac près d'une botte de paille (après Boured)
-    [34.715355, -4.147410], // Pause du midi, au dessus du lac (où un homme nous a offert un régime de bananes)
-    [34.711620, -4.175702], // Bivouac après Thar-Es-Souk
-    [34.654896, -4.215614],
+    [34.815453, -3.710397],
+    [34.806408, -3.751256], // Sidi Ali Bourakba
+    [34.717911, -3.829641], // 2ème maison Boujama
+    [34.676037, -3.877397], // 1er bivouac (pas loin de Aknoul)
+    [34.710522, -3.919950],
+    [34.734535, -3.944084], // Aïn Hamra
+    [34.732788, -4.019059], // Dodo chez "Ahmed Ajdir"
+    [34.715355, -4.147410], // Bivouac près d'une botte de paille (après Boured)
+    [34.711620, -4.175702], // Pause du midi, au dessus du lac (où un homme nous a offert un régime de bananes)
+    [34.654896, -4.215614], // Bivouac après Thar-Es-Souk
     [34.654625, -4.318217],
     [34.642960, -4.364597],
     [34.570827, -4.516751],

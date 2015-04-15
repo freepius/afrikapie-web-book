@@ -1,0 +1,79 @@
+title: 9 octobre 2013
+intro: La magie du voyage : arriver brusquement, échanger intensément, puis repartir.
+
+comments:
+    - term    : ftor
+      content : En français, « Petit-déjeuner »
+
+galleries:
+    - marker: 2
+      files : [local/famille-boujama-2.jpg]
+
+lightboxes: [elle crapahute]
+
+longnotes:
+    #####################
+    ## Portrait Fatima ##
+    #####################
+    - term  : Fatima/1
+      title : La petite sœur de Boujama
+      content : >
+          <p class="text-justify">
+          Fatima a probablement la quarantaine. Mais difficile de viser juste.
+
+          D’un côté, son joli pyjama rose et son hijab noir, masquant le moindre de ses cheveux,
+          lui confèrent quelque allure enfantine.
+
+          Elle a, pourtant, un corps et un caractère qui transpirent une force.
+          Le genre qui sait prendre le taureau par les cornes, à force de trop les avoir pris dans les flancs.
+          </p>
+
+    ##############
+    ## Jujubier ##
+    ##############
+    - term : jujubier
+      content : >
+          Le <b>jujubier commun</b> <i>(Ziziphus jujuba)</i> est un arbuste épineux
+          originaire de Chine et répandu dans les régions méditerranéennes.
+
+
+          Son fruit, le jujube, est <b>comestible</b> et <b>riche en vitamines A et C</b>.
+          Sa pulpe est sucrée, gélatineuse, à saveur fade.
+
+
+          <wp>Jujube_(fruit)|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>
+
+          <lb>local/jujubier.jpg</lb>
+
+    ###############
+    ## Polygamie ##
+    ###############
+    - term    : accomplir également
+      content : >
+          Difficile à assumer, cette exigence semble limiter la pratique polygame.
+
+          <b>Au Maroc, nous rencontrerons très peu d’hommes polygames</b>
+          (en fait, seulement deux ; les maîtresses ne comptent pas :-).
+
+    #######################
+    ## Sa première femme ##
+    #######################
+    - term : sa première femme
+      content : >
+          Qui reste alors seule, entretenue par sa plus jeune fille
+          et l’aide financière de ses enfants, partis au loin.
+
+    ####################
+    ## Fatima émotive ##
+    ####################
+    - term  : émotive
+      title : Hamadi nous confie...
+      content : >
+          « Fatima pleure tout le temps.
+          Par exemple, la semaine dernière, elle a pleuré pour la mort d’un poussin. »
+
+subtexts:
+    - term    : pas une ne parle français
+      file    : text-aparte-linguistique.md
+      marker  : 1
