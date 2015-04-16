@@ -1,0 +1,44 @@
+title: 10 octobre 2013
+intro: >
+    Le <em>ftor</em>, petit-déjeuner marocain, plaisir salutaire du voyageur précaire.
+    Et les paysages alors ? Encore plus !
+
+subtexts:
+    - term   : à les décrire comme ça
+      file   : text-ambiance-rifaine.md
+      marker : 1
+
+    - term   : Tizi Ouzli
+      file   : text-tizi-ouzli.md
+      marker : 2
+
+comments:
+    - term    : vingt-cinq dirhams
+      content : à peine 2,5 €
+
+    - term    : papotons longuement.
+      content : En anglais, pour s’entraîner mutuellement.
+
+galleries:
+    - marker : 2-bis
+      files  :
+          - file    : anarchos/52627dc246bf3
+            caption : De jeunes mariés, figés dans la pierre de l’Izenayen, juste après Tizi Ouzli.
+            size    : 6
+            offset  : 3
+
+    - marker : 3
+      files  : [anarchos/52627e41944b3, anarchos/52627e19f3a36, anarchos/52627ec8ecd4d]
+
+lightboxes:
+    - term    : Une foule de moutons
+      caption : <copy=fk>Allan Harris|CC BY-NC-ND 2.0|allan_harris/14804401630</copy>
+
+    - term : spectaculaire route en lacets
+
+    - term    : ftor
+      caption : Café au lait, pain, œufs, olives et épices (sel, poivre, cumin).
+
+    - term : Mohamed qui disait
+
+longsounds: [Arazik]

@@ -130,6 +130,9 @@ class AfrikapieText
     {
         $this->text = $this->originalText;
 
+        // "subtexts" in first, because it could contain some texts to modify!
+        $this->applyCollection('subtexts', 'collapsibleTextLinkIcon');
+
         $this->replaceTermCollection('comments'  , 'tooltipIcon');
         $this->putAtMarkerCollection('galleries' , 'gallery');
         $this->replaceTermCollection('links'     , 'linkIcon');
@@ -138,7 +141,6 @@ class AfrikapieText
         $this->replaceTermCollection('longsounds', 'soundPopoverLinkIcon');
         $this->putAtMarkerCollection('photowalls', 'photoWall');
         $this->replaceTermCollection('sounds'    , 'soundIcon');
-        $this->applyCollection      ('subtexts'  , 'collapsibleTextLinkIcon');
         $this->replaceTermCollection('wikipedias', 'wikipediaLinkIcon');
 
         $this->removeMarkers();

@@ -54,9 +54,13 @@
     };
 
     /**
-     * Change the body background image, depending on slides position
+     * WHEN THE DOM IS LOADED !
      */
     document.addEventListener('DOMContentLoaded', function () {
+
+        /**
+         * Change the body background image, depending on slides position
+         */
         var body  = document.body,
             old_i = getUpperSlideNum();
 
@@ -68,21 +72,22 @@
                 body.style.backgroundImage = 'url(images/home-bg/' + i + '.jpg)';
             }
         });
-    });
 
-    /**
-     * Activate the affix navbar (containing the important shortcuts).
-     */
-    $('#home > nav > ul').affix({
-        offset: {
-            top: function () { return $('#main').outerHeight(true); }
-        }
-    });
+        /**
+         * Activate the affix navbar (containing the important shortcuts).
+         */
+        $('#home > nav > ul').affix({
+            offset: {
+                top: function () { return $('#main').outerHeight(true); }
+            }
+        });
 
-    /**
-     * If user agent is Mozilla or Chrome, delete the "Notice for old navigators".
-     */
-    if (browser.mozilla || browser.chrome)
-        $('#old-navigator-notice').remove();
+        /**
+         * If user agent is Mozilla or Chrome, delete the "Notice for old navigators".
+         */
+        if (browser.mozilla || browser.chrome)
+            $('#old-navigator-notice').remove();
+
+    });
 
 }());

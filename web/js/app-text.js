@@ -65,39 +65,46 @@
     ////////////////////////
 
     /**
-     * On mouseenter, hide the HEADER content.
-     * Useful to see the full background picture.
+     * WHEN THE DOM IS LOADED !
      */
-    var header = document.querySelector('body > header'),
-        inner  = header.querySelector('.inner');
-    header.onmouseenter = function () { inner.style.opacity = 0; };
-    header.onmouseleave = function () { inner.style.opacity = 1; };
+    document.addEventListener('DOMContentLoaded', function () {
 
-    /**
-     * Handle the choice of DISPLAY
-     */
-    var displayLinks = $('#choose-display > a'),
-        displayTabs  = $('[property="articleBody"] > div');
+        /**
+         * On mouseenter, hide the HEADER content.
+         * Useful to see the full background picture.
+         */
+        var header = document.querySelector('body > header'),
+            inner  = header.querySelector('.inner');
+        header.onmouseenter = function () { inner.style.opacity = 0; };
+        header.onmouseleave = function () { inner.style.opacity = 1; };
 
-    displayLinks.click(function (e) {
-        if ($(this).hasClass('active')) return;
-        displayLinks.toggleClass('active');
-        displayTabs.toggle(0);
+        /**
+         * Handle the choice of DISPLAY
+         */
+        var displayLinks = $('#choose-display > a'),
+            displayTabs  = $('[property="articleBody"] > div');
+
+        displayLinks.click(function (e) {
+            if ($(this).hasClass('active')) return;
+            displayLinks.toggleClass('active');
+            displayTabs.toggle(0);
+        });
+
+        /**
+         * Activate the Bootstrap POPOVERS.
+         */
+        $('a[data-toggle="popover"]').popover({
+            html      : true,
+            placement : 'auto',
+            trigger   : 'focus'
+        });
+
+        /**
+         * Equalize the heights of "marie drawing" and map
+         */
+        document.getElementById('map').style.height =
+            document.getElementById('marie-img').clientHeight + 'px';
+
     });
-
-    /**
-     * Activate the Bootstrap POPOVERS.
-     */
-    $('a[data-toggle="popover"]').popover({
-        html      : true,
-        placement : 'auto',
-        trigger   : 'focus'
-    });
-
-    /**
-     * Equalize the heights of "marie drawing" and map
-     */
-    document.getElementById('map').style.height =
-        document.getElementById('marie-img').clientHeight + 'px';
 
 }());
