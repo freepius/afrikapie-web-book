@@ -400,6 +400,12 @@ function imageUrl($file)
 
 function licenseUrl($license)
 {
+    // "Public domain" in french
+    if ('Domaine public' === $license)
+    {
+        return $this->wikipediaUrl('Domaine_public_(propriété_intellectuelle)');
+    }
+
     // The Creative Commons licenses
     if ('CC' === substr($license, 0, 2))
     {

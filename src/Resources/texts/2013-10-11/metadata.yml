@@ -1,0 +1,131 @@
+title: 11 octobre 2013
+intro: Le triangle de la mort : craignos, mais beau !
+
+comments:
+    - term    : sa source
+      content : En arabe, le mot « Aïn » désigne une source.
+
+galleries:
+    - marker : 1
+      files  : [anarchos/52627f6e75b42, anarchos/52627f68c0e41, anarchos/5262801e5c611]
+
+lightboxes: [petit en-cas]
+
+longnotes:
+    ###############################
+    ## Village natal d’Abdelkrim ##
+    ###############################
+    - term     : village natal
+      title    : Village natal ?
+      footnote : true
+      content  : >
+          C’est ce que nous pensions alors.
+          En fait, dans le Rif, il y a <b>quatre villages se nommant « Ajdir »</b>.
+          Celui d’Abdelkrim est situé <b>50 km plus au nord</b>.
+
+    #######################
+    ## Bataille d’Anoual ##
+    #######################
+    - term    : un soulèvement/1
+      title   : Région du Rif – Info n°6
+      content : >
+          La <b>bataille d’Anoual</b> oppose un contingent militaire espagnol
+          <small>(13000 espagnols et 5000 marocains)</small>
+          à l'armée rifaine d’Abdelkrim <small>(18000 hommes)</small>, en <b>juillet 1921</b>.
+          C’est le début de la <wp>Guerre du Rif</wp>.
+
+
+          Le désastre d’Anoual est une <b>défaite cuisante de l’armée espagnole</b>
+          <small>(13000 morts côté espagnol, contre 1000 côté rifain)</small>.
+
+
+          Elle marque la naissance d’un mythe : celui d’Abdelkrim, héros de guerre,
+          fin stratège et chef charismatique de la résistance.
+
+
+          Deux articles pour en savoir plus :
+          <ul>
+              <li>
+                  <url>http://blogs.mediapart.fr/blog/m-lachkar/230710/rif-maroc-le-89e-anniversaire-de-la-bataille-d-anoual|
+                       Le 89e anniversaire de la bataille d’Anoual
+                  </url>
+                  <small>(<b>Mediapart</b>, juillet 2010)</small>
+              </li>
+              <li>
+                  <url>http://aufildesmotsetdelhistoire.unblog.fr/2014/10/25/le-21-juillet-1921-la-bataille-danoual/|
+                       Le 21 juillet 1921 – La bataille d’Anoual
+                  </url>
+                  <small>(<b>Au fil des mots et de l’histoire</b>, octobre 2014)</small>
+              </li>
+          </ul>
+
+    ############
+    ## Le kif ##
+    ############
+    - term : kif/1
+      content : >
+          Le <b>kif</b> est le <b>pollen du chanvre</b>.
+          Le plus souvent, il est compacté et coupé pour obtenir le haschisch (résine de cannabis).
+          Dans le Rif, il est souvent mélangé et <b>consommé avec du tabac</b>.
+
+
+          <img>local/kif.jpg</img>
+
+          <small>
+              Et pour répondre à votre question...
+              Non, ce kif n’est pas à nous !
+              Sportifs et non-fumeurs, nous ne touchons pas à cela.
+          </small>
+
+    ###########
+    ## Sebsi ##
+    ###########
+    - term : sebsi
+      content : >
+          Une <b>sebsi</b> ou <b>sibsi</b> est une <b>pipe originaire du Maroc</b>.
+          Confectionnée en bois, elle est de longue taille, très fine
+          et possède, à son extrémité, une petite cuve en terre cuite,
+          permettant de <b>consommer de mini-portions de kif</b> (pur ou avec tabac).
+
+
+    ###########
+    ## Douar ##
+    ###########
+    - term    : douar
+      title   : >
+          Maroc – Info n°3
+          <img src="/images/ma.png" class="pull-right">
+      content : >
+          Historiquement, un <b>douar</b> est un type de campement nomade qui, disposé en cercle,
+          permettait de remiser les troupeaux dans l’espace laissé libre au centre de celui-ci.
+
+
+          De nos jours, au Maroc, il désigne un « petit village »
+          ou un « groupement d’habitations rurales » (<b>50 à 400 foyers</b>).
+          Il constitue couramment l’<b>unité de base de la commune rurale</b>.
+
+
+          <lb>local/douar-tanger-1845.jpg|
+              Un douar marocain près de Tanger, en 1845.<br>
+              <copy=wc>Edmund Wodick|Domaine public|Douar_Souani_bei_Tanger,_1845.jpg</copy>
+          </lb>
+
+          <wp>Douar|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>
+
+    #########################
+    ## Triangle de la mort ##
+    #########################
+    - term    : cette zone-là
+      title   : Région du Rif – Info n°7
+      content : >
+          Durant les batailles anti-colonialistes des années 50, les militaires français appelaient la zone
+          « Aknoul, Tizi Ouzli, Boured » : <b>le triangle de la mort</b> !
+
+
+          En effet, les <b>combats</b> y étaient <b>d’une extrême violence</b>
+          et la tribu des <b>Gzenaya particulièrement farouche</b>.
+          Dans cette région accidentée au cœur du Rif, ni l'aviation, ni les tanks français
+          ne pouvaient intervenir efficacement contre les 2000 maquisards marocains.
+
+wikipedias: [Abdelkrim al-Khattabi]

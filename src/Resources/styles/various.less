@@ -74,9 +74,11 @@ form.contact { margin-top: 30px; }
     margin-top: 10px;
 }
 
-.popover { font-size: 14px; }
+.popover { font-size: 14px; font-style: normal; }
 
-.popover-content { font-style: normal; }
+.popover-content {
+    ul, ol { padding-left: 15px; }
+}
 
 .popover-title { font-size: 16px; }
 
@@ -112,6 +114,6 @@ form.contact { margin-top: 30px; }
 
 .lightbox {
     .lb-outerContainer { border-radius: 0; }
-    .lb-dataContainer  { background-color: white; }
+    .lb-dataContainer  { background-color: white; padding-bottom: 5px; }
     .lb-details        { color: #555; }
 }

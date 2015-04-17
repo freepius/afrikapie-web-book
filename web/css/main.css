@@ -4023,9 +4023,11 @@ form.contact {
 }
 .popover {
   font-size: 14px;
-}
-.popover-content {
   font-style: normal;
+}
+.popover-content ul,
+.popover-content ol {
+  padding-left: 15px;
 }
 .popover-title {
   font-size: 16px;
@@ -4056,6 +4058,7 @@ form.contact {
 }
 .lightbox .lb-dataContainer {
   background-color: white;
+  padding-bottom: 5px;
 }
 .lightbox .lb-details {
   color: #555;
