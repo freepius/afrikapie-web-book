@@ -265,12 +265,20 @@ function photoWall($e)
 }
 
 /**
- * Data: content, term (mandatory) and title (optional)
+ * Data: content, term (mandatory), align and title (optional)
  */
 function popoverLinkIcon($e)
 {
-    $content = htmlspecialchars($this->format($e['content']), ENT_QUOTES);
-    $title   = htmlspecialchars(@ $e['title']               , ENT_QUOTES);
+    $title = htmlspecialchars(@ $e['title'], ENT_QUOTES);
+
+    $content = htmlspecialchars(
+        sprintf(
+            '<div class="text-%s">%s</div>',
+            @ $e['align'] ?: 'justify',
+            $this->format($e['content'])
+        ),
+        ENT_QUOTES
+    );
 
     return sprintf(
         '<a tabindex="0" data-toggle="popover" title="%s" data-content="%s">%s '.

@@ -4024,6 +4024,9 @@ form.contact {
 .popover {
   font-size: 14px;
 }
+.popover-content {
+  font-style: normal;
+}
 .popover-title {
   font-size: 16px;
 }
