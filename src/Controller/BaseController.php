@@ -41,7 +41,7 @@ class BaseController implements ControllerProviderInterface
     public function manageErrors()
     {
         if ($this->app['debug']) { return; }
-        return $this->app->render('error.html.twig');
+        return $this->app->render('page/error.html.twig');
     }
 
     public function home()
@@ -54,7 +54,7 @@ class BaseController implements ControllerProviderInterface
 
         return (true === $contact = $this->contact()) ?
             $this->app->redirect("/")                 :
-            $this->app->render('home.html.twig', $contact + [
+            $this->app->render('page/home.html.twig', $contact + [
                 'today' => [
                     'day'   => $day,
                     'month' => $month,
@@ -94,7 +94,9 @@ class BaseController implements ControllerProviderInterface
             ];
         }
 
-        return $this->app->render('feed.xml.twig', ['texts' => $texts], $response);
+        return $this->app->render('page/feed.xml.twig',
+            ['texts' => $texts], $response
+        );
     }
 
     public function readText($slug)
