@@ -4063,6 +4063,15 @@ form.contact {
 .lightbox .lb-details {
   color: #555;
 }
+#follow-and-support {
+  margin-bottom: 10px;
+  text-align: center;
+}
+#follow-and-support [href="/feed"] {
+  color: inherit;
+  margin-right: 10px;
+  text-decoration: none;
+}
 body#home {
   background: url('/images/home-bg/0.jpg') no-repeat center fixed;
   background-size: cover;
