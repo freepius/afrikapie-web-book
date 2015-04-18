@@ -3,7 +3,7 @@ intro    : Notre sélection parmi les plus jolies d’Afrikapié
 module   : {audio: false}
 prev     : ~
 next     : ~
-template : simple
+template : static
 trans    : enhanced
 
 photowalls:

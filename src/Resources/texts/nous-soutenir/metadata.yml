@@ -3,7 +3,7 @@ intro    : Parce que c’est bien !
 module   : {audio: false}
 prev     : ~
 next     : ~
-template : simple
+template : static
 trans    : enhanced
 
 galleries:
