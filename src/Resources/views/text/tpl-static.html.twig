@@ -35,12 +35,12 @@
     {% include 'text/nav.html.twig' %}
 </header>
 
-{% if text.module.audio %}
+{% if text.audio %}
     {% include 'text/audio.html.twig' %}
 {% endif %}
 
 <section property="articleBody">
-    {{ text.enhanced | richtext }}
+    {{ (text.enhanced|default ?: text.simple) | richtext }}
 </section>
 
 <footer>

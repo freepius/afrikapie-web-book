@@ -1,6 +1,6 @@
 title    : Nous soutenir
 intro    : Parce que c’est bien !
-module   : {audio: false}
+audio    : ~
 prev     : ~
 next     : ~
 template : static

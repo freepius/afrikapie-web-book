@@ -48,33 +48,34 @@
     {% include 'text/nav.html.twig' %}
 </header>
 
-<!-- Buttons to choose the display mode -->
-<div id="choose-display" role="group" aria-label="Choisir le mode d’affichage du texte">
+{% if (text.enhanced is defined) and (text.simple is defined) %}
+    <!-- Buttons to choose the display mode -->
+    <div id="choose-display" role="group" aria-label="Choisir le mode d’affichage du texte">
 
-    <!-- ENHANCED choice -->
-    <a class="btn active" role="button">Version augmentée
+        <!-- ENHANCED choice -->
+        <a class="btn active" role="button">Version augmentée
 
-        <!-- Button to display (in a modal) the "enhanced text" help -->
-        <span data-target="#help-for-text" data-toggle="modal"
-              role="button" aria-label="Afficher l’aide de la version augmentée"
-        >
-            <i class="fa fa-question-circle" data-title="Afficher l’aide"></i>
-        </span>
-    </a>
+            <!-- Button to display (in a modal) the "enhanced text" help -->
+            <span data-target="#help-for-text" data-toggle="modal"
+                  role="button" aria-label="Afficher l’aide de la version augmentée"
+            >
+                <i class="fa fa-question-circle" data-title="Afficher l’aide"></i>
+            </span>
+        </a>
 
-    <!-- SIMPLE choice -->
-    <a class="btn" role="button">Version simple</a>
-</div>
+        <!-- SIMPLE choice -->
+        <a class="btn" role="button">Version simple</a>
+    </div>
+{% endif %}
 
-{% if text.module.audio %}
+{% if text.audio %}
     {% include 'text/audio.html.twig' %}
 {% endif %}
 
 <section property="articleBody">
 
-    <!-- The enhanced text -->
     <div role="tabpanel">
-        {{ text.enhanced | richtext }}
+        {{ (text.enhanced|default ?: text.simple) | richtext }}
 
         <!-- Marie drawing + Map -->
         <div class="row">
@@ -88,10 +89,11 @@
         </div>
     </div>
 
-    <!-- The simple text -->
-    <div role="tabpanel" style="display: none;">
-        {{ text.simple | richtext }}
-    </div>
+    {% if (text.enhanced is defined) and (text.simple is defined) %}
+        <div role="tabpanel" style="display: none;">
+            {{ text.simple | richtext }}
+        </div>
+    {% endif %}
 </section>
 
 <footer>

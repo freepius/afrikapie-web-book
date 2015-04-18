@@ -1,6 +1,6 @@
 title    : Catalogue photos
 intro    : Notre sélection parmi les plus jolies d’Afrikapié
-module   : {audio: false}
+audio    : ~
 prev     : ~
 next     : ~
 template : static

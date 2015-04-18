@@ -96,25 +96,15 @@ class AfrikapieText
         return file_get_contents($path);
     }
 
-    /**
-     * Return the default values:
-     *  -> for some metadata
-     *  -> for the modules activation
-     */
     protected function defaultMetadata()
     {
         return [
-            // for some metadata
+            'audio'    => 'Marie',
             'intro'    => null,
             'next'     => date('Y-m-d', strtotime("$this->slug +1 day")),
             'prev'     => date('Y-m-d', strtotime("$this->slug -1 day")),
             'template' => 'main',
             'trans'    => ['enhanced', 'simple'],
-
-            // for the modules activation
-            'module' => [
-                'audio' => true,
-            ],
         ];
     }
 
