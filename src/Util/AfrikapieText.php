@@ -8,6 +8,7 @@ use Symfony\Component\Yaml;
  * PUBLIC:
  *   __construct
  *   findAndTransform
+ *   rawText
  *   readfile
  *
  * PROTECTED:
@@ -63,6 +64,18 @@ class AfrikapieText
 
         // Return the transformed texts + the metadata
         return $out + $this->metadata;
+    }
+
+    /**
+     * Return the "raw text" ie, without any transformation.
+     */
+    public function rawText($slug)
+    {
+        $this->text = $this->readfile($slug, 'text.md');
+
+        $this->removeMarkers();
+
+        return $this->text;
     }
 
     /**

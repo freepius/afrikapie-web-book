@@ -89,7 +89,7 @@ class BaseController implements ControllerProviderInterface
                 'title'   => $titles[$slug],
                 'pubDate' => $pubDate,
                 'content' => $this->app['richtext']->transform(
-                    $this->app['afrikapieText']->readfile($slug, 'text.md')
+                    $this->app['afrikapieText']->rawText($slug)
                 ),
             ];
         }
