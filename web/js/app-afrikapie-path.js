@@ -17,22 +17,22 @@ afrikapiePath = [
     [34.710522, -3.919950],
     [34.734535, -3.944084], // Aïn Hamra
     [34.732788, -4.019059], // Dodo chez "Ahmed Ajdir"
-    [34.715355, -4.147410], // Bivouac près d'une botte de paille (après Boured)
-    [34.711620, -4.175702], // Pause du midi, au dessus du lac (où un homme nous a offert un régime de bananes)
-    [34.654896, -4.215614], // Bivouac après Thar-Es-Souk
-    [34.654625, -4.318217], // Accueil chez Abilula
-    [34.642960, -4.364597],
-    [34.570827, -4.516751], // Bivouac avant Taounate
-    [34.568306, -4.587607], // Accueil "famille paysans", Ain Aicha
-    [34.482647, -4.692276], // Pause avec "Hassan Stèt, les citroniers"
-    [34.495052, -4.870860], // Bivouac "galère + chiens", en haut de la falaise
-    [34.534237, -4.932557],
-    [34.469860, -4.990044], // Accueil chez "Azzuz qui louche"
-    [34.491852, -5.071108], // Balade au fortin français, avec Mourad
-    [34.490566, -5.188632], // Bivouac au cimetière, malades comme des chiens
-    [34.486259, -5.234833], // Bivouac au bord de l'oued Ouargha
-    [34.502609, -5.439932], // Khnichet
-    [34.499680, -5.453096],
+    [34.715355, -4.147410],
+    [34.711620, -4.175702], // Bivouac près d'une botte de paille (après Boured)
+    [34.654896, -4.215614], // Pause du midi, au dessus du lac (où un homme nous a offert un régime de bananes)
+    [34.654625, -4.318217], // Bivouac après Thar-Es-Souk
+    [34.642960, -4.364597], // Accueil chez Abilula
+    [34.570827, -4.516751],
+    [34.568306, -4.587607], // Bivouac avant Taounate
+    [34.482647, -4.692276], // Accueil "famille paysans", Ain Aicha
+    [34.495052, -4.870860], // Pause avec "Hassan Stèt, les citroniers"
+    [34.534237, -4.932557], // Bivouac "galère + chiens", en haut de la falaise
+    [34.469860, -4.990044],
+    [34.491852, -5.071108], // Accueil chez "Azzuz qui louche"
+    [34.490566, -5.188632], // Balade au fortin français, avec Mourad
+    [34.486259, -5.234833], // Bivouac au cimetière, malades comme des chiens
+    [34.502609, -5.439932], // Bivouac au bord de l'oued Ouargha
+    [34.499680, -5.453096], // Khnichet
     [34.476425, -5.610662],
     [34.436783, -5.687358],
     [34.218742, -5.711474],
