@@ -18,7 +18,7 @@ Depuis, semble-t-il, rien.
 Ne dit-on pas que l’état des routes permet d’apprécier l’investissement d’un pays pour ses régions ?
 Ce bout de Rif-là doit être, au moins, bon dernier dans la liste des priorités de l’État marocain.
 
-De rares véhicules circulent, surtout de vieux utilitaires Mercedes (type 407 ou 410) transformés, pour l’occasion, en minibus, en vraquier, en camion de déménagement ou à bétail.
+De rares véhicules circulent, surtout de vieux utilitaires Mercedes (type 207 ou 407) transformés, pour l’occasion, en minibus, en vraquier, en camion de déménagement ou à bétail.
 Ils sont l’emblème des campagnes et des montagnes marocaines.
 Sans eux, pas de vie humaine – ou plutôt, pas de vie moderne – dans tous les coins reculés de ce grand et beau pays.
 Leurs chauffeurs sont de vrais pilotes, des fous du volant.

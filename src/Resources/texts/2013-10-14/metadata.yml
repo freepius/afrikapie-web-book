@@ -1,0 +1,137 @@
+title: 14 octobre 2013
+intro: >
+    Lorsque, voyageur, tu es accueilli avec autant de naturel et de sympathie,
+    un fort sentiment fraternel se développe. Et c’est éminament joli.
+
+comments:
+    - term    : Noël occidental.
+      content : En terme d’importance des festivités, de regroupement familial, d’achats, de boustifaille, etc.
+
+    - term    : Là,
+      content : Drôle de mélange des genres...
+
+photowalls: [{marker: 1, files: 4, thumb: false}]
+
+lightboxes:
+    - term : cour terreuse
+      file : anarchos/526289dd9961a
+
+    - term : Abdiloula/5
+
+    - term    : Harma/1
+      caption : En fait, on a jamais vraiment compris son prénom. C’est un peu gênant parfois...
+
+    - term    : Leur deux fils
+      caption : >
+          Signification de Hicham (à droite) : « Générosité ».<br>
+          Et Faïssal (à gauche) : « Juge, arbitre, qui tranche de manière décisive ».
+
+    - term    : Asma/1
+      caption : Signification : « Sublime, qui a de beaux traits ».
+
+    - term    : Ptisam
+      caption : Pareil que pour Harma, son prénom reste un gênant mystère.
+
+    - term    : Soukaïna/2
+      caption : Diminutif de Sakina. Signification : « Paix profonde ».
+
+    - term    : autant de charme
+      file    : anarchos/526289af8dc08
+      caption : >
+          À gauche, la djellaba pour sortir « habillée ».
+          À droite, le pyjama, tenue décontractée (pour la maison et les petites courses).
+
+    - term    : camionnette
+      file    : anarchos/526289e2c759d
+      caption : Un Mercedes 207, le roi des montagnes marocaines.
+
+longnotes:
+    ##########################
+    ## Aucun geste ? Faux ! ##
+    ##########################
+    - term    : aucun geste
+      title   : Aucun geste ? C’est faux !
+      content : >
+          Hier, midi : nous sommes grassement à dormir,
+          dans un joli coin paumé, en lisière de forêt.
+
+
+          Un homme, revenant du <i>souk</i>, se fait déposer en taxi, à deux pas de là.
+
+
+          Sans aucun préambule, il vient à nous, nous tend un régime de bananes
+          et quelques clémentines, dit deux-trois mots gentils, puis repart aussi sec,
+          en contre-bas dans la forêt.
+
+
+          C’est ouf !
+
+    ##################################
+    ## Boured, limite arabe-berbère ##
+    ##################################
+    - term : la famille est arabe
+      content : >
+          Quelques kilomètres après Boured, au passage d’un oued,
+          ou peut-être à celui d’un col...
+          <i>pouf !</i> ça y est, nous quittons le Rif berbère,
+          pour passer en <wp>Pays Jebala</wp>, arabophone.
+
+    ###########################
+    ## Abdiloula, un notable ##
+    ###########################
+    - term    : notable de son village
+      title   : Statut en héritage
+      content : >
+          Ce statut de notable, Abdiloula le tient de son père.
+          Entre autre, celui-ci avait offert à la commune :
+          un terrain pour construire la mosquée,
+          un autre pour bâtir l’école.
+
+
+          Aussi, Abdiloula possède le « café du village ». Et ça...
+          <i class="fa fa-thumbs-o-up"></i>
+
+    ####################
+    ## Commune rurale ##
+    ####################
+    - term  : commune rurale
+      title : >
+          Maroc – Info n°4
+          <img src="/images/ma.png" class="pull-right">
+      content : >
+          Au Maroc, on distingue les <i>communes urbaines</i> des <i>communes rurales</i>.
+          Ces deux entités correspondent aux <b>plus petites subdivisions administratives</b> du pays.
+
+
+          La <b>commune rurale</b> est un <b>regroupement de petits villages</b>, les <i>douars</i>,
+          souvent très éparpillés.
+
+          L’un d’eux fait office de « centre administratif »
+          <small>(le plus peuplé, le plus près d’une route, etc.)</small>
+          La commune rurale prend alors son nom.
+
+
+          En 2009, le Maroc comptait 221 communes urbaines et <b>1282 communes rurales</b>.
+
+    ############################
+    ## Islam, religion d’État ##
+    ############################
+    - term  : religieuse et d’État
+      title : >
+          Maroc – Info n°5
+          <img src="/images/ma.png" class="pull-right">
+      content : >
+          Au Maroc, l’<b>Islam</b> est <b>religion d’État</b>.
+          Son <b>enseignement est obligatoire</b> dans les établissements scolaires publics.
+          Cependant, la constitution garantit à tous le libre exercice des cultes.
+
+
+          Le <b>roi</b> possède le titre d’<i>Amir Al Mouminine</i>,
+          soit « <b>commandeur des croyants</b> ».
+          Il veille au respect de l'Islam.
+
+
+          <wp>Islam_au_Maroc|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>
+
+sounds: ['(*ftor*).', '(*zaytun*),', '(*zayt zaytun*),', '(*khobz*),', '(*zibda*),']
