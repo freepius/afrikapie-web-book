@@ -197,7 +197,7 @@ function lightboxTextIcon($e)
 /**
  * A responsive photo-wall, where photos are openable with lightbox2.
  *
- * Data: files (mandatory), captions and colnum (optional)
+ * Data: files (mandatory), captions, colnum, dir and thumb (optional)
  *
  * 1) If files is a two-dimensional array:
  *      -> 1-st dimension represents the lines
@@ -214,11 +214,20 @@ function lightboxTextIcon($e)
  */
 function photoWall($e)
 {
+    // Default values
+    $e += [
+        'colnum' => 4,
+        'dir'    => 'wall',
+        'thumb'  => true
+    ];
+
     $out = '';
 
     $files = $e['files'];
 
-    $captions = @ $e['captions'];
+    $path = '/texts/'.$this->slug.($e['dir'] ? ('/'.$e['dir']) : '');
+
+    $pathThumb = $e['thumb'] ? "$path/thumb" : $path;
 
     // Transform "files" from integer to one-dimensional array
     if (is_integer($files)) {
@@ -227,7 +236,7 @@ function photoWall($e)
 
     // Transform "files" from one-dimensional to two-dimensional array
     if (!is_array($files[0])) {
-        $files = array_chunk($files, @ $e['colnum'] ?: 4);
+        $files = array_chunk($files, $e['colnum']);
     }
 
     // For each line of images
@@ -246,16 +255,9 @@ function photoWall($e)
                     '</a>'.
                 '</div>',
 
-                // col. size
                 $colSize,
-
-                // original image
-                "/texts/{$this->slug}/origin/$img.jpg",
-
-                // thumb image
-                "/texts/{$this->slug}/thumb/$img.jpg",
-
-                // caption
+                "$path/$img.jpg",
+                "$pathThumb/$img.jpg",
                 @ $e['captions'][$img]
             );
         }
