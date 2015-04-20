@@ -145,6 +145,10 @@ class BaseController implements ControllerProviderInterface
 
             if (! $errors)
             {
+                // Add, to the subject, the requested URI
+                $contact['subject'] =
+                    '['.$request->getRequestUri().'] '.$contact['subject'];
+
                 // Log
                 $fp = fopen(
                     $logDir.'/'.date('Y-m-d-H-i-s_').uniqid().'.txt',
