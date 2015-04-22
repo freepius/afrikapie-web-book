@@ -8,7 +8,6 @@ trans    : enhanced
 
 photowalls:
     - marker   : 1
-      colnum   : 4
       files    : 36
       captions :
           1  : Maroc, 12 octobre 2013       : Oliviers sur les montagnes vallonées du Rif

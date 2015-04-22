@@ -1,0 +1,79 @@
+title: 16 octobre 2016
+prev : 2013-10-14
+intro: Premier jour de l’<em>Aïd al-Kabir</em> : fort en émotions, en découvertes, en partages.
+
+comments:
+    - term    : familial.
+      content : Contre retribution, bien sûr.
+
+    - term    : trop mastiquées
+      content : Pour en arriver là, il faut déjà y aller fort sur la viandasse !
+
+lightboxes:
+    - Harma/1
+    - Pour ma part
+    - Mathieu/2
+    - couvre-chef rouge
+
+longnotes:
+    ############
+    ## Le Fez ##
+    ############
+    - term    : fez
+      title   : >
+          Maroc – Info n°6
+          <img src="/images/ma.png" class="pull-right">
+      content : >
+          Le <b>fez</b> est un <b>couvre-chef masculin</b> en feutre, souvent rouge, en forme de cône tronqué,
+          orné d’un gland noir fixé sur le dessus.
+
+
+          <b>Originaire de Grèce</b>, il a été adopté par de nombreux groupes ethniques
+          et religieux dans l’Empire Ottoman du XIXe siècle.
+
+
+          Le fez fait toujours partie de la <b>tenue officielle des Marocains</b>.
+          Il est porté avec un <b>jabador blanc</b> et des <b>babouches jaunes</b>.
+
+
+          <wp>Fez_(coiffure)|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>
+
+photowalls:
+    - marker   : mouton-inner
+      dir      : mouton
+      column   : 2
+      files    : 7
+      lightbox : mouton
+      thumb: false
+
+    - marker   : vache-inner
+      dir      : vache
+      files    : [[1,2,3], [4,5,6,7], [8,9,10,11]]
+      lightbox : vache
+
+subtexts:
+    - term    : sacrifier le mouton
+      caption : Cliquez pour voir les photos. Attention, elles peuvent choquer !
+      file    : text-mouton.md
+      marker  : mouton
+
+    - term    : c’était « boucherie à domicile »
+      caption : Cliquez pour voir les photos. Attention, elles peuvent choquer !
+      file    : text-vache.md
+      marker  : vache
+
+    - term    : En France/1
+      caption : C’était mieux avant ?
+      file    : text-et-pourtant.md
+      marker  : et-pourtant
+
+sounds:
+    - '*Aïd Moubarak Saïd*,'
+    - '*Aïd Mabrouk*,'
+    - '*Allah ikhlef*,'
+    - '*Bsaha o raha*,'
+
+wikipedias:
+    - term : exode rural
+      page : Exode rural en France

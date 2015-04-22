@@ -197,28 +197,30 @@ function lightboxTextIcon($e)
 /**
  * A responsive photo-wall, where photos are openable with lightbox2.
  *
- * Data: files (mandatory), captions, colnum, dir and thumb (optional)
+ * Data: files (mandatory),
+ *       captions, column, dir, lightbox and thumb (optional)
  *
  * 1) If files is a two-dimensional array:
  *      -> 1-st dimension represents the lines
  *      -> 2-nd dimension represents the image names for a line
- *      -> colnum is unnecessary
+ *      -> column is unnecessary
  *
  * 2) If files is a one-dimensional array:
  *      -> 1-st dimension represents the image names
- *      -> colnum is used (default: 4)
+ *      -> column is used (default: 4)
  *
  * 3) If files is an integer:
  *      -> the images are named from 1 to files
- *      -> colnum is used (default: 4)
+ *      -> column is used (default: 4)
  */
 function photoWall($e)
 {
     // Default values
     $e += [
-        'colnum' => 4,
-        'dir'    => 'wall',
-        'thumb'  => true
+        'column'   => 4,
+        'dir'      => 'wall',
+        'lightbox' => 'global',
+        'thumb'    => true
     ];
 
     $out = '';
@@ -236,7 +238,7 @@ function photoWall($e)
 
     // Transform "files" from one-dimensional to two-dimensional array
     if (!is_array($files[0])) {
-        $files = array_chunk($files, $e['colnum']);
+        $files = array_chunk($files, $e['column']);
     }
 
     // For each line of images
@@ -250,7 +252,7 @@ function photoWall($e)
             $tmp .= sprintf(
                 "\n\t\t".
                 '<div class="col-sm-%1$s">'.
-                    '<a href="%2$s" data-lightbox="global" data-title="%4$s">'.
+                    '<a href="%2$s" data-lightbox="%4$s" data-title="%5$s">'.
                         '<img src="%3$s">'.
                     '</a>'.
                 '</div>',
@@ -258,6 +260,7 @@ function photoWall($e)
                 $colSize,
                 "$path/$img.jpg",
                 "$pathThumb/$img.jpg",
+                $e['lightbox'],
                 @ $e['captions'][$img]
             );
         }
