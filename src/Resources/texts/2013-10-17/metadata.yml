@@ -1,0 +1,79 @@
+title: 17 octobre 2013
+intro: >
+    Le poids d’un voyage, ça se mesure en secondes.
+    À celles insoumises au dictat des kilomètres, libres de rencontrer l’autre.
+    Aux secondes lentes et molles.
+    Aux belles secondes.
+
+comments:
+    - term    : qui en a les moyens.
+      content : « Allah n’impose à aucune âme une charge supérieure à sa capacité. »
+
+galleries:
+    - marker : femmes-rurales-photos
+      files  : [anarchos/526288d5b0e08, anarchos/52628716a662b]
+
+longnotes:
+    #######################################
+    ## Histoire : Jehha et le Bouzellouf ##
+    #######################################
+    - term  : bouzellouf/1
+      title : Jehha et le Bouzellouf
+      content : >
+          Un jour, le père de Jehha lui donne un franc, pour qu’il achète une tête de mouton (<i>bouzellouf</i>).
+
+
+          Jehha l’achète, mais mange toute la viande, ne laissant qu’une carcasse vide.
+          Il l’a rapporte ensuite à son père.
+
+
+          Celui-ci, lorsqu’il l’aperçoit, s’écrie : « Qu'est-ce que c'est ? »
+          Jehha lui répond : « La tête d'un mouton, père. »
+
+          – Vilain, où sont ses oreilles ?
+
+          – Il était sourd.
+
+          – Où sont ses yeux ?
+
+          – Il était aveugle ?
+
+          – Où est sa langue ?
+
+          – Il était muet.
+
+          – Et la peau de sa tête, où est-elle ?
+
+          – Il était chauve.
+
+    ###################
+    ## Scolarisation ##
+    ###################
+    - term    : n’y vont pas
+      title   : >
+          Maroc – Info n°7
+          <img src="/images/ma.png" class="pull-right">
+      content : >
+          Au Maroc, depuis les années 2000, le <b>taux de scolarisation</b> à l’école primaire
+          est <b>en nette augmentation</b>.
+
+
+          Entre 2008 et 2012, il était de <b>96%</b> environ,
+          tandis que le taux effectif de fréquentation était de 90%.
+
+
+          Cependant, ces chiffres ne reflètent aucunement les <b>disparités entre sexes,
+          entre régions ou entre milieux urbain et rural</b>.
+
+
+          <i>Par exemple :</i> le taux d’analphabétisation des femmes en milieu rural est de 80% !
+
+
+          Ainsi, si vous êtes une fille, en milieu rural, dans un coin isolé du Rif...
+          relevez-vous les manches et <i>Bon courage !</i>
+
+subtexts:
+    - term    : les femmes/1
+      caption : Femmes rurales marocaines
+      file    : text-femmes-rurales.md
+      marker  : 1
