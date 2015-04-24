@@ -1,4 +1,4 @@
-/*global $, buzz, document */
+/*global $, buzz, document, setTimeout */
 
 (function () {
     'use strict';
@@ -99,8 +99,10 @@
         /**
          * Equalize the heights of "marie drawing" and map
          */
-        document.getElementById('map').style.height =
-            document.getElementById('marie-img').clientHeight + 'px';
+        setTimeout(function () {
+            document.getElementById('map').style.height =
+                document.getElementById('marie-img').clientHeight + 'px';
+        }, 2000);
 
     });
 
