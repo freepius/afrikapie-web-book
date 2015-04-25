@@ -51,12 +51,15 @@ $app['text.titles'] =
  * All published texts (past, present and future).
  *
  * Key = Publication date ; value = published texts
+ *
  * Key is 1 <=> static texts (always published)
+ * Value is string <=> a non-publication message
  *
  * WARNING: MUST BE from newest to oldest !
  */
 $app['text.published.all'] = $allPub =
 [
+    '2015-04-26' => 'Jour chômé ; reprise lundi.',
     '2015-04-25' => ['2013-10-18'],
     '2015-04-24' => ['2013-10-17'],
     '2015-04-23' => ['2013-10-16'],
@@ -85,7 +88,7 @@ $today     = date('Y-m-d');
 
 while (list($pubDate, $texts) = each($allPub))
 {
-    if ($pubDate > $today) { continue; }
+    if ($pubDate > $today || is_string($texts)) { continue; }
 
     $reallyPub += array_fill_keys($texts, $pubDate);
 }

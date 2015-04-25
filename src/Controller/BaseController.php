@@ -50,7 +50,14 @@ class BaseController implements ControllerProviderInterface
 
         list(, $month, $day) = explode('-', $today);
 
-        $texts = (array) @ $this->app['text.published.all'][$today];
+        $num   = 0;
+        $texts = @ $this->app['text.published.all'][$today];
+
+        if (is_array($texts))
+        {
+            $num   = $count($texts);
+            $texts = array_reverse($texts);
+        }
 
         return (true === $contact = $this->contact()) ?
             $this->app->redirect("/")                 :
@@ -58,8 +65,8 @@ class BaseController implements ControllerProviderInterface
                 'today' => [
                     'day'   => $day,
                     'month' => $month,
-                    'num'   => count($texts),
-                    'texts' => array_reverse($texts),
+                    'num'   => $num,
+                    'texts' => $texts,
                 ],
             ]);
     }

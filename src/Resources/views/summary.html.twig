@@ -15,13 +15,13 @@
         {% endif %}
     </b>
 
-    {% if today.texts %}
-        <ul>
-            {% for slug in today.texts %}
-                <li><a href="{{ slug }}">{{ app['text.titles'][slug] }}</a></li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+    <ul>
+        {% for slug in today.texts %}
+            <li><a href="{{ slug }}">{{ app['text.titles'][slug] }}</a></li>
+        {% else %}
+            <li><em>{{ today.texts }}</em></li>
+        {% endfor %}
+    </ul>
 </nav>
 
 <!-- Summary by country and month, in collapsible <div> -->
