@@ -1,0 +1,97 @@
+title: 19 octobre 2013
+intro: >
+    <s>Objectif Taounate</s><br>
+    Objectif Jorf El Melha
+
+comments:
+    - term    : '*Wa*,'
+      content : En français, « Oui ».
+
+    - term    : djebel
+      content : En français, « Montagne ».
+
+    - term    : '*La*,'
+      content : En français, « Non ».
+
+    - term    : '*Bezaf mouchkil*.'
+      content : En français, « Beaucoup de problèmes ».
+
+    - term    : une équipe de foot.
+      content : L’USTA, Union Sportive de Taounate
+
+    - term    : cybers,
+      content : Dénomination marocaine pour « cyber-café ».
+
+galleries:
+    - marker: 1
+      files :
+          - file    : local/taounate.jpg
+            caption : Vue sur Taounate, agglomération de taille moyenne.
+
+          - file    : local/pancartes.jpg
+            caption : Deux objectifs : l’ancien et le nouveau.
+
+    - marker: 2
+      files : [local/famille-fellahs.jpg]
+
+lightboxes:
+    - campée sur une petite montagne
+    - jolie petite fille
+
+longnotes:
+    ##############
+    ## Tifinagh ##
+    ##############
+    - term  : en berbère
+      title : >
+          Tamazight – Info n°3
+          <img src="/images/ber.png" class="pull-right" title="Le drapeau Berbère">
+      content : >
+          Les langues berbères utilisent l’alphabet <b>Tifinagh</b> (appelé aussi <i>libyco-amazight</i>).
+
+
+          Disparu durant l’Antiquité, il ne fut <b>conservé</b>
+          que dans la <b>sphère linguistique touarègue</b>.
+          Cela a permis de le réintroduire, au début du XX<sup>e</sup> siècle,
+          pour l’ensemble des langues berbères.
+
+
+          Exemple de mots :
+          <ul>
+              <li><i>Marie</i>     s’écrit <b>ⵎⴰⵔⵉ</b></li>
+              <li><i>Mathieu</i>   s’écrit <b>ⵎⴰⵜⵢⵓ</b></li>
+              <li><i>Tifinagh</i>  s’écrit <b>ⵜⵉⴼⵉⵏⴰⵖ</b></li>
+              <li><i>Tamazight</i> s’écrit <b>ⵜⴰⵎⴰⵣⵉⵖⵜ</b></li>
+          </ul>
+          <wp>Tifinagh|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>
+
+    ###############################
+    ## Organisation territoriale ##
+    ###############################
+    - term    : siège de province
+      title   : >
+          Maroc – Info n°8
+          <img src="/images/ma.png" class="pull-right">
+      content : >
+          L’<b>organisation territoriale</b> du Maroc repose sur un <b>système complexe</b>.
+          Voici, en gros, son découpage :
+
+          <ul>
+              <li>1 Royaume du Maroc</li>
+              <li>12 régions</li>
+              <li>76 préfectures et provinces</li>
+              <li>199 pachaliks (niveau urbain)</li>
+              <li>258 cercles (niveau rurale)</li>
+              <li>1503 communes (221 urbaines et 1282 rurales)</li>
+          </ul>
+          C’est un <b>gouverneur</b>, nommé par le pouvoir central, qui est <b>en charge d’une province</b>.
+
+
+          <b>En 2015, le Maroc s’est doté d’un nouveau découpage territorial...</b>
+
+subtexts:
+    - term    : quelle situation impossible !
+      caption : Profil démographique et socio-économique du handicap, au Maroc.
+      file    : text-handicap.md
+      marker  : 3
