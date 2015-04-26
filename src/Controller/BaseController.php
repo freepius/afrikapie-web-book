@@ -55,7 +55,7 @@ class BaseController implements ControllerProviderInterface
 
         if (is_array($texts))
         {
-            $num   = $count($texts);
+            $num   = count($texts);
             $texts = array_reverse($texts);
         }
 
