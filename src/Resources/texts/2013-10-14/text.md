@@ -5,7 +5,7 @@ Que non !
 
 Côté pratique, d’abord, ce serait probablement difficile, davantage encore en pleine campagne rifaine : vie au ralenti ; épiceries, cafés et hôtels fermés ; peu de transports ; etc.
 Côté humain, ensuite, quelle tristesse !
-Nous louperions un grand moment familiale d’ici, ses us et ses coutumes, ses beautés, ses questionnements, ses excès.
+Nous louperions un grand moment familial d’ici, ses us et ses coutumes, ses beautés, ses questionnements, ses excès.
 Et vivre cette fête de l’intérieur serait pour nous, sans aucun doute, un inoubliable moment de partage et de culture, riche en émotions.
 
 Alors au réveil, nous sommes franchement bougons, songeurs.

@@ -1,0 +1,9 @@
+title: 20 octobre 2013
+intro: Changement de décor
+trans: enhanced
+audio: ~
+css  : p { text-align: center; }
+
+galleries:
+    - marker : 1
+      files  : [local/changement-decors.jpg]
