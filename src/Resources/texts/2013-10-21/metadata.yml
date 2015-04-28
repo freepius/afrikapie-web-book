@@ -8,6 +8,9 @@ comments:
     - term    : couche/2
       content : Exactement à 18 h 36.
 
+    - term    : '*Al Hamdoulillâh*.'
+      content : En français, « Louange à Dieu ».
+
 galleries:
     - marker : 1
       files  : [anarchos/526e695f50298, anarchos/526e69595288a, anarchos/526e695d8906f]
@@ -73,3 +76,8 @@ longnotes:
                <b>« Tais-toi et récite ! »</b>
           </url>
           (mars 2015)
+
+subtexts:
+    - term   : toutes nos rencontres
+      file   : text-richesse.md
+      marker : 2

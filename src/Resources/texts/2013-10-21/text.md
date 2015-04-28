@@ -54,6 +54,8 @@ Bien sûr, cette réflexion ne date pas d’aujourd’hui.
 Voici vingt jours que nous voyageons, vingt jours que cette thématique de la richesse, la nôtre en particulier, est remuée en tous sens, par nous et par toutes nos rencontres.
 Affaire à suivre...
 
+<marker=2>
+
 Sur le chemin, Azouz s’arrête à chaque vieil homme, pour expliquer qu’il nous accueille, qu’il ne nous laisse pas dormir dehors, seuls, en pleine nature.
 Tous lui lancent un « C’est bien ! », avec une bonne tape dans le dos.
 Leurs bons regards sont évocateurs.
@@ -93,4 +95,4 @@ Leurs cours ne sont que copiage et récitation.
 
 Dans l’étable, en face du salon, la famille a quatre vaches et quelques moutons.
 De retour du café, Mathieu s’essaie à la traite : c'est laborieux ! Il n’a pas le doigté d’une *fellaha*.
-Nos hôtes, aussi, produisent de huile d’olive et un très bon miel (vendu 200 dirhams le kilo, soit 20 €).
+Nos hôtes, aussi, produisent de l’huile d’olive et un très bon miel (vendu 200 dirhams le kilo, soit 20 €).
