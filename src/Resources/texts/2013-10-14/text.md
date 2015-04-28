@@ -87,7 +87,7 @@ Il y a aussi : un « salon invité », un autre avec télévision (pour les s
 Abdiloula est un petit riche des campagnes, notable de son village, marocain modeste sinon.
 Il travaille comme ambulancier, employé par la commune rurale, et est propriétaire d’un café du village.
 Ses fils possèdent une camionnette, pour le transport des personnes et marchandises, ainsi qu’un tracteur, qu’ils utilisent pour cultiver leurs propres parcelles et qu’ils louent, sinon, pour divers services agricoles (labour, moisson du blé, récolte des olives, etc.)
-Les femmes, elles, s’occupent d’entretenir la maison, de préparer les repas, de s’occuper des enfants et animaux de basse-cour, etc.
+Les femmes, elles, entretiennent la maison, préparent les repas, s’occupent des enfants et animaux de basse-cour, etc.
 
 Après la sieste, j’accompagne Asma à l’étable.
 Une vache et deux moutons y attendent leur exécution pour l’*Aïd*.
