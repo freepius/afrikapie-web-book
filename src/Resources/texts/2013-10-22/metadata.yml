@@ -1,0 +1,103 @@
+title: 22 octobre 2013
+intro: Merci Mourad pour la balade.
+
+galleries:
+    - marker : 1
+      files  : [anarchos/526e69f8bdfca, anarchos/526e695064a69]
+
+longnotes:
+    #################
+    ## Arabisation ##
+    #################
+    - term    : arabisation
+      content : >
+          Dans les <b>années 80</b>, le système éducatif marocain est <b>islamisé puis arabisé</b>.
+
+
+          Pour l’universitaire Abderrahman El Bouhmidi :
+
+          <i>« L’arabisation est une approche sectaire qui a créé
+          des générations incapables de s’exprimer, même en arabe,
+          alors que du temps du bilinguisme, les étudiants marocains possédaient
+          deux langues maternelles, l’arabe et le français. »</i>
+
+
+          <url>//www.leconomiste.com/article/898439-arabisation-la-facture-co-te-trop-cher|
+               <b>En savoir plus</b>
+          </url>
+          <small>(sur L’Économiste)</small>
+
+    ##########################
+    ## Bras long et pistons ##
+    ##########################
+    - term : le bras assez long
+      content : >
+          On nous a souvent dit : <i>« Au Maroc, si tu n’as pas de position, d’argent ou de piston,
+          il est impossible d’obtenir un bon poste. »</i>
+
+    ####################
+    ## Kasbah Amergou ##
+    ####################
+    - term : kasbah d’Amergou
+      content : >
+          Amergou est incontestablement l’<b>ouvrage militaire almoravide</b>
+          le plus important qui nous soit parvenu.
+
+
+          Il fait partie d’une série de fortifications érigées par les <wp>Almoravides</wp> (1056-1147),
+          afin de contrecarrer la montée fulgurante de leurs adversaires almohades.
+
+
+          Au milieu du XII<sup>e</sup> siècle, cependant, il tombe entre les mains des <wp>Almohades</wp>.
+
+
+          <url>//www.qantara-med.org/qantara4/public/show_document.php?do_id=299|
+               <b>En savoir plus</b>
+          </url>
+          <small>(sur qantara-med.org)</small>
+
+    ###########################
+    ## Potentiel touristique ##
+    ###########################
+    - term    : ici/2
+      content : >
+          Il y a ici un fort potentiel éco-touristique, totalement inexploité.
+          La région – pauvre, délaissée – y gagnerait beaucoup.
+
+    ######################
+    ## Barrage Al Wahda ##
+    ######################
+    - term    : barrage hydro-électrique Al Wahda
+      title   : >
+          Maroc – Info n°10
+          <img src="/images/ma.png" class="pull-right">
+      content : >
+          Mis en service le <b>12 novembre 1996</b>,
+          le <b>barrage Al Wahda</b> reste le plus large barrage du Maroc et le second d'Afrique
+          <small>(2,6 km sur 88 m, débit de 13 000 m³/s)</small>.
+
+
+          Sa construction visait 4 objectifs :
+          <ul>
+              <li>augentation du périmètre d’<b>irrigation</b> de la plaine du Gharb</li>
+              <li>production d’<b>énergie</b> <small>(400 millions de kWh/an)</small></li>
+              <li>alimentation en <b>eau potable</b></li>
+              <li>protection <b>contre les inondations</b> de la plaine du Gharb et de Kénitra</li>
+          </ul>
+          <url>//www.leconomiste.com/article/le-barrage-al-wahda-ouvre-ses-vannes|
+               <b>En savoir plus</b>
+          </url>
+          <small>(sur L’Économiste)</small>
+
+
+          <lb>local/al-wahda.jpg</lb>
+
+photowalls: [{marker: 1-photos, files: 11}]
+
+subtexts:
+    - term    : Superbe !
+      caption : Voir plus de photos.
+      marker  : 1
+      file    : text-photos-amergou.md
+
+wikipedias: [almoravide/2]

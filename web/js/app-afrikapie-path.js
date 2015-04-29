@@ -29,7 +29,7 @@ afrikapiePath = [
     [34.534237, -4.932557], // Bivouac "galère + chiens", en haut de la falaise
     [34.469860, -4.990044],
     [34.491852, -5.071108], // Accueil chez "Azzuz qui louche"
-    [34.490566, -5.188632], // Balade au fortin français, avec Mourad
+    [34.490566, -5.188632], // Soir de la balade avec Mourad (accueil)
     [34.486259, -5.234833], // Bivouac au cimetière, malades comme des chiens
     [34.502609, -5.439932], // Bivouac au bord de l'oued Ouargha
     [34.499680, -5.453096], // Khnichet
