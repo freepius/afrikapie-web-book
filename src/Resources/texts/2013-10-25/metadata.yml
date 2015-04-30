@@ -1,0 +1,128 @@
+title: 25 octobre 2013
+intro: Serre les dents et souris !
+
+galleries:
+    - marker: 1
+      files : [local/ouergha.jpg, /texts/catalogue-photos/wall/3.jpg]
+
+lightboxes:
+    - term: La chambre
+      file: anarchos/526f97ab0e7cf
+
+    - term: '*Attention !*'
+    - term: Belle indigestion !
+
+    - term: Jorf El Melha/1
+      caption: >
+          Jorf El Melha
+          <copy=fk>Merche Lazaro|CC BY-NC-SA 2.0|deunvistazo/8427048747</copy>
+
+    - term: Meknès
+      caption: Une des nombreuses portes de Meknès (prise en 1881)
+
+    - term: Azrou
+      caption: >
+          Azrou
+          <copy=wc>Bertramz|CC BY-SA 3.0|Azrou,centerfromhill.jpg</copy>
+
+    - term: Khenifra
+      caption: >
+          Khenifra
+          <copy=wc>Bertrand benazeth|CC BY-SA 4.0|Ville_de_KHENIFRA_Maroc.JPG</copy>
+
+    - term: Beni Mellal
+      caption: >
+          Beni Mella, vue depuis la Kasbah.<br>
+          <copy=fk>Groundhopping Merseburg|CC BY-NC 2.0|fchmksfkcb/10289452636</copy>
+
+    - Impression irréelle
+
+longnotes:
+    #############
+    ## Ouergha ##
+    #############
+    - term : Ouergha/1
+      content : >
+          L’Ouergha est une rivière du Maroc.
+          Elle démarque, au sud, les montagnes du Rif et le <wp>Pays Jebala</wp>.
+          Elle se jette dans la rivière <wp>Sebou</wp>, puis aboutit dans l’Atlantique.
+
+    ######################
+    ## 1ère indigestion ##
+    ######################
+    - term : première indigestion
+      content : >
+          Sa cause ? Une eau de puits. Une grenade pas fraîche.
+          Ou encore, des sucreries qui auraient trop chauffées au soleil...
+
+    ###########################
+    ## Bataille de l’Ouergha ##
+    ###########################
+    - term    : Ouergha/3
+      title   : Région du Rif – Info n°8
+      content : >
+          La <b>bataille de l’Ouergha</b> oppose les troupes rifaines
+          (3000 hommes, dirigés par Abdelkrim)
+          aux troupes coloniales françaises
+          (20 000 hommes, commandés par le <wp>maréchal Lyautey</wp>).
+
+
+          Les confrontations durent 3 mois (avril-juillet 1925)
+          et se soldent par une <b>large défaite de l’armée française</b>
+          (2000 morts côté français, 500 côté rifain).
+          Elle fut une <b>bataille décisive</b> de la <wp>guerre du Rif</wp>.
+
+
+          <url>//www.yabiladi.com/articles/details/26877/guerre-bataille-ouargha-francais-anoual.html|
+               <b>En savoir plus</b>
+          </url>
+          <small>(sur Yabiladi.com)</small>
+
+    #################
+    ## Moyen Atlas ##
+    #################
+    - term    : Moyen Atlas
+      title   : >
+          Maroc – Info n°11
+          <img src="/images/ma.png" class="pull-right">
+      content : >
+          Le <b>Moyen Atlas</b> est un <b>massif montagneux</b>
+          qui s’étend sur <b>350 km</b>, du sud-ouest au nord-ouest marocain,
+          entre le Rif et le Haut Atlas.
+
+
+          Son point culminant est le <b>jbel Bou Naceur</b> <small>(3356 mètres)</small>.
+
+
+          Sa première <b>ressource économique</b> est le <b>pastoralisme</b>.
+
+
+          <wp>Moyen Atlas|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>
+
+
+          <lb>local/moyen-atlas.jpg|
+              <copy=wc>Hadraj Said|CC BY-SA 1.0|Paysage_Itto.jpeg</copy>
+          </lb>
+
+    ########################
+    ## Jardin des délices ##
+    ########################
+    - term : Jardin des délices
+      content : >
+          Le <b>Jardin des déciles</b> est un triptyque du peintre néerlandais
+          <b>Jérôme Bosh</b>, datant de 1503 ou 1504.
+
+
+          Son panneau de droite montre les tourments de l’Enfer.
+
+
+          <wp>Jardin des délices|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>
+
+
+          <lb>local/jardin-des-delices.jpg</lb>
+
+wikipedias:
+    - term: Styx
+      page: Styx#Fleuve_infernal

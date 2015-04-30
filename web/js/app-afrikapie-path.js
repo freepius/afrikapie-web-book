@@ -29,17 +29,19 @@ afrikapiePath = [
     [34.534237, -4.932557], // Bivouac "galère + chiens", en haut de la falaise
     [34.469860, -4.990044],
     [34.491852, -5.071108], // Accueil chez "Azzuz qui louche"
-    [34.490566, -5.188632], // Soir de la balade avec Mourad (accueil)
-    [34.486259, -5.234833], // Bivouac au cimetière, malades comme des chiens
-    [34.502609, -5.439932], // Bivouac au bord de l'oued Ouargha
-    [34.499680, -5.453096], // Khnichet
-    [34.476425, -5.610662],
-    [34.436783, -5.687358],
-    [34.218742, -5.711474],
-    [34.189926, -5.888700],
+    [34.490566, -5.188632],
+    [34.486259, -5.234833], // Soir de la balade avec Mourad (accueil)
+    [34.502609, -5.439932],
+    [34.499680, -5.453096], // Bivouac au cimetière, malades comme des chiens
+    [34.476425, -5.610662], // Bivouac au bord de l'oued Ouargha
+    [34.436783, -5.687358], // Khnichet
+    [34.218742, -5.711474], // Sidi Kacem
+    [34.189926, -5.888700], // Azghar
     [34.097466, -6.075332],
-    [34.122448, -6.139973],
-    [34.015862, -6.832659],
+    [34.122448, -6.139973], // Bivouac dans la forêt de la Mamora
+    [34.31695,  -6.27195 ],
+    [34.26309,  -6.57057 ], // Kénitra
+    [34.015862, -6.832659], // Rabat
     [33.742126, -6.760589],
     [33.558556, -6.692798],
     [33.408794, -6.742530],

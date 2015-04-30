@@ -22,7 +22,7 @@ Malgré nos sept années -- collège et lycée -- d’apprentissage de l’ang
 Mais pourquoi donc, de la part du Maroc, un tel choix ?
 En fait, c’est juste un vilain méli-mélo de l’histoire.
 Jusqu’aux années quatre-vingt, tous les cursus scolaires publics -- primaire, collège, lycée et université -- étaient bilingues, arabe-français.
-Sous Hassan II, durant la décennie, le pays a entamé l’arabisation et l’islamisation du système éducatif.
+Sous Hassan II, durant la décennie, le pays a entamé l’arabisation et l’islamisation du système éducatif.
 Les études supérieures de sciences et techniques, elles, ont gardé le français.
 
 Le père de Mourad est mort, dix ans plus tôt, laissant une femme et quatre enfants.
@@ -45,7 +45,7 @@ Enfin, c’est ce que nous comprenons...
 Nous crapahutons dans la montagne, avec boustifaille et sacs à dos, dans la chaleur et la pente raide, pour revenir, deux heures plus tard, à notre point de départ.
 Les incompréhensions linguistiques, finalement, ça a du bon.
 Si nous l’avions compris, ce Mourad, ça aurait été « Bye bye, puis droit devant ».
-Et nous aurions loupé un excellent moment (à mettre, au moins, dans le *Top 20* du voyage).
+Et nous aurions loupé un excellent moment (à mettre, au moins, dans le *Top 20* du voyage).
 
 Tout en souffle et en palabre, nous arrivons enfin en haut, où trône la kasbah d’Amergou, une forteresse almoravide construite au XII<sup>e</sup> siècle.
 Elle fut implantée sur un site stratégique, dominant toute la plaine de l’oued Ouergha et les régions environnantes.
