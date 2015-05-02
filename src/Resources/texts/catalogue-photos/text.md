@@ -1,7 +1,3 @@
-<style>
-    [property="articleBody"] p { text-align: center; }
-</style>
-
 **Choisissez ici votre contrepartie photo !**  
 *(voir la page [« Nous soutenir »](/nous-soutenir))*
 

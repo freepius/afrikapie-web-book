@@ -18,7 +18,7 @@
         body > header {
             background-image: url('/texts/{{ text.slug }}/header.jpg') !important;
         }
-        {{ text.css }}
+        {{ text.css|raw }}
     </style>
 {% endblock %}
 

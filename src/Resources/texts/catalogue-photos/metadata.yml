@@ -5,6 +5,8 @@ prev     : ~
 next     : ~
 template : static
 trans    : enhanced
+css      : '[property="articleBody"] p { text-align: center; }'
+
 
 photowalls:
     - marker   : 1

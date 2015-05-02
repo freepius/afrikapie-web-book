@@ -111,8 +111,8 @@ Alors, pour celles et ceux qui le souhaitent, **nous proposons les contreparties
 Combien ? | Quoi ?
 ----|----
 5€  | un email chaleureux + votre nom dans les remerciements <small>(page d’accueil)</small>
-15€ | 1 aquarelle <small>(format *Carte postale*)</small> dédicacée par Marie <small>+ contreparties des 5€</small>
-25€ | 3 aquarelles <small>(format *Carte postale*)</small> dédicacées par Marie <small>+ contreparties des 5€</small>
+15€ | 1 [aquarelle](/catalogue-aquarelles) <small>(format *Carte postale*)</small> dédicacée par Marie <small>+ contreparties des 5€</small>
+25€ | 3 [aquarelles](/catalogue-aquarelles) <small>(format *Carte postale*)</small> dédicacées par Marie <small>+ contreparties des 5€</small>
 35€ | 1 photo du [catalogue](/catalogue-photos) <small>(format 40x30 ou 40x20)</small>, imprimée sur papier d’art et dédicacée par Mathieu <small>+ contreparties des 15€</small>
 45€ | le livre papier « Afrikapié -- tome 1 » dédicacé par Mathieu + 1 marque-page *aquarelle* dédicacé par Marie <small class="text-danger">(contreparties à retardement)</small>
 100€| contreparties des 45€ + celles des 35€ + votre nom dans les remerciements du livre + notre reconnaissance éternelle à vie <small class="text-danger">(contreparties à retardement)</small>
