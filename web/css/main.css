@@ -4067,7 +4067,7 @@ form.contact {
   margin-bottom: 10px;
   text-align: center;
 }
-#follow-and-support [href="/feed"] {
+#follow-and-support a {
   color: inherit;
   margin-right: 10px;
   text-decoration: none;
