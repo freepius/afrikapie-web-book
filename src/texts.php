@@ -89,7 +89,7 @@ $app['text.published.all'] = $allPub =
     '2015-04-14' => ['2013-10-05-soir', '2013-10-05'],
     '2015-04-13' => ['2013-10-04'],
     '2015-04-12' => ['2013-10-03', '2013-10-02'],
-    1            => ['catalogue-photos', 'nous-soutenir'],
+    1            => ['catalogue-aquarelles', 'catalogue-photos', 'nous-soutenir'],
 ];
 
 
