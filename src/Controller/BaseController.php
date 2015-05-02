@@ -108,19 +108,11 @@ class BaseController implements ControllerProviderInterface
 
     public function readText($slug)
     {
-        try {
-            if (!$this->app['debug'] && ! $this->isPublishedText($slug)) {
-                throw new \Exception('Texte non publié.');
-            }
+        if (! $this->isPublishedText($slug)) {
+            throw new \Exception("Le texte \"$slug\" n’est pas publié.");
+        }
 
-            $text = $this->app['afrikapieText']->findAndTransform($slug);
-        }
-        catch (\Exception $e) {
-            $this->app->abort(404,
-                "Le texte \"$slug\" n'existe pas !\n".
-                ($this->app['debug'] ? $e->getMessage() : '')
-            );
-        }
+        $text = $this->app['afrikapieText']->findAndTransform($slug);
 
         // If the next text is unpublished => remove it
         if ($next =& $text['next'] && ! $this->isPublishedText($next)) { $next = null; }
@@ -197,6 +189,7 @@ class BaseController implements ControllerProviderInterface
      */
     protected function isPublishedText($text)
     {
-        return array_key_exists($text, $this->app['text.published.really']);
+        return $this->app['debug'] ||
+               array_key_exists($text, $this->app['text.published.really']);
     }
 }
