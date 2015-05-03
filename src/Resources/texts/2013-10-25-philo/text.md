@@ -1,6 +1,6 @@
 ﻿À mesure que nous approchons de l’Atlantique, les territoires se font plus plats, plus denses, plus agricoles encore.
 Aucune envie, alors, d’y pénétrer à pied.
-L’aperçu de ces derniers jours nous a suffit.
+L’aperçu de ces derniers jours nous a suffi.
 
 Ça titille tout de même notre moral, ça le met en berne, que d’avancer avec des roues et un moteur.
 Non par orgueil, cet « orgueil du grand marcheur », qui ne veut pas lâcher le moindre kilomètre.

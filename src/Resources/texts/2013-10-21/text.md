@@ -20,7 +20,7 @@ Le soleil, lui, se couche lentement, sans nous attendre.
 Au bout d’une longue côte, puis au détour d’un virage, une barre rocheuse apparaît, mignonnette et solitaire.
 Chouette ! Au pied, nous serons peinards.
 À sa droite, de gros blocs de roche s’embrassent en un petit promontoire.
-Dessus, joliment posés, quatre jeunes papottent et fument la *sebsi*.
+Dessus, joliment posés, quatre jeunes bavardent en fumant la *sebsi*.
 Nous les rejoignons alors, pour le *salam* et pour la vue.
 Il y a là Mourad, Azouz et deux amis.
 
@@ -46,7 +46,7 @@ De soutenir décemment sa fillette handicapée ou ses « petits vieux ».
 D’offrir, à ses enfants, une solide éducation et des loisirs équilibrés.
 Et de cultiver, tout simplement, tout tranquillement, son petit jardin...
 
-Quand une société à ça, quand toi-même tu as ça, ma foi, j’crois bien qu’vous êtes riches !
+Quand une société a ça, quand toi-même tu as ça, ma foi, j’crois bien qu’vous êtes riches !
 En ce sens, la société marocaine n’est pas riche. La française, bien plus.
 Au diable, alors, le bling-bling, le trop-plein de possessions, le « plus que le voisin », etc.
 

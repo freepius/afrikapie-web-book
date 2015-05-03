@@ -16,7 +16,7 @@ Alors aujourd’hui, j’écris comme se porte cet estomac : mal.
 Et je passe les jours, aussi vite que passe mon transit intestinal : *ziouf !*
 
 Malade, j’ai démarré la première.
-Mathieu m’a suivi de près.
+Mathieu m’a suivie de près.
 
 Premier jour.
 -------------
