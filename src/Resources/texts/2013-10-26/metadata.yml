@@ -1,0 +1,108 @@
+title: 26 octobre 2013
+prev : '2013-10-25-philo'
+intro: >
+    Azghar : femme, football et espérance.
+    Et de la bonne terre boueuse, partout.
+
+galleries:
+    - marker : 2
+      files  : [anarchos/526f9c4f74331, local/henne-a-secher.jpg, anarchos/526f9be3504d5]
+
+lightboxes:
+    - term : sous d’épais nuages
+      file : /texts/catalogue-photos/wall/4.jpg
+
+    - term    : lutin vert
+      file    : anarchos/526f98b975ed4
+      caption : Super, le poncho « Momo » !
+
+    - Kamal/1
+
+    - term : Son intérieur
+      file : anarchos/526f9b98cdff7
+
+    - term : Peugeot 405
+      file : anarchos/526f98be0f6f7
+
+    - term    : Barça ou Réal ?
+      caption : Et toi ? Barça ou Réal ?
+
+    - term : c’est une princesse
+      caption : >
+          Jolie mariée, pouponnée, habillée du caftan, maquillée au henné,
+          parée de bijoux et de dorure.
+
+    - term : redevenue Cendrillon
+      caption : >
+          Pourquoi un couteau ?
+          Car c’est, probablement, l’ustensile favori de la ménagère marocaine.
+
+longnotes:
+    ###########################
+    ## Aghar, commune rurale ##
+    ###########################
+    - term : Azghar/4
+      content : >
+          Azghar est le <b>centre de la commune rurale</b> du même nom.
+          Sa population, de <b>10 000 habitants</b> environ <small>(2004)</small>,
+          est disséminée dans plusieurs <i>douars</i> alentour.
+
+    #####################
+    ## Plaine du Gharb ##
+    #####################
+    - term    : plaine du Gharb
+      title   : >
+          Maroc – Info n°12
+          <img src="/images/ma.png" class="pull-right">
+      content : >
+          La <b>plaine du Gharb</b> couvre une superficie de l’ordre
+          de 616 000 hectares, soit <b>6 000 km²</b>.
+
+
+          Elle se caractérise par une <b>production</b> importante de <b>riz</b>
+          (100 % de la production nationale), de <b>betteraves à sucre</b> (69 %)
+          et de <b>canne à sucre</b> (22 %).
+
+
+          Les autres cultures sont essentiellement des céréales,
+          des oléagineux, du coton, et des plantes fourragères et maraîchères.
+
+
+          En savoir plus
+          <url>//www2.ac-toulouse.fr/mesoe/sommaire/projet/present/projet2/gharb2.htm|
+               <b>ici</b>
+          </url>
+          et
+          <url>//www2.ac-toulouse.fr/mesoe/sommaire/projet/present/projet2/gharb3.htm|
+               <b>là</b>
+          </url>.
+
+    ##################
+    ## Sidi Slimane ##
+    ##################
+    - term : Sidi Slimane
+      content : >
+          Située à 60 km de Kénitra, <b>Sidi Slimane</b>
+          compte environ <b>85 000 habitants</b>.
+
+
+          Elle est <b>réputée</b> au Maroc pour <b>ses champs et sa campagne</b>.
+
+
+          Durant la colonisation française, Sidi Slimane a été appelée « Le Petit Paris ».
+          Les peintres <i>Hans Kleiss</i> et <i>Yvonne Kleiss-Herzig</i>
+          s’y installèrent dès 1952.
+
+    ####################
+    ## Hakada el ayam ##
+    ####################
+    - term : Hakada el ayam
+      content : >
+          Littéralement : « Ce sont les jours. »
+
+          Peut être traduit en : <b>« C’est comme ça la vie. »</b>
+
+subtexts:
+    - term   : destinée des femmes
+      file   : text-moudawana.md
+      marker : 1
