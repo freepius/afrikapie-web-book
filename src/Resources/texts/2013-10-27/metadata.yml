@@ -1,0 +1,49 @@
+title: 27 octobre 2013
+intro: >
+    Premières expériences.
+    Un, des gendarmes marocains.
+    Deux, de la forêt profonde.
+
+comments:
+    - term    : '(*Skhôn ! Bezef chemch !*)'
+      content : En français, « Chaud ! Beaucoup soleil ! ».
+
+galleries:
+    - marker: 2
+      files : [anarchos/526f9d3459115, anarchos/526f9d70634a8]
+
+lightboxes:
+    - l’escorte/1
+    - eucalyptus/2
+
+longnotes:
+    #################
+    ## Gendarmerie ##
+    #################
+    - term    : gendarmerie royale
+      title   : >
+          Maroc – Info n°13
+          <img src="/images/ma.png" class="pull-right">
+      content : >
+          La <b>gendarmerie royale</b> marocaine fait partie intégrante
+          des <b>Forces Armées Royales</b>.
+          On estime ses effectifs à <b>24 000 hommes</b>.
+
+
+          <img>local/gendarmerie.png</img>
+
+    ###################
+    ## Gros dossiers ##
+    ###################
+    - term : fait asseoir
+      content : >
+          Derrière nous, une grosse étagère métallique est bourrée de dossiers.
+          Le nom de certains est très cocasse :
+
+
+          <i>OVNI, barrage, sectes, ressortissants juifs, ressortissants sahraouis, etc.</i>
+
+#subtexts:
+#    - term   : Maâmora
+#      file   : text-maamora.md
+#      marker : 1

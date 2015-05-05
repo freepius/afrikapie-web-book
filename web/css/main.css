@@ -4029,6 +4029,9 @@ form.contact {
 .popover-content ol {
   padding-left: 15px;
 }
+.popover-content .img-responsive {
+  margin: auto;
+}
 .popover-title {
   font-size: 16px;
 }
