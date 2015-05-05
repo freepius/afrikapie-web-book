@@ -1,0 +1,164 @@
+title: Maâmora
+audio: ~
+prev : '2013-10-27'
+next : '2013-10-28'
+intro: Plus grande forêt de chêne-liège au monde
+
+comments:
+    - term : INRA/1
+      content :  Institut national de la recherche agronomique.
+
+    - term : carbonisation domestique
+      content : La cuisson et le chauffage.
+
+galleries:
+    - marker : 1
+      files  :
+          - file : local/maamora-carte.gif
+            caption : >
+                En pontillé, les surfaces occupées par le chêne-liège, en 1990.<br>
+                <small>&copy; INRA – tous droits réservés.</small>
+
+          - file : local/maamora-anthropisation.gif
+            caption : >
+                Représentation d’une subéraie anthropisée.<br>
+                <small>&copy; INRA – tous droits réservés.</small>
+
+lightboxes:
+    - term : chêne-liège/2
+      caption : >
+          Chêne-liège
+          <copy=wc>Fritz Geller-Grimm|CC BY-SA 2.5|Quercus_fg01.jpg</copy>
+
+    - acacias à tanin
+
+    - term : eucalyptus
+      caption : >
+          Eucalyptus camaldulensis
+
+          <copy=wc>Atamari|CC BY-SA 3.0|Eucalyptus_camaldulensis_0002.jpg</copy>
+
+    - passerines
+
+    - term : palmiers nains
+      caption : >
+          Palmier nain
+          <copy=wc>Esculapio|CC BY-SA 2.5|Chamaerops_humilis_(Zingaro)015.jpg</copy>
+
+    - term : le liège/2
+      caption : >
+          Coupe transversale d’un chêne-liège.
+          On ne récolte que l’écorce.
+
+    - term : glands/2
+      caption : <copy=wc>Xemenendura|CC BY-SA 3.0|Bellota_de_alcornoque.JPG</copy>
+
+links:
+    - term : INRA/2
+      url  : http://www.inra.fr/
+
+longnotes:
+    ############################
+    ## Plus grande du monde ? ##
+    ############################
+    - term : probablement du monde
+      content : >
+          Ceci était absolument vrai, <b>il y a quelques années</b> encore.
+
+          Mais celle-ci <b>régresse tellement</b> que, peut-être,
+          elle ne mérite plus ce titre.
+
+    ###########################
+    ## Suberaie, répartition ##
+    ###########################
+    - term : suberaie/1
+      content : >
+          Quatre pays, le Portugal, l’Espagne, l’Algérie et le Maroc représentent
+          <b>91%</b> de la suberaie mondiale, qui couvre au total <b>2 687 millions</b> d’hectares.
+
+
+          <lb>local/suberaie-repartition.png|
+              <copy=wc>IKAI|CC BY-SA 3.0|Quercus_suber_Area.png</copy>
+          </lb>
+
+    #################
+    ## Chêne-liège ##
+    #################
+    - term : Quercus suber
+      content : >
+          Le <b>chêne-liège</b> (<i>Quercus suber</i>) est un arbre à feuilles persistantes,
+          exploité pour son écorce qui fournit le liège.
+          Il est parfois appelé <b>corcier</b>, <b>surier</b> ou <b>suve</b>.
+          Une forêt de chênes-lièges s’appelle une <b>suberaie</b>.
+
+
+          <ul>
+              <li><b>Âge :</b> 150 à 200 ans</li>
+              <li><b>Taille :</b> max. 12 à 15 mètres</li>
+              <li><b>T° douces :</b> 12 à 19 °C</li>
+          </ul>
+          <wp>Chêne-liège|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>
+
+
+          <lb>local/chene-liege-planche.jpg</lb>
+
+    ###########################
+    ## Définition de receper ##
+    ###########################
+    - term : recepées
+      content : >
+          <b>Définition :</b> tailler des arbres, des arbustes en ne gardant que les branches principales
+          pour leur donner plus de vigueur.
+
+    ##################################
+    ## Définition de eutrophisation ##
+    ##################################
+    - term : eutrophisation
+      content : >
+          <b>Définition :</b>
+          Processus de <b>pollution</b> qui se produit quand un lac, une rivière ou une zone côtière
+          devient <b>trop riche en nutriment de plante</b> et devient, en conséquence,
+          <b>trop peuplé en algues</b> et autres plantes aquatiques.
+
+
+          Ainsi, les plantes meurent et se décomposent, consommant l’oxygène de l'eau (i.e. anoxie),
+          qui devient alors sans vie.
+
+    #####################
+    ## Fourmi du liège ##
+    #####################
+    - term : fourmi du liège
+      content : >
+          La <b>fourmi du liège</b> est un insecte méditerranéen banal, noire et rouge,
+          qui <b>creuse ses nids</b> à partir d’une blessure de l’écorce du <b>chêne-liège</b>.
+
+
+          Il en résulte un système complexe de <b>galeries</b>, hébergeant plus de <b>5 000 individus</b>
+          et s’étendant, parfois, sur <b>plusieurs mètres</b>.
+
+
+          La fourmi s’attaque essentiellement au liège de mauvaise qualité, des arbres en mauvais état.
+
+    #############################
+    ## Productivité portugaise ##
+    #############################
+    - term : suberaies portugaises
+      content : >
+          La <b>production annuelle</b> mondiale de liège s’élève à <b>340 000 tonnes</b>,
+          dont <b>54 %</b> pour le seul Portugal (avec ses 32 % de la superficie mondiale).
+
+    ######################
+    ## Unité fourragère ##
+    ######################
+    - term : unités fourragères
+      content : >
+          L’unité fourragère est l’unité utilisée par l’<wp>Institut national de la recherche agronomique|INRA</wp>
+          pour déterminer la <b>valeur énergétique d’un fourrage</b>.
+
+
+          Cette unité fait <b>référence</b> à la <b>valeur énergétique d’1 kg d’orge</b>, récolté au stade « grain mûr ».
+
+wikipedias:
+    - {term: genêts, page: Genêt}
+    - maréchal Lyautey

@@ -20,7 +20,6 @@ Alors, avec insistance, il tente de nous dissuader :
 
 Le chef essaie, insiste, téléphone encore, réexamine nos passeports et, finalement, nous propose d’aller à Sidi Slimane en voiture.
 Nous déclinons l’offre.
-
 Ce chef de brigade, il ne nous expose rien, ne nous explique pas.
 Il se contente de répéter, encore et encore, *c’est dangereux !*
 Ne pourrait-il pas, tout simplement, nous balancer...
