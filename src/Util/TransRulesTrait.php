@@ -261,7 +261,7 @@ function photoWall($e)
                 "$path/$img.jpg",
                 "$pathThumb/$img.jpg",
                 $e['lightbox'],
-                @ $e['captions'][$img]
+                htmlspecialchars($this->format(@ $e['captions'][$img]), ENT_QUOTES)
             );
         }
         $out .= "\n\t<div class=\"gallery row\">$tmp\n\t</div>";

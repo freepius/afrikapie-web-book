@@ -1,0 +1,104 @@
+title: 31 octobre 2013
+intro: Rabat en marchant, par les chemins de traverse : jolies découvertes.
+
+lightboxes:
+    - term : vallée fertile
+      caption : <copy=wc>Pline|CC BY-SA 3.0|Vallée_du_Bou_Regreg_P1060533.JPG</copy>
+
+    - improbable village
+
+    - term : énorme eucalyptus
+      file : anarchos/5272487784d4d
+
+longnotes:
+    #############
+    ## Chellah ##
+    #############
+    - term : Chellah/1
+      content : >
+          Le <b>Chellah</b> est le site d’une <b>nécropole <wp>mérinide</wp></b> située
+          sur l’emplacement d’une <b>cité antique</b>,
+          dans l’actuelle ville de Rabat, au Maroc.
+
+
+          Depuis 2005, ce <b>site archéologique</b> accueille chaque année
+          le festival « Jazz au Chellah » et, depuis 2012, est inscrit
+          au <b>patrimoine mondial de l’Unesco</b>, en tant que bien culturel.
+
+
+          <wp>Chellah|<b>En savoir plus</b></wp>
+          <small>(Wikipédia)</small>
+
+
+          <lb>local/chellah.jpg|
+              Ruines romaines et enceinte mérinide<br>
+              <copy=wc>Shawn Allen|CC BY-SA 2.0|Chellah_interior_hill.jpg</copy>
+          </lb>
+
+    ###############
+    ## Bouregreg ##
+    ###############
+    - term : Bouregreg
+      content : >
+          Le <b>Bouregreg</b> <small>(en arabe أبورقراق ou <i>abou rāqrāq</i>)</small>
+          est un <b>fleuve</b> marocain long de <b>240 km</b>.
+
+          Il prend naissance dans le massif du <b>Moyen Atlas</b>
+          <small>(à l'altitude de 1 627 m)</small>
+          et se jette dans l’océan <b>Atlantique</b>,
+          entre Salé (au nord) et Rabat (au sud).
+
+
+          <wp>Bouregreg|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>
+
+    ########################
+    ## Kasbah des Oudayas ##
+    ########################
+    - term : Kasbah des Oudayas
+      content : >
+          La <b>kasbah des Oudayas</b>, ou Oudaïas, est un ancien <b>camp militaire</b> fortifié,
+          situé à Rabat et bâti au <b>XIIe siècle</b>.
+
+
+          Depuis 2012, la kasbah est inscrite au
+          <b>patrimoine mondial de l’Unesco</b>.
+          On y trouve, notamment, un des premiers palais bâti
+          par la dynastie royale des <wp>Dynastie des Alaouites|Alaouites</wp>,
+          toujours régnante.
+
+
+          <wp>Kasbah des Oudayas|<b>En savoir plus</b></wp>
+          <small>(Wikipedia)</small>
+
+
+          <lb>local/oudayas-outer.jpg|
+              <copy=wc>Elooas|CC BY-SA 3.0|Marrocos-Kasbah-Oudaya-Rabat-Luis-Filipe-Gaspar.jpg</copy>
+          </lb>
+
+    ##################
+    ## Médina rouge ##
+    ##################
+    - term : médina rouge
+      content : >
+          Construite au <b>XVIIe siècle</b> pour accueillir les
+          <wp>Expulsion_des_Morisques_d'Espagne|réfugiés d’Andalousie</wp>,
+          la <b>médina de Rabat</b> est aujourd’hui connue pour son <i>mellah</i>
+          (ancien quartier juif), son souk couvert <i>Es-Sebat</i>,
+          et sa diversité de boutiques.
+
+longsounds: [bouillonnante]
+
+photowalls:
+    - marker : 1
+      thumb  : false
+      files  :
+          - [oudayas-dessin-mathieu, oudayas-inner, oudayas-dessin-marie]
+          - [medina-panorama]
+          - [medina-dessin, medina-porte]
+      captions:
+          oudayas-dessin-mathieu: Les Oudayas par Mathieu
+          oudayas-inner         : <copy=wc>Jorge Láscar|CC BY-SA 2.0|Kasbah_des_Oudaias_(5509105140).jpg</copy>
+          oudayas-dessin-marie  : Les Oudayas par Marie
+          medina-panorama       : <copy=fk>Christopher Rose|CC BY-NC 2.0|khowaga/5966701641</copy>
+          medina-porte          : <copy=fk>Mustapha Ennaimi|CC BY 2.0|ennaimi/3734087341</copy>
