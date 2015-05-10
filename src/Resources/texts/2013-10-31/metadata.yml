@@ -97,8 +97,9 @@ photowalls:
           - [medina-panorama]
           - [medina-dessin, medina-porte]
       captions:
-          oudayas-dessin-mathieu: Les Oudayas par Mathieu
-          oudayas-inner         : <copy=wc>Jorge Láscar|CC BY-SA 2.0|Kasbah_des_Oudaias_(5509105140).jpg</copy>
-          oudayas-dessin-marie  : Les Oudayas par Marie
-          medina-panorama       : <copy=fk>Christopher Rose|CC BY-NC 2.0|khowaga/5966701641</copy>
-          medina-porte          : <copy=fk>Mustapha Ennaimi|CC BY 2.0|ennaimi/3734087341</copy>
+          oudayas-dessin-mathieu: Les Oudayas, par Mathieu
+          oudayas-inner         : Ruelle de la Kasbah des Oudayas<br><copy=wc>Jorge Láscar|CC BY-SA 2.0|Kasbah_des_Oudaias_(5509105140).jpg</copy>
+          oudayas-dessin-marie  : Les Oudayas, par Marie
+          medina-panorama       : Panorama sur la médina de Rabat<br><copy=fk>Christopher Rose|CC BY-NC 2.0|khowaga/5966701641</copy>
+          medina-dessin         : La médina de Rabat, par Marie
+          medina-porte          : Dans la médina<br><copy=fk>Mustapha Ennaimi|CC BY 2.0|ennaimi/3734087341</copy>
