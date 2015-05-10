@@ -99,9 +99,11 @@ function eventualFootnote($e)
  */
 function footnote($e)
 {
+    $id = $this->slugify($e['term']);
+
     // the reference
-    $this->replaceTerm($e, function ($e) {
-        return sprintf('%1$s[^%1$s]', $e['term']);
+    $this->replaceTerm($e, function ($e) use ($id) {
+        return sprintf('%s[^%s]', $e['term'], $id);
     });
 
     // the content
@@ -109,7 +111,7 @@ function footnote($e)
     $content = is_callable($content) ? $content($e) : $content;
 
     // the footnote
-    $this->text .= sprintf("[^%s]: %s\n", $e['term'], $this->format($content));
+    $this->text .= sprintf("[^%s]: %s\n", $id, $this->format($content));
 }
 
 /**
