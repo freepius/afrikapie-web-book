@@ -4,7 +4,7 @@ Ce mercredi 30 octobre, nous n’avons consommé qu’un seul mois.
 Reste deux.
 Nous devrons quitter le royaume chérifien, au maximum, le 3 janvier 2014.
 
-En ces temps troubles de banditisme, terrorisme et conflits au Sahara et au Sahel, tout baroudeur ouest-africain passe forcément, après le Maroc, par la Mauritanie : large pays désertique, très peu peuplé, république islamique, territoire à dattes et à dromadaires, etc.
+En ces temps troubles de banditisme, terrorisme et conflits au Sahara et au Sahel, tout baroudeur ouest-africain passe forcément, après le Maroc, par la Mauritanie : large pays désertique, très peu peuplé, république islamique, territoire à dattes et à dromadaires, etc.
 
 Il nous faut, bien entendu, un visa d’entrée.
 Mais l’obtention de celui-ci, pour un projet farfelu qui plus est, semble une gageure !

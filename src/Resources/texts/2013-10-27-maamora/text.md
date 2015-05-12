@@ -4,7 +4,7 @@
 La forêt de la Maâmora est un milieu naturel riche, pour ne pas dire exceptionnel, largement étudié par les scientifiques.
 À la fin des années 90, l’INRA a décrit sa végétation, sa géographie, ses activités humaines et les dangers qui la menacent gravement.
 
-Les informations de cet exposé sont largment tirées des articles suivants :
+Les informations de cet exposé sont largement tirées des articles suivants :
 
 * <a href="http://www7.inra.fr/lecourrier/assets/C30colloq-1.pdf" target="_blank">[1]</a>
   **Compte-rendu du colloque « Les rencontres du CERASE » (Rabat, 1996)** par *Claire Villemant* et *Dominique Titolet*, de l’INRA.
@@ -80,7 +80,7 @@ La récolte des glands, champignons et miel sauvage est une activité importante
 Le bois du chêne-liège, lui, n’est pas travaillé.
 Mais il est illégalement utilisé pour la carbonisation domestique et trop fréquemment pillé pour la revente aux hammams.
 
-Le sur-pâturage du bétail (bovins, ovins et caprins) est une des causes principales de la dégradation de la Maâmora.
+Le surpâturage du bétail (bovins, ovins et caprins) est une des causes principales de la dégradation de la Maâmora.
 La charge pastorale est de 6,4 « unités petit bétail » (UPB) à l’année, alors que la charge d’équilibre convenu est de 1,5 UPB.
 Chaque année, 24 millions d’unités fourragères y sont également produites.
 

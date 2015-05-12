@@ -25,7 +25,7 @@ Sûr qu’on en a manqué !
 Sur le parvis de la cathédrale Saint-Pierre, un joli tramway bondé nous passe devant, comme un souvenir estudiantin.
 Au moment où les lampadaires s’éclairent, les parcs publics, eux, ferment leurs grilles pour la nuit.
 Beaucoup de monde vont et viennent, en tous sens, d’un pas assuré.
-Ici, ni âne, ni charrrette, ni chien errant ; l’ordre est respecté.
+Ici, ni âne, ni charrette, ni chien errant ; l’ordre est respecté.
 De jeunes femmes non-voilées, habillées à la mode occidentale, se promènent désinvoltes, seules ou entre amies, parfois garçons et filles réunis.
 Un beau parfum cosmopolite divague dans les rues, flotte dans l’atmosphère.
 

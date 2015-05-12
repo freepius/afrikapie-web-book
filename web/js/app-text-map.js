@@ -17,7 +17,7 @@
                 first   : 'Landscape'
             },
             center   : currentPoint,
-            controls : {fullscreen: true},
+            controls : {fullscreen: true, scale: true},
             zoom     : 10
         }),
 
