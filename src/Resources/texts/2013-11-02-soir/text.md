@@ -41,3 +41,11 @@ Après une bonne série de bivouacs, pas toujours enthousiasmants, qu’il est p
 Ce boutiquier, nous lui avons acheté pour cinquante dirhams de provisions.
 Lui, instantanément, il a inversé les rôles, nous redonnant le quadruple.
 Surtout, il nous a offert ce qui ne se vend pas : la plus belle humanité.
+
+P.S. : Le lendemain, levé à 6h20, départ à 6h50.
+Le père et le fils aîné sont partis tôt à la chasse.
+Nous grignotons le petit déj’ préparé pour nous sur la table.
+Saadia, encore au lit, m’appelle pour que je l’embrasse avant de partir.
+Quelle jolie femme ! Merci à elle. Merci à eux.
+Il fait frais en partant, c’est agréable.
+Tâchons de beaucoup marcher ce matin.
