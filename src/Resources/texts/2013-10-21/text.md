@@ -1,7 +1,7 @@
 ﻿Hier soir, nous réussissons à dégotter, à force de sueur et d’entêtement, une belle petite hauteur, forestière et bucolique, sur laquelle bivouaquer.
 « Alors profitons-en, me dis-je, car c’est la dernière montagne avant longtemps ! »
 
-À peine rendus en haut, dans cet endroit abrupte et impossible, que *patatras*.
+À peine rendus en haut, dans cet endroit abrupt et impossible, que *patatras*.
 Un : quelques maisons éparses, improbables, squattent déjà le coin.
 Deux : la nuit se couche, nette.
 Trois : une bande de chiens sauvages, guère sympathique, se met à grogner au loin, nous épiant de tous ses yeux rouges.
