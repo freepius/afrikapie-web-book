@@ -1,0 +1,26 @@
+title: 4 novembre 2013
+prev : '2013-11-02-soir'
+intro: Des paysages sans verbe
+
+css: >
+    [property="articleBody"] > div:first-child p {
+        margin: auto;
+        margin-bottom: 20px;
+        max-width: 600px;
+    }
+
+lightboxes:
+    - à perte de vue
+
+    - term : chênes-lièges
+      file : anarchos/527a67dc47a19
+
+    - magnifiques étendues
+
+    - term : Une petite longueur d’eau
+      file : anarchos/527a67e3969de
+
+    - une ligne de camions
+
+    - term : un puits solitaire
+      file : anarchos/527a67ae76562
