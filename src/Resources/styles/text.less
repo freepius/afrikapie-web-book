@@ -120,11 +120,13 @@ nav
 
     table:extend(.table all, .table-striped all, .table-responsive all) {}
 
-    #marie-img > img:extend(.img-responsive) { border: 2px solid black; }
+    #bing-img, #marie-img {
+        > img:extend(.img-responsive) { border: 2px solid black; }
+    }
 
     #map {
         border: 2px solid black;
-        height: 311px;
+        height: 380px;
     }
 
     [data-toggle="popover"]:extend(.unbreak) {}

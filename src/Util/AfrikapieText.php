@@ -100,6 +100,7 @@ class AfrikapieText
     {
         return [
             'audio'    => 'Marie',
+            'bing'     => true,
             'css'      => null,
             'intro'    => null,
             'next'     => date('Y-m-d', strtotime("$this->slug +1 day")),

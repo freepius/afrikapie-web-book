@@ -307,6 +307,7 @@ img {
   vertical-align: middle;
 }
 .img-responsive,
+#text > [property="articleBody"] #bing-img > img,
 #text > [property="articleBody"] #marie-img > img {
   display: block;
   max-width: 100%;
@@ -4233,12 +4234,13 @@ body#home {
 #text > [property="articleBody"] .collapse h3 {
   font-style: italic;
 }
+#text > [property="articleBody"] #bing-img > img,
 #text > [property="articleBody"] #marie-img > img {
   border: 2px solid black;
 }
 #text > [property="articleBody"] #map {
   border: 2px solid black;
-  height: 311px;
+  height: 380px;
 }
 #text > [property="articleBody"] .gallery > div {
   text-align: center;

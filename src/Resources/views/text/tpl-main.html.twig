@@ -86,7 +86,17 @@
                 <img src="/texts/{{ text.slug }}/marie.jpg">
             </a>
 
-            <div class="col-xs-12 col-md-6">
+            {% if text.bing %}
+                <!-- The bing aerial picture -->
+                <a id="bing-img" class="col-xs-12 col-md-6"
+                   data-lightbox="global" href="/texts/{{ text.slug }}/bing.jpg"
+                   data-title="{{ text.bing is same as(true) ? '' : text.bing }}"
+                >
+                    <img src="/texts/{{ text.slug }}/bing.jpg">
+                </a>
+            {% endif %}
+
+            <div class="col-xs-12 {{ not text.bing ? 'col-md-6' }}">
                 <div id="map"></div>
             </div>
         </div>
