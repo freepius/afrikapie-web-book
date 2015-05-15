@@ -19,7 +19,7 @@
         {% for slug in today.texts %}
             <li><a href="{{ slug }}">{{ app['text.titles'][slug] }}</a></li>
         {% else %}
-            <li><em>{{ today.texts }}</em></li>
+            <li><em>{{ today.texts | raw }}</em></li>
         {% endfor %}
     </ul>
 </nav>
