@@ -7,7 +7,7 @@ Alors, ce matin, au premier « engin à roulette » qui s’arrêtera pour nou
 Finalement, c’est un bon-gros-vieux camion amerloque qui nous prend.
 À Sidi Yahya El Gharb, le sympathique conducteur -- trente-cinq ans de métier -- a fort à faire, tant l’étroite route est jonchée de piétons, d’ânes et de charrettes. Alors, il slalome au son du klaxon.
 
-Ce soir, après dix kilomètres à pied, vingt-cinq en camion, vingt en grand-taxi, puis vingt en train, nous débarquons enfin à Rabat.
+Ce soir, après dix kilomètres à pied, vingt-cinq en camion, vingt en grand taxi, puis vingt en train, nous débarquons enfin à Rabat.
 Après trois semaines à vivre dans les campagnes du Nord-Maroc, quatre-cents kilomètres à y traîner nos basques : quel choc !
 Un fossé énorme semble séparer ces « deux mondes d’un même pays ».
 
