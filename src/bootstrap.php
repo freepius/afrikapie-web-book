@@ -27,6 +27,8 @@ $app['bing_maps_api_key'] = BING_MAPS_API_KEY;
 
 $app['mail_cache_dir'] = CACHE.'/mail';
 
+$app['text.pub_dir'] = ROOT.'/web/pub';
+
 require_once APP.'/texts.php';
 
 

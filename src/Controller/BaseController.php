@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
  *  -> manageErrors
  *  -> home
  *  -> feed
+ *  -> odt
  *  -> readText
  *  -> contact         [protected]
  *  -> isPublishedText [protected]
@@ -32,6 +33,10 @@ class BaseController implements ControllerProviderInterface
         $ctrl->match('/', [$this, 'home'])->method('GET|POST');
 
         $ctrl->get('/feed', [$this, 'feed']);
+
+        if ($app['debug']) {
+            $ctrl->get('/pub/{slug}.odt', [$this, 'odt']);
+        }
 
         $ctrl->match('/{slug}', [$this, 'readText'])->method('GET|POST');
 
@@ -104,6 +109,35 @@ class BaseController implements ControllerProviderInterface
         return $this->app->render('page/feed.xml.twig',
             ['texts' => $texts], $response
         );
+    }
+
+    /**
+     * Make an ODT version ONLY for the "travel texts".
+     */
+    public function odt($slug)
+    {
+        $out = $this->app['text.pub_dir']."/$slug.odt";
+
+        $title = @ $this->app['text.titles'][$slug];
+
+        if (!$this->isPublishedText($slug) || !$title) {
+            throw new \Exception("Le texte \"$slug\" n’est pas publié ou ne dispose pas de version \"odt\".");
+        }
+
+        if (!file_exists($out))
+        {
+            $md = "# $title\n\n".$this->app['afrikapieText']->rawText($slug);
+
+            $in = tempnam('/tmp', 'anarchos-semitas_afrikapied_').'.md';
+
+            file_put_contents($in, $md);
+
+            exec("pandoc --smart --base-header-level=2 $in -o $out");
+
+            unlink($in);
+
+            return $this->app->redirect("/pub/$slug.odt");
+        }
     }
 
     public function readText($slug)
