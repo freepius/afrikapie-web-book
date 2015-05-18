@@ -69,3 +69,18 @@ longnotes:
 
           <wp>Phosphate|<b>En savoir plus</b></wp>
           <small>(Wikipédia)</small>
+
+    #####################
+    ## Année musulmane ##
+    #####################
+    - term : an musulman
+      content : >
+          Le <b>calendrier musulman</b> ou <b>calendrier hégirien</b>
+          est un calendrier lunaire, fondé sur une année de 12 mois lunaires, de 29 à 30 jours chacun.
+          Une année hégirienne compte 354 ou 355 jours.
+
+
+          <wp>Calendrier musulman|<b>En savoir plus</b></wp>
+          <small>(Wikipédia)</small>
+
+wikipedias: [hégire]
