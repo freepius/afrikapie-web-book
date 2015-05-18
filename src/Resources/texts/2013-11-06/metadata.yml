@@ -6,7 +6,18 @@ lightboxes:
     - term : De la fenêtre
       file : anarchos/527a67d828812
 
-    - les étals
+    - term    : quartiers proprets
+      caption : <copy=wc>Energievision|CC BY-SA 3.0|Khouribga_خريبكة_5.jpg</copy>
+
+    - term    : larges avenues
+      caption : >
+          Le grand boulevard Moulay Youssef de Khouribga.<br>
+          <copy=wc>Energievision|CC BY-SA 3.0|Boulevard_moulay_youssef_khouribga_شارع_المولى_يوسف_12.jpg</copy>
+
+    - term    : les étals
+      caption : <copy=wc>Energievision|CC BY-SA 3.0|Khouribga_خريبكة.jpg</copy>
+
+    - de fruits secs/1
     - belle assiette
 
 longnotes:
