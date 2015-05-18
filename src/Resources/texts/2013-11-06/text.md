@@ -43,7 +43,7 @@ L’agglomération, neuve et insipide, est en perpétuel boom, lié à l’explo
 Notre modeste hôtel est situé au cœur de la maigre médina, loin des quartiers proprets et des larges avenues rectilignes.
 De la fenêtre, nous observons à loisir la vie qui s'écoule, calme, presque endormie jusqu’à midi, puis qui s’éveille la nuit tombée, qui bouillonne et qui commerce.
 
-Tôt le matin, les employés municipaux s’échinent à ramasser l’épaisse écume d’ordures, jetée la veille par une puissante marée noctambule.
+Tôt le matin, les employés municipaux s’échinent à ramasser l’épaisse écume d’ordures, jetée la veille par une puissante marée de noctambules.
 Un policier pimpant siffle la circulation, débordé.
 Les magasins, eux, font la grasse mat’, ne s’endormant qu’à minuit passé.
 Dans la journée, des mendiants, des cireurs de pompes et des vendeurs de peu circulent, à droite à gauche, partout dans les rues.
