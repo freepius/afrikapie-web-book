@@ -661,8 +661,8 @@ abbr[data-original-title] {
 blockquote {
   padding: 14px 28px;
   margin: 0 0 28px;
-  font-size: 23px;
-  border-left: 5px solid #eeeeee;
+  font-size: 22px;
+  border-left: 5px solid #777777;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -686,7 +686,7 @@ blockquote .small:before {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #eeeeee;
+  border-right: 5px solid #777777;
   border-left: 0;
   text-align: right;
 }
@@ -3980,9 +3980,6 @@ h1 {
 p {
   text-align: justify;
 }
-blockquote {
-  border: 0;
-}
 .notice {
   font-size: 90%;
   margin: 7px;
@@ -4090,6 +4087,9 @@ body#home {
     padding-left: 5px;
     padding-right: 5px;
   }
+}
+#home .slide blockquote {
+  border: 0;
 }
 #home #main.slide {
   font-size: 26px;

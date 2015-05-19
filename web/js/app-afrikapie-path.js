@@ -55,7 +55,10 @@ afrikapiePath = [
     [33.139297, -6.665191], // Semi-bivouac, dérangés par les gendarmes
     [33.073254, -6.712592], // Dodo chez le gendarme
     [32.884678, -6.912074], // Khouribga
-    [32.664513, -6.935969],
+    [32.84714,  -6.93788 ],
+    [32.73144,  -6.94346 ], // El Foqra
+    [32.664513, -6.935969], // Accueil après El Foqra (chez le gros monsieur avec son âne)
+    [32.57814,  -6.84323 ], // Bni Oukil (avec la rangée de mobylettes)
     [32.545845, -6.872999],
     [32.479649, -6.915286],
     [32.277809, -6.893020],

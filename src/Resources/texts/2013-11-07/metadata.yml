@@ -1,0 +1,80 @@
+title: 7 novembre 2013
+intro: Fantasia surprise !
+
+galleries:
+    - marker : 2
+      files  : [anarchos/52860fe65ac2b, anarchos/52861003d5652]
+
+    - marker : 2
+      files  : [anarchos/52860fc777514, anarchos/52860f14efba7]
+
+lightboxes:
+    - term : à bicyclette
+      caption : <copy=fk>velobistrotdodo|CC BY-NC-ND 2.0|velobistrotdodo/6953434679</copy>
+
+    - term : mignonnes mini-montagnes
+      file : anarchos/52860c0ef0826
+
+    - petit amphibien
+
+    - term : grandes guitounes
+      file : anarchos/52860d5c7329c
+
+    - soixantenaires respectés
+
+longnotes:
+    #########################
+    ## Station d’épuration ##
+    #########################
+    - term : une station d’épuration
+      content : >
+          La <b>station d’épuration</b> de Khouribga
+          a une capacité de traitement de <b>220 000</b> <wp>équivalent-habitant</wp>.
+
+
+          En 2012, ce projet faisait partie du <b>programme d’assainissement</b> liquide de toute la province,
+          doté d’une enveloppe globale de <b>400 millions de dirhams</b> <small>(40 millions €)</small>.
+
+
+          Après épuration, la station <b>produit</b> 5 millions de m³/an d’<b>eau industrielle</b>,
+          pour le <b>lavage des phosphates</b>.
+
+
+          À lire sur le sujet :
+          <url>//www.leconomiste.com/article/892396-khouribga-dot-e-d-une-station-d-puration-performante|
+               « Khouribga dotée d’une station d’épuration performante »
+          </url>
+          <br>
+          <small>(L’Économiste, mars 2012)</small>
+
+    ############################
+    ## Plateau des phosphates ##
+    ############################
+    - term : plateau des phosphates
+      content : >
+          Ce plateau a la forme d’un losange.
+          <ul>
+              <li>La face nord-est (la plus élevée, 1000 mètres) jouxte le Plateau central.</li>
+              <li>La face nord-ouest, la <wp>Chaouia (Maroc)|Chaouia</wp>.</li>
+              <li>La face sud-ouest (la plus basse, 500 mètres), les Rahamna.</li>
+              <li>La face sud-est, la dépression du <wp>Tadla</wp>.</li>
+          </ul>
+          L’ensemble est constitué par une couverture sédimentaire de <b>calcaire</b>,
+          de <b>marnes</b> et de <b>phosphates</b> intercalés.
+          Le <b>réseau hydrographique</b> est <b>peu important</b>, la perméabilité des calcaires
+          ne permettant pas un écoulement normal.
+
+subtexts:
+    - term   : une fantasia
+      file   : text-fantasia.md
+      marker : 1
+
+wikipedias:
+    - Fantasia (Maghreb)
+
+    - Eugène Delacroix
+
+    - term : cavaliers numides
+      page : Cavalerie numide
+
+    - guerres puniques

@@ -100,8 +100,9 @@
          * Equalize the heights of "marie drawing" and map
          */
         setTimeout(function () {
-            document.getElementById('map').style.height =
-                document.getElementById('marie-img').clientHeight + 'px';
+            var drawingHeight = document.getElementById('marie-img').clientHeight;
+            if (drawingHeight > 100)
+                document.getElementById('map').style.height = drawingHeight + 'px';
         }, 2000);
 
     });
