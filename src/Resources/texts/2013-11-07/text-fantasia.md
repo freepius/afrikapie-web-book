@@ -1,4 +1,4 @@
-La fantasia
+La fantasia <small>– source Wikipédia, licence CC BY-SA 3.0</small>
 -----------
 
 ### Origines
@@ -18,6 +18,8 @@ L’histoire de la fantasia est liée à celle des cavaliers numides.
 Ils sont considérés, à l’époque des guerres puniques (2<sup>ème</sup> siècle av. J.-C.), comme les meilleurs cavaliers du monde, grâce notamment à leur technique de combat par harcèlement, à base de charges et de replis rapides.
 
 On retrouve plus tard cette même tactique d’attaque et de fuite (appelée *el-kerr ul-ferr*) chez les Arabes.
+
+<marker=peintures>
 
 ### Célébrations
 
@@ -55,3 +57,14 @@ Près de 1000 troupes (dites *sorbas*), comptant près de 15 000 chevaux, sont 
 En 2008 est créé le « Complexe royal des sports équestres et Tbourida Dar Es-Salam », une structure consacrée à la pratique équestre, comprenant notamment une école de fantasia et des ateliers de confection d’habits des cavaliers et de fabrication des harnachements.
 
 Les fantasias sont essentiellement organisées dans les campagnes berbères, pendant des fêtes : mariages, naissances, aïds, moussems (fête régionale annuelle, associant une célébration religieuse à des activités festives et commerciales).
+
+
+<!-- Add 2 videos -->
+<div class="row text-center">
+    <div class="col-md-6">
+        <iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/x177xnw" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-6">
+        <iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/x177y5n" allowfullscreen></iframe>
+    </div>
+</div>

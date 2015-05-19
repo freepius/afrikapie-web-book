@@ -1,6 +1,6 @@
 À sept heures, voilà notre marche qui reprend, à la fraîcheur du matin et d’un épais brouillard.
 Il nous faut une heure, soit cinq bons kilomètres, pour laisser définitivement Khouribga en arrière.
-Dans l’intervalle, nous passons à pas lents de son cœur à sa périphérie, coupant une voie ferrée, traversant des quartiers chics, moyens, populaires puis pauvres, longeant quelques usines, un cimentière, une vaste décharge, une station d’épuration, une prison, etc.
+Dans l’intervalle, nous passons à pas lents de son cœur à sa périphérie, coupant une voie ferrée, traversant des quartiers chics, moyens, populaires puis pauvres, longeant quelques usines, un cimetière, une vaste décharge, une station d’épuration, une prison, etc.
 Les camions, bus, voitures et charrettes nous frôlent en sens inverse, toujours plus nombreux à s’enfoncer dans la folie urbaine, à mesure que le jour se lève.
 
 Y a-t-il de tempo plus juste que celui lent de la marche, pour appréhender la transition urbaine, le rythme citadin ?
@@ -31,11 +31,9 @@ Le bled est petit : une pharmacie, une épicerie, un mécano « répare tout 
 À deux pas seulement, une dizaine de grandes guitounes sont plantées, en plein dans un immense champ de poussière.
 De là, proviennent à intervalle régulier d’impressionnantes détonations.
 Curieux, quoique fatigués, nous allons voir.
-
 Surprise !
 On voudrait l’faire exprès qu’on n’réussirait pas.
 Ce hasard du marcheur, moi j’dis, il est parfois bien sympathique.
-
 Même dans ce vaste territoire déshérité, l’on fête, à sa manière, 1435, l’hégire, le nouvel an musulman.
 Ici se déroule, tout le jour, une fantasia, spectacle équestre mythique et impressionnant.
 

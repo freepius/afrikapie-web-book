@@ -2,6 +2,17 @@ title: 7 novembre 2013
 intro: Fantasia surprise !
 
 galleries:
+    - marker : peintures
+      files  :
+          - file    : local/fantasia-peinture-1.jpg
+            caption : <i>Fantasia</i>, par <wp>Ulpiano Checa y Sanz</wp> (1860-1916).
+
+          - file    : local/fantasia-peinture-2.jpg
+            caption : <i>Fantasia</i>, par <wp>Otto von Faber du Faur</wp> (1883).
+
+          - file    : local/fantasia-peinture-3.jpg
+            caption : <i>Fantasia</i>, par <wp>Théo van Rysselberghe</wp> (1884).
+
     - marker : 2
       files  : [anarchos/52860fe65ac2b, anarchos/52861003d5652]
 
