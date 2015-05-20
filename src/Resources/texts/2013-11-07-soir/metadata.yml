@@ -19,9 +19,10 @@ comments:
 galleries:
     - marker: 1
       files :
-          - file  : local/ane-portrait.jpg
-            offset: 3
-            size  : 6
+          - file    : local/ane-portrait.jpg
+            caption : « Portrait d’un âne marocain », par Mathieu.
+            offset  : 3
+            size    : 6
 
     - marker: 2
       files : [anarchos/5286124ec0302, local/famille-1.jpg, local/famille-2.jpg]
