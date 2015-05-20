@@ -1,0 +1,33 @@
+title: Soirée du 7 novembre 2013
+prev : '2013-11-07'
+next : '2013-11-08'
+intro: L’âne bâté, battu, dans sa belle campagne, il brait du noir, il fait pitié.
+
+comments:
+    - term    : Shams walou.
+      content : En français, « Soleil fini ».
+
+    - term    : Gayton h’na
+      content : En français, « Tente ici ».
+
+    - term    : wakha
+      content : En français, « D’accord ».
+
+    - term    : '*kelbs*,'
+      content : En français, « Chiens ».
+
+galleries:
+    - marker: 1
+      files :
+          - file  : local/ane-portrait.jpg
+            offset: 3
+            size  : 6
+
+    - marker: 2
+      files : [anarchos/5286124ec0302, local/famille-1.jpg, local/famille-2.jpg]
+
+lightboxes:
+    - term : maisons en ruine
+      file : anarchos/528610591b687
+
+    - magnifique horizon

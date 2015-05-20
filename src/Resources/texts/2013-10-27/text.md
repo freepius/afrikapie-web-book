@@ -69,7 +69,7 @@ Péniblement, nous échangeons quelques mots, en *darija* surtout, sur sa famill
 Lorsque nous traversons celui-ci, il réquisitionne, pour nous, une grande bouteille de soda.
 Sympa, l’escorte.
 Moi, à sa place, je nous maudirais.
-Car nous le faisons marcher un dimanche midi, sous un soleil de plomb (*Skhôn ! Bezef chemch !*)
+Car nous le faisons marcher un dimanche midi, sous un soleil de plomb (*Skhôn ! Bezef shams !*)
 
 Les sacs, qui pèsent trois jours de boustifaille, nous labourent les épaules.
 Alors, nous ferions bien une pause.
