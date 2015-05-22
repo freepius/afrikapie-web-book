@@ -34,6 +34,9 @@ lightboxes:
     - magnifique horizon
 
 longnotes:
+    ############
+    ## Ruines ##
+    ############
     - term    : les nombreuses
       title   : D’où viennent ces ruines ?
       content : >
@@ -50,3 +53,24 @@ longnotes:
 
           Pourquoi, alors, ont-elles été désertées ?
           Serait-ce dû à une vague d’immigration vers les villes ou vers l’Italie ?
+
+    ##################
+    ## Âne au Maroc ##
+    ##################
+    - term    : L’âne
+      title   : >
+          Maroc – Info n°17
+          <img src="/images/ma.png" class="pull-right">
+      content : >
+          Le Maroc, ex-leader mondial, n’exporte plus d’ânes depuis 2007.
+
+
+          Le Maroc comptait, en 2012, <b>962 000 ânes</b>, dont <b>75% dans les zones de culture</b>.
+          L’élevage n’est pas structuré, seuls les paysans les élèvent pour le transport et les travaux agricoles.
+
+
+          En savoir plus :
+          <url>//www.lavieeco.com/news/economie/le-maroc-ex-leader-mondial-n-exporte-plus-d-anes-depuis-2007-21836.html|
+               <b>« Le Maroc, ex-leader mondial, n’exporte plus d'ânes depuis 2007. »</b>
+          </url>
+          <small>(La Vie éco, avril 2012)</small>

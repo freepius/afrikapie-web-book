@@ -32,7 +32,7 @@ Il ne rechigne pourtant pas à la corvée !
 Bah là, mon berger, il a un sacré tic de langage...
 
 L’âne, dans ce beau Maroc, est l’indispensable outil des campagnes.
-Un outil peu cher (cinquante ou cent euros), rustique, que l’on maltraite avec zèle, voire avec sadisme.
+Un outil peu cher (cinquante à deux-cent euros), rustique, que l’on maltraite avec zèle, voire avec sadisme.
 Animal à tout faire, animal surexploité, animal serpillère, animal mort jeté aux *kelbs*, trop sale pour la poubelle.
 Depuis un mois, nous voyons ce docile âne : attendre sans eau sous le cagnard, traîner des carrioles surchargées, porter cent kilos à même le dos, soutenir des hommes trop fainéants pour marcher, etc.
 
