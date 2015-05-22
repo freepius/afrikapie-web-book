@@ -11,3 +11,46 @@ intro: >
 galleries:
     - marker: 1
       files : [local/paysage.jpg, local/bateau.jpg]
+
+links:
+    - term: ouvriers agricoles
+      url : http://emi-cfd.com/echanges-partenariats12/spip.php?article53
+
+longnotes:
+    ###########################
+    ## Immigration en Italie ##
+    ###########################
+    - term    : vivant en Italie
+      title   : Les Marocains en Italie
+      content : >
+          Les Marocains résidant en Italie viennent, principalement, de 3 régions :
+          <ul>
+              <li><wp>Chaouia-Ouardigha</wp>, que nous venons de traverser : <b>25,3%</b> en 2008</li>
+              <li><wp>Tadla-Azilal</wp>, où nous évoluons actuellement : <b>16,1%</b></li>
+              <li><wp>Grand-Casablanca</wp> : <b>22%</b></li>
+          </ul>
+          À lire sur le sujet :
+          <ul>
+              <li>
+                  <url>//www.dossierimmigrazione.it/catalogo/2013_MAROCCO%20Un%20ponte%20sul_FR.pdf|
+                       « La communauté marocaine en Italie. Un pont sur la Méditerranée. »
+                  </url>
+                  <br>
+                  <small>(<b>Idos</b>, décembre 2013, PDF de 69 pages)</small>
+              </li>
+              <li>
+                  <url>//www.yabiladi.com/article-societe-3144.html|
+                       « Khouribga : la crise force les MRE à un retour anticipé »
+                  </url>
+                  <br>
+                  <small>(<b>yabiladi.com</b>, avril 2009)</small>
+              </li>
+          </ul>
+
+    ##########################
+    ## Betteraves sucrières ##
+    ##########################
+    - term : betteraves sucrières
+      content : >
+          <b>20%</b> de la production nationale de <b>betteraves sucrières</b> vient
+          de la région de <wp>Tadla-Azilal</wp>, que nous traversons actuellement.
