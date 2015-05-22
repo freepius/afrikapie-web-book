@@ -59,8 +59,10 @@ afrikapiePath = [
     [32.73144,  -6.94346 ], // El Foqra
     [32.664513, -6.935969], // Accueil après El Foqra (chez le gros monsieur avec son âne)
     [32.57814,  -6.84323 ], // Bni Oukil (avec la rangée de mobylettes)
-    [32.545845, -6.872999],
-    [32.479649, -6.915286],
+    [32.545845, -6.872999], // Sieste sous les oliviers d’une ferme
+    [32.479649, -6.915286], // Semi-bivouac "compresseur"
+    [32.45174,  -6.94465 ],
+    [32.44162,  -6.95812 ],
     [32.277809, -6.893020],
     [32.157883, -6.776306],
     [32.137939, -6.744395],
