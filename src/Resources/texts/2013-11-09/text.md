@@ -29,7 +29,7 @@ C’est notre yoyo schizophrène de voyageurs.
 Peut-être, en fait, que nous suivons cette fine route, comme l’on suivrait le fil d’Ariane dans un labyrinthe sans mur.
 Parce qu’évoluer ici, pour le profane, l’enfant de la campagne vallonnée, du marais, du bord océanique, de la ville ou que sais-je, a quelque chose d’effrayant.
 À perte de vue, aucun repère, rien qu’une barre montagneuse confuse qui se perd à l’infini.
-Alors, ce macadam, c’est la bouée à laquelle s’accroche le profane, pour ne pas se noyer dans sa propre terreur, celle d’être prisonnié à jamais du néant absolu.
+Alors, ce macadam, c’est la bouée à laquelle s’accroche le profane, pour ne pas se noyer dans sa propre terreur, celle d’être prisonnier à jamais du néant absolu.
 Non mais, grandiloquence à part, je jure que, apprentie voyageuse, ignare du désert, marcher ici fout les pétoches !
 
 Aurais-je eu le même sentiment, six mois plus tôt, quand tout, ici, était cultivé, vert et vivant ?
