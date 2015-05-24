@@ -65,6 +65,7 @@ $app['text.titles'] =
     '2013-11-07' => '7 novembre 2013',
     '2013-11-07-soir' => 'Soirée du 7 novembre 2013',
     '2013-11-08' => '8 novembre 2013',
+    '2013-11-08' => '9 novembre 2013',
 ];
 
 
@@ -80,6 +81,7 @@ $app['text.titles'] =
  */
 $app['text.published.all'] = $allPub =
 [
+    '2015-05-24' => ['2013-11-09'],
     '2015-05-23' => 'Samedi chômé, pour changé ; reprise dimanche.',
     '2015-05-22' => ['2013-11-08'],
     '2015-05-21' => 'Repos pour cause de grosse fatigue ; reprise vendredi, le temps de regagner un bon rythme !',
