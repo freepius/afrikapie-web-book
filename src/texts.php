@@ -65,7 +65,7 @@ $app['text.titles'] =
     '2013-11-07' => '7 novembre 2013',
     '2013-11-07-soir' => 'Soirée du 7 novembre 2013',
     '2013-11-08' => '8 novembre 2013',
-    '2013-11-08' => '9 novembre 2013',
+    '2013-11-09' => '9 novembre 2013',
 ];
 
 
