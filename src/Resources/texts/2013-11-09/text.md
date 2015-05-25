@@ -62,3 +62,13 @@ Respiration revenue
 
 Cet après-midi, nous reprenons la marche, traversant à loisir la verdure, humant l’humidité du soir.
 Où dormirons-nous ?
+
+P.S. : À un café, un homme, miteux trentenaire, propose de cirer les chaussures, comme il y en a tant au Maroc.
+Mais nous, avec nos gros godillots, ça ne nous intéresse pas.
+L’homme zone ici, l’après-midi durant, passant derrière les clients, finissant les restes de thé.
+Et, comme pour payer sa dette, il remet en place chaises et tables.
+Il a, dans les yeux et sur les lèvres, un quelque chose de très beau et de fier, malgré ses guenilles.
+Alors, lorsqu’il nous demande cinq dirhams, pour se payer un café, Mathieu les lui donne.
+Pas au mendiant, mais au bel homme.
+Ce geste-là, pourtant, il dérange sans cesse notre éthique d’athée, davantage encore au Maroc.
+Nos âmes n’ont pas encore saisi toute la charité musulmane.
