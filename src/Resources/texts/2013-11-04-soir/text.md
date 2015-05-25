@@ -25,7 +25,7 @@ Alors, tranquillement, Mathieu sort en caleçon, sa torche à la main, croyant a
 Mais, non !
 Ce sont les gendarmes !
 
---- « Bonsoir. Gendarmerie royale.  
+« Bonsoir. Gendarmerie royale.  
 --- Vous avez vu l’heure ?  
 --- Ce n’est pas prudent de dormir ici. On vous emmène à la brigade.  
 --- Hein ? Mais pourquoi ?  

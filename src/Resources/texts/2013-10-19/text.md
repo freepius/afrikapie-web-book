@@ -3,7 +3,7 @@ Depuis deux cent kilomètres, le nom de cette ville est sur le bout de nos lèvr
 
 En toute occasion, à chaque rencontre, palabre, café ou boutique, il nous faut, au moins, nous présenter et répondre au traditionnel « Pourquoi vous êtes là ? »
 Il serait inconcevable de rétorquer :  
---- « Nous sommes deux vagabonds.  
+« Nous sommes deux vagabonds.  
 --- C’est-à-dire ?  
 --- Bah, on arrive, on flâne, on observe, on papote, on écrit.  
 --- Et la nuit ?  

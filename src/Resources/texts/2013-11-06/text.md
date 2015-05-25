@@ -2,7 +2,7 @@
 ------------------
 
 Après nous être taillés tôt de chez le gendarme, nous nous taillons une matinée chaude et tranquille, dans une longue étendue de champs jaunes, direction sud-ouest, Khouribga.
-La carte indique, à nos côtés, quelques vieux bourrelets montagneux, orientés nord-est - sud-ouest, auxquels nos esprits, cependant, ne prêtent pas attention, subjugués qu’ils sont par la monotonie des paysages, des couleurs, de la marche et du temps.
+La carte indique, à nos côtés, quelques vieux bourrelets montagneux, orientés nord-est -- sud-ouest, auxquels nos esprits, cependant, ne prêtent pas attention, subjugués qu’ils sont par la monotonie des paysages, des couleurs, de la marche et du temps.
 
 Alors nous avançons, puisqu’il le faut bien, contemplant ce qui doit l’être, tâchant de méditer un peu, ne papotant guère, broyant quelques noirceurs et, surtout, fantasmant sur le prochain village, sur ses probables cafés, sur l’odeur alléchante de ses viandes mises à grillées.
 
@@ -65,15 +65,15 @@ Pour l’occasion, les familles sortent dans les rues, se visitent et s’offren
 Nota bene
 ---------
 
---- À Khouribga, beaucoup de mendicité, des vieux et des enfants en particulier.
+-- À Khouribga, beaucoup de mendicité, des vieux et des enfants en particulier.
 Certaines vieilles se retrouvent sur la place, en copines, papotant et mendiant de concert.
 Certains jeunes, eux, semblent faire cela pour « l’argent de poche » et les friandises.
 Et les autres, c’est plus sérieux...
 
---- À l’hôtel, la réceptionniste semble gênée de nous accueillir.
+-- À l’hôtel, la réceptionniste semble gênée de nous accueillir.
 Les chambres, à 80 dirhams la nuit (8€), sont très modestes, sans douche ni toilette.
 Pour elle, c’est trop rustique pour des touristes européens.
 Pour nous, c’est parfait !
 
---- Dans les gargotes, les serviettes sont, en fait, de fines feuilles de papier.
+-- Dans les gargotes, les serviettes sont, en fait, de fines feuilles de papier.
 Mathieu les accumule avidement, pour en faire des brouillons, des papiers à prose.

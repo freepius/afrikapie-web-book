@@ -23,7 +23,7 @@ Nous serions vus à des kilomètres à la ronde.
 
 À proximité d’un *douar*, nous discutons avec des jeunes, sans qu’aucune brèche d’hospitalité ne se fasse.
 Cinq-cent mètres plus loin, nous passons au large d’une fermette, où pétarade épouvantablement un quelconque engin, nous disant alors :  
---- « Imagine vivre ici, avec ces explosions continuelles. L’horreur !  
+« Imagine vivre ici, avec ces explosions continuelles. L’horreur !  
 --- Vivre ici ? T’es ouf ! Même pas y dormir une nuit. Les pauvres... »
 
 Cinq-cent mètres encore, puis nous passons devant une maison mignonnette, la lorgnant longuement, sans toutefois oser y demander l’hospitalité, ni même d’y bivouaquer.

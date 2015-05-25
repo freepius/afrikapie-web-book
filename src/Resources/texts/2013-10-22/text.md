@@ -63,12 +63,12 @@ Mathieu et moi, experts du pied, habitués des randos, nous le suivons haletants
 
 Arrivés au point de départ, après une pause et quelques derniers mots, nous nous quittons froidement, un peu bizarrement.
 En continuant sur la route du voyage, à peine vallonnée et toujours sèche, nous en discutons :  
---- Ce jeune attendait-il de nous quelque chose ?  
+« Ce jeune attendait-il de nous quelque chose ?  
 --- Mais quoi ? Il ne nous a rien dit, même du regard.  
 --- Un peu d’argent, pour la visite ?  
 --- Nous ne lui avions rien demandé, pourtant.  
 --- C’est vrai. C’est lui qui est venu à nous. Et il a l’air d’une bonne personne.  
---- Peut-être voulait-il juste échanger avec deux français de son âge ?
+--- Peut-être voulait-il juste échanger avec deux français de son âge ? »
 
 Qu’il est difficile de jauger, de juger, ce que l’on attend les uns des autres.
 À trop y penser, aussi, on passe à côté de beaux moments simples.

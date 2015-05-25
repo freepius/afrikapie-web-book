@@ -8,7 +8,7 @@ Alors, il nous questionne, passe deux-trois coups de téléphone, puis scribouil
 
 L’homme ne veut pas que nous marchions dans la forêt de la Maâmora, du moins, pas dans sa circonscription.
 Alors, avec insistance, il tente de nous dissuader :  
---- « C’est dangereux !  
+« C’est dangereux !  
 --- Ah ? Quels sont les dangers ?  
 --- C’est une grande forêt. Y’a rien ni personne, là-bas. Pas de ville, pas de boutique, vous êtes seuls. C’est pas prudent.  
 --- Mais nous avons une carte, un GPS, de l’eau, de la nourriture et, surtout, l’habitude de voyager comme ça.  
@@ -16,7 +16,7 @@ Alors, avec insistance, il tente de nous dissuader :
 --- Des bandits ? Dans la Maâmora ?  
 --- Non non ! C’est tranquille, ici. La gendarmerie fait son travail ! Mais vous êtes français, ça peut attirer les convoitises.  
 --- Nous venons de traverser le Rif et le Pays Jebala, à pied, pendant un mois. Et nous n’avons eu aucun problème. Les marocains sont très gentils et hospitaliers !  
---- Oui mais...
+--- Oui mais... »
 
 Le chef essaie, insiste, téléphone encore, réexamine nos passeports et, finalement, nous propose d’aller à Sidi Slimane en voiture.
 Nous déclinons l’offre.
