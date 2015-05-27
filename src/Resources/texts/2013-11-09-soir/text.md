@@ -103,7 +103,7 @@ Voilà pourquoi nous n’aimons pas forcer l’accueil, quémander l’hospitali
 Au contraire, nous les laissons venir, tantôt attentistes, tantôt séducteurs, jouant à les provoquer.
 Là, alors, il y a peu d’ambiguïté, aucun sentiment d’être redevables autrement qu’en étant curieux, polis, serviables et gentils.
 Là, aussi, nous avons toute latitude à dire « Non » ou « Merde », quand cela s’y prête.
-Du reste, rien ne nous empêche, en bons invités, d’apporter des friandises aux enfants, d’envoyer une photo aux parents.
+Du reste, rien ne nous empêche, en bons invités, d’apporter une friandise aux enfants, d’envoyer une photo aux parents.
 
 Ce bon monsieur, cet Aslam, il n’a probablement rien contre nous.
 C’est juste un de ces hommes -- comme le bon Dieu en pond partout -- continuellement apathique, plaintif et tristounet, quelle que soit sa richesse.
