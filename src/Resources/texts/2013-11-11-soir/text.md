@@ -53,10 +53,17 @@ Des chèvres sauvages, naines et noires, qui nous narguent de leur agilité, per
 Et l’oued, en contre-bas, à peine visible, qui bruisse, glougloute et résonne.
 
 Nous débouchons enfin sur la route, usés mais heureux, admirant longuement le beau paysage, gagné à la sueur de nos fronts.
-Nous marchons encore une demi-heure, à la recherche d’un joli coin de bivouac : pas simple sur ces flancs de montagne.
+Nous marchons encore une demi-heure, à la recherche d’un joli coin de bivouac : pas simple à flanc de montagne.
 Au-dessus d’un chemin forestier, nous déblayons un petit replat, tout juste aux dimensions de la guitoune.
 
 La soirée est courte ; la nuit tombe vite en altitude.
-Rincés par la crapahute, nous profitons toutefois des derniers rayons du soleil, de la solitude et de la plénitude de l’instant.
+Rincés par ce crapahut, nous profitons toutefois des derniers rayons du soleil, de la solitude et de l’extase.
+
+N.B. : Paumés au cœur de ces gorges du Maroc, notre sensation est étrange.
+En France, l’on se sent toujours protégé : par la gendarmerie de haute montagne, les pompiers et autres secouristes.
+Ici, c’est *freestyle* !
+Nous sommes seuls ; alors, pas d’erreur possible.
+Nous ne pouvons compter que sur nous-même.
+Cette totale solitude, cette hyper-attention, elles attisent -- bizarrement -- notre ivresse montagnarde.
 
 <marker=videos>
