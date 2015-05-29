@@ -58,13 +58,4 @@ En 2008 est créé le « Complexe royal des sports équestres et Tbourida Dar E
 
 Les fantasias sont essentiellement organisées dans les campagnes berbères, pendant des fêtes : mariages, naissances, aïds, moussems (fête régionale annuelle, associant une célébration religieuse à des activités festives et commerciales).
 
-
-<!-- Add 2 videos -->
-<div class="row text-center">
-    <div class="col-md-6">
-        <iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/x177xnw" allowfullscreen></iframe>
-    </div>
-    <div class="col-md-6">
-        <iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/x177y5n" allowfullscreen></iframe>
-    </div>
-</div>
+<marker=videos>

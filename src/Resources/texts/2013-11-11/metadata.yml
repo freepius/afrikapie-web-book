@@ -1,9 +1,13 @@
 title: 11 novembre 2013
 intro: Aït Attab, son rasta et son potier
+next : '2013-11-11-soir'
 
 galleries:
     - marker : 1
       files  : [anarchos/52862aaf0360e, anarchos/52862a79b7e29, anarchos/52862a662cd24]
+
+    - marker : 2
+      files  : [{file: dailymotion/x191hpw, offset: 2, size: 8}]
 
 lightboxes:
     - term : cabane en brique

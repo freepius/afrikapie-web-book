@@ -14,6 +14,9 @@ galleries:
           - file    : local/fantasia-peinture-3.jpg
             caption : <i>Fantasia</i>, par <wp>Théo van Rysselberghe</wp> (1884).
 
+    - marker : videos
+      files  : [dailymotion/x177xnw, dailymotion/x177y5n]
+
     - marker : 2
       files  : [anarchos/52860fe65ac2b, anarchos/52861003d5652]
 

@@ -87,9 +87,7 @@ Mathieu et moi aimons mieux le premier genre.
 Nous restons là trois jolies heures, assis dans le petit atelier, écoutant la radio en français, papotant et contemplant ce beau potier.
 Pendant qu’Hussein modèle l’argile sans relâche, Moustapha, lui, faisant fondre à la casserole des haricots blancs, prépare une de ces fameuses soupes marocaines. *Miam !*
 
-<div class="row">
-    <iframe class="col-xs-12 col-md-8 col-md-offset-2" height="355" frameborder="0" src="//www.dailymotion.com/embed/video/x191hpw" allowfullscreen></iframe>
-</div>
+<marker=2>
 
 Prendre sa liberté
 ------------------

@@ -132,13 +132,31 @@ function gallery($e)
     {
         if (is_string($e)) { $e = ['file' => $e]; }
 
+        $type = strtok($e['file'], '/');
+
+        // Dailymotion video
+        if ('dailymotion' === $type) {
+            $object = '<iframe style="width: 100%; height: 355px;" '.
+                'frameborder="0" allowfullscreen '.
+                'src="//www.dailymotion.com/embed/video/'.strtok('').'"></iframe>';
+        }
+        // Image
+        else {
+            $object = sprintf(
+                '<a href="%1$s" data-lightbox="global" data-title="%2$s">'.
+                    '<img src="%1$s">'.
+                '</a>',
+
+                // file
+                $this->imageUrl($e['file']),
+
+                // caption
+                htmlspecialchars($this->format(@ $e['caption']), ENT_QUOTES)
+            );
+        }
+
         $out .= sprintf(
-            "\n\t".
-            '<div class="col-sm-%1$s %2$s">'.
-                '<a href="%3$s" data-lightbox="global" data-title="%4$s">'.
-                    '<img src="%3$s">'.
-                '</a>'.
-            '</div>',
+            "\n\t<div class=\"col-sm-%s %s\">%s</div>",
 
             // col. size
             @ $e['size'] ?: $colSize,
@@ -146,11 +164,7 @@ function gallery($e)
             // eventual offset
             @ $e['offset'] ? ('col-sm-offset-'.$e['offset']) : '',
 
-            // file
-            $this->imageUrl($e['file']),
-
-            // caption
-            htmlspecialchars($this->format(@ $e['caption']), ENT_QUOTES)
+            $object
         );
     }
 
@@ -394,7 +408,6 @@ function wikipediaLinkIcon($e)
 
 function imageUrl($file)
 {
-    $file      = trim($file);
     $namespace = strtok($file, '/');
     $filename  = strtok('');
 
