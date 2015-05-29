@@ -69,6 +69,7 @@ $app['text.titles'] =
     '2013-11-09-soir' => 'Soirée du 9 novembre 2013',
     '2013-11-10' => '10 novembre 2013',
     '2013-11-11' => '11 novembre 2013',
+    '2013-11-11-soir' => 'Gorges Al Abid',
 ];
 
 
