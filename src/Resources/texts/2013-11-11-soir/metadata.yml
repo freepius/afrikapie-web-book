@@ -3,6 +3,13 @@ intro: Si nos mamans nous voyaient...
 prev : '2013-11-11'
 next : '2013-11-12'
 
+comments:
+    - term : la nuit tombe vite en altitude.
+      content : Vers 17 h 30.
+
+    - term : dix kilos dans le dos.
+      content : En fait, 8 kg pour moi et 15 kg pour Mathieu, qui porte la nourriture.
+
 galleries:
     - marker : 1
       files  : [anarchos/52862b17aff7d, anarchos/52862b0e3596d]
@@ -15,6 +22,9 @@ galleries:
 
 lightboxes:
     - chèvres sauvages/1
+
+    - term : chèvres/2
+      file : anarchos/528629f1bfcf5
 
     - term : naines et noires
       file : anarchos/52862adb9968a
@@ -48,3 +58,13 @@ longnotes:
       content : >
           Le <b>gaz</b> est un terme d’escalade ou d’alpinisme, signifiant « <b>le vide</b> ».
           Ainsi, une voie très aérienne est dite gazeuse.
+
+    ######################
+    ## Chèvres sauvages ##
+    ######################
+    - term : chèvres sauvages
+      content : >
+          D’après Moustapha, les chèvres d’ici sont <b>protégées</b>.
+          Ce sont d’<b>anciennes chèvres domestiques</b> qui ont repris leur liberté,
+          s’abritant dans ces gorges inaccessibles.
+          De génération en génération, elles sont <b>redevenues sauvages</b>.

@@ -24,6 +24,7 @@ Les détails, ça s’improvise, ça s’apprivoise.
 Il y a toujours un passage, que diable !
 Et profitons du paysage, diantre ! »
 Alors, nous avançons...
+
 Je tricote, pour ma part, un bien joli chemin, à partir de bribes de sentiers à chèvres, choisies habilement.
 Mathieu, lui, danse quelques pas techniques, sur deux-trois roches périlleuses, retrouvant là ses belles sensations d’escalade.
 
