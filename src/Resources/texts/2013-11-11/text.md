@@ -100,7 +100,7 @@ Moustapha se propose de bivouaquer avec nous, affirmant avoir déjà dormi là, 
 Pourtant, aucun endroit où installer la guitoune : le terrain est bien trop accidenté.
 Voilà le moment, pour chacun, de reprendre sa liberté.
 
-Nous passons l’oued torrentiel, sur un pont branlant qui n’inspire aucune confiance, mais sur lequel passe, pourtant, des camions, des bus et des camping-cars hollandais.
+Nous franchissons l’oued torrentiel, sur un pont branlant qui n’inspire aucune confiance, mais sur lequel passe, pourtant, des camions, des bus et des camping-cars hollandais.
 Ils ont bien du courage.
 
 Si nous continuons la route, nous devrons faire un énorme détour, de cinq kilomètres en lacet.
