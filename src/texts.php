@@ -86,6 +86,7 @@ $app['text.titles'] =
  */
 $app['text.published.all'] = $allPub =
 [
+    '2015-05-31' => 'Dimanche chômé ; reprise lundi, Inch’Allah.',
     '2015-05-30' => ['2013-11-12'],
     '2015-05-29' => ['2013-11-11-soir'],
     '2015-05-28' => ['2013-11-11'],

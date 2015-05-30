@@ -1,4 +1,4 @@
-﻿Ce matin, sur la petite route sinueuse, pas trop de voiture.
+﻿Ce matin, sur la petite route sinueuse, pas trop de voitures.
 Nous y marchons lentement, absorbant au maximum les paysages, inhalant à fond la tranquillité de l’instant.
 Et nous nous sentons juste bien, naturels, dans notre élément.
 Impression de ne pas être au Maroc, ni même ailleurs.
