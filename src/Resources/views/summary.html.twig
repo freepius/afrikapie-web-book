@@ -6,6 +6,7 @@
 
 <!-- List of "today published texts" -->
 <nav id="today-texts">
+    {#
     Aujourd’hui {{ today.day }} {{ today.month|trans }},
 
     <b class="unbreak">
@@ -22,6 +23,11 @@
             <li><em>{{ today.texts | raw }}</em></li>
         {% endfor %}
     </ul>
+    #}
+
+    <b>Jusqu’au 15 juin</b>, pas de nouveau texte.
+    <br>
+    Mais lisez le billet « <a href="/mi-parcours"><b>Mots de mi-parcours</b></a> ».
 </nav>
 
 <!-- Summary by country and month, in collapsible <div> -->

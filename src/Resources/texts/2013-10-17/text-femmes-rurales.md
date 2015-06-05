@@ -18,9 +18,9 @@ La femme rurale est le membre le plus confronté à la gestion des dénuements s
 La femme a une relation directe avec son environnement et a un impact sur les ressources naturelles, notamment en ce qui concerne la gestion de l'eau.
 Les formes du savoir qui prédominent sont l'élevage des bovins, ovins et caprins ;
 64% des femmes rurales exercent leur savoir-faire à la maison.
-I1 n'est pas reconnu par les hommes comme activité rentable.
+Il n'est pas reconnu par les hommes comme activité rentable.
 
 Les années de sécheresse successives, l'insuffisance de services sociaux, le manque de qualification sont autant de handicaps qui paralysent les efforts des femmes rurales.
-Le milieu féminin marocain est caractérisé par un taux élevé d'analphabétisme (go%), un taux de scolarisation des filles des plus faibles au monde (27%) et seulement 20% ont accès à la formation professionnelle.
+Le milieu féminin marocain est caractérisé par un taux élevé d'analphabétisme (90%), un taux de scolarisation des filles des plus faibles au monde (27%) et seulement 20% ont accès à la formation professionnelle.
 
 <marker=femmes-rurales-photos>
