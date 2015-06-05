@@ -51,10 +51,12 @@ C’est une superbe arche, creusée dans la roche par un petit oued, depuis des 
 À l’intérieur, au plafond : d’énormes stalactites, des centaines de chauve-souris et d’oiseaux.
 C’est impressionnant et gigantesque.
 
+<marker=1>
+
 Alors, nous descendons sous l’arche, sautant d’une pierre à l’autre, glissant un peu, longeant laborieusement l’oued, à la recherche du bon bivouac.
 Vite vite ! Le soleil déjà est couché.
 
 Au crépuscule, enfin, nous trouvons la place parfaite : un champ herbeux, solitaire, voisin d’un canal d’irrigation, pratique pour nos ablutions et celles de nos chaussettes.
 
-Ici, l’été, les week-ends, les vacances, ce lieu est absolument congestionné.
+L’été, les week-ends, les vacances, ce lieu est absolument congestionné.
 Les Marocains y viennent en famille : pique-niquer, se détendre, se baigner, prendre le frais, etc.

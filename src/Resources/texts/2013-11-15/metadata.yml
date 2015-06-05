@@ -1,5 +1,5 @@
 title: 15 novembre 2013
-intro: Aux portes des hauts sommets, dernier réconfort citadain.
+intro: Aux portes des hauts sommets, dernier réconfort citadin.
 
 comments:
     - term    : '*bab*'
@@ -39,3 +39,43 @@ longnotes:
 
           <url>//www.oiseaux.net/oiseaux/cochevis.huppe.html|<b>En savoir plus</b></url>
           <small>(oiseaux.net)</small>
+
+    #############
+    ## Demnate ##
+    #############
+    - term : Demnate/1
+      content : >
+          <b>Demnate</b> est une ville <b>berbère</b> construite en <b>998 ap. J.C</b>, 40 ans avant Marrakech (à 100 km).
+          Demnate signifie, en <wp>tachelhit</wp> <small>(un dialecte berbère)</small>, <b>« terres fertiles »</b>.
+
+
+          La couleur verte caractérisant la ville <small>(de manière générale)</small>
+          est connue dans le milieu artistique comme « <b>le vert demnati</b> ».
+
+
+          <wp>Charles de Foucauld</wp> a décrit cette ville dans son célèbre ouvrage
+          « <wp>Reconnaissance au Maroc</wp> » (1888).
+
+
+          <wp>Demnate|<b>En savoir plus</b></wp>
+          <small>(Wikipédia)</small>
+
+
+    ################
+    ## Imi n'Ifri ##
+    ################
+    - term : Imi n’ifri
+      content : >
+          Le pont naturel d’<b>Imi n'ifri</b> est un site touristique important de la région.
+          Son nom en berbère veut dire :
+          <i>Immi</i> = bouche ;
+          <i>Ifri</i> = grotte.
+
+
+          L’oued qui coule sous l’arche est le <b>Tisslit</b>.
+
+subtexts:
+    - term    : Demnate/2
+      caption : Comme l’écrivait Charles de Foucauld...
+      file    : text-demnate.md
+      marker  : 1
