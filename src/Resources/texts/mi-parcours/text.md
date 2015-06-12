@@ -14,7 +14,7 @@ Etc.
 
 C’est le moment, alors, de faire une pause dans la publication, pour **prendre du recul**, reprendre des forces, nous aérer l’esprit.
 Cela devient nécessaire, même, si nous voulons continuer à prendre du plaisir et faire du bon travail.
-Durant **une semaine** donc, jusqu’au **lundi 15 juin**, nous ne publierons **aucun nouveau texte**.
+Durant **une dizaine de jours** donc, jusqu’au **mercredi 17 juin**, nous ne publierons **aucun nouveau texte**.
 
 Vos avis
 --------
@@ -35,7 +35,7 @@ Notre démarche est-elle pertinente ?
 Que manque-t-il à nos textes ? Quels sont leurs points forts ?
 Etc.
 
-Chères lectrices et lecteurs, que vous aimiez ou bof ce livre web, profitez de cette semaine pour **donner votre avis** (si possible, de plus de 10 mots...) **et partager**.
+Chères lectrices et lecteurs, que vous aimiez ou bof ce livre web, profitez de cette dizaine pour **donner votre avis** (si possible, de plus de 10 mots...) **et partager**.
 Nous n’attendons que cela !
 Pour nous motiver ; pour nous améliorer.
 Et, pourquoi pas, soutenez-nous !
@@ -57,5 +57,5 @@ Le premier consacré au Maroc, dont la publication web se terminera mi-juillet.
 Le second, consacré à la Mauritanie, au Sénégal et au Mali, sera publié en automne, sous une nouvelle forme.
 En effet, plutôt que d’écrire au jour le jour, type carnet de bord, nous écrirons les épisodes majeurs du voyage, ainsi que des textes indépendants (portraits, philosophie de la marche et diverses thématiques).
 
-Nous vous retrouvons, alors, dans une semaine, pour de nouveaux et jolis textes.
+Nous vous retrouvons, alors, dans dix jours, pour de nouveaux et jolis textes.
 Inch’Allah...
