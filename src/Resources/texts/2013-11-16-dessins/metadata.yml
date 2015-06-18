@@ -1,0 +1,10 @@
+title: En attendant...
+bing : false
+intro: >
+    En attendant que le rhume des foins de mon compagnon-écrivain se calme,
+    voici le 16 novembre en dessin.
+
+photowalls:
+    - marker : 1
+      column : 2
+      files  : 8
